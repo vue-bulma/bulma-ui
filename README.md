@@ -1,6 +1,6 @@
 # Bulma UI
 
-Bulma UI.
+Bulma UI for Vue.
 
 ## Badges
 

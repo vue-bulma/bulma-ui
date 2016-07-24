@@ -1,7 +1,7 @@
 {
   "name": "vue-bulma-ui",
   "version": "0.0.0",
-  "description": "Bulma UI",
+  "description": "Bulma UI for Vue",
   "main": "src/index.js",
   "peerDependencies": {
     "bulma": "^0.1.0",
