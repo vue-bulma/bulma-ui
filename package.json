@@ -1,0 +1,22 @@
+{
+  "name": "vue-bulma-ui",
+  "version": "0.0.0",
+  "description": "Bulma UI",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "bulma": "^0.1.0",
+    "vue": "^1.0.26"
+  },
+  "scripts": {},
+  "repository": "git+https://github.com/vue-bulma/bulma-ui.git",
+  "keywords": [
+    "vue",
+    "bulma",
+    "bulma-ui",
+    "vue-bulma",
+    "vue-bulma-ui",
+    "ui"
+  ],
+  "author": "Fangdun Cai <cfddream@gmail.com>",
+  "license": "MIT"
+}
