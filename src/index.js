@@ -1,6 +1,7 @@
-import Test from './components/Test'
+import Box from './components/elements/Box'
+import Button from './components/elements/Button'
 
-const components = [Test]
+const components = [Box, Button]
 
 const install = function(Vue) {
   components.map(component => {
