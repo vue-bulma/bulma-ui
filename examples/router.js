@@ -20,6 +20,16 @@ export default new Router({
       path: '/elements/content',
       name: 'Content',
       component: () => import('./components/elements/Content')
+    },
+    {
+      path: '/elements/delete',
+      name: 'Delete',
+      component: () => import('./components/elements/Delete')
+    },
+    {
+      path: '/elements/icon',
+      name: 'Icon',
+      component: () => import('./components/elements/Icon')
     }
   ]
 })

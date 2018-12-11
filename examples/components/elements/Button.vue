@@ -55,6 +55,10 @@
 
     <vb-box class="button-invert">
       <vb-button type="primary" inverted outlined>Invert Outlined</vb-button>
+      <vb-button type="link" inverted outlined>Invert Outlined</vb-button>
+      <vb-button type="info" inverted outlined>Invert Outlined</vb-button>
+      <vb-button type="success" inverted outlined>Invert Outlined</vb-button>
+      <vb-button type="danger" inverted outlined>Invert Outlined</vb-button>
     </vb-box>
 
     <span id="rounded" class="title">Rounded:</span>
@@ -84,7 +88,14 @@
     </vb-box>
 
     <span id="disabled" class="title">Disabled:</span>
-
+    <vb-box>
+      <vb-button disabled>Disable</vb-button>
+    </vb-box>
+    <span id="icons" class="title">With Font Awesome icons:</span>
+    <vb-box>
+      <vb-button disabled>Disable</vb-button>
+    </vb-box>
+     <span id="icons" class="title">With Font Awesome icons:</span>
     <vb-box>
       <vb-button disabled>Disable</vb-button>
     </vb-box>
