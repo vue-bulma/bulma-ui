@@ -1,12 +1,18 @@
 <template>
   <div class="container">
-    <span id="basic" class="title">Basic:</span>
+    <span
+      id="basic"
+      class="title"
+    >Basic:</span>
 
     <vb-box>
       <vb-button>Button</vb-button>
     </vb-box>
 
-    <span id="colors" class="title">Colors:</span>
+    <span
+      id="colors"
+      class="title"
+    >Colors:</span>
 
     <vb-box>
       <vb-button type="primary">Primary</vb-button>
@@ -25,7 +31,10 @@
       <vb-button type="text">Text</vb-button>
     </vb-box>
 
-    <span id="sizes" class="title">Sizes:</span>
+    <span
+      id="sizes"
+      class="title"
+    >Sizes:</span>
 
     <vb-box>
       <vb-button size="small">Small</vb-button>
@@ -35,69 +44,168 @@
       <vb-button size="large">Large</vb-button>
     </vb-box>
 
-    <span id="displays" class="title">Displays:</span>
+    <span
+      id="displays"
+      class="title"
+    >Displays:</span>
 
     <vb-box>
       <vb-button fullwidth>Fullwidth</vb-button>
     </vb-box>
 
-    <span id="styles" class="title">Styles:</span>
+    <span
+      id="styles"
+      class="title"
+    >Styles:</span>
 
     <vb-box>
       <vb-button outlined>Outlined</vb-button>
-      <vb-button type="primary" outlined>primary</vb-button>
-      <vb-button type="link" outlined>link</vb-button>
-      <vb-button type="info" outlined>Info</vb-button>
-      <vb-button type="warning" outlined>Warning</vb-button>
-      <vb-button type="success" outlined>Success</vb-button>
-      <vb-button type="danger" outlined>Danger</vb-button>
+      <vb-button
+        type="primary"
+        outlined
+      >primary</vb-button>
+      <vb-button
+        type="link"
+        outlined
+      >link</vb-button>
+      <vb-button
+        type="info"
+        outlined
+      >Info</vb-button>
+      <vb-button
+        type="warning"
+        outlined
+      >Warning</vb-button>
+      <vb-button
+        type="success"
+        outlined
+      >Success</vb-button>
+      <vb-button
+        type="danger"
+        outlined
+      >Danger</vb-button>
     </vb-box>
 
     <vb-box class="button-invert">
-      <vb-button type="primary" inverted outlined>Invert Outlined</vb-button>
-      <vb-button type="link" inverted outlined>Invert Outlined</vb-button>
-      <vb-button type="info" inverted outlined>Invert Outlined</vb-button>
-      <vb-button type="success" inverted outlined>Invert Outlined</vb-button>
-      <vb-button type="danger" inverted outlined>Invert Outlined</vb-button>
+      <vb-button
+        type="primary"
+        inverted
+        outlined
+      >Invert Outlined</vb-button>
+      <vb-button
+        type="link"
+        inverted
+        outlined
+      >Invert Outlined</vb-button>
+      <vb-button
+        type="info"
+        inverted
+        outlined
+      >Invert Outlined</vb-button>
+      <vb-button
+        type="success"
+        inverted
+        outlined
+      >Invert Outlined</vb-button>
+      <vb-button
+        type="danger"
+        inverted
+        outlined
+      >Invert Outlined</vb-button>
     </vb-box>
 
-    <span id="rounded" class="title">Rounded:</span>
+    <span
+      id="rounded"
+      class="title"
+    >Rounded:</span>
 
     <vb-box>
       <vb-button rounded>Outlined</vb-button>
-      <vb-button type="primary" rounded>Rounded</vb-button>
-      <vb-button type="link" rounded>Rounded</vb-button>
-      <vb-button type="info" rounded>Rounded</vb-button>
-      <vb-button type="success" rounded>Rounded</vb-button>
-      <vb-button type="danger" rounded>Rounded</vb-button>
+      <vb-button
+        type="primary"
+        rounded
+      >Rounded</vb-button>
+      <vb-button
+        type="link"
+        rounded
+      >Rounded</vb-button>
+      <vb-button
+        type="info"
+        rounded
+      >Rounded</vb-button>
+      <vb-button
+        type="success"
+        rounded
+      >Rounded</vb-button>
+      <vb-button
+        type="danger"
+        rounded
+      >Rounded</vb-button>
     </vb-box>
 
-    <span id="states" class="title">States:</span>
+    <span
+      id="states"
+      class="title"
+    >States:</span>
 
     <vb-box>
-      <vb-button state="hovered">
-        <span class="icon is-small">
-          <i class="fas fa-check"></i>
-        </span>
-        Hover
-      </vb-button>
+      <vb-button state="hovered">Hover</vb-button>
       <vb-button state="focused">Focus</vb-button>
       <vb-button state="active">Active</vb-button>
       <vb-button state="loading">Loading</vb-button>
       <vb-button state="static">Static</vb-button>
     </vb-box>
 
-    <span id="disabled" class="title">Disabled:</span>
+    <span
+      id="disabled"
+      class="title"
+    >Disabled:</span>
     <vb-box>
       <vb-button disabled>Disable</vb-button>
     </vb-box>
-    <span id="icons" class="title">With Font Awesome icons:</span>
+    <span
+      id="icons"
+      class="title"
+    >With Font Awesome icons:</span>
     <vb-box>
-      <vb-button disabled>Disable</vb-button>
+      <vb-button>
+        <vb-icon type="fa fa-home"></vb-icon>
+      </vb-button>
+      <vb-button>
+        <vb-icon type="fa fa-home"></vb-icon>
+        <span>home</span>
+      </vb-button>
     </vb-box>
-     <span id="icons" class="title">With Font Awesome icons:</span>
+    <span
+      id="group"
+      class="title"
+    >Button group:</span>
     <vb-box>
-      <vb-button disabled>Disable</vb-button>
+      <vb-button-group>
+        <vb-button type="primary">Save</vb-button>
+        <vb-button>Cancel</vb-button>
+        <vb-button type="danger">Delete</vb-button>
+      </vb-button-group>
+    </vb-box>
+    <span
+      id="addons"
+      class="title"
+    >Button addons:</span>
+    <vb-box>
+      <vb-button-addons>
+        <vb-button>
+          <vb-icon type="fa fa-align-left"></vb-icon>
+          <span>left</span>
+        </vb-button>
+        <vb-button>
+          <vb-icon type="fa fa-align-center"></vb-icon>
+          <span>center</span>
+        </vb-button>
+        <vb-button>
+          <vb-icon type="fa fa-align-right"></vb-icon>
+          <span>right</span>
+        </vb-button>
+      </vb-button-addons>
     </vb-box>
   </div>
 </template>
@@ -111,5 +219,8 @@ export default {
 <style lang="scss" scoped>
 .button-invert {
   background-color: #00d1b2;
+}
+.main .box :not(:last-child) {
+  margin-bottom: 0;
 }
 </style>
