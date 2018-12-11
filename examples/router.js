@@ -15,6 +15,11 @@ export default new Router({
       path: '/elements/button',
       name: 'Button',
       component: () => import('./components/elements/Button')
+    },
+    {
+      path: '/elements/content',
+      name: 'Content',
+      component: () => import('./components/elements/Content')
     }
   ]
 })
