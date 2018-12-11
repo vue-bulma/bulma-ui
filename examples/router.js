@@ -9,12 +9,12 @@ export default new Router({
     {
       path: '/elements/box',
       name: 'Box',
-      component: () => import('./components/elements/Box'),
+      component: () => import('./components/elements/Box')
     },
     {
       path: '/elements/button',
       name: 'Button',
-      component: () => import('./components/elements/Button'),
-    },
-  ],
+      component: () => import('./components/elements/Button')
+    }
+  ]
 })

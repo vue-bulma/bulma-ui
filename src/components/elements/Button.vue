@@ -22,13 +22,12 @@ export default {
           'dark',
           'black',
           'link',
-          'text',
-        ].includes(value),
+          'text'
+        ].includes(value)
     },
     size: {
       type: String,
-      validator: value =>
-        ['small', 'normal', 'medium', 'large'].includes(value),
+      validator: value => ['small', 'normal', 'medium', 'large'].includes(value)
     },
     fullwidth: Boolean,
     outlined: Boolean,
@@ -38,8 +37,8 @@ export default {
     state: {
       type: String,
       validator: value =>
-        ['loading', 'active', 'focused', 'hovered', 'static'].includes(value),
-    },
+        ['loading', 'active', 'focused', 'hovered', 'static'].includes(value)
+    }
   },
   computed: {
     classes() {
@@ -52,20 +51,16 @@ export default {
         'is-fullwidth': fullwidth,
         'is-inverted': inverted,
         'is-rounded': rounded,
-        'is-outlined': outlined,
+        'is-outlined': outlined
       }
       return obj
-    },
-  },
+    }
+  }
 }
 </script>
 
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/base/_all';
-</style>
-
-<style lang="scss" scoped>
-@import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/elements/button';
 </style>

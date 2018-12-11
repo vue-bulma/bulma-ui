@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'BoxExamples',
+  name: 'BoxExamples'
 }
 </script>

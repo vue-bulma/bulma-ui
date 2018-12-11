@@ -93,7 +93,7 @@
 
 <script>
 export default {
-  name: 'ButtonExamples',
+  name: 'ButtonExamples'
 }
 </script>
 
