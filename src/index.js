@@ -5,6 +5,9 @@ import Delete from './components/elements/Delete'
 import Icon from './components/elements/Icon'
 import ButtonGroup from './components/elements/ButtonGroup'
 import ButtonAddons from './components/elements/ButtonAddons'
+import Input from './components/form/Input'
+import Textarea from './components/form/Textarea'
+
 const components = [
   Box,
   Button,
@@ -12,7 +15,9 @@ const components = [
   Delete,
   Icon,
   ButtonGroup,
-  ButtonAddons
+  ButtonAddons,
+  Input,
+  Textarea
 ]
 
 const install = function(Vue) {

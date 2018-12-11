@@ -30,6 +30,16 @@ export default new Router({
       path: '/elements/icon',
       name: 'Icon',
       component: () => import('./components/elements/Icon')
+    },
+    {
+      path: '/form/input',
+      name: 'Input',
+      component: () => import('./components/form/Input')
+    },
+    {
+      path: '/form/textarea',
+      name: 'Textarea',
+      component: () => import('./components/form/Textarea')
     }
   ]
 })
