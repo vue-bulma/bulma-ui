@@ -9,6 +9,7 @@ import ButtonsList from './components/elements/ButtonsList'
 import Image from './components/elements/Image'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
+import Select from './components/form/Select'
 
 const components = [
   Box,
@@ -21,7 +22,8 @@ const components = [
   ButtonsList,
   Image,
   Input,
-  Textarea
+  Textarea,
+  Select
 ]
 
 const install = function(Vue) {

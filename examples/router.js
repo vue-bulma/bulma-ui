@@ -45,6 +45,11 @@ export default new Router({
       path: '/form/textarea',
       name: 'Textarea',
       component: () => import('./components/form/Textarea')
+    },
+    {
+      path: '/form/select',
+      name: 'Select',
+      component: () => import('./components/form/Select')
     }
   ]
 })
