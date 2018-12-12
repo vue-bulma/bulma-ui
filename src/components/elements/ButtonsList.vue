@@ -1,0 +1,41 @@
+<template>
+  <div class="buttons" :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'VbButtonsList',
+  props: {
+    align: {
+      type: String,
+      validator: value =>
+        [
+          'centered',
+          'right',
+        ].includes(value)
+    },
+    type: {
+      type: String,
+      validator: value => ['addons'].includes(value)
+    }
+  },
+  computed: {
+    classes() {
+      const { align, type } = this
+      const obj = {
+        [`is-${align}`]: !!align,
+        [`has-${type}`]: !!type,
+      }
+      return obj
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import '~bulma/sass/utilities/_all';
+@import '~bulma/sass/base/_all';
+@import '~bulma/sass/elements/button';
+</style>

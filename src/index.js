@@ -5,6 +5,7 @@ import Delete from './components/elements/Delete'
 import Icon from './components/elements/Icon'
 import ButtonGroup from './components/elements/ButtonGroup'
 import ButtonAddons from './components/elements/ButtonAddons'
+import ButtonsList from './components/elements/ButtonsList'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 
@@ -16,6 +17,7 @@ const components = [
   Icon,
   ButtonGroup,
   ButtonAddons,
+  ButtonsList,
   Input,
   Textarea
 ]

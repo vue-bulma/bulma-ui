@@ -33,7 +33,7 @@ export default {
           'link'
         ].includes(value)
     },
-    type: {
+    name: {
       type: String
     },
     iconSize: {
@@ -52,9 +52,9 @@ export default {
       return obj
     },
     IconClasses() {
-      const { iconSize, type, animated } = this
+      const { iconSize, name, animated } = this
       const obj = {
-        [`${type}`]: !!type,
+        [`${name}`]: !!name,
         [`fa-${iconSize}`]: !!iconSize,
         'fa-pulse': animated
       }

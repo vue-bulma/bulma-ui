@@ -167,12 +167,12 @@
       id="icons"
       class="title"
     >With Font Awesome icons:</span>
-    <vb-box>
+    <vb-box class="button-icon">
       <vb-button>
-        <vb-icon type="fa fa-home"></vb-icon>
+        <vb-icon name="fa fa-home"></vb-icon>
       </vb-button>
       <vb-button>
-        <vb-icon type="fa fa-home"></vb-icon>
+        <vb-icon name="fa fa-home"></vb-icon>
         <span>home</span>
       </vb-button>
     </vb-box>
@@ -191,21 +191,87 @@
       id="addons"
       class="title"
     >Button addons:</span>
-    <vb-box>
+    <vb-box class="button-icon">
       <vb-button-addons>
         <vb-button>
-          <vb-icon type="fa fa-align-left"></vb-icon>
+          <vb-icon name="fa fa-align-left"></vb-icon>
           <span>left</span>
         </vb-button>
         <vb-button>
-          <vb-icon type="fa fa-align-center"></vb-icon>
+          <vb-icon name="fa fa-align-center"></vb-icon>
           <span>center</span>
         </vb-button>
         <vb-button>
-          <vb-icon type="fa fa-align-right"></vb-icon>
+          <vb-icon name="fa fa-align-right"></vb-icon>
           <span>right</span>
         </vb-button>
       </vb-button-addons>
+    </vb-box>
+    <span
+      id="ButtonsList"
+      class="title"
+    >Buttons List:</span>
+    <vb-box>
+      <vb-buttons-List>
+        <vb-button>
+          Save changes
+        </vb-button>
+        <vb-button>
+          Save and continue
+        </vb-button>
+        <vb-button>
+          Cancel
+        </vb-button>
+      </vb-buttons-List>
+    </vb-box>
+    <span
+      id="ButtonsListAddons"
+      class="title"
+    >Buttons List addons:</span>
+    <vb-box>
+      <vb-buttons-List type="addons">
+        <vb-button type="success">
+          Save changes
+        </vb-button>
+        <vb-button>
+          Save and continue
+        </vb-button>
+        <vb-button>
+          Cancel
+        </vb-button>
+      </vb-buttons-List>
+    </vb-box>
+    <vb-box>
+      <vb-buttons-List
+        type="addons"
+        align="centered"
+      >
+        <vb-button>
+          Save changes
+        </vb-button>
+        <vb-button type="info">
+          Save and continue
+        </vb-button>
+        <vb-button>
+          Cancel
+        </vb-button>
+      </vb-buttons-List>
+    </vb-box>
+    <vb-box>
+      <vb-buttons-List
+        type="addons"
+        align="right"
+      >
+        <vb-button>
+          Save changes
+        </vb-button>
+        <vb-button>
+          Save and continue
+        </vb-button>
+        <vb-button type="danger">
+          Cancel
+        </vb-button>
+      </vb-buttons-List>
     </vb-box>
   </div>
 </template>
@@ -220,7 +286,7 @@ export default {
 .button-invert {
   background-color: #00d1b2;
 }
-.main .box :not(:last-child) {
+.button-icon :not(:last-child) {
   margin-bottom: 0;
 }
 </style>
