@@ -62,13 +62,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.icon-background{
-background-color: #ffdd57
+.icon-background {
+  background-color: #ffdd57;
 }
-.icon-background-dark{
-background-color: #363636
+.icon-background-dark {
+  background-color: #363636;
 }
-.iconSize-block{
-display: flex
+.iconSize-block {
+  display: flex;
 }
 </style>

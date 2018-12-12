@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import baseInput from './baseInput'
+import baseInput from '../../lib/baseInput'
 
 export default {
   name: 'VbTextarea',

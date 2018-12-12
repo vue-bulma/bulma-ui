@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import baseInput from './baseInput'
+import baseInput from '../../lib/baseInput'
 import VbIcon from '../elements/Icon'
 
 export default {
