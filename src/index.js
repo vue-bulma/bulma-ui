@@ -6,6 +6,7 @@ import Icon from './components/elements/Icon'
 import ButtonGroup from './components/elements/ButtonGroup'
 import ButtonAddons from './components/elements/ButtonAddons'
 import ButtonsList from './components/elements/ButtonsList'
+import Image from './components/elements/Image'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 
@@ -18,6 +19,7 @@ const components = [
   ButtonGroup,
   ButtonAddons,
   ButtonsList,
+  Image,
   Input,
   Textarea
 ]

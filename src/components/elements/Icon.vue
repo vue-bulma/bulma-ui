@@ -1,8 +1,5 @@
 <template>
-  <span
-    class="icon"
-    :class="classes"
-  >
+  <span :class="classes">
     <i :class="IconClasses">
       <slot></slot>
     </i>
@@ -40,7 +37,7 @@ export default {
       type: String,
       validator: value => ['lg', '2x', '3x'].includes(value)
     },
-    animated:Boolean
+    animated: Boolean
   },
   computed: {
     classes() {
@@ -54,6 +51,7 @@ export default {
     IconClasses() {
       const { iconSize, name, animated } = this
       const obj = {
+        icon: true,
         [`${name}`]: !!name,
         [`fa-${iconSize}`]: !!iconSize,
         'fa-pulse': animated

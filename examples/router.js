@@ -32,6 +32,11 @@ export default new Router({
       component: () => import('./components/elements/Icon')
     },
     {
+      path: '/elements/image',
+      name: 'Image',
+      component: () => import('./components/elements/Image')
+    },
+    {
       path: '/form/input',
       name: 'Input',
       component: () => import('./components/form/Input')

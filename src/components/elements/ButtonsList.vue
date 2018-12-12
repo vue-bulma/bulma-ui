@@ -1,5 +1,5 @@
 <template>
-  <div class="buttons" :class="classes">
+  <div :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -25,6 +25,7 @@ export default {
     classes() {
       const { align, type } = this
       const obj = {
+        buttons:true,
         [`is-${align}`]: !!align,
         [`has-${type}`]: !!type,
       }

@@ -1,12 +1,12 @@
 <template>
-  <button class="delete" :class="classes">
+  <button :class="classes">
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: "VbDelete",
+  name: 'VbDelete',
   props: {
     size: {
       type: String,
@@ -14,9 +14,10 @@ export default {
     }
   },
   computed: {
-    classes () {
+    classes() {
       const { size } = this
       const obj = {
+        delete: true,
         [`is-${size}`]: !!size
       }
       return obj
