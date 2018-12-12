@@ -13,6 +13,7 @@ import Table from './components/elements/Table'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
+import Checkbox from './components/form/Checkbox'
 
 const components = [
   Box,
@@ -29,7 +30,8 @@ const components = [
   Table,
   Input,
   Textarea,
-  Select
+  Select,
+  Checkbox
 ]
 
 const install = function(Vue) {

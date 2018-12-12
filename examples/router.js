@@ -65,6 +65,11 @@ export default new Router({
       path: '/form/select',
       name: 'Select',
       component: () => import('./components/form/Select')
+    },
+    {
+      path: '/form/checkbox',
+      name: 'Checkbox',
+      component: () => import('./components/form/Checkbox')
     }
   ]
 })
