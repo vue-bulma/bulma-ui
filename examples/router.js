@@ -37,6 +37,16 @@ export default new Router({
       component: () => import('./components/elements/Image')
     },
     {
+      path: '/elements/notification',
+      name: 'Notification',
+      component: () => import('./components/elements/Notification')
+    },
+    {
+      path: '/elements/Progress',
+      name: 'ProgressBar',
+      component: () => import('./components/elements/Progress')
+    },
+    {
       path: '/form/input',
       name: 'Input',
       component: () => import('./components/form/Input')

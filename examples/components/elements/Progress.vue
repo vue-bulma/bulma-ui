@@ -1,0 +1,96 @@
+<template>
+  <div class="container">
+    <span
+      id="Basic"
+      class="title"
+    >Basic:</span>
+    <vb-box>
+      <vb-progress></vb-progress>
+    </vb-box>
+    <span
+      id="Colors"
+      class="title"
+    >Colors and value:</span>
+    <vb-box>
+      value=10
+      <vb-progress
+        color="primary"
+        value="10"
+      ></vb-progress>
+      value=10, max=200<vb-progress
+        color="primary"
+        value="10"
+        max="200"
+      ></vb-progress>
+      <vb-progress
+        color="info"
+        value="20"
+      ></vb-progress>
+      <vb-progress
+        color="success"
+        value="30"
+      ></vb-progress>
+      <vb-progress
+        color="warning"
+        value="40"
+      ></vb-progress>
+      <vb-progress
+        color="danger"
+        value="50"
+      ></vb-progress>
+      <vb-progress
+        color="white"
+        value="60"
+      ></vb-progress>
+      <vb-progress
+        color="light"
+        value="70"
+      ></vb-progress>
+      <vb-progress
+        color="dark"
+        value="80"
+      ></vb-progress>
+      <vb-progress
+        color="black"
+        value="90"
+      ></vb-progress>
+      <vb-progress
+        color="link"
+        value="100"
+      ></vb-progress>
+    </vb-box>
+    <span
+      id="Sizes"
+      class="title"
+    >Sizes:</span>
+    <vb-box>
+      <vb-progress
+        color="primary"
+        size="small"
+      ></vb-progress>
+      <vb-progress
+        color="primary"
+        value="20"
+      ></vb-progress>
+      <vb-progress
+        color="primary"
+        value="40"
+        size="medium"
+      ></vb-progress>
+      <vb-progress
+        color="primary"
+        value="80"
+        size="large"
+      ></vb-progress>
+    </vb-box>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ProgressExamples'
+}
+</script>
+<style>
+</style>
+

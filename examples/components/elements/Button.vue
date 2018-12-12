@@ -15,20 +15,20 @@
     >Colors:</span>
 
     <vb-box>
-      <vb-button type="primary">Primary</vb-button>
-      <vb-button type="link">Link</vb-button>
-      <vb-button type="info">Info</vb-button>
-      <vb-button type="success">Success</vb-button>
-      <vb-button type="warning">Warning</vb-button>
-      <vb-button type="danger">Danger</vb-button>
+      <vb-button color="primary">Primary</vb-button>
+      <vb-button color="link">Link</vb-button>
+      <vb-button color="info">Info</vb-button>
+      <vb-button color="success">Success</vb-button>
+      <vb-button color="warning">Warning</vb-button>
+      <vb-button color="danger">Danger</vb-button>
     </vb-box>
 
     <vb-box>
-      <vb-button type="white">White</vb-button>
-      <vb-button type="light">Light</vb-button>
-      <vb-button type="dark">Dark</vb-button>
-      <vb-button type="black">Black</vb-button>
-      <vb-button type="text">Text</vb-button>
+      <vb-button color="white">White</vb-button>
+      <vb-button color="light">Light</vb-button>
+      <vb-button color="dark">Dark</vb-button>
+      <vb-button color="black">Black</vb-button>
+      <vb-button color="text">Text</vb-button>
     </vb-box>
 
     <span
@@ -61,54 +61,54 @@
     <vb-box>
       <vb-button outlined>Outlined</vb-button>
       <vb-button
-        type="primary"
+        color="primary"
         outlined
       >primary</vb-button>
       <vb-button
-        type="link"
+        color="link"
         outlined
       >link</vb-button>
       <vb-button
-        type="info"
+        color="info"
         outlined
       >Info</vb-button>
       <vb-button
-        type="warning"
+        color="warning"
         outlined
       >Warning</vb-button>
       <vb-button
-        type="success"
+        color="success"
         outlined
       >Success</vb-button>
       <vb-button
-        type="danger"
+        color="danger"
         outlined
       >Danger</vb-button>
     </vb-box>
 
     <vb-box class="button-invert">
       <vb-button
-        type="primary"
+        color="primary"
         inverted
         outlined
       >Invert Outlined</vb-button>
       <vb-button
-        type="link"
+        color="link"
         inverted
         outlined
       >Invert Outlined</vb-button>
       <vb-button
-        type="info"
+        color="info"
         inverted
         outlined
       >Invert Outlined</vb-button>
       <vb-button
-        type="success"
+        color="success"
         inverted
         outlined
       >Invert Outlined</vb-button>
       <vb-button
-        type="danger"
+        color="danger"
         inverted
         outlined
       >Invert Outlined</vb-button>
@@ -122,23 +122,23 @@
     <vb-box>
       <vb-button rounded>Outlined</vb-button>
       <vb-button
-        type="primary"
+        color="primary"
         rounded
       >Rounded</vb-button>
       <vb-button
-        type="link"
+        color="link"
         rounded
       >Rounded</vb-button>
       <vb-button
-        type="info"
+        color="info"
         rounded
       >Rounded</vb-button>
       <vb-button
-        type="success"
+        color="success"
         rounded
       >Rounded</vb-button>
       <vb-button
-        type="danger"
+        color="danger"
         rounded
       >Rounded</vb-button>
     </vb-box>
@@ -182,9 +182,9 @@
     >Button group:</span>
     <vb-box>
       <vb-button-group>
-        <vb-button type="primary">Save</vb-button>
+        <vb-button color="primary">Save</vb-button>
         <vb-button>Cancel</vb-button>
-        <vb-button type="danger">Delete</vb-button>
+        <vb-button color="danger">Delete</vb-button>
       </vb-button-group>
     </vb-box>
     <span
@@ -230,7 +230,7 @@
     >Buttons List addons:</span>
     <vb-box>
       <vb-buttons-List type="addons">
-        <vb-button type="success">
+        <vb-button color="success">
           Save changes
         </vb-button>
         <vb-button>
@@ -249,7 +249,7 @@
         <vb-button>
           Save changes
         </vb-button>
-        <vb-button type="info">
+        <vb-button color="info">
           Save and continue
         </vb-button>
         <vb-button>
@@ -259,7 +259,7 @@
     </vb-box>
     <vb-box>
       <vb-buttons-List
-        type="addons"
+        color="addons"
         align="right"
       >
         <vb-button>
@@ -268,7 +268,7 @@
         <vb-button>
           Save and continue
         </vb-button>
-        <vb-button type="danger">
+        <vb-button color="danger">
           Cancel
         </vb-button>
       </vb-buttons-List>

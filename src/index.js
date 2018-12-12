@@ -7,6 +7,8 @@ import ButtonGroup from './components/elements/ButtonGroup'
 import ButtonAddons from './components/elements/ButtonAddons'
 import ButtonsList from './components/elements/ButtonsList'
 import Image from './components/elements/Image'
+import Note from './components/elements/Notification'
+import Progress from './components/elements/ProgressBar'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
@@ -21,6 +23,8 @@ const components = [
   ButtonAddons,
   ButtonsList,
   Image,
+  Note,
+  Progress,
   Input,
   Textarea,
   Select

@@ -8,7 +8,7 @@
 export default {
   name: 'VbButton',
   props: {
-    type: {
+    color: {
       type: String,
       validator: value =>
         [
@@ -42,10 +42,10 @@ export default {
   },
   computed: {
     classes() {
-      const { type, size, outlined, inverted, state, fullwidth, rounded } = this
+      const { color, size, outlined, inverted, state, fullwidth, rounded } = this
       const obj = {
         button: true,
-        [`is-${type}`]: !!type,
+        [`is-${color}`]: !!color,
         [`is-${size}`]: !!size,
         [`is-${state}`]: !!state,
         'is-fullwidth': fullwidth,
