@@ -12,6 +12,7 @@ import Progress from './components/elements/ProgressBar'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
+import Checkbox from './components/form/Checkbox'
 
 const components = [
   Box,
@@ -27,7 +28,8 @@ const components = [
   Progress,
   Input,
   Textarea,
-  Select
+  Select,
+  Checkbox
 ]
 
 const install = function(Vue) {
