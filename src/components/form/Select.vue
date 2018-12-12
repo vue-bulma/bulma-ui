@@ -45,7 +45,7 @@ export default {
         return +value
       }
     },
-    type: {
+    color: {
       type: String,
       validator(value) {
         return ['primary', 'info', 'success', 'warning', 'danger'].includes(
@@ -68,11 +68,11 @@ export default {
   },
   computed: {
     classes() {
-      const { type, size, rounded, multiple, loading } = this
+      const { color, size, rounded, multiple, loading } = this
       return {
         select: true,
         'is-multiple': multiple,
-        [`is-${type}`]: !!type,
+        [`is-${color}`]: !!color,
         [`is-${size}`]: !!size,
         'is-rounded': rounded,
         'is-loading': loading

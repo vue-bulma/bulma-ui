@@ -27,7 +27,7 @@ export default {
     static: Boolean,
     prefix: String,
     suffix: String,
-    type: {
+    color: {
       type: String,
       validator(value) {
         return ['primary', 'info', 'success', 'warning', 'danger'].includes(
@@ -55,10 +55,10 @@ export default {
   },
   computed: {
     classes() {
-      const { type, size, state, rounded } = this
+      const { color, size, state, rounded } = this
       return {
         input: true,
-        [`is-${type}`]: !!type,
+        [`is-${color}`]: !!color,
         [`is-${size}`]: !!size,
         [`is-${state}`]: !!state,
         'is-static': this.static,

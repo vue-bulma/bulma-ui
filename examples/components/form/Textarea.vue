@@ -9,14 +9,14 @@
       <vb-textarea :rows="2" placeholder="2 lines of textarea" />
     </vb-box>
 
-    <span id="type" class="title">Type:</span>
+    <span id="color" class="title">Colors:</span>
 
     <vb-box>
-      <vb-textarea type="primary" :rows="2" placeholder="Primary" />
-      <vb-textarea type="info" :rows="2" placeholder="Info" />
-      <vb-textarea type="success" :rows="2" placeholder="Success" />
-      <vb-textarea type="warning" :rows="2" placeholder="Warning" />
-      <vb-textarea type="danger" :rows="2" placeholder="Danger" />
+      <vb-textarea color="primary" :rows="2" placeholder="Primary" />
+      <vb-textarea color="info" :rows="2" placeholder="Info" />
+      <vb-textarea color="success" :rows="2" placeholder="Success" />
+      <vb-textarea color="warning" :rows="2" placeholder="Warning" />
+      <vb-textarea color="danger" :rows="2" placeholder="Danger" />
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>

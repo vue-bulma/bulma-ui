@@ -23,7 +23,7 @@ export default {
   name: 'VbTextarea',
   mixins: [baseInput],
   props: {
-    type: {
+    color: {
       type: String,
       validator(value) {
         return ['primary', 'info', 'success', 'warning', 'danger'].includes(
@@ -55,10 +55,10 @@ export default {
   },
   computed: {
     classes() {
-      const { type, size, state, resize } = this
+      const { color, size, state, resize } = this
       return {
         textarea: true,
-        [`is-${type}`]: !!type,
+        [`is-${color}`]: !!color,
         [`is-${size}`]: !!size,
         [`is-${state}`]: !!state,
         'has-fixed-size': !resize

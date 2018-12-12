@@ -6,14 +6,14 @@
       <vb-input />
     </vb-box>
 
-    <span id="type" class="title">Type:</span>
+    <span id="colors" class="title">Colors:</span>
 
     <vb-box>
-      <vb-input type="primary" placeholder="Primary" />
-      <vb-input type="info" placeholder="Info" />
-      <vb-input type="success" placeholder="Success" />
-      <vb-input type="warning" placeholder="Warning" />
-      <vb-input type="danger" placeholder="Danger" />
+      <vb-input color="primary" placeholder="Primary" />
+      <vb-input color="info" placeholder="Info" />
+      <vb-input color="success" placeholder="Success" />
+      <vb-input color="warning" placeholder="Warning" />
+      <vb-input color="danger" placeholder="Danger" />
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>

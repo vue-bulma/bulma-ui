@@ -28,26 +28,26 @@
       </vb-select>
     </vb-box>
 
-    <span id="type" class="title">Type:</span>
+    <span id="colors" class="title">Colors:</span>
 
     <vb-box>
-      <vb-select type="primary" :value="model">
+      <vb-select color="primary" :value="model">
         <option>Select dropdown</option>
         <option>With options</option>
       </vb-select>
-      <vb-select type="info" :value="model">
+      <vb-select color="info" :value="model">
         <option>Select dropdown</option>
         <option>With options</option>
       </vb-select>
-      <vb-select type="success" :value="model">
+      <vb-select color="success" :value="model">
         <option>Select dropdown</option>
         <option>With options</option>
       </vb-select>
-      <vb-select type="warning" :value="model">
+      <vb-select color="warning" :value="model">
         <option>Select dropdown</option>
         <option>With options</option>
       </vb-select>
-      <vb-select type="danger" :value="model">
+      <vb-select color="danger" :value="model">
         <option>Select dropdown</option>
         <option>With options</option>
       </vb-select>
