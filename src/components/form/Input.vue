@@ -14,8 +14,8 @@
       @compositionend="handleComposition"
     >
 
-    <vb-icon v-if="!!prefix" class="is-left" :type="prefix" :size="size"></vb-icon>
-    <vb-icon v-if="!!suffix" class="is-right" :type="suffix" :size="size"></vb-icon>
+    <vb-icon v-if="!!prefix" class="is-left" :name="prefix" :size="size"></vb-icon>
+    <vb-icon v-if="!!suffix" class="is-right" :name="suffix" :size="size"></vb-icon>
   </div>
 </template>
 

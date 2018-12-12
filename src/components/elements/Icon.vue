@@ -43,6 +43,7 @@ export default {
     classes() {
       const { size, color } = this
       const obj = {
+        icon: true,
         [`is-${size}`]: !!size,
         [`has-text-${color}`]: !!color
       }
@@ -51,7 +52,6 @@ export default {
     IconClasses() {
       const { iconSize, name, animated } = this
       const obj = {
-        icon: true,
         [`${name}`]: !!name,
         [`fa-${iconSize}`]: !!iconSize,
         'fa-pulse': animated

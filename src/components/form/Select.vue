@@ -14,7 +14,7 @@
         <slot></slot>
       </select>
 
-      <vb-icon :type="prefix" :size="size"></vb-icon>
+      <vb-icon v-if="!!prefix" class="is-left" :name="prefix" :size="size"></vb-icon>
     </div>
   </div>
 </template>
