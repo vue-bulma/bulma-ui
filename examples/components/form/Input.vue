@@ -46,7 +46,7 @@
     <span id="icons" class="title">With Font Awesome icons:</span>
 
     <vb-box>
-      <vb-input prefix="fa-envelope" suffix="fa-check" placeholder="Normal" />
+      <vb-input prefix="fa fa-envelope" suffix="fa fa-check" placeholder="Normal" />
     </vb-box>
 
     <span id="event" class="title">Event:</span>

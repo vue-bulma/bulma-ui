@@ -13,14 +13,19 @@
       @compositionupdate="handleComposition"
       @compositionend="handleComposition"
     >
+
+    <vb-icon v-if="!!prefix" class="is-left" :type="prefix" :size="size"></vb-icon>
+    <vb-icon v-if="!!suffix" class="is-right" :type="suffix" :size="size"></vb-icon>
   </div>
 </template>
 
 <script>
 import baseInput from './baseInput'
+import VbIcon from '../elements/Icon'
 
 export default {
   name: 'VbInput',
+  components: { VbIcon },
   mixins: [baseInput],
   props: {
     rounded: Boolean,
