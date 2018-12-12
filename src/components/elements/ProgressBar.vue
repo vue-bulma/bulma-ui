@@ -1,9 +1,5 @@
 <template>
-  <progress
-    :class="classes"
-    :value="15"
-    :max="100"
-  ></progress>
+  <progress :class="classes"></progress>
 </template>
 
 <script>

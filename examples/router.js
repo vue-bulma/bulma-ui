@@ -47,6 +47,11 @@ export default new Router({
       component: () => import('./components/elements/Progress')
     },
     {
+      path: '/elements/Table',
+      name: 'Table',
+      component: () => import('./components/elements/Table')
+    },
+    {
       path: '/form/input',
       name: 'Input',
       component: () => import('./components/form/Input')

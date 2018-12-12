@@ -9,6 +9,7 @@ import ButtonsList from './components/elements/ButtonsList'
 import Image from './components/elements/Image'
 import Note from './components/elements/Notification'
 import Progress from './components/elements/ProgressBar'
+import Table from './components/elements/Table'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
@@ -25,6 +26,7 @@ const components = [
   Image,
   Note,
   Progress,
+  Table,
   Input,
   Textarea,
   Select
