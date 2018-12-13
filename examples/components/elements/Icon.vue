@@ -64,9 +64,11 @@ export default {
 <style lang="scss" scoped>
 .icon-background {
   background-color: #ffdd57;
+  margin-right: 1em
 }
 .icon-background-dark {
   background-color: #363636;
+  margin-right: 1em
 }
 .iconSize-block {
   display: flex;

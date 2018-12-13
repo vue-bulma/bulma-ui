@@ -12,10 +12,18 @@
       type="title"
     >Size:</vb-title>
     <vb-box>
-      <vb-delete size="small"></vb-delete>
-      <vb-delete></vb-delete>
-      <vb-delete size="medium"></vb-delete>
-      <vb-delete size="large"></vb-delete>
+      <span class="margin">
+        <vb-delete size="small"></vb-delete>
+      </span>
+      <span class="margin">
+        <vb-delete></vb-delete>
+      </span>
+      <span class="margin">
+        <vb-delete size="medium"></vb-delete>
+      </span>
+      <span class="margin">
+        <vb-delete size="large"></vb-delete>
+      </span>
     </vb-box>
     <vb-title
       id="Combinations"
@@ -34,3 +42,8 @@ export default {
   name: 'DeleteExamples'
 }
 </script>
+<style>
+.margin {
+  margin-right: 1em;
+}
+</style>
