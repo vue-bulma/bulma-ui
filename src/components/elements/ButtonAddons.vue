@@ -5,15 +5,19 @@ const VbButtonAddons = Vue.component('VbButtonAddons', {
   components: {
     Control
   },
-  render (h) {
-    return h('control', { 'class': 'has-addons' }, this.list.map(item => {
-      return item.componentOptions.tag === 'VbButtonAddons'
-        ? item
-        : h('p', { 'class': 'control' },[item])
-    }))
+  render(h) {
+    return h(
+      'control',
+      { class: 'has-addons' },
+      this.list.map(item => {
+        return item.componentOptions.tag === 'VbButtonAddons'
+          ? item
+          : h('p', { class: 'control' }, [item])
+      })
+    )
   },
   computed: {
-    list () {
+    list() {
       return this.$slots.default || []
     }
   }

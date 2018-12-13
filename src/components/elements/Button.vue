@@ -42,7 +42,15 @@ export default {
   },
   computed: {
     classes() {
-      const { color, size, outlined, inverted, state, fullwidth, rounded } = this
+      const {
+        color,
+        size,
+        outlined,
+        inverted,
+        state,
+        fullwidth,
+        rounded
+      } = this
       const obj = {
         button: true,
         [`is-${color}`]: !!color,
