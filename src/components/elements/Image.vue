@@ -55,7 +55,7 @@ export default {
       return obj
     },
     imgClasses() {
-      const { rounded} = this
+      const { rounded } = this
       const obj = {
         'is-rounded': rounded
       }
@@ -67,5 +67,5 @@ export default {
 
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/elements/image.sass';
+@import '~bulma/sass/elements/image';
 </style>

@@ -10,11 +10,7 @@ export default {
   props: {
     align: {
       type: String,
-      validator: value =>
-        [
-          'centered',
-          'right',
-        ].includes(value)
+      validator: value => ['centered', 'right'].includes(value)
     },
     type: {
       type: String,
@@ -25,9 +21,9 @@ export default {
     classes() {
       const { align, type } = this
       const obj = {
-        buttons:true,
+        buttons: true,
         [`is-${align}`]: !!align,
-        [`has-${type}`]: !!type,
+        [`has-${type}`]: !!type
       }
       return obj
     }

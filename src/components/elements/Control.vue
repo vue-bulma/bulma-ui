@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "VbControl",
+  name: 'VbControl'
 }
 </script>
 

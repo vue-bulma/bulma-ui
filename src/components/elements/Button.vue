@@ -1,5 +1,8 @@
 <template>
-  <a :class="classes" :disabled="disabled">
+  <a
+    :class="classes"
+    :disabled="disabled"
+  >
     <slot></slot>
   </a>
 </template>

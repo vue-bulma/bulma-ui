@@ -10,6 +10,9 @@ import Image from './components/elements/Image'
 import Note from './components/elements/Notification'
 import Progress from './components/elements/ProgressBar'
 import Table from './components/elements/Table'
+import Tag from './components/elements/Tag'
+import TagAddons from './components/elements/TagAddons'
+import Title from './components/elements/Title'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
@@ -28,6 +31,9 @@ const components = [
   Note,
   Progress,
   Table,
+  Tag,
+  TagAddons,
+  Title,
   Input,
   Textarea,
   Select,

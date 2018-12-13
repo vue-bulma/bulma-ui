@@ -42,14 +42,24 @@ export default new Router({
       component: () => import('./components/elements/Notification')
     },
     {
-      path: '/elements/Progress',
+      path: '/elements/progress',
       name: 'ProgressBar',
       component: () => import('./components/elements/Progress')
     },
     {
-      path: '/elements/Table',
+      path: '/elements/table',
       name: 'Table',
       component: () => import('./components/elements/Table')
+    },
+    {
+      path: '/elements/tag',
+      name: 'Tag',
+      component: () => import('./components/elements/Tag')
+    },
+    {
+      path: '/elements/title',
+      name: 'Title',
+      component: () => import('./components/elements/Title')
     },
     {
       path: '/form/input',

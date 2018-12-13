@@ -1,13 +1,12 @@
 <template>
-  <div :class="classes">
-    <button class="delete"></button>
+  <span :class="classes">
     <slot></slot>
-  </div>
+  </span>
 </template>
 
 <script>
 export default {
-  name: 'VbNotification',
+  name: 'VbTag',
   props: {
     color: {
       type: String,
@@ -24,14 +23,23 @@ export default {
           'black',
           'link'
         ].includes(value)
-    }
+    },
+    size: {
+      type: String,
+      validator: value => ['normal', 'medium', 'large'].includes(value)
+    },
+    rounded: Boolean,
+    del: Boolean
   },
   computed: {
     classes() {
-      const { color } = this
+      const { color, size, rounded, del } = this
       const obj = {
-        notification: true,
-        [`is-${color}`]: !!color
+        tag: true,
+        [`is-${color}`]: !!color,
+        [`is-${size}`]: !!size,
+        'is-rounded': rounded,
+        'is-delete': del
       }
       return obj
     }
@@ -41,6 +49,5 @@ export default {
 
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/elements/button';
-@import '~bulma/sass/elements/notification';
+@import '~bulma/sass/elements/tag.sass';
 </style>

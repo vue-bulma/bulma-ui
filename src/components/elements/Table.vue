@@ -125,7 +125,7 @@ export default {
       type: String,
       validator: value => ['small', 'medium', 'large'].includes(value)
     },
-    showHeader:Boolean
+    showHeader: Boolean
   },
   computed: {
     classes() {
