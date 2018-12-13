@@ -9,20 +9,38 @@
     <span id="colors" class="title">Colors:</span>
 
     <vb-box>
-      <vb-input color="primary" placeholder="Primary" />
-      <vb-input color="info" placeholder="Info" />
-      <vb-input color="success" placeholder="Success" />
-      <vb-input color="warning" placeholder="Warning" />
-      <vb-input color="danger" placeholder="Danger" />
+      <div class="field">
+        <vb-input color="primary" placeholder="Primary" />
+      </div>
+      <div class="field">
+        <vb-input color="info" placeholder="Info" />
+      </div>
+      <div class="field">
+        <vb-input color="success" placeholder="Success" />
+      </div>
+      <div class="field">
+        <vb-input color="warning" placeholder="Warning" />
+      </div>
+      <div class="field">
+        <vb-input color="danger" placeholder="Danger" />
+      </div>
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>
 
     <vb-box>
-      <vb-input size="small" placeholder="Small" />
-      <vb-input placeholder="Normal" />
-      <vb-input size="medium" placeholder="Medium" />
-      <vb-input size="large" placeholder="Large" />
+      <div class="field">
+        <vb-input size="small" placeholder="Small" />
+      </div>
+      <div class="field">
+        <vb-input placeholder="Normal" />
+      </div>
+      <div class="field">
+        <vb-input size="medium" placeholder="Medium" />
+      </div>
+      <div class="field">
+        <vb-input size="large" placeholder="Large" />
+      </div>
     </vb-box>
 
     <span id="styles" class="title">Styles:</span>
@@ -34,13 +52,27 @@
     <span id="states" class="title">States:</span>
 
     <vb-box>
-      <vb-input placeholder="Normal" />
-      <vb-input state="hovered" placeholder="Hovered" />
-      <vb-input state="focused" placeholder="Focus" />
-      <vb-input placeholder="Loading" loading />
-      <vb-input placeholder="Disabled" disabled />
-      <vb-input value="This text is readonly" placeholder="Disabled" readonly />
-      <vb-input value="Static: me@example.com" static readonly />
+      <div class="field">
+        <vb-input placeholder="Normal" />
+      </div>
+      <div class="field">
+        <vb-input state="hovered" placeholder="Hovered" />
+      </div>
+      <div class="field">
+        <vb-input state="focused" placeholder="Focus" />
+      </div>
+      <div class="field">
+        <vb-input placeholder="Loading" loading />
+      </div>
+      <div class="field">
+        <vb-input placeholder="Disabled" disabled />
+      </div>
+      <div class="field">
+        <vb-input value="This text is readonly" placeholder="Disabled" readonly />
+      </div>
+      <div class="field">
+        <vb-input value="Static: me@example.com" static readonly />
+      </div>
     </vb-box>
 
     <span id="icons" class="title">With Font Awesome icons:</span>

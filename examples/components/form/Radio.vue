@@ -55,11 +55,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.box {
-  :not(:last-child) {
-    margin: 0;
-  }
-}
 .radio + .radio {
   margin-left: 1.5rem;
 }

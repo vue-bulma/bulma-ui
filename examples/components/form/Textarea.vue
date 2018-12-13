@@ -3,41 +3,76 @@
     <span id="basic" class="title">Basic:</span>
 
     <vb-box>
-      <vb-textarea placeholder="Basic" />
-    </vb-box>
-    <vb-box>
-      <vb-textarea :rows="2" placeholder="2 lines of textarea" />
+      <div class="field">
+        <vb-textarea placeholder="Basic" />
+      </div>
+
+      <div class="field">
+        <vb-textarea :rows="2" placeholder="2 lines of textarea" />
+      </div>
     </vb-box>
 
     <span id="color" class="title">Colors:</span>
 
     <vb-box>
-      <vb-textarea color="primary" :rows="2" placeholder="Primary" />
-      <vb-textarea color="info" :rows="2" placeholder="Info" />
-      <vb-textarea color="success" :rows="2" placeholder="Success" />
-      <vb-textarea color="warning" :rows="2" placeholder="Warning" />
-      <vb-textarea color="danger" :rows="2" placeholder="Danger" />
+      <div class="field">
+        <vb-textarea color="primary" :rows="2" placeholder="Primary" />
+      </div>
+      <div class="field">
+        <vb-textarea color="info" :rows="2" placeholder="Info" />
+      </div>
+      <div class="field">
+        <vb-textarea color="success" :rows="2" placeholder="Success" />
+      </div>
+      <div class="field">
+        <vb-textarea color="warning" :rows="2" placeholder="Warning" />
+      </div>
+      <div class="field">
+        <vb-textarea color="danger" :rows="2" placeholder="Danger" />
+      </div>
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>
 
     <vb-box>
-      <vb-textarea size="small" :rows="2" placeholder="Small" />
-      <vb-textarea :rows="2" placeholder="Normal" />
-      <vb-textarea size="medium" :rows="2" placeholder="Medium" />
-      <vb-textarea size="large" :rows="2" placeholder="Large" loading />
+      <div class="field">
+        <vb-textarea size="small" :rows="2" placeholder="Small" />
+      </div>
+      <div class="field">
+        <vb-textarea :rows="2" placeholder="Normal" />
+      </div>
+      <div class="field">
+        <vb-textarea size="medium" :rows="2" placeholder="Medium" />
+      </div>
+      <div class="field">
+        <vb-textarea size="large" :rows="2" placeholder="Large" loading />
+      </div>
     </vb-box>
 
     <span id="states" class="title">States:</span>
 
     <vb-box>
-      <vb-textarea placeholder="Normal" :rows="2" />
-      <vb-textarea placeholder="Hover" state="hovered" :rows="2" />
-      <vb-textarea placeholder="Focus" state="focused" :rows="2" />
-      <vb-textarea placeholder="Loading" loading :rows="2" />
-      <vb-textarea placeholder="Disabled" disabled :rows="2" />
-      <vb-textarea value="Read only" readonly :rows="2" />
-      <vb-textarea placeholder="Fixed Size" :resize="false" :rows="2" />
+      <div class="field">
+        <vb-textarea placeholder="Normal" :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea placeholder="Hover" state="hovered" :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea placeholder="Focus" state="focused" :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea placeholder="Loading" loading :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea placeholder="Disabled" disabled :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea value="Read only" readonly :rows="2" />
+      </div>
+      <div class="field">
+        <vb-textarea placeholder="Fixed Size" :resize="false" :rows="2" />
+      </div>
     </vb-box>
 
     <span id="events" class="title">Events:</span>
@@ -71,13 +106,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.container {
-  .box {
-    :not(:last-child) {
-      margin-right: 0;
-    }
-  }
-}
-</style>

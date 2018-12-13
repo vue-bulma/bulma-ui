@@ -31,26 +31,36 @@
     <span id="colors" class="title">Colors:</span>
 
     <vb-box>
-      <vb-select color="primary" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select color="info" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select color="success" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select color="warning" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select color="danger" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
+      <div class="field">
+        <vb-select color="primary" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="info" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="success" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="warning" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="danger" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
     </vb-box>
 
     <span id="styles" class="title">Styles:</span>
@@ -65,64 +75,88 @@
     <span id="sizes" class="title">Sizes:</span>
 
     <vb-box>
-      <vb-select size="small" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select size="medium" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select size="large" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
+      <div class="field">
+        <vb-select size="small" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select size="medium" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select size="large" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
     </vb-box>
 
     <span id="states" class="title">States:</span>
 
     <vb-box>
-      <vb-select :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select state="hovered" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select state="focused" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select loading :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
+      <div class="field">
+        <vb-select :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select state="hovered" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select state="focused" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select loading :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
     </vb-box>
 
     <span id="icons" class="title">With icons:</span>
 
     <vb-box>
-      <vb-select size="small" prefix="fa fa-home" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select prefix="fa fa-home" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select size="medium" prefix="fa fa-home" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-      <vb-select size="large" prefix="fa fa-home" :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
+      <div class="field">
+        <vb-select size="small" prefix="fa fa-home" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select prefix="fa fa-home" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select size="medium" prefix="fa fa-home" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select size="large" prefix="fa fa-home" :value="model">
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
     </vb-box>
 
     <span id="events" class="title">Events:</span>
@@ -181,9 +215,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-option:not(:last-child) {
-  margin: 0 !important;
-}
-</style>
