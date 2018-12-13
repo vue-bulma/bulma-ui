@@ -78,7 +78,7 @@
         <vb-tag del></vb-tag>
       </vb-tags>
     </vb-box>
-     <span
+    <span
       id="TagsAddons"
       class="title"
     >Tags Addons:</span>
@@ -105,4 +105,3 @@ export default {
   display: flex !important;
 }
 </style>
-

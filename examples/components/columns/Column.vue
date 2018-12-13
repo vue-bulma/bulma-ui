@@ -648,11 +648,15 @@
       class="title"
     >Multiline and Centering:</span>
     <vb-box>
-      <vb-cols view="mobile" align="centered" multiline>
+      <vb-cols
+        view="mobile"
+        align="centered"
+        multiline
+      >
         <vb-col narrow>
           <p class="bg bg-primary">First Column</p>
         </vb-col>
-       <vb-col narrow>
+        <vb-col narrow>
           <p class="bg bg-primary">Our Second Column</p>
         </vb-col>
         <vb-col narrow>
@@ -712,4 +716,3 @@ export default {
   margin-right: 0;
 }
 </style>
-

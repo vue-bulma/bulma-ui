@@ -9,8 +9,7 @@ export default {
     color: {
       type: String,
       validator(value) {
-        return
-        ;[
+        return [
           'primary',
           'info',
           'success',
