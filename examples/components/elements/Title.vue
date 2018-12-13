@@ -87,4 +87,3 @@ export default {
   margin-bottom: 1em !important;
 }
 </style>
-

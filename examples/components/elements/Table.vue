@@ -5,7 +5,7 @@
       type="title"
     >Basic:</vb-title>
     <vb-box>
-      <vb-table >
+      <vb-table>
         <div showHeader></div>
       </vb-table>
     </vb-box>
@@ -18,4 +18,3 @@ export default {
   name: 'TableExamples'
 }
 </script>
-
