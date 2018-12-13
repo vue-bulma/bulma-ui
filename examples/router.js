@@ -95,6 +95,11 @@ export default new Router({
       path: '/form/file',
       name: 'File',
       component: () => import('./components/form/File')
+    },
+    {
+      path: '/components/breadcrumb',
+      name: 'Breadcrumb',
+      component: () => import('./components/components/Breadcrumb')
     }
   ]
 })

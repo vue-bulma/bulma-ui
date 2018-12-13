@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "npm": "^6.5.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {
