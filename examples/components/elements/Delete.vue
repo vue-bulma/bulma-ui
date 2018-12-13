@@ -1,28 +1,30 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-delete></vb-delete>
     </vb-box>
-    <span
+    <vb-title
       id="size"
-      class="title"
-    >Size:</span>
+      type="title"
+    >Size:</vb-title>
     <vb-box>
       <vb-delete size="small"></vb-delete>
       <vb-delete></vb-delete>
       <vb-delete size="medium"></vb-delete>
       <vb-delete size="large"></vb-delete>
     </vb-box>
-    <span
+    <vb-title
       id="Combinations"
-      class="title"
-    >Combinations:</span>
+      type="title"
+    >Combinations:</vb-title>
     <vb-box>
 
+      <vb-tag color="danger"> Hello World <vb-delete size="small"></vb-delete>
+      </vb-tag>
     </vb-box>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-notification>
         <vb-delete></vb-delete>
@@ -12,10 +12,10 @@
         consectetur adipiscing elit
       </vb-notification>
     </vb-box>
-    <span
+    <vb-title
       id="Colors"
-      class="title"
-    >Colors:</span>
+      type="title"
+    >Colors:</vb-title>
     <vb-box class="box-background">
       <vb-notification color="primary">
         <vb-delete></vb-delete>

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-cols>
         <vb-col>
@@ -20,10 +20,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Sizes"
-      class="title"
-    >Sizes:</span>
+      type="title"
+    >Sizes:</vb-title>
     <vb-box class="size">
       <vb-cols>
         <vb-col size='1'>
@@ -388,10 +388,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Offset"
-      class="title"
-    >Offset:</span>
+      type="title"
+    >Offset:</vb-title>
     <vb-box>
       <vb-cols>
         <vb-col
@@ -426,10 +426,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Narrow"
-      class="title"
-    >Narrow:</span>
+      type="title"
+    >Narrow:</vb-title>
     <vb-box>
       <vb-cols>
         <vb-col narrow>
@@ -442,10 +442,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="MobileColumns"
-      class="title"
-    >Mobile columns:</span>
+      type="title"
+    >Mobile columns:</vb-title>
     <vb-box>
       <vb-cols view="mobile">
         <vb-col>
@@ -462,10 +462,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="DesktopColumns"
-      class="title"
-    >Desktop columns:</span>
+      type="title"
+    >Desktop columns:</vb-title>
     <vb-box>
       <vb-cols view="desktop">
         <vb-col>
@@ -482,10 +482,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Breakpoint"
-      class="title"
-    >Different column sizes per breakpoint:</span>
+      type="title"
+    >Different column sizes per breakpoint:</vb-title>
     <vb-box>
       <vb-cols view="mobile">
         <vb-col
@@ -512,10 +512,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Nesting"
-      class="title"
-    >Nesting:</span>
+      type="title"
+    >Nesting:</vb-title>
     <vb-box>
       <vb-cols>
         <vb-col>
@@ -531,10 +531,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Gapless"
-      class="title"
-    >Gapless:</span>
+      type="title"
+    >Gapless:</vb-title>
     <vb-box>
       <vb-cols gapType="gapless">
         <vb-col>
@@ -545,10 +545,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Variable"
-      class="title"
-    >Variable gap:</span>
+      type="title"
+    >Variable gap:</vb-title>
     <vb-tags>
       <vb-tag
         v-for="(value,index) in values"
@@ -569,10 +569,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Breakpoint"
-      class="title"
-    >Breakpoint based column gaps:</span>
+      type="title"
+    >Breakpoint based column gaps:</vb-title>
     <vb-box>
       <vb-cols
         gapType="variable"
@@ -590,10 +590,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Align"
-      class="title"
-    >Vertical alignment:</span>
+      type="title"
+    >Vertical alignment:</vb-title>
     <vb-box>
       <vb-cols align="vcentered">
         <vb-col size="8">
@@ -604,10 +604,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Align"
-      class="title"
-    >Centering columns:</span>
+      type="title"
+    >Centering columns:</vb-title>
     <vb-box>
       <vb-cols align="centered">
         <vb-col size="8">
@@ -623,10 +623,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Multiline"
-      class="title"
-    >Multiline:</span>
+      type="title"
+    >Multiline:</vb-title>
     <vb-box>
       <vb-cols multiline>
         <vb-col size="8">
@@ -643,10 +643,10 @@
         </vb-col>
       </vb-cols>
     </vb-box>
-    <span
+    <vb-title
       id="Multiline"
-      class="title"
-    >Multiline and Centering:</span>
+      type="title"
+    >Multiline and Centering:</vb-title>
     <vb-box>
       <vb-cols
         view="mobile"

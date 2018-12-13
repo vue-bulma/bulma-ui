@@ -1,73 +1,81 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-tag>Tag label</vb-tag>
     </vb-box>
-    <span
+    <vb-title
       id="Colors"
-      class="title"
-    >Colors:</span>
+      type="title"
+    >Colors:</vb-title>
     <vb-box>
-      <vb-tag color="black">Tag label</vb-tag>
-      <vb-tag color="dark">Tag label</vb-tag>
-      <vb-tag color="light">Tag label</vb-tag>
-      <vb-tag color="white">Tag label</vb-tag>
-      <vb-tag color="primary">Tag label</vb-tag>
-      <vb-tag color="link">Tag label</vb-tag>
-      <vb-tag color="info">Tag label</vb-tag>
-      <vb-tag color="success">Tag label</vb-tag>
-      <vb-tag color="warning">Tag label</vb-tag>
-      <vb-tag color="danger">Tag label</vb-tag>
+      <vb-tags>
+        <vb-tag color="black">Tag label</vb-tag>
+        <vb-tag color="dark">Tag label</vb-tag>
+        <vb-tag color="light">Tag label</vb-tag>
+        <vb-tag color="white">Tag label</vb-tag>
+        <vb-tag color="primary">Tag label</vb-tag>
+        <vb-tag color="link">Tag label</vb-tag>
+        <vb-tag color="info">Tag label</vb-tag>
+        <vb-tag color="success">Tag label</vb-tag>
+        <vb-tag color="warning">Tag label</vb-tag>
+        <vb-tag color="danger">Tag label</vb-tag>
+      </vb-tags>
     </vb-box>
-    <span
+    <vb-title
       id="Sizes"
-      class="title"
-    >Sizes:</span>
+      type="title"
+    >Sizes:</vb-title>
     <vb-box>
-      <vb-tag>Tag label</vb-tag>
-      <vb-tag size="medium">Tag label</vb-tag>
-      <vb-tag size='large'>Tag label</vb-tag>
+      <vb-tags>
+        <vb-tag>Tag label</vb-tag>
+        <vb-tag size="medium">Tag label</vb-tag>
+        <vb-tag size='large'>Tag label</vb-tag>
+      </vb-tags>
     </vb-box>
-    <span
+    <vb-title
       id="Modifiers"
-      class="title"
-    >Modifiers:</span>
+      type="title"
+    >Modifiers:</vb-title>
     <vb-box class="box-display">
-      <vb-tag rounded>Tag label</vb-tag>
-      <vb-tag del></vb-tag>
+      <vb-tags>
+        <vb-tag rounded>Tag label</vb-tag>
+        <vb-tag del></vb-tag>
+      </vb-tags>
     </vb-box>
-    <span
+    <vb-title
       id="Combinations"
-      class="title"
-    >Combinations:</span>
+      type="title"
+    >Combinations:</vb-title>
     <vb-box>
-      <vb-tag color="success">
-        Bar
-        <vb-delete size="small"></vb-delete>
-      </vb-tag>
-      <vb-tag
-        color="warning"
-        size='medium'
-      >
-        Bar
-        <vb-delete size="small"></vb-delete>
-      </vb-tag>
-      <vb-tag
-        color="danger"
-        size='large'
-      >
-        Bar
-        <vb-delete></vb-delete>
-      </vb-tag>
+      <vb-tags>
+        <vb-tag color="success">
+          Bar
+          <vb-delete size="small"></vb-delete>
+        </vb-tag>
+        <vb-tag
+          color="warning"
+          size='medium'
+        >
+          Bar
+          <vb-delete size="small"></vb-delete>
+        </vb-tag>
+        <vb-tag
+          color="danger"
+          size='large'
+        >
+          Bar
+          <vb-delete></vb-delete>
+        </vb-tag>
+      </vb-tags>
     </vb-box>
-    <span
+    <vb-title
       id="Tags"
-      class="title"
-    >Tags:</span>
+      type="title"
+    >Tags:</vb-title>
     <vb-box>
       <vb-tags>
         <vb-tag color="primary">Vue</vb-tag>
@@ -78,10 +86,10 @@
         <vb-tag del></vb-tag>
       </vb-tags>
     </vb-box>
-    <span
+    <vb-title
       id="TagsAddons"
-      class="title"
-    >Tags Addons:</span>
+      type="title"
+    >Tags Addons:</vb-title>
     <vb-box>
       <vb-tags addons>
         <vb-tag color="primary">Vue</vb-tag>

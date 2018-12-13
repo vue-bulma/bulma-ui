@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="type"
-      class="title"
-    >Attribute value type:</span>
+      type="title"
+    >Attribute value type:</vb-title>
     <vb-box>
       <vb-content>
         <ol type="1">
@@ -33,10 +33,10 @@
         </ol>
       </vb-content>
     </vb-box>
-    <span
+    <vb-title
       id="class"
-      class="title"
-    >CSS modifier classes:</span>
+      type="title"
+    >CSS modifier classes:</vb-title>
     <vb-box>
       <vb-content>
         <ol class="is-lower-alpha">
@@ -61,10 +61,10 @@
         </ol>
       </vb-content>
     </vb-box>
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-content>
         <h1>Hello World</h1>
@@ -79,10 +79,10 @@
         </ul>
       </vb-content>
     </vb-box>
-    <span
+    <vb-title
       id="size"
-      class="title"
-    >Size:</span>
+      type="title"
+    >Size:</vb-title>
     <vb-box>
       <vb-content size="small">
         <h1>Hello World</h1>

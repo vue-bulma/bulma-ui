@@ -1,185 +1,201 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
 
     <vb-box>
       <vb-button>Button</vb-button>
     </vb-box>
 
-    <span
+    <vb-title
       id="colors"
-      class="title"
-    >Colors:</span>
+      type="title"
+    >Colors:</vb-title>
 
     <vb-box>
-      <vb-button color="primary">Primary</vb-button>
-      <vb-button color="link">Link</vb-button>
-      <vb-button color="info">Info</vb-button>
-      <vb-button color="success">Success</vb-button>
-      <vb-button color="warning">Warning</vb-button>
-      <vb-button color="danger">Danger</vb-button>
+      <vb-buttons-List>
+        <vb-button color="primary">Primary</vb-button>
+        <vb-button color="link">Link</vb-button>
+        <vb-button color="info">Info</vb-button>
+        <vb-button color="success">Success</vb-button>
+        <vb-button color="warning">Warning</vb-button>
+        <vb-button color="danger">Danger</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
     <vb-box>
-      <vb-button color="white">White</vb-button>
-      <vb-button color="light">Light</vb-button>
-      <vb-button color="dark">Dark</vb-button>
-      <vb-button color="black">Black</vb-button>
-      <vb-button color="text">Text</vb-button>
+      <vb-buttons-List>
+        <vb-button color="white">White</vb-button>
+        <vb-button color="light">Light</vb-button>
+        <vb-button color="dark">Dark</vb-button>
+        <vb-button color="black">Black</vb-button>
+        <vb-button color="text">Text</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
-    <span
+    <vb-title
       id="sizes"
-      class="title"
-    >Sizes:</span>
+      type="title"
+    >Sizes:</vb-title>
 
     <vb-box>
-      <vb-button size="small">Small</vb-button>
-      <vb-button>Default</vb-button>
-      <vb-button size="normal">Normal</vb-button>
-      <vb-button size="medium">Medium</vb-button>
-      <vb-button size="large">Large</vb-button>
+      <vb-buttons-List>
+        <vb-button size="small">Small</vb-button>
+        <vb-button>Default</vb-button>
+        <vb-button size="normal">Normal</vb-button>
+        <vb-button size="medium">Medium</vb-button>
+        <vb-button size="large">Large</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
-    <span
+    <vb-title
       id="displays"
-      class="title"
-    >Displays:</span>
+      type="title"
+    >Displays:</vb-title>
 
     <vb-box>
       <vb-button fullwidth>Fullwidth</vb-button>
     </vb-box>
 
-    <span
+    <vb-title
       id="styles"
-      class="title"
-    >Styles:</span>
+      type="title"
+    >Styles:</vb-title>
 
     <vb-box>
-      <vb-button outlined>Outlined</vb-button>
-      <vb-button
-        color="primary"
-        outlined
-      >primary</vb-button>
-      <vb-button
-        color="link"
-        outlined
-      >link</vb-button>
-      <vb-button
-        color="info"
-        outlined
-      >Info</vb-button>
-      <vb-button
-        color="warning"
-        outlined
-      >Warning</vb-button>
-      <vb-button
-        color="success"
-        outlined
-      >Success</vb-button>
-      <vb-button
-        color="danger"
-        outlined
-      >Danger</vb-button>
+      <vb-buttons-List>
+        <vb-button outlined>Outlined</vb-button>
+        <vb-button
+          color="primary"
+          outlined
+        >primary</vb-button>
+        <vb-button
+          color="link"
+          outlined
+        >link</vb-button>
+        <vb-button
+          color="info"
+          outlined
+        >Info</vb-button>
+        <vb-button
+          color="warning"
+          outlined
+        >Warning</vb-button>
+        <vb-button
+          color="success"
+          outlined
+        >Success</vb-button>
+        <vb-button
+          color="danger"
+          outlined
+        >Danger</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
     <vb-box class="button-invert">
-      <vb-button
-        color="primary"
-        inverted
-        outlined
-      >Invert Outlined</vb-button>
-      <vb-button
-        color="link"
-        inverted
-        outlined
-      >Invert Outlined</vb-button>
-      <vb-button
-        color="info"
-        inverted
-        outlined
-      >Invert Outlined</vb-button>
-      <vb-button
-        color="success"
-        inverted
-        outlined
-      >Invert Outlined</vb-button>
-      <vb-button
-        color="danger"
-        inverted
-        outlined
-      >Invert Outlined</vb-button>
+      <vb-buttons-List>
+        <vb-button
+          color="primary"
+          inverted
+          outlined
+        >Invert Outlined</vb-button>
+        <vb-button
+          color="link"
+          inverted
+          outlined
+        >Invert Outlined</vb-button>
+        <vb-button
+          color="info"
+          inverted
+          outlined
+        >Invert Outlined</vb-button>
+        <vb-button
+          color="success"
+          inverted
+          outlined
+        >Invert Outlined</vb-button>
+        <vb-button
+          color="danger"
+          inverted
+          outlined
+        >Invert Outlined</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
-    <span
+    <vb-title
       id="rounded"
-      class="title"
-    >Rounded:</span>
+      type="title"
+    >Rounded:</vb-title>
 
     <vb-box>
-      <vb-button rounded>Outlined</vb-button>
-      <vb-button
-        color="primary"
-        rounded
-      >Rounded</vb-button>
-      <vb-button
-        color="link"
-        rounded
-      >Rounded</vb-button>
-      <vb-button
-        color="info"
-        rounded
-      >Rounded</vb-button>
-      <vb-button
-        color="success"
-        rounded
-      >Rounded</vb-button>
-      <vb-button
-        color="danger"
-        rounded
-      >Rounded</vb-button>
+      <vb-buttons-List>
+        <vb-button rounded>Outlined</vb-button>
+        <vb-button
+          color="primary"
+          rounded
+        >Rounded</vb-button>
+        <vb-button
+          color="link"
+          rounded
+        >Rounded</vb-button>
+        <vb-button
+          color="info"
+          rounded
+        >Rounded</vb-button>
+        <vb-button
+          color="success"
+          rounded
+        >Rounded</vb-button>
+        <vb-button
+          color="danger"
+          rounded
+        >Rounded</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
-    <span
+    <vb-title
       id="states"
-      class="title"
-    >States:</span>
+      type="title"
+    >States:</vb-title>
 
     <vb-box>
-      <vb-button state="hovered">Hover</vb-button>
-      <vb-button state="focused">Focus</vb-button>
-      <vb-button state="active">Active</vb-button>
-      <vb-button state="loading">Loading</vb-button>
-      <vb-button state="static">Static</vb-button>
+      <vb-buttons-List>
+        <vb-button state="hovered">Hover</vb-button>
+        <vb-button state="focused">Focus</vb-button>
+        <vb-button state="active">Active</vb-button>
+        <vb-button state="loading">Loading</vb-button>
+        <vb-button state="static">Static</vb-button>
+      </vb-buttons-List>
     </vb-box>
 
-    <span
+    <vb-title
       id="disabled"
-      class="title"
-    >Disabled:</span>
+      type="title"
+    >Disabled:</vb-title>
     <vb-box>
       <vb-button disabled>Disable</vb-button>
     </vb-box>
-    <span
+    <vb-title
       id="icons"
-      class="title"
-    >With Font Awesome icons:</span>
+      type="title"
+    >With Font Awesome icons:</vb-title>
     <vb-box class="button-icon">
-      <vb-button>
-        <vb-icon name="fa fa-home"></vb-icon>
-      </vb-button>
-      <vb-button>
-        <vb-icon name="fa fa-home"></vb-icon>
-        <span>home</span>
-      </vb-button>
+      <vb-buttons-List>
+        <vb-button>
+          <vb-icon name="fa fa-home"></vb-icon>
+        </vb-button>
+        <vb-button>
+          <vb-icon name="fa fa-home"></vb-icon>
+          <vb-title>home</vb-title>
+        </vb-button>
+      </vb-buttons-List>
     </vb-box>
-    <span
+    <vb-title
       id="group"
-      class="title"
-    >Button group:</span>
+      type="title"
+    >Button group:</vb-title>
     <vb-box>
       <vb-button-group>
         <vb-button color="primary">Save</vb-button>
@@ -187,30 +203,30 @@
         <vb-button color="danger">Delete</vb-button>
       </vb-button-group>
     </vb-box>
-    <span
+    <vb-title
       id="addons"
-      class="title"
-    >Button addons:</span>
+      type="title"
+    >Button addons:</vb-title>
     <vb-box class="button-icon">
       <vb-button-addons>
         <vb-button>
           <vb-icon name="fa fa-align-left"></vb-icon>
-          <span>left</span>
+          <vb-title>left</vb-title>
         </vb-button>
         <vb-button>
           <vb-icon name="fa fa-align-center"></vb-icon>
-          <span>center</span>
+          <vb-title>center</vb-title>
         </vb-button>
         <vb-button>
           <vb-icon name="fa fa-align-right"></vb-icon>
-          <span>right</span>
+          <vb-title>right</vb-title>
         </vb-button>
       </vb-button-addons>
     </vb-box>
-    <span
+    <vb-title
       id="ButtonsList"
-      class="title"
-    >Buttons List:</span>
+      type="title"
+    >Buttons List:</vb-title>
     <vb-box>
       <vb-buttons-List>
         <vb-button>
@@ -224,10 +240,10 @@
         </vb-button>
       </vb-buttons-List>
     </vb-box>
-    <span
+    <vb-title
       id="ButtonsListAddons"
-      class="title"
-    >Buttons List addons:</span>
+      type="title"
+    >Buttons List addons:</vb-title>
     <vb-box>
       <vb-buttons-List type="addons">
         <vb-button color="success">
@@ -287,6 +303,6 @@ export default {
   background-color: #00d1b2;
 }
 .button-icon :not(:last-child) {
-  margin-bottom: 0;
+  // margin-bottom: 0;
 }
 </style>

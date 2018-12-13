@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-image
         path="https://bulma.io/images/placeholders/128x128.png"
         size="128x128"
       ></vb-image>
     </vb-box>
-    <span
+    <vb-title
       id="Type"
-      class="title"
-    >Type:</span>
+      type="title"
+    >Type:</vb-title>
     <vb-box>
       <vb-image
         path="https://bulma.io/images/placeholders/128x128.png"
@@ -21,10 +21,10 @@
         rounded
       ></vb-image>
     </vb-box>
-    <span
+    <vb-title
       id="Size"
-      class="title"
-    >Size:</span>
+      type="title"
+    >Size:</vb-title>
     <vb-box>
       <vb-image
         path="https://bulma.io/images/placeholders/128x128.png"
@@ -55,10 +55,10 @@
         size="128x128"
       ></vb-image>
     </vb-box>
-    <span
+    <vb-title
       id="Ratios"
-      class="title"
-    >Responsive images with ratios:</span>
+      type="title"
+    >Responsive images with ratios:</vb-title>
     <vb-box>
       <vb-image
         path="https://bulma.io/images/placeholders/480x480.png"

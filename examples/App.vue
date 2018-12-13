@@ -33,5 +33,11 @@ export default {
     font-size: 1.5rem;
     font-weight: 400;
   }
+  .box {
+    :not(:last-child) {
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 </style>

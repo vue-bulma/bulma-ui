@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-icon class="icon-background" name="fa fa-home"></vb-icon>
     </vb-box>
-     <span
+     <vb-title
       id="Colors"
-      class="title"
-    >Colors:</span>
+      type="title"
+    >Colors:</vb-title>
     <vb-box class="box-background">
       <vb-icon class="icon-background" name="fa fa-home" color="primary"></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" color="info"></vb-icon>
@@ -23,30 +23,30 @@
       <vb-icon class="icon-background" name="fa fa-home" color="black"></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" color="link"></vb-icon>
     </vb-box>
-       <span
+       <vb-title
       id="Sizes"
-      class="title"
-    >Container Sizes:</span>
+      type="title"
+    >Container Sizes:</vb-title>
     <vb-box>
       <vb-icon class="icon-background" name="fa fa-home" size="small" ></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" ></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" size="medium" ></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" size="large" ></vb-icon>
     </vb-box>
-           <span
+           <vb-title
       id="iconSize"
-      class="title"
-    >Icon Sizes:</span>
+      type="title"
+    >Icon Sizes:</vb-title>
     <vb-box class="iconSize-block">
       <vb-icon class="icon-background" name="fa fa-home" size="large"></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="lg"></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="2x"></vb-icon>
       <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="3x"></vb-icon>
     </vb-box>
-     <span
+     <vb-title
       id="Animated"
-      class="title"
-    >Animated:</span>
+      type="title"
+    >Animated:</vb-title>
     <vb-box class="iconSize-block">
       <vb-icon class="icon-background" name="fa fa-spinner" size="large" animated></vb-icon>
       <vb-icon class="icon-background" name="fa fa-refresh" size="large" animated></vb-icon>

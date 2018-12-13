@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box>
       <vb-progress></vb-progress>
     </vb-box>
-    <span
+    <vb-title
       id="Colors"
-      class="title"
-    >Colors and value:</span>
+      type="title"
+    >Colors and value:</vb-title>
     <vb-box>
       <vb-progress
         color="primary"
@@ -63,10 +63,10 @@
         max="100"
       ></vb-progress>
     </vb-box>
-    <span
+    <vb-title
       id="Sizes"
-      class="title"
-    >Sizes:</span>
+      type="title"
+    >Sizes:</vb-title>
     <vb-box>
       <vb-progress
         color="primary"

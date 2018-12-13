@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <span
+    <vb-title
       id="Basic"
-      class="title"
-    >Basic:</span>
+      type="title"
+    >Basic:</vb-title>
     <vb-box class="box-bottom">
       <vb-title type='title'>Title</vb-title>
       <vb-title type='subtitle'>Subtitle</vb-title>
     </vb-box>
-    <span
+    <vb-title
       id="Sizes"
-      class="title"
-    >Sizes:</span>
+      type="title"
+    >Sizes:</vb-title>
     <vb-box>
       <vb-title
         type='title'
@@ -63,10 +63,10 @@
         size='6'
       >Subtitle</vb-title>
     </vb-box>
-    <span
+    <vb-title
       id="Combinations"
-      class="title"
-    >Combinations:</span>
+      type="title"
+    >Combinations:</vb-title>
     <vb-box class="box-bottom">
       <vb-title
         type='title'
