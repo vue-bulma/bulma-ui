@@ -80,6 +80,11 @@ export default new Router({
       path: '/form/checkbox',
       name: 'Checkbox',
       component: () => import('./components/form/Checkbox')
+    },
+    {
+      path: '/form/radio',
+      name: 'Radio',
+      component: () => import('./components/form/Radio')
     }
   ]
 })

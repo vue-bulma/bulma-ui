@@ -17,6 +17,7 @@ import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
 import Checkbox from './components/form/Checkbox'
+import Radio from './components/form/Radio'
 
 const components = [
   Box,
@@ -37,7 +38,8 @@ const components = [
   Input,
   Textarea,
   Select,
-  Checkbox
+  Checkbox,
+  Radio
 ]
 
 const install = function(Vue) {
