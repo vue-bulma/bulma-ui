@@ -24,7 +24,7 @@
       id="Sizes"
       type="title"
     >Sizes:</vb-title>
-    <vb-box class="size">
+    <vb-box>
       <vb-cols>
         <vb-col size='1'>
           <p class="bg bg-primary">1</p>
@@ -706,13 +706,5 @@ export default {
 .bg-light {
   background-color: #f5f5f5;
   color: #000;
-}
-.main .box :not(:last-child) {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-.size .columns {
-  margin-left: 0;
-  margin-right: 0;
 }
 </style>
