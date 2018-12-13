@@ -1,6 +1,5 @@
 <template>
-  <div :class="classes">
-    <button class="delete"></button>
+  <div :class="classes"> 
     <slot></slot>
   </div>
 </template>
