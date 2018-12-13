@@ -11,7 +11,7 @@ import Note from './components/elements/Notification'
 import Progress from './components/elements/ProgressBar'
 import Table from './components/elements/Table'
 import Tag from './components/elements/Tag'
-import TagAddons from './components/elements/TagAddons'
+import Tags from './components/elements/Tags'
 import Title from './components/elements/Title'
 import Column from './components/columns/Column'
 import Columns from './components/columns/Columns'
@@ -37,7 +37,7 @@ const components = [
   Progress,
   Table,
   Tag,
-  TagAddons,
+  Tags,
   Title,
   Column,
   Columns,

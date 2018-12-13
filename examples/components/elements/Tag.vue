@@ -65,18 +65,32 @@
       </vb-tag>
     </vb-box>
     <span
-      id="Addons"
+      id="Tags"
       class="title"
-    >Tag Addons:</span>
+    >Tags:</span>
     <vb-box>
-      <vb-tag-addons>
+      <vb-tags>
         <vb-tag color="primary">Vue</vb-tag>
         <vb-tag color="dark">Bulma</vb-tag>
-      </vb-tag-addons>
-      <vb-tag-addons>
+      </vb-tags>
+      <vb-tags>
         <vb-tag color="danger">Vue</vb-tag>
         <vb-tag del></vb-tag>
-      </vb-tag-addons>
+      </vb-tags>
+    </vb-box>
+     <span
+      id="TagsAddons"
+      class="title"
+    >Tags Addons:</span>
+    <vb-box>
+      <vb-tags addons>
+        <vb-tag color="primary">Vue</vb-tag>
+        <vb-tag color="dark">Bulma</vb-tag>
+      </vb-tags>
+      <vb-tags addons>
+        <vb-tag color="danger">Vue</vb-tag>
+        <vb-tag del></vb-tag>
+      </vb-tags>
     </vb-box>
   </div>
 </template>

@@ -5,20 +5,7 @@
 </template>
 
 <script>
-const NUMERICAL = [
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '10',
-  '11',
-  '12'
-]
+const GAPS = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
 export default {
   name: 'VbCols',
   props: {
@@ -28,40 +15,46 @@ export default {
         return ['mobile', 'desktop'].includes(value)
       }
     },
-    gap: {
+    gapType: {
       type: String,
       validator(value) {
         return ['gapless', 'variable'].includes(value)
       }
     },
+    gap: {
+      type: String,
+      validator(value) {
+        return GAPS.includes(value)
+      }
+    },
     mobileGap: {
       type: String,
       validator(value) {
-        return NUMERICAL.includes(value)
+        return GAPS.includes(value)
       }
     },
     tabletGap: {
       type: String,
       validator(value) {
-        return NUMERICAL.includes(value)
+        return GAPS.includes(value)
       }
     },
     desktopGap: {
       type: String,
       validator(value) {
-        return NUMERICAL.includes(value)
+        return GAPS.includes(value)
       }
     },
     widescreenGap: {
       type: String,
       validator(value) {
-        return NUMERICAL.includes(value)
+        return GAPS.includes(value)
       }
     },
     fullhdGap: {
       type: String,
       validator(value) {
-        return NUMERICAL.includes(value)
+        return GAPS.includes(value)
       }
     },
     align: {
@@ -76,6 +69,7 @@ export default {
     classes() {
       const {
         view,
+        gapType,
         gap,
         mobileGap,
         tabletGap,
@@ -89,6 +83,7 @@ export default {
         columns: true,
         [`is-${view}`]: !!view,
         [`is-${gap}`]: !!gap,
+        [`is-${gapType}`]: !!gapType,
         [`is-${mobileGap}-mobile`]: !!mobileGap,
         [`is-${tabletGap}-tablet`]: !!tabletGap,
         [`is-${desktopGap}-desktop`]: !!desktopGap,

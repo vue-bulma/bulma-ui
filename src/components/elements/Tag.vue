@@ -1,5 +1,7 @@
 <template>
-  <span :class="classes">
+  <span
+    :class="classes"
+  >
     <slot></slot>
   </span>
 </template>
