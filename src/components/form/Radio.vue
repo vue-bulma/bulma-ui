@@ -28,7 +28,7 @@ export default {
     model: {}
   },
   methods: {
-    handleChange(event) {
+    handleChange() {
       this.$emit('change', this.value)
     },
     handleFocus(event) {

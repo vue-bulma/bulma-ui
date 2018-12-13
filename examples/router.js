@@ -85,6 +85,11 @@ export default new Router({
       path: '/form/radio',
       name: 'Radio',
       component: () => import('./components/form/Radio')
+    },
+    {
+      path: '/form/file',
+      name: 'File',
+      component: () => import('./components/form/File')
     }
   ]
 })
