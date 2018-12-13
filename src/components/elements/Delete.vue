@@ -10,7 +10,9 @@ export default {
   props: {
     size: {
       type: String,
-      validator: value => ['small', 'medium', 'large'].includes(value)
+      validator(value) {
+        return ['small', 'medium', 'large'].includes(value)
+      }
     }
   },
   computed: {

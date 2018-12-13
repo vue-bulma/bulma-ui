@@ -10,8 +10,8 @@ export default {
   props: {
     color: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return [
           'primary',
           'info',
           'success',
@@ -23,10 +23,13 @@ export default {
           'black',
           'link'
         ].includes(value)
+      }
     },
     size: {
       type: String,
-      validator: value => ['normal', 'medium', 'large'].includes(value)
+      validator(value) {
+        return ['normal', 'medium', 'large'].includes(value)
+      }
     },
     rounded: Boolean,
     del: Boolean

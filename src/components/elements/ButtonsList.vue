@@ -10,11 +10,15 @@ export default {
   props: {
     align: {
       type: String,
-      validator: value => ['centered', 'right'].includes(value)
+      validator(value) {
+        return ['centered', 'right'].includes(value)
+      }
     },
     type: {
       type: String,
-      validator: value => ['addons'].includes(value)
+      validator(value) {
+        return ['addons'].includes(value)
+      }
     }
   },
   computed: {

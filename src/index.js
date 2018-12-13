@@ -13,6 +13,8 @@ import Table from './components/elements/Table'
 import Tag from './components/elements/Tag'
 import TagAddons from './components/elements/TagAddons'
 import Title from './components/elements/Title'
+import Column from './components/columns/Column'
+import Columns from './components/columns/Columns'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
@@ -36,6 +38,8 @@ const components = [
   Tag,
   TagAddons,
   Title,
+  Column,
+  Columns,
   Input,
   Textarea,
   Select,

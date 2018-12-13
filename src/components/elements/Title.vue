@@ -10,11 +10,15 @@ export default {
   props: {
     type: {
       type: String,
-      validator: value => ['title', 'subtitle'].includes(value)
+      validator(value) {
+        return ['title', 'subtitle'].includes(value)
+      }
     },
     size: {
       type: String,
-      validator: value => ['1', '2', '3', '4', '5', '6'].includes(value)
+      validator(value) {
+        return ['1', '2', '3', '4', '5', '6'].includes(value)
+      }
     },
     spaced: Boolean
   },

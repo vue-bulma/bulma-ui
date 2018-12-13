@@ -13,8 +13,8 @@ export default {
   props: {
     color: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return [
           'primary',
           'info',
           'success',
@@ -27,10 +27,13 @@ export default {
           'link',
           'text'
         ].includes(value)
+      }
     },
     size: {
       type: String,
-      validator: value => ['small', 'normal', 'medium', 'large'].includes(value)
+      validator(value) {
+        return ['small', 'normal', 'medium', 'large'].includes(value)
+      }
     },
     fullwidth: Boolean,
     outlined: Boolean,
@@ -39,8 +42,11 @@ export default {
     disabled: Boolean,
     state: {
       type: String,
-      validator: value =>
-        ['loading', 'active', 'focused', 'hovered', 'static'].includes(value)
+      validator(value) {
+        return ['loading', 'active', 'focused', 'hovered', 'static'].includes(
+          value
+        )
+      }
     }
   },
   computed: {

@@ -12,12 +12,14 @@ export default {
   props: {
     size: {
       type: String,
-      validator: value => ['small', 'medium', 'large'].includes(value)
+      validator(value) {
+        return ['small', 'medium', 'large'].includes(value)
+      }
     },
     color: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return [
           'primary',
           'info',
           'success',
@@ -29,13 +31,16 @@ export default {
           'black',
           'link'
         ].includes(value)
+      }
     },
     name: {
       type: String
     },
     iconSize: {
       type: String,
-      validator: value => ['lg', '2x', '3x'].includes(value)
+      validator(value) {
+        return ['lg', '2x', '3x'].includes(value)
+      }
     },
     animated: Boolean
   },

@@ -8,8 +8,9 @@ export default {
   props: {
     color: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return
+        ;[
           'primary',
           'info',
           'success',
@@ -21,10 +22,13 @@ export default {
           'black',
           'link'
         ].includes(value)
+      }
     },
     size: {
       type: String,
-      validator: value => ['small', 'medium', 'large'].includes(value)
+      validator(value) {
+        return ['small', 'medium', 'large'].includes(value)
+      }
     }
   },
   computed: {

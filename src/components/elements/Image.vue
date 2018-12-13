@@ -13,8 +13,8 @@ export default {
   props: {
     size: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return [
           '16x16',
           '24x24',
           '32x32',
@@ -39,6 +39,7 @@ export default {
           '1by2',
           '1by3'
         ].includes(value)
+      }
     },
     path: {
       type: String

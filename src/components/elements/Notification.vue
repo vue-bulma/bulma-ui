@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes"> 
+  <div :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -10,8 +10,8 @@ export default {
   props: {
     color: {
       type: String,
-      validator: value =>
-        [
+      validator(value) {
+        return [
           'primary',
           'info',
           'success',
@@ -23,6 +23,7 @@ export default {
           'black',
           'link'
         ].includes(value)
+      }
     }
   },
   computed: {
