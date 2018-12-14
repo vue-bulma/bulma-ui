@@ -550,10 +550,11 @@
       type="title"
     >Variable gap:</vb-title>
     <vb-tags>
-      <vb-tag class="cursor"
+      <vb-tag
+        class="cursor"
         v-for="(value,index) in values"
         :key="index"
-        @mouseente="handleMouseente(value)"
+        @mouseente="handleMouseente(value,$event)"
       >{{value}}</vb-tag>
     </vb-tags>
     <vb-box>
@@ -684,7 +685,12 @@ export default {
     }
   },
   methods: {
-    handleMouseente(value) {
+    handleMouseente(value, event) {
+      console.log(event.currentTarget.parentNode.childNodes)
+      event.currentTarget.parentNode.childNodes.forEach(e => {
+        e.classList.remove('bg-info')
+      })
+      event.currentTarget.classList.add('bg-info')
       this.gapValue = value
     }
   }
@@ -700,14 +706,15 @@ export default {
   color: #fff;
 }
 .bg-info {
-  background-color: #209cee;
-  color: #fff;
+  background-color: #209cee !important;
+  color: #fff !important;
 }
 .bg-light {
   background-color: #f5f5f5;
   color: #000;
 }
-.cursor{
+.cursor {
   cursor: pointer;
+  color: #fff;
 }
 </style>

@@ -6,7 +6,7 @@
     >Basic:</vb-title>
 
     <vb-box>
-      <vb-button>Button</vb-button>
+      <vb-button >Button</vb-button>
     </vb-box>
 
     <vb-title
@@ -44,7 +44,6 @@
       <vb-buttons-List>
         <vb-button size="small">Small</vb-button>
         <vb-button>Default</vb-button>
-        <vb-button size="normal">Normal</vb-button>
         <vb-button size="medium">Medium</vb-button>
         <vb-button size="large">Large</vb-button>
       </vb-buttons-List>
@@ -294,15 +293,17 @@
 
 <script>
 export default {
-  name: 'ButtonExamples'
+  name: 'ButtonExamples',
+  methods:{
+    aa(){
+      console.log(1)
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .button-invert {
   background-color: #00d1b2;
-}
-.button-icon :not(:last-child) {
-  // margin-bottom: 0;
 }
 </style>
