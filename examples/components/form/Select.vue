@@ -32,32 +32,62 @@
 
     <vb-box>
       <div class="field">
-        <vb-select color="primary" :value="model">
-          <option>Select dropdown</option>
+        <vb-select color="primary" value="Primary">
+          <option>Primary</option>
           <option>With options</option>
         </vb-select>
       </div>
       <div class="field">
-        <vb-select color="info" :value="model">
-          <option>Select dropdown</option>
+        <vb-select color="info" value="Info">
+          <option>Info</option>
           <option>With options</option>
         </vb-select>
       </div>
       <div class="field">
-        <vb-select color="success" :value="model">
-          <option>Select dropdown</option>
+        <vb-select color="success" value="Success">
+          <option>Success</option>
           <option>With options</option>
         </vb-select>
       </div>
       <div class="field">
-        <vb-select color="warning" :value="model">
-          <option>Select dropdown</option>
+        <vb-select color="warning" value="Warning">
+          <option>Warning</option>
           <option>With options</option>
         </vb-select>
       </div>
       <div class="field">
-        <vb-select color="danger" :value="model">
-          <option>Select dropdown</option>
+        <vb-select color="danger" value="Danger">
+          <option>Danger</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="white" value="White">
+          <option>White</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="light" value="Light">
+          <option>Light</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="dark" value="Dark">
+          <option>Dark</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="black" value="Black">
+          <option>Black</option>
+          <option>With options</option>
+        </vb-select>
+      </div>
+      <div class="field">
+        <vb-select color="link" value="Link">
+          <option>Link</option>
           <option>With options</option>
         </vb-select>
       </div>

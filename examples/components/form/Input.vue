@@ -24,6 +24,21 @@
       <div class="field">
         <vb-input color="danger" placeholder="Danger" />
       </div>
+      <div class="field">
+        <vb-input color="white" placeholder="White" />
+      </div>
+      <div class="field">
+        <vb-input color="light" placeholder="Light" />
+      </div>
+      <div class="field">
+        <vb-input color="dark" placeholder="Dark" />
+      </div>
+      <div class="field">
+        <vb-input color="black" placeholder="Black" />
+      </div>
+      <div class="field">
+        <vb-input color="link" placeholder="Link" />
+      </div>
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>

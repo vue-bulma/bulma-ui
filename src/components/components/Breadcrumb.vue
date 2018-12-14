@@ -1,32 +1,21 @@
 <template>
-  <div
-    :class="classes"
-    aria-label="breadcrumbs"
-  >
+  <div :class="classes" aria-label="breadcrumbs">
     <slot></slot>
-
   </div>
 </template>
+
 <script>
+import alignProps from '../../mixins/align'
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbBreadcrumb',
+  mixins: [sizeProps, alignProps],
   props: {
     separator: {
       type: String,
       validator(value) {
         return ['arrow', 'bullet', 'dot', 'succeeds'].includes(value)
-      }
-    },
-    align: {
-      type: String,
-      validator(value) {
-        return ['centered', 'right'].includes(value)
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'medium', 'large'].includes(value)
       }
     }
   },
@@ -49,6 +38,7 @@ export default {
   // }
 }
 </script>
+
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/_all';

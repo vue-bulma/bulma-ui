@@ -30,6 +30,21 @@
       <div class="field">
         <vb-textarea color="danger" :rows="2" placeholder="Danger" />
       </div>
+      <div class="field">
+        <vb-textarea color="white" :rows="2" placeholder="White" />
+      </div>
+      <div class="field">
+        <vb-textarea color="light" :rows="2" placeholder="Light" />
+      </div>
+      <div class="field">
+        <vb-textarea color="dark" :rows="2" placeholder="Dark" />
+      </div>
+      <div class="field">
+        <vb-textarea color="black" :rows="2" placeholder="Black" />
+      </div>
+      <div class="field">
+        <vb-textarea color="link" :rows="2" placeholder="Link" />
+      </div>
     </vb-box>
 
     <span id="sizes" class="title">Sizes:</span>

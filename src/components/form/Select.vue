@@ -21,10 +21,13 @@
 
 <script>
 import VbIcon from '../elements/Icon'
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
 import { equal } from '../../utils'
 
 export default {
   name: 'VbSelect',
+  mixins: [colorProps, sizeProps],
   model: {
     prop: 'value',
     event: 'change'
@@ -43,20 +46,6 @@ export default {
       type: [String, Number],
       validator(value) {
         return +value
-      }
-    },
-    color: {
-      type: String,
-      validator(value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(
-          value
-        )
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'normal', 'medium', 'large'].includes(value)
       }
     },
     state: {

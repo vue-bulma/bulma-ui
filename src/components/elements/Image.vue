@@ -41,9 +41,7 @@ export default {
         ].includes(value)
       }
     },
-    path: {
-      type: String
-    },
+    path: String,
     rounded: Boolean
   },
   computed: {

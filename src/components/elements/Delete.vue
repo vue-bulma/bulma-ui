@@ -5,16 +5,11 @@
 </template>
 
 <script>
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbDelete',
-  props: {
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'medium', 'large'].includes(value)
-      }
-    }
-  },
+  mixins: [sizeProps],
   computed: {
     classes() {
       const { size } = this

@@ -17,26 +17,14 @@
 </template>
 
 <script>
-import baseInput from '../../lib/baseInput'
+import baseInput from '../../mixins/baseInput'
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
 
 export default {
   name: 'VbTextarea',
-  mixins: [baseInput],
+  mixins: [baseInput, colorProps, sizeProps],
   props: {
-    color: {
-      type: String,
-      validator(value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(
-          value
-        )
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'normal', 'medium', 'large'].includes(value)
-      }
-    },
     state: {
       type: String,
       validator(value) {

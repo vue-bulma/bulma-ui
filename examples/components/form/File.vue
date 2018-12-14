@@ -44,22 +44,47 @@
 
     <vb-box>
       <div class="field">
-        <vb-uploader color="primary" label="Primary file">
+        <vb-uploader color="primary" label="Primary">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
       </div>
       <div class="field">
-        <vb-uploader color="info" label="Info file…" name="Screen Shot 2017-07-29 at 15.54.25.png">
+        <vb-uploader color="info" label="Info" name="Screen Shot 2017-07-29 at 15.54.25.png">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
       </div>
       <div class="field">
-        <vb-uploader boxed color="warning" label="Warning file…">
+        <vb-uploader boxed color="warning" label="Warning">
           <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
         </vb-uploader>
       </div>
       <div class="field">
-        <vb-uploader boxed color="danger" label="Danger file…" name="Screen Shot 2017-07-29 at 15.54.25.png">
+        <vb-uploader boxed color="danger" label="Danger" name="Screen Shot 2017-07-29 at 15.54.25.png">
+          <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
+        </vb-uploader>
+      </div>
+      <div class="field">
+        <vb-uploader color="white" label="Color white">
+          <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
+        </vb-uploader>
+      </div>
+      <div class="field">
+        <vb-uploader color="light" label="Light" name="Screen Shot 2017-07-29 at 15.54.25.png">
+          <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
+        </vb-uploader>
+      </div>
+      <div class="field">
+        <vb-uploader boxed color="dark" label="Dark">
+          <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
+        </vb-uploader>
+      </div>
+      <div class="field">
+        <vb-uploader boxed color="black" label="Black" name="Screen Shot 2017-07-29 at 15.54.25.png">
+          <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
+        </vb-uploader>
+      </div>
+      <div class="field">
+        <vb-uploader boxed color="link" label="Link" name="Screen Shot 2017-07-29 at 15.54.25.png">
           <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
         </vb-uploader>
       </div>

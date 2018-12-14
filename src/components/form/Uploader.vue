@@ -24,36 +24,20 @@
 
 <script>
 import VbIcon from '../elements/Icon'
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
+import alignProps from '../../mixins/align'
 
 export default {
   name: 'VbUploader',
+  mixins: [colorProps, sizeProps, alignProps],
   components: { VbIcon },
   props: {
     label: String,
     name: String,
     icon: String,
     fullwidth: Boolean,
-    boxed: Boolean,
-    align: {
-      type: String,
-      validator(value) {
-        return ['right', 'centered'].includes(value)
-      }
-    },
-    color: {
-      type: String,
-      validator(value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(
-          value
-        )
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'normal', 'medium', 'large'].includes(value)
-      }
-    }
+    boxed: Boolean
   },
   computed: {
     hasName() {

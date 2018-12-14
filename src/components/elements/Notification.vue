@@ -5,27 +5,11 @@
 </template>
 
 <script>
+import colorProps from '../../mixins/color'
+
 export default {
   name: 'VbNotification',
-  props: {
-    color: {
-      type: String,
-      validator(value) {
-        return [
-          'primary',
-          'info',
-          'success',
-          'warning',
-          'danger',
-          'white',
-          'light',
-          'dark',
-          'black',
-          'link'
-        ].includes(value)
-      }
-    }
-  },
+  mixins: [colorProps],
   computed: {
     classes() {
       const { color } = this

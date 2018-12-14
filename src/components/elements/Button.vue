@@ -8,33 +8,13 @@
 </template>
 
 <script>
+import { button as colorProps } from '../../mixins/color'
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbButton',
+  mixins: [sizeProps, colorProps],
   props: {
-    color: {
-      type: String,
-      validator(value) {
-        return [
-          'primary',
-          'info',
-          'success',
-          'warning',
-          'danger',
-          'white',
-          'light',
-          'dark',
-          'black',
-          'link',
-          'text'
-        ].includes(value)
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'normal', 'medium', 'large'].includes(value)
-      }
-    },
     fullwidth: Boolean,
     outlined: Boolean,
     inverted: Boolean,

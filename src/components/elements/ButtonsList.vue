@@ -5,15 +5,12 @@
 </template>
 
 <script>
+import alignProps from '../../mixins/align'
+
 export default {
   name: 'VbButtonsList',
+  mixins: [alignProps],
   props: {
-    align: {
-      type: String,
-      validator(value) {
-        return ['centered', 'right'].includes(value)
-      }
-    },
     type: {
       type: String,
       validator(value) {

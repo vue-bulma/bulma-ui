@@ -20,32 +20,20 @@
 </template>
 
 <script>
-import baseInput from '../../lib/baseInput'
 import VbIcon from '../elements/Icon'
+import baseInput from '../../mixins/baseInput'
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
 
 export default {
   name: 'VbInput',
   components: { VbIcon },
-  mixins: [baseInput],
+  mixins: [baseInput, colorProps, sizeProps],
   props: {
     rounded: Boolean,
     static: Boolean,
     prefix: String,
     suffix: String,
-    color: {
-      type: String,
-      validator(value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(
-          value
-        )
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'normal', 'medium', 'large'].includes(value)
-      }
-    },
     state: {
       type: String,
       validator(value) {

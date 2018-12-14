@@ -102,29 +102,13 @@
 </template>
 
 <script>
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbTable',
+  mixins: [sizeProps, colorProps],
   props: {
-    color: {
-      type: String,
-      validator: value =>
-        [
-          'primary',
-          'info',
-          'success',
-          'warning',
-          'danger',
-          'white',
-          'light',
-          'dark',
-          'black',
-          'link'
-        ].includes(value)
-    },
-    size: {
-      type: String,
-      validator: value => ['small', 'medium', 'large'].includes(value)
-    },
     showHeader: Boolean
   },
   computed: {

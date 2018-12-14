@@ -7,35 +7,14 @@
 </template>
 
 <script>
+import colorProps from '../../mixins/color'
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbIcon',
+  mixins: [sizeProps, colorProps],
   props: {
-    size: {
-      type: String,
-      validator(value) {
-        return ['small', 'medium', 'large'].includes(value)
-      }
-    },
-    color: {
-      type: String,
-      validator(value) {
-        return [
-          'primary',
-          'info',
-          'success',
-          'warning',
-          'danger',
-          'white',
-          'light',
-          'dark',
-          'black',
-          'link'
-        ].includes(value)
-      }
-    },
-    name: {
-      type: String
-    },
+    name: String,
     iconSize: {
       type: String,
       validator(value) {
