@@ -22,7 +22,6 @@ export default {
   computed: {
     classes() {
       const { align, separator, size } = this
-
       const obj = {
         breadcrumb: true,
         [`is-${align}`]: !!align,
@@ -32,10 +31,6 @@ export default {
       return obj
     }
   }
-  // mounted() {
-  //   this.$nextTick().then(() => console.log(this.classes))
-
-  // }
 }
 </script>
 

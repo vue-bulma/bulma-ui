@@ -26,6 +26,8 @@ import Breadcrumb from './components/components/Breadcrumb'
 import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
+import Card from './components/components/Card'
+
 
 const components = [
   Box,
@@ -55,7 +57,8 @@ const components = [
   Breadcrumb,
   Container,
   Level,
-  LevelItem
+  LevelItem,
+  Card
 ]
 
 const install = function(Vue) {

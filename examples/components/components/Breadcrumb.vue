@@ -156,7 +156,7 @@
     <span
       id="sizes"
       class="title"
-    >Sizes</span>
+    >Sizes:</span>
     <vb-box>
       <vb-breadcrumb size="small">
         <ul>

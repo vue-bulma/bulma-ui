@@ -110,6 +110,11 @@ export default new Router({
       path: '/layout/level',
       name: 'Level',
       component: () => import('./components/layout/Level')
+    },
+    {
+      path: '/components/card',
+      name: 'Card',
+      component: () => import('./components/components/Card')
     }
   ]
 })
