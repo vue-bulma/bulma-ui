@@ -98,7 +98,6 @@ export default {
         [`is-${desktop}-desktop`]: !!desktop,
         [`is-${widescreen}-widescreen`]: !!widescreen,
         [`is-${fullhd}-fullhd`]: !!fullhd,
-        'is-spaced': spaced,
         'is-narrow': narrow
       }
       return obj

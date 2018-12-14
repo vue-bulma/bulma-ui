@@ -100,6 +100,11 @@ export default new Router({
       path: '/components/breadcrumb',
       name: 'Breadcrumb',
       component: () => import('./components/components/Breadcrumb')
+    },
+    {
+      path: '/layout/container',
+      name: 'Container',
+      component: () => import('./components/layout/Container')
     }
   ]
 })

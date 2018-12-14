@@ -22,6 +22,7 @@ import Checkbox from './components/form/Checkbox'
 import Radio from './components/form/Radio'
 import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/Breadcrumb'
+import Container from './components/layout/Container'
 
 const components = [
   Box,
@@ -47,7 +48,8 @@ const components = [
   Checkbox,
   Radio,
   Uploader,
-  Breadcrumb
+  Breadcrumb,
+  Container
 ]
 
 const install = function(Vue) {
