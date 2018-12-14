@@ -23,6 +23,8 @@ import Radio from './components/form/Radio'
 import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/Breadcrumb'
 import Container from './components/layout/Container'
+import Level from './components/layout/Level'
+import LevelItem from './components/layout/LevelItem'
 
 const components = [
   Box,
@@ -49,7 +51,9 @@ const components = [
   Radio,
   Uploader,
   Breadcrumb,
-  Container
+  Container,
+  Level,
+  LevelItem
 ]
 
 const install = function(Vue) {

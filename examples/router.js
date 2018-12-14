@@ -105,6 +105,11 @@ export default new Router({
       path: '/layout/container',
       name: 'Container',
       component: () => import('./components/layout/Container')
+    },
+    {
+      path: '/layout/level',
+      name: 'Level',
+      component: () => import('./components/layout/Level')
     }
   ]
 })
