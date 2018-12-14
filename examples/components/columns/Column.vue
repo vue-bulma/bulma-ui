@@ -550,10 +550,10 @@
       type="title"
     >Variable gap:</vb-title>
     <vb-tags>
-      <vb-tag
+      <vb-tag class="cursor"
         v-for="(value,index) in values"
         :key="index"
-        @click="getValue(value)"
+        @mouseente="handleMouseente(value)"
       >{{value}}</vb-tag>
     </vb-tags>
     <vb-box>
@@ -684,7 +684,7 @@ export default {
     }
   },
   methods: {
-    getValue(value) {
+    handleMouseente(value) {
       this.gapValue = value
     }
   }
@@ -706,5 +706,8 @@ export default {
 .bg-light {
   background-color: #f5f5f5;
   color: #000;
+}
+.cursor{
+  cursor: pointer;
 }
 </style>

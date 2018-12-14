@@ -1,6 +1,7 @@
 <template>
   <span
     :class="classes"
+    @mouseenter="handleMouseenter"
   >
     <slot></slot>
   </span>
@@ -28,6 +29,11 @@ export default {
         'is-delete': del
       }
       return obj
+    }
+  },
+  methods: {
+    handleMouseenter(event) {
+      this.$emit('mouseente', event)
     }
   }
 }
