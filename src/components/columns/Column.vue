@@ -86,7 +86,6 @@ export default {
         desktop,
         widescreen,
         fullhd,
-        spaced,
         narrow
       } = this
       const obj = {

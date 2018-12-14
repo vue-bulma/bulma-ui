@@ -2,6 +2,7 @@
   <a
     :class="classes"
     :disabled="disabled"
+    @click="handleClick"
   >
     <slot></slot>
   </a>
@@ -51,6 +52,11 @@ export default {
         'is-outlined': outlined
       }
       return obj
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     }
   }
 }

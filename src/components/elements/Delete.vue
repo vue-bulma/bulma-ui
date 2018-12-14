@@ -1,5 +1,8 @@
 <template>
-  <a :class="classes">
+  <a
+    :class="classes"
+    @click="handleClick"
+  >
     <slot></slot>
   </a>
 </template>
@@ -18,6 +21,11 @@ export default {
         [`is-${size}`]: !!size
       }
       return obj
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     }
   }
 }

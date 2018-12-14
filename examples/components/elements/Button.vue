@@ -6,7 +6,7 @@
     >Basic:</vb-title>
 
     <vb-box>
-      <vb-button >Button</vb-button>
+      <vb-button>Button</vb-button>
     </vb-box>
 
     <vb-title
@@ -288,15 +288,30 @@
         </vb-button>
       </vb-buttons-List>
     </vb-box>
+
+    <vb-title
+      id="Event"
+      type="title"
+    >Event:</vb-title>
+
+    <vb-box>
+      <vb-button @click="handleClick">Click event</vb-button>
+      <vb-title>{{title}}</vb-title>
+    </vb-box>
   </div>
 </template>
 
 <script>
 export default {
   name: 'ButtonExamples',
-  methods:{
-    aa(){
-      console.log(1)
+  data() {
+    return {
+      title: true
+    }
+  },
+  methods: {
+    handleClick() {
+      this.title = !this.title
     }
   }
 }

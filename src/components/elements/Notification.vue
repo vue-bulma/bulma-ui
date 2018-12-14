@@ -1,5 +1,10 @@
 <template>
-  <div :class="classes">
+  <div
+    :class="classes"
+    @click="handleClick"
+    @mouseenter="handleMouseenter"
+    @mouseleave="handleMouseleave"
+  >
     <slot></slot>
   </div>
 </template>
@@ -18,6 +23,17 @@ export default {
         [`is-${color}`]: !!color
       }
       return obj
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
+    },
+    handleMouseenter(event) {
+      this.$emit('mouseenter', event)
+    },
+    handleMouseleave(event) {
+      this.$emit('mouseleave', event)
     }
   }
 }

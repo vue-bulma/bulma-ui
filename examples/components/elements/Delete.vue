@@ -30,8 +30,23 @@
       type="title"
     >Combinations:</vb-title>
     <vb-box>
-
-      <vb-tag color="danger"> Hello World <vb-delete size="small"></vb-delete>
+      <vb-tag color="danger"> Hello World
+        <vb-delete size="small"></vb-delete>
+      </vb-tag>
+    </vb-box>
+    <vb-title
+      id="Event"
+      type="title"
+    >Event:</vb-title>
+    <vb-box>
+      <vb-tag
+        color="danger"
+        v-if="visible"
+      > Click on close
+        <vb-delete
+          size="small"
+          @click="handleClick"
+        ></vb-delete>
       </vb-tag>
     </vb-box>
   </div>
@@ -39,7 +54,17 @@
 
 <script>
 export default {
-  name: 'DeleteExamples'
+  name: 'DeleteExamples',
+  data() {
+    return {
+      visible: true
+    }
+  },
+  methods: {
+    handleClick() {
+      this.visible = false
+    }
+  }
 }
 </script>
 <style>
