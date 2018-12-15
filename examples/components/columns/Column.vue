@@ -686,7 +686,6 @@ export default {
   },
   methods: {
     handleMouseente(value, event) {
-      console.log(event.currentTarget.parentNode.childNodes)
       event.currentTarget.parentNode.childNodes.forEach(e => {
         e.classList.remove('bg-info')
       })
