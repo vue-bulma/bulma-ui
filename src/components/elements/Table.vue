@@ -25,11 +25,11 @@ export default {
     striped: Boolean,
     narrow: Boolean,
     hoverable: Boolean,
-    fullwidth:Boolean
+    fullwidth: Boolean
   },
   computed: {
     classes() {
-      const { bordered, striped, narrow, hoverable,fullwidth } = this
+      const { bordered, striped, narrow, hoverable, fullwidth } = this
       const obj = []
       if (bordered) obj.push('is-bordered')
       if (striped) obj.push('is-striped')

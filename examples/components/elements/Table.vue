@@ -114,7 +114,7 @@
       </vb-table>
     </vb-box>
 
-     <vb-title
+    <vb-title
       id="Modifiers"
       type="title"
     >Hover Effect:</vb-title>
@@ -150,10 +150,10 @@
       </vb-table>
     </vb-box>
 
-     <vb-title
+    <vb-title
       id="Modifiers"
       type="title"
-    >fullwidth:</vb-title>
+    >Fullwidth:</vb-title>
     <vb-box>
       <vb-table fullwidth>
         <vb-table-header slot="header">
@@ -186,12 +186,18 @@
       </vb-table>
     </vb-box>
 
-     <vb-title
+    <vb-title
       id="Modifiers"
       type="title"
-    >combine:</vb-title>
+    >Combine:</vb-title>
     <vb-box>
-      <vb-table bordered striped narrow hoverable fullwidth>
+      <vb-table
+        bordered
+        striped
+        narrow
+        hoverable
+        fullwidth
+      >
         <vb-table-header slot="header">
           <tr>
             <td>one</td>
@@ -209,7 +215,7 @@
           <td>one</td>
           <td>two</td>
         </tr>
-        <tr>
+        <tr class="is-selected">
           <th>3</th>
           <td>one</td>
           <td>two</td>

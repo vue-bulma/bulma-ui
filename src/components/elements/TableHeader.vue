@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name:'VbTableHeader'
+  name: 'VbTableHeader'
 }
 </script>

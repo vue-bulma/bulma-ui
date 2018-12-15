@@ -1,12 +1,6 @@
-<template>
-  <h1 :class="classes">
-    <slot></slot>
-  </h1>
-</template>
-
 <script>
-export default {
-  name: 'VbTitle',
+import Vue from 'vue'
+const VbTitle = Vue.component('VbTitle', {
   props: {
     type: {
       type: String,
@@ -16,24 +10,29 @@ export default {
     },
     size: {
       type: String,
+      default:'3',
       validator(value) {
         return ['1', '2', '3', '4', '5', '6'].includes(value)
       }
     },
     spaced: Boolean
   },
-  computed: {
-    classes() {
-      const { type, size, spaced } = this
-      const obj = {
-        [`${type}`]: !!type,
-        [`is-${size}`]: !!size,
-        'is-spaced': spaced
-      }
-      return obj
-    }
+  render(h) {
+    const { type, size, spaced } = this
+    return h(
+      `h${size}`,
+      {
+        class: {
+          [`${type}`]: !!type,
+          [`is-${size}`]: !!size,
+          'is-spaced': spaced
+        }
+      },
+      this.$slots.default
+    )
   }
-}
+})
+export default VbTitle
 </script>
 
 <style lang="scss">
