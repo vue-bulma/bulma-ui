@@ -1,5 +1,6 @@
 <script>
 import Vue from 'vue'
+const NUMERICAL =['1', '2', '3', '4', '5', '6']
 const VbTitle = Vue.component('VbTitle', {
   props: {
     type: {
@@ -10,9 +11,9 @@ const VbTitle = Vue.component('VbTitle', {
     },
     size: {
       type: String,
-      default:'3',
+      default: '3',
       validator(value) {
-        return ['1', '2', '3', '4', '5', '6'].includes(value)
+        return NUMERICAL.includes(value)
       }
     },
     spaced: Boolean

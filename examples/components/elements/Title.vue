@@ -66,7 +66,7 @@
     <vb-title
       id="Combinations"
       type="title"
-    >Combinations:</vb-title>
+    >Combinations And Spaced:</vb-title>
     <vb-box class="box-bottom">
       <vb-title
         type='title'
