@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div>
   <vb-box>
     <span id="basic" class="title">
       Basic:
@@ -21,7 +21,7 @@
     </span>
     <vb-card
     title="title"
-    icon="fa fa-angle-down" 
+    icon="fa fa-angle-down"
     >
     <div slot="content">
       <p>Content of card</p>
@@ -36,7 +36,7 @@
     </span>
     <vb-card
     title="title"
-    icon="fa fa-angle-down" 
+    icon="fa fa-angle-down"
     >
     <div slot="content">
       <p>Content of card</p>

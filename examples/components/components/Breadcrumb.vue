@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <span
       id="basic"
       class="title"

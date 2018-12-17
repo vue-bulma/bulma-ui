@@ -67,6 +67,11 @@ export default new Router({
       component: () => import('./components/columns/Column')
     },
     {
+      path: '/form',
+      name: 'Form',
+      component: () => import('./components/form/form/index')
+    },
+    {
       path: '/form/input',
       name: 'Input',
       component: () => import('./components/form/Input')

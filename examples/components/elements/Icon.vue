@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <vb-title
       id="Basic"
       type="title"
