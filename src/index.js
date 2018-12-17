@@ -16,6 +16,8 @@ import Tags from './components/elements/Tags'
 import Title from './components/elements/Title'
 import Column from './components/columns/Column'
 import Columns from './components/columns/Columns'
+import FormItem from './components/form/FormItem'
+import Form from './components/form/Form'
 import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
@@ -27,7 +29,6 @@ import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
 import Card from './components/components/Card'
-
 
 const components = [
   Box,
@@ -58,7 +59,9 @@ const components = [
   Container,
   Level,
   LevelItem,
-  Card
+  Card,
+  FormItem,
+  Form
 ]
 
 const install = function(Vue) {

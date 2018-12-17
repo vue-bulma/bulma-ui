@@ -21,14 +21,21 @@ import baseInput from '../../mixins/baseInput'
 import colorProps from '../../mixins/color'
 import sizeProps from '../../mixins/size'
 
+const STATES = ['focused', 'hovered']
+
 export default {
   name: 'VbTextarea',
+  inject: {
+    vbFormItem: {
+      default: ''
+    }
+  },
   mixins: [baseInput, colorProps, sizeProps],
   props: {
     state: {
       type: String,
       validator(value) {
-        return ['focused', 'hovered'].includes(value)
+        return STATES.includes(value)
       }
     },
     resize: {
@@ -42,21 +49,24 @@ export default {
     }
   },
   computed: {
+    formSize() {
+      return this.size || this.vbFormItem._formSize
+    },
     classes() {
-      const { color, size, state, resize } = this
+      const { color, formSize, state, resize } = this
       return {
         textarea: true,
         [`is-${color}`]: !!color,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         [`is-${state}`]: !!state,
         'has-fixed-size': !resize
       }
     },
     ctrlClass() {
-      const { size, loading } = this
+      const { formSize, loading } = this
       return {
         control: true,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         'is-loading': loading
       }
     }

@@ -12,8 +12,15 @@
 import { button as colorProps } from '../../mixins/color'
 import sizeProps from '../../mixins/size'
 
+const STATE = ['loading', 'active', 'focused', 'hovered', 'static']
+
 export default {
   name: 'VbButton',
+  inject: {
+    vbFormItem: {
+      default: ''
+    }
+  },
   mixins: [sizeProps, colorProps],
   props: {
     fullwidth: Boolean,
@@ -24,34 +31,34 @@ export default {
     state: {
       type: String,
       validator(value) {
-        return ['loading', 'active', 'focused', 'hovered', 'static'].includes(
-          value
-        )
+        return STATE.includes(value)
       }
     }
   },
   computed: {
+    formSize() {
+      return this.size || this.vbFormItem._formSize
+    },
     classes() {
       const {
         color,
-        size,
+        formSize,
         outlined,
         inverted,
         state,
         fullwidth,
         rounded
       } = this
-      const obj = {
+      return {
         button: true,
         [`is-${color}`]: !!color,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         [`is-${state}`]: !!state,
         'is-fullwidth': fullwidth,
         'is-inverted': inverted,
         'is-rounded': rounded,
         'is-outlined': outlined
       }
-      return obj
     }
   },
   methods: {

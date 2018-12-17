@@ -25,19 +25,27 @@ import baseInput from '../../mixins/baseInput'
 import colorProps from '../../mixins/color'
 import sizeProps from '../../mixins/size'
 
+const STATES = ['focused', 'hovered', 'static']
+
 export default {
   name: 'VbInput',
+  inject: {
+    vbFormItem: {
+      default: ''
+    }
+  },
   components: { VbIcon },
   mixins: [baseInput, colorProps, sizeProps],
   props: {
     rounded: Boolean,
+    expanded: Boolean,
     static: Boolean,
     prefix: String,
     suffix: String,
     state: {
       type: String,
       validator(value) {
-        return ['focused', 'hovered', 'static'].includes(value)
+        return STATES.includes(value)
       }
     }
   },
@@ -47,25 +55,29 @@ export default {
     }
   },
   computed: {
+    formSize() {
+      return this.size || this.vbFormItem._formSize
+    },
     classes() {
-      const { color, size, state, rounded } = this
+      const { color, formSize, state, rounded } = this
       return {
         input: true,
         [`is-${color}`]: !!color,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         [`is-${state}`]: !!state,
         'is-static': this.static,
         'is-rounded': rounded
       }
     },
     ctrlClass() {
-      const { size, loading, prefix, suffix } = this
+      const { formSize, loading, prefix, suffix, expanded } = this
       return {
         control: true,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         'has-icons-left': !!prefix,
         'has-icons-right': !!suffix,
-        'is-loading': loading
+        'is-loading': loading,
+        'is-expanded': expanded
       }
     }
   }

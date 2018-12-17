@@ -9,7 +9,9 @@
       @blur="handleBlur"
     >
 
-    <slot></slot>
+    <span class="checkbox-label">
+      <slot></slot>
+    </span>
   </label>
 </template>
 
@@ -41,4 +43,10 @@ export default {
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/elements/form';
+
+.checkbox {
+  .checkbox-label {
+    padding-left: 0.5rem;
+  }
+}
 </style>

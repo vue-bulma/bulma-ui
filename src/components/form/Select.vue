@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ control: true, 'has-icons-left': !!prefix }">
+  <div :class="ctrlClass">
     <div :class="classes">
       <select
         v-model="currentValue"
@@ -25,8 +25,15 @@ import colorProps from '../../mixins/color'
 import sizeProps from '../../mixins/size'
 import { equal } from '../../utils'
 
+const STATES = ['focused', 'hovered', 'loading']
+
 export default {
   name: 'VbSelect',
+  inject: {
+    vbFormItem: {
+      default: ''
+    }
+  },
   mixins: [colorProps, sizeProps],
   model: {
     prop: 'value',
@@ -37,6 +44,7 @@ export default {
     multiple: Boolean,
     rounded: Boolean,
     loading: Boolean,
+    fullWidth: Boolean,
     prefix: String,
     placeholder: String,
     value: {
@@ -51,20 +59,32 @@ export default {
     state: {
       type: String,
       validator(value) {
-        return ['focused', 'hovered', 'loading'].includes(value)
+        return STATES.includes(value)
       }
     }
   },
   computed: {
+    formSize() {
+      return this.size || this.vbFormItem._formSize
+    },
     classes() {
-      const { color, size, rounded, multiple, loading } = this
+      const { color, rounded, multiple, loading, fullWidth, formSize } = this
       return {
         select: true,
         'is-multiple': multiple,
         [`is-${color}`]: !!color,
-        [`is-${size}`]: !!size,
+        [`is-${formSize}`]: !!formSize,
         'is-rounded': rounded,
-        'is-loading': loading
+        'is-loading': loading,
+        'is-fullwidth': fullWidth
+      }
+    },
+    ctrlClass() {
+      const { prefix, fullWidth } = this
+      return {
+        control: true,
+        'has-icons-left': !!prefix,
+        'is-expanded': fullWidth
       }
     },
     selectClass() {
