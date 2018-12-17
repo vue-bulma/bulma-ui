@@ -1,14 +1,18 @@
 <template>
   <vb-box>
-    <vb-radio name="Size" value="small" v-model="size">Small</vb-radio>
-    <vb-radio name="horizontal" :value="null" v-model="size">Normal</vb-radio>
-    <vb-radio name="Size" value="medium" v-model="size">Medium</vb-radio>
-    <vb-radio name="horizontal" value="large" v-model="size">Large</vb-radio>
+    <div class="field">
+      <vb-radio-group v-model="size">
+        <vb-radio label="small">Small</vb-radio>
+        <vb-radio :label="null">Normal</vb-radio>
+        <vb-radio label="medium">Medium</vb-radio>
+        <vb-radio label="large">Large</vb-radio>
+      </vb-radio-group>
+    </div>
 
     <vb-form :size="size" horizontal>
       <vb-form-item label="From" message="test">
         <vb-input prefix="fa fa-user" placeholder="Name"></vb-input>
-        <vb-input prefix="fa fa-envelope" suffix="fa fa-check" value="alex@smith.com"></vb-input>
+        <vb-input color="primary" prefix="fa fa-envelope" suffix="fa fa-check" value="alex@smith.com"></vb-input>
       </vb-form-item>
 
       <vb-form-item addons>

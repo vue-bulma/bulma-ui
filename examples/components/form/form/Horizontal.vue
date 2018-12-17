@@ -1,7 +1,11 @@
 <template>
   <vb-box>
-    <vb-radio name="horizontal" :value="true" v-model="horizontal">Horizontal</vb-radio>
-    <vb-radio name="horizontal" :value="false" v-model="horizontal">Vertical</vb-radio>
+    <div class="field">
+      <vb-radio-group v-model="horizontal">
+        <vb-radio :label="true">Horizontal</vb-radio>
+        <vb-radio :label="false">Vertical</vb-radio>
+      </vb-radio-group>
+    </div>
 
     <vb-form :horizontal="horizontal">
       <vb-form-item label="From">

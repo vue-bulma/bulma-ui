@@ -1,55 +1,56 @@
 <template>
   <vb-box>
-    <vb-form-item label="Name">
-      <vb-input placeholder="Text Input"></vb-input>
-    </vb-form-item>
+    <vb-form>
+      <vb-form-item label="Name">
+        <vb-input placeholder="Text Input"></vb-input>
+      </vb-form-item>
 
-    <vb-form-item label="Username" :color="msg.username.color" :message="msg.username.text">
-      <vb-input
-        placeholder="Text Input"
-        prefix="fa fa-user"
-        suffix="fa fa-check"
-        color="success"
-        v-model="username"
-      >
-      </vb-input>
-    </vb-form-item>
+      <vb-form-item label="Username" :color="msg.username.color" :message="msg.username.text">
+        <vb-input
+          placeholder="Text Input"
+          prefix="fa fa-user"
+          suffix="fa fa-check"
+          color="success"
+          v-model="username"
+        >
+        </vb-input>
+      </vb-form-item>
 
-    <vb-form-item label="Email" size="small">
-      <vb-input
-        placeholder="Text Input"
-        prefix="fa fa-envelope"
-        suffix="fa fa-exclamation-triangle"
-        size="small"
-        :color="msg.email.color"
-        v-model="email"
-      >
-      </vb-input>
+      <vb-form-item label="Email">
+        <vb-input
+          placeholder="Text Input"
+          prefix="fa fa-envelope"
+          suffix="fa fa-exclamation-triangle"
+          :color="msg.email.color"
+          v-model="email"
+        >
+        </vb-input>
 
-      <p slot="message" :class="`help is-${msg.email.color}`">{{msg.email.text}}</p>
-    </vb-form-item>
+        <p slot="message" :class="`help is-${msg.email.color}`">{{msg.email.text}}</p>
+      </vb-form-item>
 
-    <vb-form-item label="City">
-      <vb-select v-model="city">
-        <option :value="1">Old Town</option>
-        <option :value="2">New Town</option>
-      </vb-select>
-    </vb-form-item>
+      <vb-form-item label="City">
+        <vb-select v-model="city">
+          <option :value="1">Old Town</option>
+          <option :value="2">New Town</option>
+        </vb-select>
+      </vb-form-item>
 
-    <vb-form-item label="Message">
-      <vb-textarea placeholder="Textarea" v-model="message"></vb-textarea>
-    </vb-form-item>
+      <vb-form-item label="Message">
+        <vb-textarea placeholder="Textarea" v-model="message"></vb-textarea>
+      </vb-form-item>
 
-    <vb-form-item>
-      <vb-checkbox v-model="agree">
-        I agree to the <a href="#">terms and conditions</a>
-      </vb-checkbox>
-    </vb-form-item>
+      <vb-form-item>
+        <vb-checkbox v-model="agree">
+          I agree to the <a href="#">terms and conditions</a>
+        </vb-checkbox>
+      </vb-form-item>
 
-    <vb-form-item grouped align="right">
-      <vb-button color="link" @click="confirm">Confirm</vb-button>
-      <vb-button color="light" @click="reset">Reset</vb-button>
-    </vb-form-item>
+      <vb-form-item grouped align="right">
+        <vb-button color="link" @click="confirm">Confirm</vb-button>
+        <vb-button color="light" @click="reset">Reset</vb-button>
+      </vb-form-item>
+    </vb-form>
   </vb-box>
 </template>
 
