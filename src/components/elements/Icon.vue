@@ -1,8 +1,8 @@
 <template>
   <span :class="classes">
-    <i :class="IconClasses">
-      <slot></slot>
-    </i>
+    <slot>
+      <i :class="IconClasses"></i>
+    </slot>
   </span>
 </template>
 

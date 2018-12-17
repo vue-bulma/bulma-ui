@@ -14,8 +14,13 @@
       @compositionend="handleComposition"
     >
 
-    <vb-icon v-if="!!prefix" class="is-left" :name="prefix" :size="size"></vb-icon>
-    <vb-icon v-if="!!suffix" class="is-right" :name="suffix" :size="size"></vb-icon>
+    <vb-icon v-if="hasIconLeft" class="is-left" :name="prefix" :size="size">
+      <slot name="prefix"></slot>
+    </vb-icon>
+
+    <vb-icon v-if="hasIconRight" class="is-right" :name="suffix" :size="size">
+      <slot name="suffix"></slot>
+    </vb-icon>
   </div>
 </template>
 
@@ -55,6 +60,12 @@ export default {
     }
   },
   computed: {
+    hasIconLeft() {
+      return !!this.prefix || !!this.$slots.prefix
+    },
+    hasIconRight() {
+      return !!this.suffix || !!this.$slots.suffix
+    },
     formSize() {
       return this.size || this.vbFormItem._formSize
     },
@@ -70,12 +81,12 @@ export default {
       }
     },
     ctrlClass() {
-      const { formSize, loading, prefix, suffix, expanded } = this
+      const { formSize, loading, hasIconLeft, hasIconRight, expanded } = this
       return {
         control: true,
         [`is-${formSize}`]: !!formSize,
-        'has-icons-left': !!prefix,
-        'has-icons-right': !!suffix,
+        'has-icons-left': hasIconLeft,
+        'has-icons-right': hasIconRight,
         'is-loading': loading,
         'is-expanded': expanded
       }

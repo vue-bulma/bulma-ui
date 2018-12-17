@@ -17,13 +17,9 @@
       </vb-form-item>
 
       <vb-form-item label="Email">
-        <vb-input
-          placeholder="Text Input"
-          prefix="fa fa-envelope"
-          suffix="fa fa-exclamation-triangle"
-          :color="msg.email.color"
-          v-model="email"
-        >
+        <vb-input placeholder="Text Input" :color="msg.email.color" v-model="email">
+          <i slot="prefix" class="fa fa-envelope" aria-hidden="true"></i>
+          <i slot="suffix" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
         </vb-input>
 
         <p slot="message" :class="`help is-${msg.email.color}`">{{msg.email.text}}</p>

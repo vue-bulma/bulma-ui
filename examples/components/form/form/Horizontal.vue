@@ -10,7 +10,10 @@
     <vb-form :horizontal="horizontal">
       <vb-form-item label="From">
         <vb-input prefix="fa fa-user" placeholder="Name"></vb-input>
-        <vb-input color="primary" prefix="fa fa-envelope" suffix="fa fa-check" value="alex@smith.com"></vb-input>
+        <vb-input color="primary" value="alex@smith.com">
+          <i slot="prefix" class="fa fa-envelope" aria-hidden="true"></i>
+          <i slot="suffix" class="fa fa-check" aria-hidden="true"></i>
+        </vb-input>
       </vb-form-item>
 
       <vb-form-item addons>
