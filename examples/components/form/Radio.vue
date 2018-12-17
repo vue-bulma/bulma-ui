@@ -3,8 +3,8 @@
     <span id="basic" class="title">Basic:</span>
 
     <vb-box>
-      <vb-radio name="test" disabled>Disabled</vb-radio>
-      <vb-radio name="test" checked>Default Checked</vb-radio>
+      <vb-radio disabled>Disabled</vb-radio>
+      <vb-radio checked>Default Checked</vb-radio>
     </vb-box>
 
     <span id="events" class="title">Events:</span>
@@ -14,8 +14,8 @@
         Gender:
       </div>
 
-      <vb-radio name="gender" :value="1" :model="gender" @change="handleChange">Female</vb-radio>
-      <vb-radio name="gender" :value="2" :model="gender" @change="handleChange">Male</vb-radio>
+      <vb-radio :label="1" v-model="gender">Female</vb-radio>
+      <vb-radio :label="2" v-model="gender">Male</vb-radio>
 
       <div>
         Value: {{gender}}
@@ -24,14 +24,16 @@
 
     <vb-box>
       <div>
-        Gender2:
+        Group gender:
       </div>
 
-      <vb-radio name="gender2" :value="1" v-model="gender2">Female</vb-radio>
-      <vb-radio name="gender2" :value="2" v-model="gender2">Male</vb-radio>
+      <vb-radio-group v-model="gender2">
+        <vb-radio :label="1">Female</vb-radio>
+        <vb-radio :label="2">Male</vb-radio>
+      </vb-radio-group>
 
       <div>
-        Value2: {{gender2}}
+        Value: {{gender2}}
       </div>
     </vb-box>
   </div>
@@ -45,17 +47,6 @@ export default {
       gender: 1,
       gender2: 2
     }
-  },
-  methods: {
-    handleChange(value) {
-      this.gender = value
-    }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.radio + .radio {
-  margin-left: 1.5rem;
-}
-</style>

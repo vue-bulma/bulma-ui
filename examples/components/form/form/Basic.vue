@@ -40,16 +40,11 @@
       <vb-textarea placeholder="Textarea" v-model="message"></vb-textarea>
     </vb-form-item>
 
-    <!-- <vb-form-item>
+    <vb-form-item>
       <vb-checkbox v-model="agree">
         I agree to the <a href="#">terms and conditions</a>
       </vb-checkbox>
     </vb-form-item>
-
-    <vb-form-item>
-      <vb-radio name="gender" :value="1" v-model="gender">Female</vb-radio>
-      <vb-radio name="gender" :value="2" v-model="gender">Male</vb-radio>
-    </vb-form-item> -->
 
     <vb-form-item grouped align="right">
       <vb-button color="link" @click="confirm">Confirm</vb-button>

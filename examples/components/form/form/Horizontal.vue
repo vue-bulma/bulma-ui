@@ -25,10 +25,10 @@
       </vb-form-item>
 
       <vb-form-item label="Already a member?">
-        <div>
-          <vb-radio name="member">Yes</vb-radio>
-          <vb-radio name="member">No</vb-radio>
-        </div>
+        <vb-radio-group v-model="already">
+          <vb-radio :label="1">Yes</vb-radio>
+          <vb-radio :label="0">No</vb-radio>
+        </vb-radio-group>
       </vb-form-item>
 
       <vb-form-item label="Subject" message="This field is required" color="danger">
@@ -37,6 +37,20 @@
 
       <vb-form-item label="Question">
         <vb-textarea placeholder="Explain how we can help you"></vb-textarea>
+      </vb-form-item>
+
+      <vb-form-item>
+        <vb-checkbox-group v-model="shared">
+          <vb-checkbox label="twitter">
+            <vb-icon name="fa fa-twitter"></vb-icon>
+          </vb-checkbox>
+          <vb-checkbox label="facebook">
+            <vb-icon name="fa fa-facebook"></vb-icon>
+          </vb-checkbox>
+          <vb-checkbox label="github">
+            <vb-icon name="fa fa-github"></vb-icon>
+          </vb-checkbox>
+        </vb-checkbox-group>
       </vb-form-item>
 
       <vb-form-item>
@@ -51,7 +65,9 @@ export default {
   name: 'FormHorizontal',
   data() {
     return {
-      horizontal: true
+      horizontal: true,
+      shared: [],
+      already: 1
     }
   }
 }

@@ -22,7 +22,9 @@ import Input from './components/form/Input'
 import Textarea from './components/form/Textarea'
 import Select from './components/form/Select'
 import Checkbox from './components/form/Checkbox'
+import CheckboxGroup from './components/form/CheckboxGroup'
 import Radio from './components/form/Radio'
+import RadioGroup from './components/form/RadioGroup'
 import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/Breadcrumb'
 import Container from './components/layout/Container'
@@ -53,7 +55,9 @@ const components = [
   Textarea,
   Select,
   Checkbox,
+  CheckboxGroup,
   Radio,
+  RadioGroup,
   Uploader,
   Breadcrumb,
   Container,

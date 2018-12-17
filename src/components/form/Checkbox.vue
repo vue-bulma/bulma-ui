@@ -1,9 +1,20 @@
 <template>
   <label class="checkbox">
     <input
+      v-if="group"
       type="checkbox"
-      :checked="value || checked"
+      v-model="model"
       v-bind="$attrs"
+      :value="label"
+      @change="handleChange"
+      @focus="handleFocus"
+      @blur="handleBlur"
+    >
+    <input
+      v-else
+      type="checkbox"
+      v-bind="$attrs"
+      :checked="value"
       @change="handleChange"
       @focus="handleFocus"
       @blur="handleBlur"
@@ -23,12 +34,30 @@ export default {
     event: 'change'
   },
   props: {
-    value: Boolean,
-    checked: Boolean
+    label: {},
+    value: Boolean
+  },
+  computed: {
+    model: {
+      // Never use this while this.group === undefined
+      get() {
+        return this.group.value
+      },
+      set(value) {
+        this.group.$emit.apply(this.group, ['input', value])
+      }
+    },
+    group() {
+      let parent = this.$parent
+      while (parent && parent.$options.name !== 'VbCheckboxGroup') {
+        parent = parent.$parent
+      }
+      return parent
+    }
   },
   methods: {
     handleChange(event) {
-      this.$emit('change', event.target.checked, event)
+      this.$emit('change', event.target.checked)
     },
     handleFocus(event) {
       this.$emit('focus', event)

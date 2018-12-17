@@ -3,8 +3,8 @@
     <input
       type="radio"
       v-bind="$attrs"
-      :checked="value === model"
-      :value="value"
+      v-model="model"
+      :value="label"
       @change="handleChange"
       @focus="handleFocus"
       @blur="handleBlur"
@@ -19,17 +19,34 @@
 <script>
 export default {
   name: 'VbRadio',
-  model: {
-    prop: 'model',
-    event: 'change'
-  },
   props: {
     value: {},
-    model: {}
+    label: {}
+  },
+  computed: {
+    model: {
+      get() {
+        return this.group ? this.group.value : this.value
+      },
+      set(value) {
+        if (this.group) {
+          this.group.$emit.apply(this.group, ['input', value])
+        } else {
+          this.$emit('input', value)
+        }
+      }
+    },
+    group() {
+      let parent = this.$parent
+      while (parent && parent.$options.name !== 'VbRadioGroup') {
+        parent = parent.$parent
+      }
+      return parent
+    }
   },
   methods: {
     handleChange() {
-      this.$emit('change', this.value)
+      this.$emit('change', this.model)
     },
     handleFocus(event) {
       this.$emit('focus', event)
@@ -47,7 +64,7 @@ export default {
 
 .radio {
   .radio-label {
-    padding-left: 0.5rem;
+    padding-left: 0.25rem;
   }
 }
 </style>
