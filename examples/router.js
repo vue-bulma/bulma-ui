@@ -127,6 +127,11 @@ export default new Router({
       component: () => import('./components/layout/Hero')
     },
     {
+      path: '/layout/section',
+      name: 'Section',
+      component: () => import('./components/layout/Section')
+    },
+    {
       path: '/components/card',
       name: 'Card',
       component: () => import('./components/components/Card')
