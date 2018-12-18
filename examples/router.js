@@ -122,6 +122,11 @@ export default new Router({
       component: () => import('./components/layout/Media')
     },
     {
+      path: '/layout/hero',
+      name: 'Hero',
+      component: () => import('./components/layout/Hero')
+    },
+    {
       path: '/components/card',
       name: 'Card',
       component: () => import('./components/components/Card')

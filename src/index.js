@@ -33,6 +33,7 @@ import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
 import MediaObject from './components/layout/MediaObject'
+import Hero from './components/layout/Hero'
 
 const components = [
   Box,
@@ -69,7 +70,8 @@ const components = [
   Card,
   FormItem,
   Form,
-  MediaObject
+  MediaObject,
+  Hero
 ]
 
 const install = function(Vue) {

@@ -5,10 +5,13 @@
 </template>
 
 <script>
+import alignProps from '../../mixins/align'
+
 const VIEWS = ['desktop', 'fullhd', 'widescreen', 'fluid']
 
 export default {
   name: 'VbContainer',
+  mixins: [alignProps],
   props: {
     view: {
       type: String,
@@ -19,10 +22,11 @@ export default {
   },
   computed: {
     classes() {
-      const { view } = this
+      const { view, align } = this
       return {
         container: true,
-        [`is-${view}`]: !!view
+        [`is-${view}`]: !!view,
+        [`has-text-${align}`]: !!align
       }
     }
   }
