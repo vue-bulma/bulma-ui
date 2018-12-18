@@ -117,6 +117,11 @@ export default new Router({
       component: () => import('./components/layout/Level')
     },
     {
+      path: '/layout/media',
+      name: 'Media',
+      component: () => import('./components/layout/Media')
+    },
+    {
       path: '/components/card',
       name: 'Card',
       component: () => import('./components/components/Card')

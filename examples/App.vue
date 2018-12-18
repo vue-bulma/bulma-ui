@@ -32,5 +32,11 @@ export default {
     font-size: 1.5rem;
     font-weight: 400;
   }
+  .component-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 </style>

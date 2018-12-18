@@ -28,10 +28,11 @@ import RadioGroup from './components/form/RadioGroup'
 import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/Breadcrumb'
 import BreadcrumbItem from './components/components/BreadcrumbItem'
+import Card from './components/components/Card'
 import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
-import Card from './components/components/Card'
+import MediaObject from './components/layout/MediaObject'
 
 const components = [
   Box,
@@ -67,7 +68,8 @@ const components = [
   LevelItem,
   Card,
   FormItem,
-  Form
+  Form,
+  MediaObject
 ]
 
 const install = function(Vue) {
