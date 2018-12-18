@@ -1,37 +1,37 @@
-
 <script>
 import Vue from 'vue'
+import alignProps from '../../mixins/align'
+
+const ELEMENTS = ['nav', 'div']
 
 const Level = Vue.component('VbLevel', {
+  mixins: [alignProps],
+  provide() {
+    return {
+      vbLevel: this
+    }
+  },
   props: {
     element: {
       type: String,
       default: 'nav',
-      validator: value => ['nav', 'div'].includes(value)
+      validator: value => ELEMENTS.includes(value)
     },
     mobile: Boolean
   },
   render(createElement) {
     const { element, mobile } = this
-    const items = []
-    const lItems = []
-    const rItems = []
-    if (this.$slots.left) {
-      this.$slots.left.map(function(node) {
-        lItems.push(node.children)
-      })
-      items.push(createElement('div', { class: 'level-left' }, lItems))
+    const { left, right, default: content } = this.$slots
+    const items = [content]
+    if (left) {
+      items.unshift(createElement('div', { class: 'level-left' }, left))
     }
-    items.push(this.$slots.default)
-    if (this.$slots.right) {
-      this.$slots.right.map(function(node) {
-        rItems.push(node.children)
-      })
-      items.push(createElement('div', { class: 'level-right' }, rItems))
+    if (right) {
+      items.push(createElement('div', { class: 'level-right' }, right))
     }
     return createElement(
       element,
-      { class: 'level', 'is-mobile': mobile },
+      { class: { level: true, 'is-mobile': mobile } },
       items
     )
   }

@@ -1,27 +1,31 @@
 <script>
 import Vue from 'vue'
+import alignProps from '../../mixins/align'
+
+const ELEMENTS = ['nav', 'div']
 
 const LevelItem = Vue.component('VbLevelItem', {
+  inject: {
+    vbLevel: {
+      default() {
+        return {}
+      }
+    }
+  },
+  mixins: [alignProps],
   props: {
     element: {
       type: String,
       default: 'div',
       validator(value) {
-        return ['p', 'div'].includes(value)
-      }
-    },
-    align: {
-      type: String,
-      default: undefined,
-      validator(value) {
-        return !value || ['left', 'right', 'centered'].includes(value)
+        return ELEMENTS.includes(value)
       }
     }
   },
   render(createElement) {
-    const { element, align } = this
+    const align = this.align || this.vbLevel.align
     return createElement(
-      element,
+      this.element,
       {
         class: {
           'level-item': true,

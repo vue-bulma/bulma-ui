@@ -5,13 +5,15 @@
 </template>
 
 <script>
+const VIEWS = ['desktop', 'fullhd', 'widescreen', 'fluid']
+
 export default {
   name: 'VbContainer',
   props: {
     view: {
       type: String,
       validator(value) {
-        return ['desktop', 'fullhd', 'widescreen', 'fluid'].includes(value)
+        return VIEWS.includes(value)
       }
     }
   },

@@ -10,16 +10,10 @@
         </vb-level-item>
 
         <vb-level-item>
-          <div class="field has-addons">
-            <p class="control">
-              <input class="input" type="text" placeholder="Find a post">
-            </p>
-            <p class="control">
-              <button class="button">
-                Search
-              </button>
-            </p>
-          </div>
+          <vb-form-item addons>
+            <vb-input placeholder="Find a post"></vb-input>
+            <vb-button>Search</vb-button>
+          </vb-form-item>
         </vb-level-item>
       </vb-level>
     </div>
@@ -27,77 +21,127 @@
     <div class="field">
       <vb-container view="fluid">
         <vb-level element="nav">
-          <div slot="left">
-            <vb-level-item>
-              <vb-title type="subtitle" size="5">
-                <strong>123</strong> posts
-              </vb-title>
-            </vb-level-item>
+          <vb-level-item slot="left">
+            <vb-title type="subtitle" size="5">
+              <strong>123</strong> posts
+            </vb-title>
+          </vb-level-item>
 
-            <vb-level-item>
-              <div class="field has-addons">
-                <p class="control">
-                  <input class="input" type="text" placeholder="Find a post">
-                </p>
-                <p class="control">
-                  <button class="button">
-                    Search
-                  </button>
-                </p>
-              </div>
-            </vb-level-item>
-          </div>
+          <vb-level-item slot="left">
+            <vb-form-item addons>
+              <vb-input placeholder="Find a post"></vb-input>
+              <vb-button>Search</vb-button>
+            </vb-form-item>
+          </vb-level-item>
 
-          <div slot="right">
-            <vb-level-item element="p">
-              <strong>All</strong>
-            </vb-level-item>
-
-            <vb-level-item element="p">
-              <a>Published</a>
-            </vb-level-item>
-
-            <vb-level-item element="p">
-              <a>Drafts</a>
-            </vb-level-item>
-
-            <vb-level-item element="p">
-              <a>Deleted</a>
-            </vb-level-item>
-
-            <vb-level-item element="p">
-              <a class="button is-success">New</a>
-            </vb-level-item>
-          </div>
+          <vb-level-item element="p" slot="right">
+            <strong>All</strong>
+          </vb-level-item>
+          <vb-level-item element="p" slot="right">
+            <a>Published</a>
+          </vb-level-item>
+          <vb-level-item element="p" slot="right">
+            <a>Drafts</a>
+          </vb-level-item>
+          <vb-level-item element="p" slot="right">
+            <a>Deleted</a>
+          </vb-level-item>
+          <vb-level-item element="p" slot="right">
+            <vb-button color="success">New</vb-button>
+          </vb-level-item>
         </vb-level>
       </vb-container>
     </div>
 
-    <span id="align" class="title">Align:</span>
+    <span id="align" class="title">Text Align:</span>
     <div class="field">
       <vb-level>
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Tweets</p>
             <p class="title">3,456</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Following</p>
             <p class="title">123</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Followers</p>
             <p class="title">456K</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
+          <div>
+            <p class="heading">Likes</p>
+            <p class="title">789</p>
+          </div>
+        </vb-level-item>
+      </vb-level>
+    </div>
+
+    <div class="field">
+      <vb-level align="centered">
+        <vb-level-item>
+          <div>
+            <p class="heading">Tweets</p>
+            <p class="title">3,456</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item>
+          <div>
+            <p class="heading">Following</p>
+            <p class="title">123</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item>
+          <div>
+            <p class="heading">Followers</p>
+            <p class="title">456K</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item>
+          <div>
+            <p class="heading">Likes</p>
+            <p class="title">789</p>
+          </div>
+        </vb-level-item>
+      </vb-level>
+    </div>
+
+    <div class="field">
+      <vb-level>
+        <vb-level-item align="right">
+          <div>
+            <p class="heading">Tweets</p>
+            <p class="title">3,456</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item align="right">
+          <div>
+            <p class="heading">Following</p>
+            <p class="title">123</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item align="right">
+          <div>
+            <p class="heading">Followers</p>
+            <p class="title">456K</p>
+          </div>
+        </vb-level-item>
+
+        <vb-level-item align="right">
           <div>
             <p class="heading">Likes</p>
             <p class="title">789</p>
@@ -108,29 +152,29 @@
 
     <span id="mobile" class="title">Mobile:</span>
     <div class="field">
-      <vb-level mobile>
-        <vb-level-item align="centered">
+      <vb-level mobile align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Tweets</p>
             <p class="title">3,456</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Following</p>
             <p class="title">123</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Followers</p>
             <p class="title">456K</p>
           </div>
         </vb-level-item>
 
-        <vb-level-item align="centered">
+        <vb-level-item>
           <div>
             <p class="heading">Likes</p>
             <p class="title">789</p>
@@ -153,7 +197,9 @@ export default {
   position: absolute;
   left: 0;
   max-width: none;
-  .title {
+  #basic,
+  #align,
+  #mobile {
     margin-left: 1rem;
   }
 }
