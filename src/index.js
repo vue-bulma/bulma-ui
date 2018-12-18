@@ -35,6 +35,7 @@ import LevelItem from './components/layout/LevelItem'
 import MediaObject from './components/layout/MediaObject'
 import Hero from './components/layout/Hero'
 import Section from './components/layout/Section'
+import Footer from './components/layout/Footer'
 
 const components = [
   Box,
@@ -73,7 +74,8 @@ const components = [
   Form,
   MediaObject,
   Hero,
-  Section
+  Section,
+  Footer
 ]
 
 const install = function(Vue) {

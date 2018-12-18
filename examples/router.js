@@ -132,6 +132,11 @@ export default new Router({
       component: () => import('./components/layout/Section')
     },
     {
+      path: '/layout/footer',
+      name: 'Footer',
+      component: () => import('./components/layout/Footer')
+    },
+    {
       path: '/components/card',
       name: 'Card',
       component: () => import('./components/components/Card')
