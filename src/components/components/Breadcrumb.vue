@@ -1,12 +1,16 @@
 <template>
-  <div :class="classes" aria-label="breadcrumbs">
-    <slot></slot>
-  </div>
+  <nav :class="classes" aria-label="breadcrumbs">
+    <ul>
+      <slot></slot>
+    </ul>
+  </nav>
 </template>
 
 <script>
 import alignProps from '../../mixins/align'
 import sizeProps from '../../mixins/size'
+
+const SEPARATOR = ['arrow', 'bullet', 'dot', 'succeeds']
 
 export default {
   name: 'VbBreadcrumb',
@@ -15,20 +19,19 @@ export default {
     separator: {
       type: String,
       validator(value) {
-        return ['arrow', 'bullet', 'dot', 'succeeds'].includes(value)
+        return SEPARATOR.includes(value)
       }
     }
   },
   computed: {
     classes() {
       const { align, separator, size } = this
-      const obj = {
+      return {
         breadcrumb: true,
         [`is-${align}`]: !!align,
         [`has-${separator}-separator`]: !!separator,
         [`is-${size}`]: !!size
       }
-      return obj
     }
   }
 }
@@ -36,5 +39,5 @@ export default {
 
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/components/_all';
+@import '~bulma/sass/components/breadcrumb';
 </style>

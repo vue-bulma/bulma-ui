@@ -27,6 +27,7 @@ import Radio from './components/form/Radio'
 import RadioGroup from './components/form/RadioGroup'
 import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/Breadcrumb'
+import BreadcrumbItem from './components/components/BreadcrumbItem'
 import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
@@ -60,6 +61,7 @@ const components = [
   RadioGroup,
   Uploader,
   Breadcrumb,
+  BreadcrumbItem,
   Container,
   Level,
   LevelItem,
