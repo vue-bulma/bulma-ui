@@ -50,3 +50,8 @@
   </vb-box>
 </div>
 </template>
+<style scoped>
+.box {
+  width: 50%;
+}
+</style>

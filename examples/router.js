@@ -140,6 +140,11 @@ export default new Router({
       path: '/components/card',
       name: 'Card',
       component: () => import('./components/components/Card')
+    },
+    {
+      path: '/components/menu',
+      name: 'Menu',
+      component: () => import('./components/components/Menu')
     }
   ]
 })

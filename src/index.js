@@ -36,6 +36,9 @@ import MediaObject from './components/layout/MediaObject'
 import Hero from './components/layout/Hero'
 import Section from './components/layout/Section'
 import Footer from './components/layout/Footer'
+import Menu from './components/components/Menu'
+import MenuGroup from './components/components/MenuGroup'
+import MenuItem from './components/components/MenuItem'
 
 const components = [
   Box,
@@ -75,7 +78,10 @@ const components = [
   MediaObject,
   Hero,
   Section,
-  Footer
+  Footer,
+  Menu,
+  MenuGroup,
+  MenuItem
 ]
 
 const install = function(Vue) {
