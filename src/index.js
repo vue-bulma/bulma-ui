@@ -36,6 +36,7 @@ import MediaObject from './components/layout/MediaObject'
 import Hero from './components/layout/Hero'
 import Section from './components/layout/Section'
 import Footer from './components/layout/Footer'
+import Tile from './components/layout/Tile'
 import Menu from './components/components/Menu'
 import MenuGroup from './components/components/MenuGroup'
 import MenuItem from './components/components/MenuItem'
@@ -80,6 +81,7 @@ const components = [
   Hero,
   Section,
   Footer,
+  Tile,
   Menu,
   MenuGroup,
   MenuItem,
