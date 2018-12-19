@@ -1,19 +1,25 @@
 <script>
 import Vue from 'vue'
-const NUMERICAL = ['1', '2', '3', '4', '5', '6']
+
+const TYPES = ['title', 'subtitle']
+const NUMERICAL = [1, 2, 3, 4, 5, 6]
+
 const VbTitle = Vue.component('VbTitle', {
   props: {
     type: {
       type: String,
+      default: 'title',
       validator(value) {
-        return ['title', 'subtitle'].includes(value)
+        return TYPES.includes(value)
       }
     },
     size: {
-      type: String,
-      default: '3',
+      type: [String, Number],
+      default() {
+        return this.type === 'title' ? 3 : 5
+      },
       validator(value) {
-        return NUMERICAL.includes(value)
+        return NUMERICAL.includes(+value)
       }
     },
     spaced: Boolean
@@ -21,7 +27,7 @@ const VbTitle = Vue.component('VbTitle', {
   render(h) {
     const { type, size, spaced } = this
     return h(
-      `h${size}`,
+      'p',
       {
         class: {
           [`${type}`]: !!type,
