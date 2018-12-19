@@ -28,10 +28,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  .title {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
   .component-title {
     font-size: 1.5rem;
     font-weight: 400;
