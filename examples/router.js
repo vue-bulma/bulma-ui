@@ -145,6 +145,11 @@ export default new Router({
       path: '/components/menu',
       name: 'Menu',
       component: () => import('./components/components/Menu')
+    },
+    {
+      path: '/components/message',
+      name: 'Message',
+      component: () => import('./components/components/Message')
     }
   ]
 })

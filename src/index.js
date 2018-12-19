@@ -39,6 +39,7 @@ import Footer from './components/layout/Footer'
 import Menu from './components/components/Menu'
 import MenuGroup from './components/components/MenuGroup'
 import MenuItem from './components/components/MenuItem'
+import Message from './components/components/Message'
 
 const components = [
   Box,
@@ -81,7 +82,8 @@ const components = [
   Footer,
   Menu,
   MenuGroup,
-  MenuItem
+  MenuItem,
+  Message
 ]
 
 const install = function(Vue) {
