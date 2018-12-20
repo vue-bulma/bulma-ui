@@ -1,11 +1,11 @@
 <template>
-  <a
+  <button
     :class="classes"
     :disabled="disabled"
     @click="handleClick"
   >
     <slot></slot>
-  </a>
+  </button>
 </template>
 
 <script>

@@ -41,7 +41,7 @@ import Menu from './components/components/Menu'
 import MenuGroup from './components/components/MenuGroup'
 import MenuItem from './components/components/MenuItem'
 import Message from './components/components/Message'
-
+import Pagination from './components/components/Pagination'
 const components = [
   Box,
   Button,
@@ -85,7 +85,8 @@ const components = [
   Menu,
   MenuGroup,
   MenuItem,
-  Message
+  Message,
+  Pagination
 ]
 
 const install = function(Vue) {

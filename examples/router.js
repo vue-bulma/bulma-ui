@@ -155,6 +155,11 @@ export default new Router({
       path: '/components/message',
       name: 'Message',
       component: () => import('./components/components/Message')
+    },
+    {
+      path: '/components/pagination',
+      name: 'Pagination',
+      component: () => import('./components/components/Pagination')
     }
   ]
 })

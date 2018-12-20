@@ -187,7 +187,7 @@
         </vb-button>
         <vb-button>
           <vb-icon name="fa fa-home"></vb-icon>
-          <vb-title>home</vb-title>
+          <vb-title size="6">home</vb-title>
         </vb-button>
       </vb-buttons-List>
     </vb-box>
@@ -210,15 +210,15 @@
       <vb-button-addons>
         <vb-button>
           <vb-icon name="fa fa-align-left"></vb-icon>
-          <vb-title>left</vb-title>
+          <vb-title size="6">left</vb-title>
         </vb-button>
         <vb-button>
           <vb-icon name="fa fa-align-center"></vb-icon>
-          <vb-title>center</vb-title>
+          <vb-title size="6">center</vb-title>
         </vb-button>
         <vb-button>
           <vb-icon name="fa fa-align-right"></vb-icon>
-          <vb-title>right</vb-title>
+          <vb-title size="6">right</vb-title>
         </vb-button>
       </vb-button-addons>
     </vb-box>
@@ -296,7 +296,7 @@
 
     <vb-box>
       <vb-button @click="handleClick">Click event</vb-button>
-      <vb-title>{{title}}</vb-title>
+      <vb-title size="6">{{title}}</vb-title>
     </vb-box>
   </div>
 </template>
@@ -310,7 +310,7 @@ export default {
     }
   },
   methods: {
-    handleClick() {
+    handleClick(e) {
       this.title = !this.title
     }
   }
