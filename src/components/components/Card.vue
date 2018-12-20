@@ -1,43 +1,35 @@
 <template>
   <div class="card">
-    <header
-      class="card-header"
-      v-if="!!title"
-    >
-      <div
-        class="card-header-title"
-        v-if="!!title"
-      >{{ title }}</div>
-      <div
-        class="card-header-icon"
-        v-if="!!icon"
-      >
-        <vb-icon :name="icon"></vb-icon>
-      </div>
+    <header v-if="hasTitle || hasIcon" class="card-header">
+      <slot name="header">
+        <div v-if="hasTitle" class="card-header-title">
+          <slot name="title">{{title}}</slot>
+        </div>
+
+        <div v-if="hasIcon" class="card-header-icon">
+          <slot name="icon">
+            <vb-icon :name="icon"></vb-icon>
+          </slot>
+        </div>
+      </slot>
     </header>
-    <div
-      class="card-image"
-      v-if="!!image"
-    >
-      <vb-image
-        :path="image"
-        :size="size"
-      ></vb-image>
+
+    <div v-if="hasImage" class="card-image">
+      <slot name="image">
+        <vb-image :path="image"></vb-image>
+      </slot>
     </div>
-    <div
-      class="card-content"
-      v-if="!!$slots.content"
-    >
-      <slot name="content"></slot>
+
+    <div v-if="!!$slots.default" class="card-content">
+      <slot></slot>
     </div>
-    <footer
-      class="card-footer"
-      v-if="!!this.$slots.footer"
-    >
+
+    <footer v-if="!!$slots.footer" class="card-footer">
       <slot name="footer"></slot>
     </footer>
   </div>
 </template>
+
 <script>
 export default {
   name: 'VbCard',
@@ -50,13 +42,22 @@ export default {
     },
     image: {
       type: String
+    }
+  },
+  computed: {
+    hasTitle() {
+      return !!this.$slots.title || !!this.title
     },
-    size: {
-      type: String
+    hasImage() {
+      return !!this.$slots.image || !!this.image
+    },
+    hasIcon() {
+      return !!this.$slots.icon || !!this.icon
     }
   }
 }
 </script>
+
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/card';
