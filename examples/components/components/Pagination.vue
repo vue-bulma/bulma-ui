@@ -32,6 +32,7 @@
     >Size:</vb-title>
     <vb-box>
       <vb-pagination :pageCount=5 @topage=topage size="small"></vb-pagination>
+      <vb-pagination :pageCount=5 @topage=topage ></vb-pagination>
       <vb-pagination :pageCount=5 @topage=topage size="medium"></vb-pagination>
       <vb-pagination :pageCount=5 @topage=topage size="large"></vb-pagination>
     </vb-box>
