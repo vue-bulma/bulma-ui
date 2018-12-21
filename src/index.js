@@ -43,6 +43,9 @@ import MenuItem from './components/components/MenuItem'
 import Message from './components/components/Message'
 import Pagination from './components/components/Pagination'
 import Tabs from './components/components/Tabs'
+import Modal from './components/components/Modal'
+import ModalCard from './components/components/ModalCard'
+
 const components = [
   Box,
   Button,
@@ -88,7 +91,9 @@ const components = [
   MenuItem,
   Message,
   Pagination,
-  Tabs
+  Tabs,
+  Modal,
+  ModalCard
 ]
 
 const install = function(Vue) {

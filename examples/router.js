@@ -165,6 +165,11 @@ export default new Router({
       path: '/components/tabs',
       name: 'Tabs',
       component: () => import('./components/components/Tabs')
+    },
+    {
+      path: '/components/modal',
+      name: 'Modal',
+      component: () => import('./components/components/Modal')
     }
   ]
 })
