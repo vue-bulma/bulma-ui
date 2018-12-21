@@ -73,10 +73,16 @@ export default {
       default: 1
     },
     align: {
-      type: String
+      type: String,
+      validator(value) {
+        return ALIGNS.includes(value)
+      }
     },
     size: {
-      type: String
+      type: String,
+      validator(value) {
+        return SIZE.includes(value)
+      }
     },
     rounded: Boolean
   },
@@ -112,7 +118,7 @@ export default {
         // 当前页码大于三时，显示当前页码的前2个
         // ret.push(this.currentPage - 2)
         getPages.ret.push(this.currentPage - 1)
-        if (this.currentPage > 3) {
+        if (this.currentPage > 2) {
           // 当前页与第一页差距4以上时显示省略号
           getPages.preClipped = true
         }
@@ -160,8 +166,7 @@ export default {
       // 下一页
       this.currentPage++
       this.$emit('topage', this.currentPage)
-    },
-    pagerCountOffset(direction) {}
+    }
   }
 }
 </script>

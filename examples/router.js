@@ -160,6 +160,11 @@ export default new Router({
       path: '/components/pagination',
       name: 'Pagination',
       component: () => import('./components/components/Pagination')
+    },
+    {
+      path: '/components/tabs',
+      name: 'Tabs',
+      component: () => import('./components/components/Tabs')
     }
   ]
 })

@@ -5,7 +5,10 @@
       type="title"
     >Basic:</vb-title>
     <vb-box>
-      <vb-pagination :pageCount=10 @topage=topage></vb-pagination>
+      <vb-pagination
+        :pageCount=10
+        @topage=topage
+      ></vb-pagination>
     </vb-box>
 
     <vb-title
@@ -13,17 +16,32 @@
       type="title"
     >Aligns:</vb-title>
     <vb-box>
-      <vb-pagination :pageCount=5 @topage=topage></vb-pagination>
-      <vb-pagination :pageCount=5 align="centered" @topage=topage></vb-pagination>
-      <vb-pagination :pageCount=5 align="right" @topage=topage></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+      ></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        align="centered"
+        @topage=topage
+      ></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        align="right"
+        @topage=topage
+      ></vb-pagination>
     </vb-box>
 
-     <vb-title
+    <vb-title
       id="Type"
       type="title"
     >Type:</vb-title>
     <vb-box>
-      <vb-pagination :pageCount=5 @topage=topage rounded></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+        rounded
+      ></vb-pagination>
     </vb-box>
 
     <vb-title
@@ -31,10 +49,25 @@
       type="title"
     >Size:</vb-title>
     <vb-box>
-      <vb-pagination :pageCount=5 @topage=topage size="small"></vb-pagination>
-      <vb-pagination :pageCount=5 @topage=topage ></vb-pagination>
-      <vb-pagination :pageCount=5 @topage=topage size="medium"></vb-pagination>
-      <vb-pagination :pageCount=5 @topage=topage size="large"></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+        size="small"
+      ></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+      ></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+        size="medium"
+      ></vb-pagination>
+      <vb-pagination
+        :pageCount=5
+        @topage=topage
+        size="large"
+      ></vb-pagination>
     </vb-box>
   </div>
 </template>

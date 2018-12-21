@@ -310,7 +310,7 @@ export default {
     }
   },
   methods: {
-    handleClick(e) {
+    handleClick() {
       this.title = !this.title
     }
   }
