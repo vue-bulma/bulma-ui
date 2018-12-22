@@ -45,6 +45,9 @@ import Pagination from './components/components/Pagination'
 import Tabs from './components/components/Tabs'
 import Modal from './components/components/Modal'
 import ModalCard from './components/components/ModalCard'
+import Navbar from './components/components/navbar/Navbar'
+import NavbarDropdown from './components/components/navbar/NavbarDropdown'
+import NavbarItem from './components/components/navbar/NavbarItem'
 
 const components = [
   Box,
@@ -93,7 +96,10 @@ const components = [
   Pagination,
   Tabs,
   Modal,
-  ModalCard
+  ModalCard,
+  Navbar,
+  NavbarDropdown,
+  NavbarItem
 ]
 
 const install = function(Vue) {
