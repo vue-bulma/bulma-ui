@@ -1,171 +1,128 @@
 <template>
-  <nav
-    :class="classes"
-    role="navigation"
-    aria-label="pagination"
-  >
-    <button
-      class="pagination-previous"
-      @click.stop.prevent="prePage"
-      :disabled="this.currentPage === 1"
-    >上一页</button>
-    <button
-      class="pagination-next"
-      @click.stop.prevent="nextPage"
-      :disabled="this.pageCount === this.currentPage || this.pageCount ===0"
-    >下一页</button>
-    <ul class="pagination-list">
-      <li>
-        <a
-          v-if="pageCount !== 1"
-          class="pagination-link"
-          :class="{'is-current':currentPage===(1||0)}"
-          aria-label="Goto page 1"
-          @click.stop.prevent="goPage(1)"
-        >1</a>
-      </li>
-      <li>
-        <span
-          v-if="pages.preClipped"
-          class="pagination-ellipsis"
-          @click.stop.prevent="pagerCountOffset('left')"
-        >&hellip;</span>
-      </li>
+<nav :class="classes" role="navigation" aria-label="pagination">
+  <button class="pagination-previous" @click="prePage" :disabled="!hasPrevPage">上一页</button>
+  <button class="pagination-next" @click="nextPage" :disabled="!hasNextPage">下一页</button>
 
-      <li>
-        <a
-          v-for="(page,index) in pages.ret"
-          :key="index"
-          class="pagination-link"
-          :class="{'is-current':currentPage===page}"
-          :aria-label="'Goto page'+ index"
-          @click.stop.prevent="goPage(page)"
-        >{{page}}</a>
-      </li>
-      <li>
-        <span
-          v-if="pages.nextClipped"
-          class="pagination-ellipsis"
-          @click.stop.prevent="pagerCountOffset('right')"
-        >&hellip;</span>
-      </li>
-      <li>
-        <a
-          v-if="pageCount!=0"
-          class="pagination-link"
-          :class="{'is-current':currentPage===pageCount}"
-          aria-label="Goto page 86"
-          @click.stop.prevent="goPage(pageCount)"
-        >{{pageCount}}</a>
-      </li>
-    </ul>
-  </nav>
+  <ul class="pagination-list">
+    <li>
+      <a class="pagination-link" aria-label="Goto page 1" :class="{ 'is-current': currentPage === 1 }" @click="goPage(1)">1</a>
+    </li>
+
+    <li v-if="pages.showPrevMore">
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+
+    <li v-for="page in pages.ret" :key="page">
+      <a class="pagination-link" :class="{ 'is-current': currentPage === page }" :aria-label="`Goto page ${page}`" @click="goPage(page)">
+        {{page}}
+      </a>
+    </li>
+
+    <li v-if="pages.showNextMore">
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+
+    <li v-if="pageCount > 1">
+      <a class="pagination-link" :class="{ 'is-current': currentPage === pageCount }" :aria-label="`Goto page ${pageCount}`" @click="goPage(pageCount)">
+        {{pageCount}}
+      </a>
+    </li>
+  </ul>
+</nav>
 </template>
 
 <script>
-const ALIGNS = ['centered', 'right']
-const SIZE = ['small', 'medium', 'large']
+import alignProps from '../../mixins/align'
+import sizeProps from '../../mixins/size'
+
 export default {
   name: 'VbPagination',
+  mixins: [alignProps, sizeProps],
   props: {
+    current: {
+      type: Number,
+      default: 1
+    },
     pageCount: {
       type: Number,
       default: 1
     },
-    align: {
-      type: String,
-      validator(value) {
-        return ALIGNS.includes(value)
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return SIZE.includes(value)
-      }
+    // Items count in prevMore and nextMore
+    pagerCount: {
+      type: Number,
+      default: 3
     },
     rounded: Boolean
   },
   data() {
     return {
-      // 当前页
-      currentPage: 1
+      currentPage: this.current
     }
   },
   computed: {
     classes() {
       const { align, rounded, size } = this
-      const obj = {
+      return {
         pagination: true,
         [`is-${align}`]: !!align,
         [`is-${size}`]: !!size,
         'is-rounded': rounded
       }
-      return obj
     },
-
-    disabled() {
-      if (this.pageCount <= 1) {
-        return true
-      } else {
-        return false
-      }
+    hasPrevPage() {
+      return this.currentPage > 1
     },
-    // 使用计算属性来得到每次应该显示的页码
+    hasNextPage() {
+      const { currentPage, pageCount } = this
+      return currentPage < pageCount && currentPage > 0
+    },
     pages() {
-      let getPages = { ret: [], nextClipped: true, preClipped: false }
-      if (this.currentPage > 3) {
-        // 当前页码大于三时，显示当前页码的前2个
-        // ret.push(this.currentPage - 2)
-        getPages.ret.push(this.currentPage - 1)
-        if (this.currentPage > 2) {
-          // 当前页与第一页差距4以上时显示省略号
-          getPages.preClipped = true
-        }
-      } else {
-        getPages.preClipped = false
-        for (let i = 2; i < this.currentPage; i++) {
-          getPages.ret.push(i)
-        }
+      const { currentPage, pageCount, pagerCount } = this
+      const showMore = pageCount > pagerCount
+
+      const min = 2
+      const max = pageCount - 1
+      const offset = (pagerCount - 1) / 2
+      const start = currentPage - offset
+      const end = currentPage + offset
+
+      const showPrevMore = showMore && start > min
+      const showNextMore = showMore && end < max
+
+      let pages = []
+      const startPage = showPrevMore ? start : min
+      const endPage = showNextMore ? end : max
+
+      for (let i = startPage; i <= endPage; i++) {
+        pages.push(i)
       }
-      if (this.currentPage !== this.pageCount && this.currentPage !== 1) {
-        getPages.ret.push(this.currentPage)
+
+      return {
+        ret: pages,
+        showPrevMore,
+        showNextMore
       }
-      if (this.currentPage < this.pageCount - 2) {
-        // 显示当前页码的后2个
-        getPages.ret.push(this.currentPage + 1)
-        // ret.push(this.currentPage + 2)
-        if (this.currentPage <= this.pageCount - 3) {
-          //  当前页与最后一页差距3以上时显示省略号
-          getPages.nextClipped = true
-        }
-      } else {
-        getPages.nextClipped = false
-        for (let i = this.currentPage + 1; i < this.pageCount; i++) {
-          getPages.ret.push(i)
-        }
-      }
-      // 返回整个页码组
-      return getPages
     }
   },
   methods: {
     goPage(index) {
-      // 跳转到相应页面
       if (index !== this.currentPage) {
         this.currentPage = index
-        this.$emit('topage', this.currentPage)
+        this.$emit('change', index)
       }
     },
     prePage() {
-      // 上一页
       this.currentPage--
-      this.$emit('topage', this.currentPage)
+      this.$emit('change', this.currentPage)
     },
     nextPage() {
-      // 下一页
       this.currentPage++
-      this.$emit('topage', this.currentPage)
+      this.$emit('change', this.currentPage)
+    }
+  },
+  watch: {
+    current(newVal) {
+      this.currentPage = newVal
     }
   }
 }
