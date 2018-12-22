@@ -175,6 +175,16 @@ export default new Router({
       path: '/components/modal',
       name: 'Modal',
       component: () => import('./components/components/Modal')
+    },
+    {
+      path: '/components/panel',
+      name: 'Panel',
+      component: () => import('./components/components/Panel')
+    },
+    {
+      path: '/components/dropdown',
+      name: 'Dropdown',
+      component: () => import('./components/components/Dropdown')
     }
   ]
 })

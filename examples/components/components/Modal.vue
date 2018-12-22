@@ -19,21 +19,21 @@
       <vb-modal :is-show.sync="modal2" :closable="false">
         <p>This is the content</p>
       </vb-modal>
-      <vb-modal :is-show.sync="modal3" close-button-size="small" >
-      <p>This closeButton is small</p>
+      <vb-modal :is-show.sync="modal3" close-button-size="small">
+        <p>This closeButton is small</p>
       </vb-modal>
-      <vb-modal :is-show.sync="modal4" close-button-size="medium" >
-      <p>This closeButton is medium</p>
+      <vb-modal :is-show.sync="modal4" close-button-size="medium">
+        <p>This closeButton is medium</p>
       </vb-modal>
-      <vb-modal :is-show.sync="modal5" close-button-size="large" >
-      <p>This closeButton is large</p>
+      <vb-modal :is-show.sync="modal5" close-button-size="large">
+        <p>This closeButton is large</p>
       </vb-modal>      
     </vb-box>
     
     <span id="image-modal" class="title">Image modal:</span>
     <vb-box>
       <vb-button @click="modal6 = true">Image modal</vb-button>
-      <vb-modal :is-show.sync="modal6" close-button-size="large" >
+      <vb-modal :is-show.sync="modal6" close-button-size="large">
         <vb-image
           path="https://bulma.io/images/placeholders/1280x960.png"
           size="4by3"

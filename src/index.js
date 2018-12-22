@@ -48,6 +48,10 @@ import ModalCard from './components/components/ModalCard'
 import Navbar from './components/components/navbar/Navbar'
 import NavbarDropdown from './components/components/navbar/NavbarDropdown'
 import NavbarItem from './components/components/navbar/NavbarItem'
+import Panel from './components/components/Panel'
+import Dropdown from './components/components/Dropdown'
+import DropdownMenu from './components/components/DropdownMenu'
+import DropdownItem from './components/components/DropdownItem'
 
 const components = [
   Box,
@@ -99,7 +103,11 @@ const components = [
   ModalCard,
   Navbar,
   NavbarDropdown,
-  NavbarItem
+  NavbarItem,
+  Panel,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem
 ]
 
 const install = function(Vue) {
