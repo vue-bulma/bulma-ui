@@ -10,6 +10,14 @@ const ModalMixin = {
     showHeader: {
       type: Boolean,
       default: true
+    },
+    maskClosable: {
+      tyep: Boolean,
+      default: true
+    },
+    showMask: {
+      tyep: Boolean,
+      default: true
     }
   },
   data() {
@@ -31,6 +39,11 @@ const ModalMixin = {
     }
   },
   methods: {
+    handleMask() {
+      if (this.maskClosable && this.showMask) {
+        this.deactive()
+      }
+    },
     deactive() {
       this.isActive = false
     }

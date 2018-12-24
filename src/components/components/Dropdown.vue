@@ -7,6 +7,8 @@
 </template>
 
 <script>
+const TRIGGER = ['click', 'hover']
+
 export default {
   name: 'VbDropdown',
   props: {
@@ -14,7 +16,7 @@ export default {
       type: String,
       default: 'hover',
       validator(value) {
-        return ['click', 'hover'].includes(value)
+        return TRIGGER.includes(value)
       }
     },
     rightAligned: Boolean,

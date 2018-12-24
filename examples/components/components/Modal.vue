@@ -11,12 +11,13 @@
     <span id="closable" class="title">Closable:</span>
     <vb-box>
       <vb-buttons-List>
-        <vb-button @click="modal2 = true">Closable</vb-button>
-        <vb-button @click="modal3 = true">Closable small</vb-button>
-        <vb-button @click="modal4 = true">Closable medium</vb-button>
-        <vb-button @click="modal5 = true">Closable large</vb-button>
+        <vb-button @click="modal2 = true">Close button normal</vb-button>
+        <vb-button @click="modal3 = true">Close button small</vb-button>
+        <vb-button @click="modal4 = true">Close button medium</vb-button>
+        <vb-button @click="modal5 = true">Close button large</vb-button>
+        <vb-button @click="modal6 = true">Disable close button</vb-button>
       </vb-buttons-List>
-      <vb-modal :is-show.sync="modal2" :closable="false">
+      <vb-modal :is-show.sync="modal2">
         <p>This is the content</p>
       </vb-modal>
       <vb-modal :is-show.sync="modal3" close-button-size="small">
@@ -27,24 +28,47 @@
       </vb-modal>
       <vb-modal :is-show.sync="modal5" close-button-size="large">
         <p>This closeButton is large</p>
-      </vb-modal>      
+      </vb-modal>
+      <vb-modal :is-show.sync="modal6" :closable="false">
+        <p>Disable closeButton</p>
+      </vb-modal>
     </vb-box>
-    
+
     <span id="image-modal" class="title">Image modal:</span>
     <vb-box>
-      <vb-button @click="modal6 = true">Image modal</vb-button>
-      <vb-modal :is-show.sync="modal6" close-button-size="large">
-        <vb-image
-          path="https://bulma.io/images/placeholders/1280x960.png"
-          size="4by3"
-        ></vb-image>
+      <vb-button @click="modal7 = true">Image modal</vb-button>
+      <vb-modal :is-show.sync="modal7" close-button-size="large">
+        <vb-image path="https://bulma.io/images/placeholders/1280x960.png" size="4by3"></vb-image>
       </vb-modal>
     </vb-box>
 
     <span id="modal-card" class="title">Modal card:</span>
     <vb-box>
-      <vb-button @click="modal7 = true">Modal card</vb-button>
-      <vb-modal-card title="modalCard" :is-show.sync="modal7">
+      <vb-button @click="modal8 = true">Modal card</vb-button>
+      <vb-modal-card title="modalCard" :is-show.sync="modal8">
+        <p>This is content</p>
+        <div slot="foot">
+          <vb-button color="success">Save changes</vb-button>
+          <vb-button>Cancel</vb-button>
+        </div>
+      </vb-modal-card>
+    </vb-box>
+
+    <span id="modal-card" class="title">Disable:</span>
+    <vb-box>
+      <vb-buttons-List>
+        <vb-button @click="modal9 = true">Disable mask layer closure</vb-button>
+        <vb-button @click="modal10 = true">Disable Mask</vb-button>
+      </vb-buttons-List>
+      <vb-modal-card title="modalCard" :is-show.sync="modal9" :mask-closable="false">
+        <p>This is content</p>
+        <div slot="foot">
+          <vb-button color="success">Save changes</vb-button>
+          <vb-button>Cancel</vb-button>
+        </div>
+      </vb-modal-card>
+
+      <vb-modal-card title="modalCard" :is-show.sync="modal10" :show-mask="false">
         <p>This is content</p>
         <div slot="foot">
           <vb-button color="success">Save changes</vb-button>
@@ -65,7 +89,10 @@ export default {
       modal4: false,
       modal5: false,
       modal6: false,
-      modal7: false
+      modal7: false,
+      modal8: false,
+      modal9: false,
+      modal10: false
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div :class="classes" v-show="isActive">
-    <div class="modal-background" @click="deactive"></div>
+    <div class="modal-background" @click="handleMask" v-if="showMask"></div>
     <div class="modal-card">
       <header class="modal-card-head" v-if="showHead">
         <slot name="head">
