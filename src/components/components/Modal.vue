@@ -1,6 +1,6 @@
 <template>
   <div v-if="isActive" :class="classes" >
-    <div class="modal-background" @click="handleMask" v-if="showMask"></div>
+    <div v-if="showMask" class="modal-background" @click="handleMask"></div>
     <div class="modal-content">
       <slot></slot>
     </div>

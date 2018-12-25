@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="menu-label" v-if="label">{{ label }}</p>
+    <p v-if="label" class="menu-label">{{ label }}</p>
     <ul class="menu-list">
       <slot></slot>
     </ul>

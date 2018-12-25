@@ -1,8 +1,8 @@
 <template>
-  <div :class="classes" v-show="isActive">
-    <div class="modal-background" @click="handleMask" v-if="showMask"></div>
+  <div v-show="isActive" :class="classes">
+    <div v-if="showMask" class="modal-background" @click="handleMask"></div>
     <div class="modal-card">
-      <header class="modal-card-head" v-if="showHead">
+      <header v-if="showHead" class="modal-card-head">
         <slot name="head">
           <p class="modal-card-title">{{ title }}</p>
           <button class="delete" @click="deactive"></button>
@@ -13,7 +13,7 @@
         <slot></slot>
       </section>
 
-      <footer class="modal-card-foot" v-if="$slots.foot">
+      <footer v-if="$slots.foot" class="modal-card-foot">
         <slot name="foot"></slot>
       </footer>
     </div>

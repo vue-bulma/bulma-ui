@@ -2,7 +2,7 @@
   <li>
     <span @click="toggle">
       <router-link :class="classes" :to="to">
-        <vb-icon class="icon-margin" v-if="hasIcon" :name="icon"></vb-icon>
+        <vb-icon v-if="hasIcon" class="icon-margin" :name="icon"></vb-icon>
         <slot></slot>
         <vb-icon
           v-if="$slots.sub"

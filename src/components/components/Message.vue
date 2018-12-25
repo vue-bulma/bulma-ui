@@ -1,10 +1,10 @@
 <template>
-  <article :class="classes" v-if="show">
-    <div class="message-header" v-if="title">
+  <article v-if="show" :class="classes">
+    <div v-if="title" class="message-header">
       <p>{{title}}</p>
-      <button class="delete" v-if="showCloseButton" @click="close"></button>
+      <button v-if="showCloseButton" class="delete" @click="close"></button>
     </div>
-    <div class="message-body" v-if="$slots.content">
+    <div v-if="$slots.content" class="message-body">
       <slot name="content"></slot>
     </div>
   </article>
