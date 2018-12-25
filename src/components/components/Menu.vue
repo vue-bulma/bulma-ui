@@ -1,12 +1,18 @@
 <template>
-  <aside class="menu">
-    <slot></slot>
-  </aside>
+  <div>
+    <p class="menu-label is-8" v-if="label">{{ label }}</p>
+    <ul class="menu-list">
+      <slot></slot>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'VbMenu'
+  name: 'VbMenu',
+  props: {
+    label: String
+  }
 }
 </script>
 

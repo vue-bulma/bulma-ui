@@ -38,7 +38,6 @@ import Section from './components/layout/Section'
 import Footer from './components/layout/Footer'
 import Tile from './components/layout/Tile'
 import Menu from './components/components/Menu'
-import MenuGroup from './components/components/MenuGroup'
 import MenuItem from './components/components/MenuItem'
 import Message from './components/components/Message'
 import Pagination from './components/components/Pagination'
@@ -49,6 +48,7 @@ import Navbar from './components/components/navbar/Navbar'
 import NavbarDropdown from './components/components/navbar/NavbarDropdown'
 import NavbarItem from './components/components/navbar/NavbarItem'
 import Panel from './components/components/Panel'
+import PanelBlock from './components/components/PanelBlock'
 import Dropdown from './components/components/Dropdown'
 import DropdownMenu from './components/components/DropdownMenu'
 import DropdownItem from './components/components/DropdownItem'
@@ -94,7 +94,6 @@ const components = [
   Footer,
   Tile,
   Menu,
-  MenuGroup,
   MenuItem,
   Message,
   Pagination,
@@ -105,6 +104,7 @@ const components = [
   NavbarDropdown,
   NavbarItem,
   Panel,
+  PanelBlock,
   Dropdown,
   DropdownMenu,
   DropdownItem
