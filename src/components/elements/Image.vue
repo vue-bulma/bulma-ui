@@ -1,7 +1,7 @@
 <template>
   <figure :class="classes">
     <img
-      :src="path"
+      :src="src"
       :class="imgClasses "
     >
   </figure>
@@ -42,7 +42,7 @@ export default {
         return NUMERICAL.includes(value)
       }
     },
-    path: String,
+    src: String,
     rounded: Boolean
   },
   computed: {

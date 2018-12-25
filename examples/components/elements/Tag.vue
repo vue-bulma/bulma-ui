@@ -13,16 +13,16 @@
     >Colors:</vb-title>
     <vb-box>
       <vb-tags>
-        <vb-tag color="black">Tag label</vb-tag>
-        <vb-tag color="dark">Tag label</vb-tag>
-        <vb-tag color="light">Tag label</vb-tag>
-        <vb-tag color="white">Tag label</vb-tag>
-        <vb-tag color="primary">Tag label</vb-tag>
-        <vb-tag color="link">Tag label</vb-tag>
-        <vb-tag color="info">Tag label</vb-tag>
-        <vb-tag color="success">Tag label</vb-tag>
-        <vb-tag color="warning">Tag label</vb-tag>
-        <vb-tag color="danger">Tag label</vb-tag>
+        <vb-tag color="black">black</vb-tag>
+        <vb-tag color="dark">dark</vb-tag>
+        <vb-tag color="light">light</vb-tag>
+        <vb-tag color="white">white</vb-tag>
+        <vb-tag color="primary">primary</vb-tag>
+        <vb-tag color="link">link</vb-tag>
+        <vb-tag color="info">info</vb-tag>
+        <vb-tag color="success">success</vb-tag>
+        <vb-tag color="warning">warning</vb-tag>
+        <vb-tag color="danger">danger</vb-tag>
       </vb-tags>
     </vb-box>
     <vb-title
@@ -31,9 +31,9 @@
     >Sizes:</vb-title>
     <vb-box>
       <vb-tags>
-        <vb-tag>Tag label</vb-tag>
-        <vb-tag size="medium">Tag label</vb-tag>
-        <vb-tag size='large'>Tag label</vb-tag>
+        <vb-tag>Normal</vb-tag>
+        <vb-tag size="medium">Medium</vb-tag>
+        <vb-tag size='large'>Large</vb-tag>
       </vb-tags>
     </vb-box>
     <vb-title
@@ -42,7 +42,7 @@
     >Modifiers:</vb-title>
     <vb-box class="box-display">
       <vb-tags>
-        <vb-tag rounded>Tag label</vb-tag>
+        <vb-tag rounded>Rounded</vb-tag>
         <vb-tag del></vb-tag>
       </vb-tags>
     </vb-box>

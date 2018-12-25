@@ -85,6 +85,7 @@
     >Size:</vb-title>
     <vb-box>
       <vb-content size="small">
+        <h1>Small</h1>
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
         <h2>Second level</h2>
@@ -99,6 +100,7 @@
     </vb-box>
     <vb-box>
       <vb-content>
+        <h1>Normal</h1>
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
         <h2>Second level</h2>
@@ -113,6 +115,7 @@
     </vb-box>
     <vb-box>
       <vb-content size="medium">
+        <h1>Medium</h1>
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
         <h2>Second level</h2>
@@ -127,6 +130,7 @@
     </vb-box>
     <vb-box>
       <vb-content size="large">
+        <h1>Large</h1>
         <h1>Hello World</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
         <h2>Second level</h2>

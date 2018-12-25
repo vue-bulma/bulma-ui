@@ -1,9 +1,14 @@
 <template>
   <div :class="classes">
     <ul>
-      <li v-for="(tab,index) in tabs" :key="index" :class="itemClass(index)" @click.stop="handleClick(index)">
+      <li
+        :class="{'is-active':currentTab===index}"
+        v-for="(tab,index) in tabs"
+        :key="index"
+        @click.stop="handleClick(index)"
+      >
         <a>
-          <span v-if="tab.icon" class="icon is-small">
+          <span class="icon is-small" v-if="tab.icon&&tab.icon!==''">
             <i class="fa" :class="tab.icon" aria-hidden="true"></i>
           </span>
           <span>{{tab.name}}</span>
@@ -17,7 +22,6 @@
 const ALIGNS = ['centered', 'right']
 const SIZE = ['small', 'medium', 'large']
 const STYLES = ['boxed', 'toggle', 'fullwidth']
-
 export default {
   name: 'VbTabs',
   props: {
@@ -47,13 +51,14 @@ export default {
   },
   data() {
     return {
+      // 当前Tab
       currentTab: 0
     }
   },
   computed: {
     classes() {
       const { align, size, type, rounded, fullwidth } = this
-      return {
+      const obj = {
         tabs: true,
         [`is-${align}`]: !!align,
         [`is-${size}`]: !!size,
@@ -61,14 +66,10 @@ export default {
         'is-toggle-rounded': rounded,
         'is-fullwidth': fullwidth
       }
+      return obj
     }
   },
   methods: {
-    itemClass(index) {
-      return {
-        'is-active': this.currentTab === index
-      }
-    },
     handleClick(index) {
       this.currentTab = index
       this.$emit('click', index)

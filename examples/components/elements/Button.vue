@@ -69,27 +69,27 @@
         <vb-button
           color="primary"
           outlined
-        >primary</vb-button>
+        >Outlined</vb-button>
         <vb-button
           color="link"
           outlined
-        >link</vb-button>
+        >Outlined</vb-button>
         <vb-button
           color="info"
           outlined
-        >Info</vb-button>
+        >Outlined</vb-button>
         <vb-button
           color="warning"
           outlined
-        >Warning</vb-button>
+        >Outlined</vb-button>
         <vb-button
           color="success"
           outlined
-        >Success</vb-button>
+        >Outlined</vb-button>
         <vb-button
           color="danger"
           outlined
-        >Danger</vb-button>
+        >Outlined</vb-button>
       </vb-buttons-List>
     </vb-box>
 

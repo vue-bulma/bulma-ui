@@ -48,7 +48,7 @@ import Navbar from './components/components/navbar/Navbar'
 import NavbarDropdown from './components/components/navbar/NavbarDropdown'
 import NavbarItem from './components/components/navbar/NavbarItem'
 import Panel from './components/components/Panel'
-import PanelBlock from './components/components/PanelBlock'
+// import PanelBlock from './components/components/PanelBlock'
 import Dropdown from './components/components/Dropdown'
 import DropdownMenu from './components/components/DropdownMenu'
 import DropdownItem from './components/components/DropdownItem'
@@ -104,7 +104,7 @@ const components = [
   NavbarDropdown,
   NavbarItem,
   Panel,
-  PanelBlock,
+  // PanelBlock,
   Dropdown,
   DropdownMenu,
   DropdownItem
