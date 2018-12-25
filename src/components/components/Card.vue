@@ -2,7 +2,7 @@
   <div class="card">
     <header v-if="hasTitle || hasIcon" class="card-header">
       <slot name="header">
-        <div v-if="hasTitle" class="card-header-title">
+        <div v-if="hasTitle" class="card-header-title" :class="{'is-centered': titleCentered}">
           <slot name="title">{{title}}</slot>
         </div>
 
@@ -42,7 +42,8 @@ export default {
     },
     image: {
       type: String
-    }
+    },
+    titleCentered: Boolean
   },
   computed: {
     hasTitle() {

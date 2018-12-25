@@ -14,8 +14,10 @@
 
       <vb-content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
+        Phasellus nec iaculis mauris.
+        <a>@bulmaio</a>.
+        <a href="#">#css</a>
+        <a href="#">#responsive</a>
         <br>
         <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
       </vb-content>
@@ -29,8 +31,10 @@
 
       <vb-content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
+        Phasellus nec iaculis mauris.
+        <a>@bulmaio</a>.
+        <a href="#">#css</a>
+        <a href="#">#responsive</a>
         <br>
         <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
       </vb-content>
@@ -45,8 +49,27 @@
     <vb-card title="Component" icon="fa fa-angle-down">
       <vb-content>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
+        Phasellus nec iaculis mauris.
+        <a>@bulmaio</a>.
+        <a href="#">#css</a>
+        <a href="#">#responsive</a>
+        <br>
+        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      </vb-content>
+
+      <a slot="footer" class="card-footer-item">Save</a>
+      <a slot="footer" class="card-footer-item">Edit</a>
+      <a slot="footer" class="card-footer-item">Delete</a>
+    </vb-card>
+
+    <br>
+    <vb-card title="Component" icon="fa fa-angle-down" title-centered>
+      <vb-content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus nec iaculis mauris.
+        <a>@bulmaio</a>.
+        <a href="#">#css</a>
+        <a href="#">#responsive</a>
         <br>
         <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
       </vb-content>
@@ -64,11 +87,11 @@
         <vb-title type="subtitle">Jeff Atwood</vb-title>
       </vb-content>
 
-      <p slot="footer" class="card-footer-item">
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+      <p slot="footer" class="card-footer-item">View on
+        <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
       </p>
-      <p slot="footer" class="card-footer-item">
-        Share on <a href="#">Facebook</a>
+      <p slot="footer" class="card-footer-item">Share on
+        <a href="#">Facebook</a>
       </p>
     </vb-card>
   </div>

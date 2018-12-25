@@ -5,7 +5,7 @@
         <vb-icon v-if="hasIcon" class="icon-margin" :name="icon"></vb-icon>
         <slot></slot>
         <vb-icon
-          v-if="$slots.sub"
+          v-if="!!$slots.sub"
           class="icon-right"
           :class="{'icon-rotate': isOpen}"
           name="fa fa-angle-down"
