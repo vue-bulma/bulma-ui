@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build && now && now alias",
-    "deploy:public": "npm run build && now --public && now alias"
+    "now-build": "npm run build"
   },
   "dependencies": {
     "vue": "^2.5.17"
