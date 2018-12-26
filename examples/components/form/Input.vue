@@ -1,108 +1,113 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <vb-input />
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <vb-input />
-    </vb-box>
+    <example-section-item title="Colors">
+      <demo>
+        <div class="block">
+          <vb-input color="primary" placeholder="Primary" />
+        </div>
+        <div class="block">
+          <vb-input color="info" placeholder="Info" />
+        </div>
+        <div class="block">
+          <vb-input color="success" placeholder="Success" />
+        </div>
+        <div class="block">
+          <vb-input color="warning" placeholder="Warning" />
+        </div>
+        <div class="block">
+          <vb-input color="danger" placeholder="Danger" />
+        </div>
+        <div class="block">
+          <vb-input color="white" placeholder="White" />
+        </div>
+        <div class="block">
+          <vb-input color="light" placeholder="Light" />
+        </div>
+        <div class="block">
+          <vb-input color="dark" placeholder="Dark" />
+        </div>
+        <div class="block">
+          <vb-input color="black" placeholder="Black" />
+        </div>
+        <div class="block">
+          <vb-input color="link" placeholder="Link" />
+        </div>
+      </demo>
+    </example-section-item>
 
-    <span id="colors" class="title">Colors:</span>
+    <example-section-item title="Sizes">
+      <demo>
+        <div class="block">
+          <vb-input size="small" placeholder="Small" />
+        </div>
+        <div class="block">
+          <vb-input placeholder="Normal" />
+        </div>
+        <div class="block">
+          <vb-input size="medium" placeholder="Medium" />
+        </div>
+        <div class="block">
+          <vb-input size="large" placeholder="Large" />
+        </div>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <div class="field">
-        <vb-input color="primary" placeholder="Primary" />
-      </div>
-      <div class="field">
-        <vb-input color="info" placeholder="Info" />
-      </div>
-      <div class="field">
-        <vb-input color="success" placeholder="Success" />
-      </div>
-      <div class="field">
-        <vb-input color="warning" placeholder="Warning" />
-      </div>
-      <div class="field">
-        <vb-input color="danger" placeholder="Danger" />
-      </div>
-      <div class="field">
-        <vb-input color="white" placeholder="White" />
-      </div>
-      <div class="field">
-        <vb-input color="light" placeholder="Light" />
-      </div>
-      <div class="field">
-        <vb-input color="dark" placeholder="Dark" />
-      </div>
-      <div class="field">
-        <vb-input color="black" placeholder="Black" />
-      </div>
-      <div class="field">
-        <vb-input color="link" placeholder="Link" />
-      </div>
-    </vb-box>
+    <example-section-item title="Rounded">
+      <demo>
+        <vb-input rounded placeholder="Rounded" />
+      </demo>
+    </example-section-item>
 
-    <span id="sizes" class="title">Sizes:</span>
+    <example-section-item title="States">
+      <demo>
+        <div class="block">
+          <vb-input placeholder="Normal" />
+        </div>
+        <div class="block">
+          <vb-input state="hovered" placeholder="Hovered" />
+        </div>
+        <div class="block">
+          <vb-input state="focused" placeholder="Focus" />
+        </div>
+        <div class="block">
+          <vb-input placeholder="Loading" loading />
+        </div>
+        <div class="block">
+          <vb-input placeholder="Disabled" disabled />
+        </div>
+        <div class="block">
+          <vb-input value="This text is readonly" placeholder="Disabled" readonly />
+        </div>
+        <div class="block">
+          <vb-input value="Static: me@example.com" static readonly />
+        </div>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <div class="field">
-        <vb-input size="small" placeholder="Small" />
-      </div>
-      <div class="field">
-        <vb-input placeholder="Normal" />
-      </div>
-      <div class="field">
-        <vb-input size="medium" placeholder="Medium" />
-      </div>
-      <div class="field">
-        <vb-input size="large" placeholder="Large" />
-      </div>
-    </vb-box>
+    <example-section-item title="With Font Awesome icons">
+      <demo>
+        <vb-input prefix="fa fa-envelope" suffix="fa fa-check" placeholder="Normal" />
+      </demo>
+    </example-section-item>
 
-    <span id="styles" class="title">Styles:</span>
+    <example-section-item title="Event">
+      <demo>
+        <div class="block" slot="control">
+          Value: <strong>{{value}}</strong>
+          <br>
+          State: <strong>{{placeholder}}</strong>
+        </div>
 
-    <vb-box>
-      <vb-input rounded placeholder="Rounded" />
-    </vb-box>
-
-    <span id="states" class="title">States:</span>
-
-    <vb-box>
-      <div class="field">
-        <vb-input placeholder="Normal" />
-      </div>
-      <div class="field">
-        <vb-input state="hovered" placeholder="Hovered" />
-      </div>
-      <div class="field">
-        <vb-input state="focused" placeholder="Focus" />
-      </div>
-      <div class="field">
-        <vb-input placeholder="Loading" loading />
-      </div>
-      <div class="field">
-        <vb-input placeholder="Disabled" disabled />
-      </div>
-      <div class="field">
-        <vb-input value="This text is readonly" placeholder="Disabled" readonly />
-      </div>
-      <div class="field">
-        <vb-input value="Static: me@example.com" static readonly />
-      </div>
-    </vb-box>
-
-    <span id="icons" class="title">With Font Awesome icons:</span>
-
-    <vb-box>
-      <vb-input prefix="fa fa-envelope" suffix="fa fa-check" placeholder="Normal" />
-    </vb-box>
-
-    <span id="event" class="title">Event:</span>
-
-    <vb-box>
-      <vb-input v-model="value" @focus="handleFocus" @blur="handleBlur" />
-      <vb-input :value="value" :placeholder="placeholder" static readonly />
-    </vb-box>
-  </div>
+        <vb-input v-model="value" @focus="handleFocus" @blur="handleBlur" />
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>

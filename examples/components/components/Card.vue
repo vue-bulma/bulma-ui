@@ -1,100 +1,86 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
-    <vb-card>
-      <vb-image slot="image" path="https://bulma.io/images/placeholders/1280x960.png" size="4by3"></vb-image>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <vb-card>
+          <vb-image slot="image" src="https://bulma.io/images/placeholders/1280x960.png" size="4by3"></vb-image>
 
-      <vb-media-object>
-        <vb-image slot="left" path="https://bulma.io/images/placeholders/96x96.png" size="48x48"></vb-image>
-        <vb-content>
-          <vb-title size="4">John Smith</vb-title>
-          <vb-title type="subtitle" size="6">@johnsmith</vb-title>
-        </vb-content>
-      </vb-media-object>
+          <vb-media-object>
+            <vb-image slot="left" src="https://bulma.io/images/placeholders/96x96.png" size="48x48"></vb-image>
+            <vb-content>
+              <vb-title size="4">John Smith</vb-title>
+              <vb-title type="subtitle" size="6">@johnsmith</vb-title>
+            </vb-content>
+          </vb-media-object>
 
-      <vb-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris.
-        <a>@bulmaio</a>.
-        <a href="#">#css</a>
-        <a href="#">#responsive</a>
-        <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </vb-content>
-    </vb-card>
+          <vb-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
+            <a>@bulmaio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </vb-content>
+        </vb-card>
+      </demo>
 
-    <br>
+      <demo>
+        <vb-card>
+          <span slot="title">Component</span>
+          <vb-icon slot="icon" name="fa fa-angle-down"></vb-icon>
 
-    <vb-card>
-      <span slot="title">Component</span>
-      <vb-icon slot="icon" name="fa fa-angle-down"></vb-icon>
+          <vb-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
+            <a>@bulmaio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </vb-content>
 
-      <vb-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris.
-        <a>@bulmaio</a>.
-        <a href="#">#css</a>
-        <a href="#">#responsive</a>
-        <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </vb-content>
+          <a slot="footer" class="card-footer-item">Save</a>
+          <a slot="footer" class="card-footer-item">Edit</a>
+          <a slot="footer" class="card-footer-item">Delete</a>
+        </vb-card>
+      </demo>
 
-      <a slot="footer" class="card-footer-item">Save</a>
-      <a slot="footer" class="card-footer-item">Edit</a>
-      <a slot="footer" class="card-footer-item">Delete</a>
-    </vb-card>
+      <demo>
+        <vb-card title="Component" icon="fa fa-angle-down" title-centered>
+          <vb-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
+            <a>@bulmaio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
+            <br>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </vb-content>
 
-    <br>
+          <a slot="footer" class="card-footer-item">Save</a>
+          <a slot="footer" class="card-footer-item">Edit</a>
+          <a slot="footer" class="card-footer-item">Delete</a>
+        </vb-card>
+      </demo>
 
-    <vb-card title="Component" icon="fa fa-angle-down">
-      <vb-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris.
-        <a>@bulmaio</a>.
-        <a href="#">#css</a>
-        <a href="#">#responsive</a>
-        <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </vb-content>
+      <demo>
+        <vb-card>
+          <vb-content>
+            <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
+            <vb-title type="subtitle">Jeff Atwood</vb-title>
+          </vb-content>
 
-      <a slot="footer" class="card-footer-item">Save</a>
-      <a slot="footer" class="card-footer-item">Edit</a>
-      <a slot="footer" class="card-footer-item">Delete</a>
-    </vb-card>
-
-    <br>
-    <vb-card title="Component" icon="fa fa-angle-down" title-centered>
-      <vb-content>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris.
-        <a>@bulmaio</a>.
-        <a href="#">#css</a>
-        <a href="#">#responsive</a>
-        <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </vb-content>
-
-      <a slot="footer" class="card-footer-item">Save</a>
-      <a slot="footer" class="card-footer-item">Edit</a>
-      <a slot="footer" class="card-footer-item">Delete</a>
-    </vb-card>
-
-    <br>
-
-    <vb-card>
-      <vb-content>
-        <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
-        <vb-title type="subtitle">Jeff Atwood</vb-title>
-      </vb-content>
-
-      <p slot="footer" class="card-footer-item">View on
-        <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-      </p>
-      <p slot="footer" class="card-footer-item">Share on
-        <a href="#">Facebook</a>
-      </p>
-    </vb-card>
-  </div>
+          <p slot="footer" class="card-footer-item">View on
+            <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+          </p>
+          <p slot="footer" class="card-footer-item">Share on
+            <a href="#">Facebook</a>
+          </p>
+        </vb-card>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>

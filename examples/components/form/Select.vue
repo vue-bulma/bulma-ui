@@ -1,223 +1,223 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
-
-    <vb-box>
-      <vb-select :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-    </vb-box>
-
-    <span id="multiple" class="title">Multiple:</span>
-
-    <vb-box>
-      <vb-select multiple lines="8" :value="[model]">
-        <option value="Argentina">Argentina</option>
-        <option value="Bolivia">Bolivia</option>
-        <option value="Brazil">Brazil</option>
-        <option value="Chile">Chile</option>
-        <option value="Colombia">Colombia</option>
-        <option value="Ecuador">Ecuador</option>
-        <option value="Guyana">Guyana</option>
-        <option value="Paraguay">Paraguay</option>
-        <option value="Peru">Peru</option>
-        <option value="Suriname">Suriname</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="Venezuela">Venezuela</option>
-      </vb-select>
-    </vb-box>
-
-    <span id="colors" class="title">Colors:</span>
-
-    <vb-box>
-      <div class="field">
-        <vb-select color="primary" value="Primary">
-          <option>Primary</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="info" value="Info">
-          <option>Info</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="success" value="Success">
-          <option>Success</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="warning" value="Warning">
-          <option>Warning</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="danger" value="Danger">
-          <option>Danger</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="white" value="White">
-          <option>White</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="light" value="Light">
-          <option>Light</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="dark" value="Dark">
-          <option>Dark</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="black" value="Black">
-          <option>Black</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select color="link" value="Link">
-          <option>Link</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-    </vb-box>
-
-    <span id="styles" class="title">Styles:</span>
-
-    <vb-box>
-      <vb-select rounded :value="model">
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </vb-select>
-    </vb-box>
-
-    <span id="sizes" class="title">Sizes:</span>
-
-    <vb-box>
-      <div class="field">
-        <vb-select size="small" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
         <vb-select :value="model">
           <option>Select dropdown</option>
           <option>With options</option>
         </vb-select>
-      </div>
-      <div class="field">
-        <vb-select size="medium" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select size="large" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-    </vb-box>
+      </demo>
+    </example-section-item>
 
-    <span id="states" class="title">States:</span>
+    <example-section-item title="Multiple">
+      <demo>
+        <vb-select multiple lines="8" :value="[model]">
+          <option value="Argentina">Argentina</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Chile">Chile</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Guyana">Guyana</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Peru</option>
+          <option value="Suriname">Suriname</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Venezuela">Venezuela</option>
+        </vb-select>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <div class="field">
-        <vb-select :value="model">
-          <option>Select dropdown</option>
+    <example-section-item title="Colors">
+      <demo>
+        <div class="block">
+          <vb-select color="primary" value="Primary">
+            <option>Primary</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="info" value="Info">
+            <option>Info</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="success" value="Success">
+            <option>Success</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="warning" value="Warning">
+            <option>Warning</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="danger" value="Danger">
+            <option>Danger</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="white" value="White">
+            <option>White</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="light" value="Light">
+            <option>Light</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="dark" value="Dark">
+            <option>Dark</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="black" value="Black">
+            <option>Black</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="link" value="Link">
+            <option>Link</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Styles">
+      <demo>
+        <vb-select rounded value="Rounded">
+          <option>Rounded</option>
           <option>With options</option>
         </vb-select>
-      </div>
-      <div class="field">
-        <vb-select state="hovered" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select state="focused" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select loading :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-    </vb-box>
+      </demo>
+    </example-section-item>
 
-    <span id="icons" class="title">With icons:</span>
+    <example-section-item title="Sizes">
+      <demo>
+        <div class="block">
+          <vb-select size="small" value="Small dropdown">
+            <option>Small dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select value="Default dropdown">
+            <option>Default dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select size="medium" value="Medium dropdown">
+            <option>Medium dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select size="large" value="Large dropdown">
+            <option>Large dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <div class="field">
-        <vb-select size="small" prefix="fa fa-home" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
+    <example-section-item title="States">
+      <demo>
+        <div class="block">
+          <vb-select value="Normal dropdown">
+            <option>Normal dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select state="hovered" value="Hover dropdown">
+            <option>Hover dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select state="focused" value="Focused dropdown">
+            <option>Focused dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select loading value="Loading dropdown">
+            <option>Loading dropdown</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="With icons">
+      <demo>
+        <div class="block">
+          <vb-select size="small" prefix="fa fa-home" value="Small dropdown with Small icon">
+            <option>Small dropdown with Small icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select prefix="fa fa-home" value="Default dropdown with Default icon">
+            <option>Default dropdown with Default icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select size="medium" prefix="fa fa-home" value="Medium dropdown with Medium icon">
+            <option>Medium dropdown with Medium icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select size="large" prefix="fa fa-home" value="Large dropdown with Large icon">
+            <option>Large dropdown with Large icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+      </demo>
+    </example-section-item>
+
+
+    <example-section-item title="Events">
+      <demo>
+        <div class="block" slot="control">
+          Value: <strong>{{value}}</strong>
+          <br>
+          This Select on: <strong>{{placeholder}}</strong>!
+        </div>
+
+        <vb-select v-model="value" @focus="handleFocus" @blur="handleBlur">
+          <option v-for="item in options" :key="item.value" :value="item.value">
+            {{item.label}}
+          </option>
         </vb-select>
-      </div>
-      <div class="field">
-        <vb-select prefix="fa fa-home" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
+      </demo>
+
+      <demo>
+        <div class="block" slot="control">
+          Value: <strong>{{multiple}}</strong>
+        </div>
+
+        <vb-select multiple v-model="multiple">
+          <option v-for="item in options" :key="item.value" :value="item.value">
+            {{item.label}}
+          </option>
         </vb-select>
-      </div>
-      <div class="field">
-        <vb-select size="medium" prefix="fa fa-home" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-      <div class="field">
-        <vb-select size="large" prefix="fa fa-home" :value="model">
-          <option>Select dropdown</option>
-          <option>With options</option>
-        </vb-select>
-      </div>
-    </vb-box>
-
-    <span id="events" class="title">Events:</span>
-
-    <vb-box>
-      <vb-select v-model="value" @focus="handleFocus" @blur="handleBlur">
-        <option v-for="item in options" :key="item.value" :value="item.value">
-          {{item.label}}
-        </option>
-      </vb-select>
-
-      <div>
-        Value: {{value}}
-      </div>
-      <div>
-        This Select on: {{placeholder}}!
-      </div>
-    </vb-box>
-
-    <vb-box>
-      <vb-select multiple v-model="multiple" @focus="handleFocus" @blur="handleBlur">
-        <option v-for="item in options" :key="item.value" :value="item.value">
-          {{item.label}}
-        </option>
-      </vb-select>
-
-      <div>
-        Value: {{multiple}}
-      </div>
-    </vb-box>
-  </div>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>
@@ -227,7 +227,7 @@ export default {
     return {
       model: 'Select dropdown',
       placeholder: 'Blurred',
-      value: null,
+      value: 1,
       multiple: [],
       options: [{ label: 'Beijing', value: 1 }, { label: 'Shanghai', value: 2 }]
     }

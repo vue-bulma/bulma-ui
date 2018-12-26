@@ -1,108 +1,107 @@
 <template>
-  <div>
-    <vb-title id="Basic" type="title">Basic:</vb-title>
-    <vb-box>
-      <vb-notification>
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-    </vb-box>
-    <vb-title id="Colors" type="title">Colors:</vb-title>
-    <vb-box class="box-background">
-      <vb-notification color="primary">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="info">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="success">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="warning">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="danger">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="white">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="light">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="dark">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="black">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-      <vb-notification color="link">
-        <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor.
-        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
-        <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-      </vb-notification>
-    </vb-box>
-
-    <vb-title id="Event" type="title">Event:</vb-title>
-    <vb-box>
-      <vb-button @click="visible=true">show Notification</vb-button>
-      <transition name="slide-fade">
-        <vb-notification
-          v-if="visible"
-          @click="handleClick"
-          @mouseenter="handleMouseenter"
-          @mouseleave="handleMouseleave"
-        >
-          <vb-delete @click.stop="close"></vb-delete>Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit lorem ipsum dolor.
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <vb-notification>
+          <vb-delete></vb-delete>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
           <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
           <a>felis venenatis</a> efficitur. Sit amet,
           consectetur adipiscing elit
         </vb-notification>
-      </transition>
-    </vb-box>
-  </div>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Colors">
+      <demo class="box-background">
+        <vb-notification color="primary">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="info">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="success">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="warning">
+          <vb-delete></vb-delete>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
+          <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+          <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="danger">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="white">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="light">
+          <vb-delete></vb-delete>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
+          <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+          <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="dark">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="black">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+        <vb-notification color="link">
+          <vb-delete></vb-delete>
+          Primar lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+          consectetur adipiscing elit
+        </vb-notification>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Event">
+      <demo>
+        <div class="block" slot="control">
+          <vb-button @click="visible=true">show Notification</vb-button>
+        </div>
+
+        <transition name="slide-fade">
+          <vb-notification
+            v-if="visible"
+            @click="handleClick"
+            @mouseenter="handleMouseenter"
+            @mouseleave="handleMouseleave"
+          >
+            <vb-delete @click.stop="close"></vb-delete>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
+            <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+            <a>felis venenatis</a> efficitur. Sit amet,
+            consectetur adipiscing elit
+          </vb-notification>
+        </transition>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>

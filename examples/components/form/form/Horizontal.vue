@@ -1,6 +1,6 @@
 <template>
-  <vb-box>
-    <div class="field">
+  <demo>
+    <div class="block" slot="control">
       <vb-radio-group v-model="horizontal">
         <vb-radio :label="true">Horizontal</vb-radio>
         <vb-radio :label="false">Vertical</vb-radio>
@@ -64,7 +64,7 @@
         <vb-button color="primary">Send message</vb-button>
       </vb-form-item>
     </vb-form>
-  </vb-box>
+  </demo>
 </template>
 
 <script>

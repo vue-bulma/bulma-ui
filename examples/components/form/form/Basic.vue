@@ -1,5 +1,5 @@
 <template>
-  <vb-box>
+  <demo>
     <vb-form>
       <vb-form-item label="Name">
         <vb-input placeholder="Text Input"></vb-input>
@@ -47,7 +47,7 @@
         <vb-button color="light" @click="reset">Reset</vb-button>
       </vb-form-item>
     </vb-form>
-  </vb-box>
+  </demo>
 </template>
 
 <script>

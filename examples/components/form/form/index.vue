@@ -1,25 +1,25 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
+  <vb-section>
+    <example-section-item title="Basic">
+      <example-basic></example-basic>
+    </example-section-item>
 
-    <example-basic></example-basic>
+    <example-section-item title="Horizontal">
+      <example-horizontal></example-horizontal>
+    </example-section-item>
 
-    <span id="horizontal" class="title">Horizontal:</span>
+    <example-section-item title="Sizes">
+      <example-size></example-size>
+    </example-section-item>
 
-    <example-horizontal></example-horizontal>
+    <example-section-item title="Addons">
+      <example-addons></example-addons>
+    </example-section-item>
 
-    <span id="sizes" class="title">Sizes:</span>
-
-    <example-size></example-size>
-
-    <span id="addons" class="title">Addons:</span>
-
-    <example-addons></example-addons>
-
-    <span id="group" class="title">Group:</span>
-
-    <example-group></example-group>
-  </div>
+    <example-section-item title="Group">
+      <example-group></example-group>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>

@@ -1,123 +1,89 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <vb-message title="Hello World" showClose>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+        </vb-message>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <vb-message title="Hello World" showCloseButton>
-        <div slot="content">
+    <example-section-item title="Colors">
+      <demo>
+        <vb-message title="Dark" color="dark" showClose>
           <p>This is the content</p>
-        </div>
-      </vb-message>
-    </vb-box>
+        </vb-message>
+        <vb-message title="Primary" color="primary" showClose>
+          <p>This is the content</p>
+        </vb-message>
+        <vb-message title="Link" color="link" showClose>
+          <p>This is the content</p>
+        </vb-message>
+        <vb-message title="Info" color="info" showClose>
+          <p>This is the content</p>
+        </vb-message>
+        <vb-message title="Success" color="success" showClose>
+          <p>This is the content</p>
+        </vb-message>
+        <vb-message title="Warning" color="warning" showClose>
+          <p>This is the content</p>
+        </vb-message>
+        <vb-message title="Danger" color="danger" showClose>
+          <p>This is the content</p>
+        </vb-message>
+      </demo>
+    </example-section-item>
 
-    <span id="colors" class="title">Colors:</span>
+    <example-section-item title="Message body only">
+      <demo>
+        <vb-message>
+          <p>Default</p>
+        </vb-message>
+        <vb-message color="dark">
+          <p>Dark</p>
+        </vb-message>
+        <vb-message color="primary">
+          <p>Primary</p>
+        </vb-message>
+        <vb-message color="link">
+          <p>Link</p>
+        </vb-message>
+        <vb-message color="info">
+          <p>Info</p>
+        </vb-message>
+        <vb-message color="success">
+          <p>Success</p>
+        </vb-message>
+        <vb-message color="warning">
+          <p>Warning</p>
+        </vb-message>
+        <vb-message color="danger">
+          <p>Danger</p>
+        </vb-message>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <vb-message title="Hello World" color="dark" showCloseButton>
-        <div slot="content">
+    <example-section-item title="Sizes">
+      <demo>
+        <vb-message title="Small message" size="small" showClose>
           <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="primary" showCloseButton>
-        <div slot="content">
+        </vb-message>
+        <vb-message title="Normal message" showClose>
           <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="link" showCloseButton>
-        <div slot="content">
+        </vb-message>
+        <vb-message title="Medium message" size="medium" showClose>
           <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="info" showCloseButton>
-        <div slot="content">
+        </vb-message>
+        <vb-message title="Large message" size="large" showClose>
           <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="success" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="warning" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" color="danger" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>                          
-    </vb-box>
-
-    <span id="content" class="title">Message content only:</span>
-
-    <vb-box>
-      <vb-message>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message color="dark">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message color="primary">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message color="link">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message color="info">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>      
-      <vb-message color="success">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message color="warning">
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>       
-      <vb-message color="danger"> 
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>                                          
-    </vb-box>
-
-    <span id="sizes" class="title">Sizes:</span>
-
-    <vb-box>
-      <vb-message title="Hello World" size="small" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message> 
-      <vb-message title="Hello World" size="medium" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>
-      <vb-message title="Hello World" size="large" showCloseButton>
-        <div slot="content">
-          <p>This is the content</p>
-        </div>
-      </vb-message>                
-    </vb-box>
-  </div>
+        </vb-message>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
+
+<script>
+export default {
+  name: 'MessageExamples'
+}
+</script>

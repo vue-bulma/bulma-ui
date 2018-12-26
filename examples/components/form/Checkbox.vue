@@ -1,53 +1,53 @@
 <template>
-  <div>
-    <span id="basic" class="title">Basic:</span>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <div>
+          <vb-checkbox v-model="rember">Remember me</vb-checkbox> // {{rember}}
+        </div>
 
-    <vb-box>
-      <div>
-        <vb-checkbox v-model="rember">Remember me</vb-checkbox> // {{rember}}
-      </div>
-
-      <div>
         <vb-checkbox v-model="agree">
           I agree to the <a href="#">terms and conditions</a> // {{agree}}
         </vb-checkbox>
-      </div>
 
-      <div>
-        <vb-checkbox disabled>
-          Save my preferences
-        </vb-checkbox>
-      </div>
-    </vb-box>
+        <div>
+          <vb-checkbox disabled>
+            Save my preferences
+          </vb-checkbox>
+        </div>
+      </demo>
+    </example-section-item>
 
-    <span id="group" class="title">Group:</span>
 
-    <vb-box>
-      The animals you like: {{animals.join(', ')}}.
-      <vb-checkbox-group v-model="animals">
-        <vb-checkbox label="dog">Dog</vb-checkbox>
-        <vb-checkbox label="cat">Cat</vb-checkbox>
-        <vb-checkbox label="mouse">Mouse</vb-checkbox>
-        <vb-checkbox label="panda">Panda</vb-checkbox>
-      </vb-checkbox-group>
-    </vb-box>
+    <example-section-item title="Group">
+      <demo>
+        <div class="block" slot="control">
+          The animals you like: <strong>{{animals.join(', ')}}</strong>.
+        </div>
 
-    <span id="events" class="title">Events:</span>
+        <vb-checkbox-group v-model="animals">
+          <vb-checkbox label="dog">Dog</vb-checkbox>
+          <vb-checkbox label="cat">Cat</vb-checkbox>
+          <vb-checkbox label="mouse">Mouse</vb-checkbox>
+          <vb-checkbox label="panda">Panda</vb-checkbox>
+        </vb-checkbox-group>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <div>
+    <example-section-item title="Events">
+      <demo>
+        <div class="block" slot="control">
+          I'm <strong>{{checked ? 'ok' : 'not ok'}}</strong>.
+          <br>
+          This Checkbox <strong>{{ focused ? 'Focused' : 'Blurred' }}</strong>
+        </div>
+
         <vb-checkbox v-model="checked" @focus="handleFocus" @blur="handleBlur">
           Are You OK
         </vb-checkbox>
-      </div>
-      <div>
-        I'm {{checked ? 'ok' : 'not ok'}}.
-      </div>
-      <div>
-        This Checkbox "{{ focused ? 'Focused' : 'Blurred' }}"
-      </div>
-    </vb-box>
-  </div>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>

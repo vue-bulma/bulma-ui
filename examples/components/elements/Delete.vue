@@ -1,55 +1,40 @@
 <template>
-  <div>
-    <vb-title
-      id="Basic"
-      type="title"
-    >Basic:</vb-title>
-    <vb-box>
-      <vb-delete></vb-delete>
-    </vb-box>
-    <vb-title
-      id="size"
-      type="title"
-    >Size:</vb-title>
-    <vb-box>
-      <span class="margin">
-        <vb-delete size="small"></vb-delete>
-      </span>
-      <span class="margin">
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
         <vb-delete></vb-delete>
-      </span>
-      <span class="margin">
-        <vb-delete size="medium"></vb-delete>
-      </span>
-      <span class="margin">
-        <vb-delete size="large"></vb-delete>
-      </span>
-    </vb-box>
-    <vb-title
-      id="Combinations"
-      type="title"
-    >Combinations:</vb-title>
-    <vb-box>
-      <vb-tag color="danger"> Hello World
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Size">
+      <demo>
         <vb-delete size="small"></vb-delete>
-      </vb-tag>
-    </vb-box>
-    <vb-title
-      id="Event"
-      type="title"
-    >Event:</vb-title>
-    <vb-box>
-      <vb-tag
-        color="danger"
-        v-if="visible"
-      > Click on close
-        <vb-delete
-          size="small"
-          @click="handleClick"
-        ></vb-delete>
-      </vb-tag>
-    </vb-box>
-  </div>
+        <vb-delete></vb-delete>
+        <vb-delete size="medium"></vb-delete>
+        <vb-delete size="large"></vb-delete>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Combinations">
+      <demo>
+        <div class="block">
+          <vb-tag color="success">
+            Hello World
+            <vb-delete size="small"></vb-delete>
+          </vb-tag>
+        </div>
+
+        <vb-notification color="danger">
+          <vb-delete></vb-delete>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </vb-notification>
+
+        <vb-message title="info" color="info" showClose>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+        </vb-message>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>
@@ -67,8 +52,9 @@ export default {
   }
 }
 </script>
-<style>
-.margin {
-  margin-right: 1em;
+
+<style scoped>
+.delete:not(:first-child) {
+  margin-left: 0.5rem;
 }
 </style>

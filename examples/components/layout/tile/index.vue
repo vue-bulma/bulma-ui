@@ -1,23 +1,29 @@
 <template>
-  <vb-container id="tile">
-    <div id="basic" class="component-title">Basic:</div>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo title="Size in 1 ... 12">
+        <example-basic></example-basic>
+      </demo>
+    </example-section-item>
 
-    <vb-title type="subtitle">Size in 1 ... 12</vb-title>
+    <example-section-item title="Nesting requirements">
+      <demo>
+        <example-nest></example-nest>
+      </demo>
+    </example-section-item>
 
-    <example-basic></example-basic>
+    <example-section-item title="3 columns">
+      <demo>
+        <example-columns3></example-columns3>
+      </demo>
+    </example-section-item>
 
-    <div id="nesting" class="component-title">Nesting requirements:</div>
-
-    <example-nest></example-nest>
-
-    <div id="3-columns" class="component-title">3 columns:</div>
-
-    <example-columns3></example-columns3>
-
-    <div id="4-columns" class="component-title">4 columns:</div>
-
-    <example-columns4></example-columns4>
-  </vb-container>
+    <example-section-item title="4 columns">
+      <demo>
+        <example-columns4></example-columns4>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>
@@ -31,13 +37,3 @@ export default {
   components: { ExampleBasic, ExampleNest, ExampleColumns3, ExampleColumns4 }
 }
 </script>
-
-<style lang="scss" scoped>
-#tile {
-  padding: 1rem;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  max-width: none;
-}
-</style>

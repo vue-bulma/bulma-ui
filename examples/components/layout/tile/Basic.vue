@@ -22,7 +22,7 @@
             <vb-content>
               <vb-title>Middle tile</vb-title>
               <vb-title type="subtitle">With an image</vb-title>
-              <vb-image size="4by3" path="https://bulma.io/images/placeholders/640x480.png"></vb-image>
+              <vb-image size="4by3" src="https://bulma.io/images/placeholders/640x480.png"></vb-image>
             </vb-content>
           </vb-notification>
         </vb-tile>

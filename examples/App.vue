@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <navbar></navbar>
+
     <div class="main">
       <router-view></router-view>
     </div>
@@ -7,32 +9,25 @@
 </template>
 
 <script>
+import Navbar from './layouts/Navbar'
+
 export default {
   name: 'app',
-  components: {}
+  components: { Navbar }
 }
 </script>
 
 <style lang="scss">
+@import '~bulma/sass/utilities/_all';
+@import '~bulma/sass/components/navbar';
+html,
+body,
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 100%;
+  overflow: hidden !important;
 }
 .main {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  .component-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
+  height: 100%;
+  overflow: hidden scroll;
 }
 </style>

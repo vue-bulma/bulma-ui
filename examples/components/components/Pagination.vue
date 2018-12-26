@@ -1,39 +1,48 @@
 <template>
-  <div>
-    <vb-title id="Basic" type="title">Basic:</vb-title>
-    <vb-box>
-      <vb-pagination :current="page" :pageCount="5" @change="handleChange"></vb-pagination>
+  <vb-section>
+    <example-section-item title="Basic">
+      <demo>
+        <div class="block" slot="control">
+          Current Page: {{page}}
+        </div>
 
-      <div class="section">
-        <p>Current Page: {{page}}</p>
-      </div>
-    </vb-box>
+        <vb-pagination :current="page" :pageCount="5" @change="handleChange"></vb-pagination>
+      </demo>
+    </example-section-item>
 
-    <vb-box>
-      <vb-pagination :pageCount="10" :pagerCount="3"></vb-pagination>
-      <vb-pagination :pageCount="10" :pagerCount="5"></vb-pagination>
-    </vb-box>
+    <example-section-item title="Pager Count">
+      <demo title="Pager Count: 3">
+        <vb-pagination :current="5" :pageCount="10" :pagerCount="3"></vb-pagination>
+      </demo>
 
-    <vb-title id="Aligns" type="title">Aligns:</vb-title>
-    <vb-box>
-      <vb-pagination :pageCount="5"></vb-pagination>
-      <vb-pagination :pageCount="5" align="centered"></vb-pagination>
-      <vb-pagination :pageCount="5" align="right"></vb-pagination>
-    </vb-box>
+      <demo title="Pager Count: 5">
+        <vb-pagination :current="5" :pageCount="10" :pagerCount="5"></vb-pagination>
+      </demo>
+    </example-section-item>
 
-    <vb-title id="Type" type="title">Type:</vb-title>
-    <vb-box>
-      <vb-pagination :pageCount="10" rounded></vb-pagination>
-    </vb-box>
+    <example-section-item title="Alignment">
+      <demo>
+        <vb-pagination :pageCount="5"></vb-pagination>
+        <vb-pagination :pageCount="5" align="centered"></vb-pagination>
+        <vb-pagination :pageCount="5" align="right"></vb-pagination>
+      </demo>
+    </example-section-item>
 
-    <vb-title id="Size" type="title">Size:</vb-title>
-    <vb-box>
-      <vb-pagination :pageCount="5" size="small"></vb-pagination>
-      <vb-pagination :pageCount="5"></vb-pagination>
-      <vb-pagination :pageCount="5" size="medium"></vb-pagination>
-      <vb-pagination :pageCount="5" size="large"></vb-pagination>
-    </vb-box>
-  </div>
+    <example-section-item title="Rounded">
+      <demo>
+        <vb-pagination :pageCount="10" rounded></vb-pagination>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Size">
+      <demo>
+        <vb-pagination :pageCount="5" size="small"></vb-pagination>
+        <vb-pagination :pageCount="5"></vb-pagination>
+        <vb-pagination :pageCount="5" size="medium"></vb-pagination>
+        <vb-pagination :pageCount="5" size="large"></vb-pagination>
+      </demo>
+    </example-section-item>
+  </vb-section>
 </template>
 
 <script>
