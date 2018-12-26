@@ -32,6 +32,8 @@ export default {
   mixins: [colorProps],
   props: {
     transparent: Boolean,
+    shadow: Boolean,
+    spaced: Boolean,
     position: {
       type: String,
       validator(value) {
@@ -59,12 +61,14 @@ export default {
       }
     },
     classes() {
-      const { color, position, transparent } = this
+      const { color, position, transparent, shadow, spaced } = this
       return {
         navbar: true,
         [`is-${color}`]: !!color,
         [`is-fixed-${position}`]: !!position,
-        'is-transparent': transparent
+        'is-transparent': transparent,
+        'has-shadow': shadow,
+        'is-spaced': spaced
       }
     }
   },
