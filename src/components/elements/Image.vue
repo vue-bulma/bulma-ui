@@ -1,9 +1,6 @@
 <template>
   <figure :class="classes">
-    <img
-      :src="src"
-      :class="imgClasses "
-    >
+    <img :src="src" :class="imgClasses">
   </figure>
 </template>
 
@@ -48,18 +45,15 @@ export default {
   computed: {
     classes() {
       const { size } = this
-      const obj = {
+      return {
         image: true,
         [`is-${size}`]: !!size
       }
-      return obj
     },
     imgClasses() {
-      const { rounded } = this
-      const obj = {
-        'is-rounded': rounded
+      return {
+        'is-rounded': this.rounded
       }
-      return obj
     }
   }
 }

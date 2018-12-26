@@ -1,8 +1,8 @@
 <template>
   <article class="media">
-    <figure class="media-left">
+    <div class="media-left">
       <slot name="left"></slot>
-    </figure>
+    </div>
 
     <div class="media-content">
       <slot></slot>

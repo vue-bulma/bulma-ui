@@ -1,9 +1,5 @@
 <template>
-  <button
-    :class="classes"
-    :disabled="disabled"
-    @click="handleClick"
-  >
+  <button :class="classes" :disabled="disabled" @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -12,7 +8,7 @@
 import { button as colorProps } from '../../mixins/color'
 import sizeProps from '../../mixins/size'
 
-const STATE = ['loading', 'active', 'focused', 'hovered', 'static']
+const STATES = ['loading', 'active', 'focused', 'hovered', 'static']
 
 export default {
   name: 'VbButton',
@@ -31,7 +27,7 @@ export default {
     state: {
       type: String,
       validator(value) {
-        return STATE.includes(value)
+        return STATES.includes(value)
       }
     }
   },
