@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import alignProps from '../../mixins/align'
 
-const ELEMENTS = ['nav', 'div']
+const ELEMENTS = ['nav', 'div', 'p']
 
 const LevelItem = Vue.component('VbLevelItem', {
   inject: {
