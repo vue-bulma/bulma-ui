@@ -2,10 +2,11 @@
   <article v-if="show" :class="classes">
     <div v-if="title" class="message-header">
       <p>{{title}}</p>
-      <button v-if="showCloseButton" class="delete" @click="close"></button>
+      <button v-if="showClose" class="delete" @click="close"></button>
     </div>
-    <div v-if="$slots.content" class="message-body">
-      <slot name="content"></slot>
+
+    <div v-if="$slots.default" class="message-body">
+      <slot></slot>
     </div>
   </article>
 </template>
@@ -19,7 +20,7 @@ export default {
   mixins: [colorProps, sizeProps],
   props: {
     title: String,
-    showCloseButton: Boolean
+    showClose: Boolean
   },
   data() {
     return {
