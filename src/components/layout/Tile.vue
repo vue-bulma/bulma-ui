@@ -58,8 +58,9 @@ export default Vue.component('VbTile', {
     return createElement('div', classes, children)
   },
   methods: {
-    isContent({ componentOptions: { tag } }) {
-      return tag !== 'vb-tile'
+    isContent({ componentOptions = {} }) {
+      const { tag } = componentOptions
+      return !tag || tag !== 'vb-tile'
     }
   }
 })
