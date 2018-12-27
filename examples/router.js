@@ -182,23 +182,26 @@ export default new Router({
           path: 'components/dropdown',
           name: 'Dropdown',
           component: () => import('./components/components/Dropdown')
+        },
+        {
+          path: '/docs/layout/hero',
+          name: 'Hero',
+          component: () => import('./components/layout/Hero'),
+          meta: { fullwidth: true }
+        },
+        {
+          path: '/docs/layout/container',
+          name: 'Container',
+          component: () => import('./components/layout/Container'),
+          meta: { fullwidth: true }
+        },
+        {
+          path: '/docs/components/navbar',
+          name: 'Navbar',
+          component: () => import('./components/components/Navbar'),
+          meta: { fullwidth: true }
         }
       ]
-    },
-    {
-      path: '/layout/hero',
-      name: 'Hero',
-      component: () => import('./components/layout/Hero')
-    },
-    {
-      path: '/layout/container',
-      name: 'Container',
-      component: () => import('./components/layout/Container')
-    },
-    {
-      path: '/components/navbar',
-      name: 'Navbar',
-      component: () => import('./components/components/Navbar')
     }
   ]
 })

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <navbar></navbar>
+    <navbar @toggleSidebar="toggleSidebar"></navbar>
 
-    <div class="main">
+    <div :class="classes">
       <router-view></router-view>
     </div>
   </div>
@@ -13,7 +13,41 @@ import Navbar from './layouts/Navbar'
 
 export default {
   name: 'app',
-  components: { Navbar }
+  components: { Navbar },
+  data() {
+    return {
+      visible: true,
+      fullwidth: false
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        main: true,
+        'has-sidebar': this.visible,
+        'has-fullwidth-content': this.fullwidth
+      }
+    }
+  },
+  mounted() {
+    this.setVisible(this.$route)
+  },
+  methods: {
+    setVisible(route) {
+      const { meta = {} } = route
+      const fullwidth = Boolean(meta.fullwidth)
+      this.fullwidth = fullwidth
+      this.visible = !fullwidth
+    },
+    toggleSidebar() {
+      this.visible = !this.visible
+    }
+  },
+  watch: {
+    $route(route) {
+      this.setVisible(route)
+    }
+  }
 }
 </script>
 

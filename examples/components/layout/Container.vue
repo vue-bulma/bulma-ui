@@ -1,49 +1,50 @@
 <template>
   <vb-section>
-    <vb-container id="layouts" view="fullhd">
-      <span id="basic" class="title">Basic:</span>
-      <div class="field">
+    <example-section-item title="Basic">
+      <demo>
         <vb-container>
           <vb-notification>
             This container is <strong>centered</strong> on desktop.
           </vb-notification>
         </vb-container>
-      </div>
+      </demo>
+    </example-section-item>
 
-      <span id="fluid" class="title">Fluid:</span>
-      <div class="field">
+    <example-section-item title="Fluid">
+      <demo>
         <vb-container view="fluid">
           <vb-notification>
             This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any viewport size.
           </vb-notification>
         </vb-container>
-      </div>
+      </demo>
+    </example-section-item>
 
-      <span id="breakpoint" class="title">Breakpoint containers:</span>
-      <div class="field">
+    <example-section-item title="Breakpoint containers">
+      <demo>
         <vb-container view="desktop">
           <vb-notification>
             This container is <strong>fullwidth</strong> <em> until</em> the <code>$desktop</code> breakpoint.
           </vb-notification>
         </vb-container>
-      </div>
+      </demo>
 
-      <div class="field">
+      <demo>
         <vb-container view="widescreen">
           <vb-notification>
             This container is <strong>fullwidth</strong> <em> until</em> the <code>$widescreen</code> breakpoint.
           </vb-notification>
         </vb-container>
-      </div>
+      </demo>
 
-      <div class="field">
+      <demo>
         <vb-container view="fullhd">
           <vb-notification>
             This container is <strong>fullwidth</strong> <em> until</em> the <code>$fullhd</code> breakpoint.
           </vb-notification>
         </vb-container>
-      </div>
-    </vb-container>
+      </demo>
+    </example-section-item>
   </vb-section>
 </template>
 
@@ -52,15 +53,3 @@ export default {
   name: 'Container'
 }
 </script>
-
-<style lang="scss">
-#layouts {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  max-width: none;
-  .title {
-    margin-left: 1rem;
-  }
-}
-</style>
