@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <aside class="menu">
     <p v-if="label" class="menu-label">{{ label }}</p>
     <ul class="menu-list">
       <slot></slot>
     </ul>
-  </div>
+  </aside>
 </template>
 
 <script>
