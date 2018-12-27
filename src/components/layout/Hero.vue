@@ -1,7 +1,9 @@
 <template>
   <section :class="classes">
     <div v-if="$slots.head" class="hero-head">
-      <slot name="head"></slot>
+      <div class="container">
+        <slot name="head"></slot>
+      </div>
     </div>
 
     <div class="hero-body">
@@ -16,7 +18,9 @@
     </div>
 
     <div v-if="$slots.foot" class="hero-foot">
-      <slot name="foot"></slot>
+      <div class="container">
+        <slot name="foot"></slot>
+      </div>
     </div>
   </section>
 </template>

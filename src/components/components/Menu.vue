@@ -23,6 +23,6 @@ export default {
 
 <style scoped>
 .menu-label:not(:first-child) {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 </style>
