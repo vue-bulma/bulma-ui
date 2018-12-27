@@ -3,14 +3,14 @@
     <example-section-item title="Basic">
       <demo>
         <vb-image :src="imageUrl(7)" size="128x128"></vb-image>
-        <pre>{{imageBasic}}</pre>
+        <pre slot="code">{{imageBasic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Rounded">
       <demo>
         <vb-image :src="imageUrl(7)" size="128x128" rounded></vb-image>
-        <pre>{{imageRounded}}</pre>
+        <pre slot="code">{{imageRounded}}</pre>
       </demo>
     </example-section-item>
 

@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import alignProps from '../../mixins/align'
-import sizeProps from '../../mixins/size'
+import alignProps from '../../../mixins/align'
+import sizeProps from '../../../mixins/size'
 
 const SEPARATOR = ['arrow', 'bullet', 'dot', 'succeeds']
 

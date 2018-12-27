@@ -36,12 +36,10 @@
             <span>Examples</span>
           </vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">
-            <vb-icon name="fa fa-puzzle-piece" size="small"></vb-icon>
-            Components
+            <vb-icon name="fa fa-puzzle-piece" size="small"></vb-icon>Components
           </vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>
-            <vb-icon name="fa fa-thumbs-up" size="small"></vb-icon>
-            Breadcrumb
+            <vb-icon name="fa fa-thumbs-up" size="small"></vb-icon>Breadcrumb
           </vb-breadcrumb-item>
         </vb-breadcrumb>
       </demo>

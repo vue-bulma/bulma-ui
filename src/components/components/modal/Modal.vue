@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ModalMixin from '../../mixins/modal'
+import ModalMixin from '../../../mixins/modal'
 
 const SIZE = ['small', 'medium', 'large']
 

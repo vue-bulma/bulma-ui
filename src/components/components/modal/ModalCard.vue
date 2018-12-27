@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import ModalMixin from '../../mixins/modal'
+import ModalMixin from '../../../mixins/modal'
 
 export default {
   name: 'VbModalCard',
