@@ -11,9 +11,9 @@ const LevelItem = Vue.component('VbLevelItem', {
     }
   },
   mixins: [alignProps],
-  render(createElement) {
+  render(h) {
     const align = this.align || this.vbLevel.align
-    return createElement(
+    return h(
       'div',
       {
         class: {

@@ -22,14 +22,14 @@ export default Vue.component('VbTile', {
       return !parent
     }
   },
-  render(createElement) {
+  render(h) {
     const { vertical, isAncestor, size } = this
     const { default: nodes = [] } = this.$slots
     const children = nodes.map(vnode => {
       if (!this.isChild(vnode)) return vnode
 
       addClass(vnode, 'tile is-child')
-      return createElement('div', { class: 'tile is-parent' }, [vnode])
+      return h('div', { class: 'tile is-parent' }, [vnode])
     })
 
     const classes = {
@@ -41,7 +41,7 @@ export default Vue.component('VbTile', {
       }
     }
 
-    return createElement('div', classes, children)
+    return h('div', classes, children)
   },
   methods: {
     isChild(vnode) {

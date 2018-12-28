@@ -57,28 +57,26 @@ export default Vue.component('VbFormItem', {
       }
     }
   },
-  render(createElement) {
+  render(h) {
     const { isHorizontal, _formSize = 'normal' } = this
-    let label = this.renderLabel(createElement)
-    let content = this.renderContent(createElement)
+    let label = this.renderLabel(h)
+    let content = this.renderContent(h)
 
     if (isHorizontal) {
-      label = createElement('div', { class: `field-label is-${_formSize}` }, [
-        label
-      ])
-      content = createElement('div', { class: 'field-body' }, [content])
+      label = h('div', { class: `field-label is-${_formSize}` }, [label])
+      content = h('div', { class: 'field-body' }, [content])
     }
 
-    return createElement('div', { class: this.classes }, [label, content])
+    return h('div', { class: this.classes }, [label, content])
   },
   methods: {
-    renderLabel(createElement) {
+    renderLabel(h) {
       const labelTmpl = this.$slots.label || this.label
-      return labelTmpl && createElement('label', { class: 'label' }, labelTmpl)
+      return labelTmpl && h('label', { class: 'label' }, labelTmpl)
     },
-    renderContent(createElement) {
+    renderContent(h) {
       const { isHorizontal, addons } = this
-      const help = this.renderHelp(createElement)
+      const help = this.renderHelp(h)
 
       let content = this.$slots.default.map(o => {
         const { componentOptions: options, data } = o
@@ -86,18 +84,18 @@ export default Vue.component('VbFormItem', {
           ? options.tag !== 'vb-button' // VbButton is <a>
           : data && data.staticClass.includes('control') // custom elm.class has control
 
-        return isControl ? o : createElement('div', { class: 'control' }, [o])
+        return isControl ? o : h('div', { class: 'control' }, [o])
       })
 
       if (addons && help) {
-        content = createElement('div', { class: 'field' }, [
-          createElement('div', { class: 'field has-addons' }, [content]),
+        content = h('div', { class: 'field' }, [
+          h('div', { class: 'field has-addons' }, [content]),
           help
         ])
       } else if (!addons && isHorizontal) {
         content = content.map((o, index) => {
           const item = index === 0 ? [o, help] : [o]
-          return createElement('div', { class: 'field' }, item)
+          return h('div', { class: 'field' }, item)
         })
       } else {
         content = [content, help]
@@ -105,11 +103,11 @@ export default Vue.component('VbFormItem', {
 
       return content
     },
-    renderHelp(createElement) {
+    renderHelp(h) {
       const { helpMessage, color } = this
       if (!helpMessage) return
 
-      return createElement(
+      return h(
         'p',
         {
           class: {

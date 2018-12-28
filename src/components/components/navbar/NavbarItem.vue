@@ -14,9 +14,9 @@ export default Vue.component('VbNavbarItem', {
       return parent
     }
   },
-  render(createElement) {
+  render(h) {
     const { name, handleClick: click } = this
-    return createElement(
+    return h(
       name ? 'a' : 'div',
       { class: 'navbar-item', on: { click } },
       this.$slots.default

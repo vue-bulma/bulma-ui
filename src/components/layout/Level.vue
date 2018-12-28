@@ -12,20 +12,16 @@ const Level = Vue.component('VbLevel', {
   props: {
     mobile: Boolean
   },
-  render(createElement) {
+  render(h) {
     const { left, right, default: content } = this.$slots
     const items = [content]
     if (left) {
-      items.unshift(createElement('div', { class: 'level-left' }, left))
+      items.unshift(h('div', { class: 'level-left' }, left))
     }
     if (right) {
-      items.push(createElement('div', { class: 'level-right' }, right))
+      items.push(h('div', { class: 'level-right' }, right))
     }
-    return createElement(
-      'div',
-      { class: { level: true, 'is-mobile': this.mobile } },
-      items
-    )
+    return h('div', { class: { level: true, 'is-mobile': this.mobile } }, items)
   }
 })
 export default Level
