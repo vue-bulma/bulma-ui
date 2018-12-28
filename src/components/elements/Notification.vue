@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import colorProps from '../../mixins/color'
+import colorProps from '@/mixins/color'
 
 export default {
   name: 'VbNotification',

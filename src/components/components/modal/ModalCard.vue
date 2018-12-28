@@ -21,7 +21,11 @@
 </template>
 
 <script>
+<<<<<<< Updated upstream:src/components/components/modal/ModalCard.vue
 import ModalMixin from '../../../mixins/modal'
+=======
+import ModalMixin from '@/mixins/modal'
+>>>>>>> Stashed changes:src/components/components/ModalCard.vue
 
 export default {
   name: 'VbModalCard',

@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import { button as colorProps } from '../../mixins/color'
-import sizeProps from '../../mixins/size'
+import { button as colorProps } from '@/mixins/color'
+import sizeProps from '@/mixins/size'
 
 const STATES = ['loading', 'active', 'focused', 'hovered', 'static']
 

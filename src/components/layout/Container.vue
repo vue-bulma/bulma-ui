@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import alignProps from '../../mixins/align'
+import alignProps from '@/mixins/align'
 
 const VIEWS = ['desktop', 'fullhd', 'widescreen', 'fluid']
 

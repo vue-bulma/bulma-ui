@@ -24,9 +24,9 @@
 
 <script>
 import VbIcon from '../elements/Icon'
-import colorProps from '../../mixins/color'
-import sizeProps from '../../mixins/size'
-import alignProps from '../../mixins/align'
+import colorProps from '@/mixins/color'
+import sizeProps from '@/mixins/size'
+import alignProps from '@/mixins/align'
 
 export default {
   name: 'VbUploader',

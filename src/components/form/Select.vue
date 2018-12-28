@@ -21,9 +21,9 @@
 
 <script>
 import VbIcon from '../elements/Icon'
-import colorProps from '../../mixins/color'
-import sizeProps from '../../mixins/size'
-import { equal } from '../../utils'
+import colorProps from '@/mixins/color'
+import sizeProps from '@/mixins/size'
+import { equal } from '@/utils'
 
 const STATES = ['focused', 'hovered', 'loading']
 

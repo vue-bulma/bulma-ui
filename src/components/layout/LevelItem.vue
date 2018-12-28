@@ -1,6 +1,6 @@
 <script>
 import Vue from 'vue'
-import alignProps from '../../mixins/align'
+import alignProps from '@/mixins/align'
 
 const ELEMENTS = ['nav', 'div', 'p']
 

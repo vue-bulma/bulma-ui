@@ -9,7 +9,11 @@
 </template>
 
 <script>
+<<<<<<< Updated upstream:src/components/components/modal/Modal.vue
 import ModalMixin from '../../../mixins/modal'
+=======
+import ModalMixin from '@/mixins/modal'
+>>>>>>> Stashed changes:src/components/components/Modal.vue
 
 const SIZE = ['small', 'medium', 'large']
 

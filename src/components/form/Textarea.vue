@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import baseInput from '../../mixins/baseInput'
-import colorProps from '../../mixins/color'
-import sizeProps from '../../mixins/size'
+import baseInput from '@/mixins/baseInput'
+import colorProps from '@/mixins/color'
+import sizeProps from '@/mixins/size'
 
 const STATES = ['focused', 'hovered']
 

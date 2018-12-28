@@ -1,7 +1,7 @@
 <script>
-import colorProps from '../../mixins/color'
-import sizeProps from '../../mixins/size'
-import alignProps from '../../mixins/align'
+import colorProps from '@/mixins/color'
+import sizeProps from '@/mixins/size'
+import alignProps from '@/mixins/align'
 import Vue from 'vue'
 
 export default Vue.component('VbFormItem', {

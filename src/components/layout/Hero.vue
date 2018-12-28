@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import alignProps from '../../mixins/align'
-import { hero as colorProps } from '../../mixins/color'
-import { hero as sizeProps } from '../../mixins/size'
+import alignProps from '@/mixins/align'
+import { hero as colorProps } from '@/mixins/color'
+import { hero as sizeProps } from '@/mixins/size'
 
 export default {
   name: 'VbHero',

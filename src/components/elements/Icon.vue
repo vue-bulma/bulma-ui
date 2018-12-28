@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import colorProps from '../../mixins/color'
-import sizeProps from '../../mixins/size'
+import colorProps from '@/mixins/color'
+import sizeProps from '@/mixins/size'
 
 export default {
   name: 'VbIcon',

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import sizeProps from '../../mixins/size'
+import sizeProps from '@/mixins/size'
 
 export default {
   name: 'VbDelete',

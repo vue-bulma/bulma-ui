@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import alignProps from '../../mixins/align'
+import alignProps from '@/mixins/align'
 
 export default {
   name: 'VbFooter',
