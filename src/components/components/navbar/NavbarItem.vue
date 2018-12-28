@@ -23,7 +23,8 @@ export default Vue.component('VbNavbarItem', {
     )
   },
   methods: {
-    handleClick() {
+    handleClick(event) {
+      this.$emit('click', event)
       const { navbar, name } = this
       if (navbar && name) {
         navbar.$emit.apply(navbar, ['select', name])
