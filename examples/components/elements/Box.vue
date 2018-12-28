@@ -4,11 +4,7 @@
       <demo>
         <vb-box>
           <vb-media-object>
-            <vb-image
-              slot="left"
-              src="https://bulma.io/images/placeholders/128x128.png"
-              size="64x64"
-            ></vb-image>
+            <vb-image slot="left" :src="image" size="64x64"></vb-image>
 
             <vb-content>
               <p>
@@ -50,7 +46,8 @@ export default {
   name: 'BoxExamples',
   data() {
     return {
-      code: code
+      code: code,
+      image: require('../../assets/images/64x64.png')
     }
   },
   methods: {
