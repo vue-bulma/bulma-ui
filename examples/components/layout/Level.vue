@@ -2,8 +2,8 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo>
-        <vb-level element="nav">
-          <vb-level-item element="p">
+        <vb-level>
+          <vb-level-item>
             <vb-title type="subtitle" size="5">
               <strong>123</strong> posts
             </vb-title>
@@ -19,35 +19,39 @@
       </demo>
 
       <demo>
-        <vb-level element="nav">
-          <vb-level-item slot="left">
-            <vb-title type="subtitle" size="5">
-              <strong>123</strong> posts
-            </vb-title>
-          </vb-level-item>
+        <vb-level>
+          <template slot="left">
+            <vb-level-item>
+              <vb-title type="subtitle" size="5">
+                <strong>123</strong> posts
+              </vb-title>
+            </vb-level-item>
 
-          <vb-level-item slot="left">
-            <vb-form-item addons>
-              <vb-input placeholder="Find a post"></vb-input>
-              <vb-button>Search</vb-button>
-            </vb-form-item>
-          </vb-level-item>
+            <vb-level-item>
+              <vb-form-item addons>
+                <vb-input placeholder="Find a post"></vb-input>
+                <vb-button>Search</vb-button>
+              </vb-form-item>
+            </vb-level-item>
+          </template>
 
-          <vb-level-item element="p" slot="right">
-            <strong>All</strong>
-          </vb-level-item>
-          <vb-level-item element="p" slot="right">
-            <a>Published</a>
-          </vb-level-item>
-          <vb-level-item element="p" slot="right">
-            <a>Drafts</a>
-          </vb-level-item>
-          <vb-level-item element="p" slot="right">
-            <a>Deleted</a>
-          </vb-level-item>
-          <vb-level-item element="p" slot="right">
-            <vb-button color="success">New</vb-button>
-          </vb-level-item>
+          <template slot="right">
+            <vb-level-item>
+              <strong>All</strong>
+            </vb-level-item>
+            <vb-level-item>
+              <a>Published</a>
+            </vb-level-item>
+            <vb-level-item>
+              <a>Drafts</a>
+            </vb-level-item>
+            <vb-level-item>
+              <a>Deleted</a>
+            </vb-level-item>
+            <vb-level-item>
+              <vb-button color="success">New</vb-button>
+            </vb-level-item>
+          </template>
         </vb-level>
       </demo>
     </example-section-item>

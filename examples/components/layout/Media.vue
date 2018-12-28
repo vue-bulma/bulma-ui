@@ -16,15 +16,17 @@
           </vb-content>
 
           <vb-level mobile>
-            <vb-level-item slot="left">
-              <vb-icon size="small" name="fa fa-reply"></vb-icon>
-            </vb-level-item>
-            <vb-level-item slot="left">
-              <vb-icon size="small" name="fa fa-retweet"></vb-icon>
-            </vb-level-item>
-            <vb-level-item slot="left">
-              <vb-icon size="small" name="fa fa-heart"></vb-icon>
-            </vb-level-item>
+            <template slot="left">
+              <vb-level-item>
+                <a href="#"><vb-icon size="small" name="fa fa-reply"></vb-icon></a>
+              </vb-level-item>
+              <vb-level-item>
+                <a href="#"><vb-icon size="small" name="fa fa-retweet"></vb-icon></a>
+              </vb-level-item>
+              <vb-level-item>
+                <a href="#"><vb-icon size="small" name="fa fa-heart"></vb-icon></a>
+              </vb-level-item>
+            </template>
           </vb-level>
         </vb-media-object>
 

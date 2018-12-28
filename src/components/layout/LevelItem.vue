@@ -2,8 +2,6 @@
 import Vue from 'vue'
 import alignProps from '@/mixins/align'
 
-const ELEMENTS = ['nav', 'div', 'p']
-
 const LevelItem = Vue.component('VbLevelItem', {
   inject: {
     vbLevel: {
@@ -13,19 +11,10 @@ const LevelItem = Vue.component('VbLevelItem', {
     }
   },
   mixins: [alignProps],
-  props: {
-    element: {
-      type: String,
-      default: 'div',
-      validator(value) {
-        return ELEMENTS.includes(value)
-      }
-    }
-  },
   render(createElement) {
     const align = this.align || this.vbLevel.align
     return createElement(
-      this.element,
+      'div',
       {
         class: {
           'level-item': true,

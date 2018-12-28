@@ -2,8 +2,6 @@
 import Vue from 'vue'
 import alignProps from '@/mixins/align'
 
-const ELEMENTS = ['nav', 'div', 'p']
-
 const Level = Vue.component('VbLevel', {
   mixins: [alignProps],
   provide() {
@@ -12,15 +10,9 @@ const Level = Vue.component('VbLevel', {
     }
   },
   props: {
-    element: {
-      type: String,
-      default: 'nav',
-      validator: value => ELEMENTS.includes(value)
-    },
     mobile: Boolean
   },
   render(createElement) {
-    const { element, mobile } = this
     const { left, right, default: content } = this.$slots
     const items = [content]
     if (left) {
@@ -30,8 +22,8 @@ const Level = Vue.component('VbLevel', {
       items.push(createElement('div', { class: 'level-right' }, right))
     }
     return createElement(
-      element,
-      { class: { level: true, 'is-mobile': mobile } },
+      'div',
+      { class: { level: true, 'is-mobile': this.mobile } },
       items
     )
   }
