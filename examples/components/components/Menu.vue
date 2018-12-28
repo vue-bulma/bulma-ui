@@ -52,13 +52,21 @@
             <span>Balance</span>
           </vb-menu-item>
         </vb-menu>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/components/menu.js'
+
 export default {
-  name: 'MenuExamples'
+  name: 'MenuExamples',
+  data() {
+    return {
+      basic: code.basic
+    }
+  }
 }
 </script>

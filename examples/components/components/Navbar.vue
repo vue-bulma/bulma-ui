@@ -37,6 +37,7 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -69,6 +70,7 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
+        <pre slot="code">{{ transparentNavbar }}</pre>
       </demo>
     </example-section-item>
 
@@ -109,6 +111,7 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
+        <pre slot="code">{{ fixedNavbar }}</pre>
       </demo>
     </example-section-item>
 
@@ -141,45 +144,19 @@
             </vb-navbar-dropdown>
           </template>
         </vb-navbar>
-      </demo>
-    </example-section-item>
-
-    <example-section-item title="Right Dropdown">
-      <demo>
-        <vb-navbar @select="handleSelect">
-          <vb-navbar-dropdown>
-            <template slot="title">Left</template>
-            <vb-navbar-item name="about">About</vb-navbar-item>
-            <vb-navbar-item name="jobs">Jobs</vb-navbar-item>
-          </vb-navbar-dropdown>
-
-          <vb-navbar-dropdown dropup>
-            <template slot="title">Up</template>
-            <vb-navbar-item name="about">About</vb-navbar-item>
-            <vb-navbar-item name="jobs">Jobs</vb-navbar-item>
-          </vb-navbar-dropdown>
-
-          <vb-navbar-dropdown arrow-less>
-            <template slot="title">Dropdown without arrow</template>
-            <vb-navbar-item name="about">About</vb-navbar-item>
-            <vb-navbar-item name="jobs">Jobs</vb-navbar-item>
-          </vb-navbar-dropdown>
-
-          <template slot="right">
-            <vb-navbar-dropdown>
-              <template slot="title">Right</template>
-              <vb-navbar-item name="about">About</vb-navbar-item>
-              <vb-navbar-item name="jobs">Jobs</vb-navbar-item>
-            </vb-navbar-dropdown>
-          </template>
-        </vb-navbar>
+        <pre slot="code">{{ rightDropdown }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
       <demo>
         <vb-button-addons slot="control">
-          <vb-button v-for="color in colors" :key="color" :color="color" @click="handleCheckColor(color)">{{color}}</vb-button>
+          <vb-button
+            v-for="color in colors"
+            :key="color"
+            :color="color"
+            @click="handleCheckColor(color)"
+          >{{color}}</vb-button>
         </vb-button-addons>
 
         <vb-navbar :color="color">
@@ -196,6 +173,7 @@
             <vb-button color="primary" @click="name = 'Sign up'">Sign up</vb-button>
           </vb-navbar-item>
         </vb-navbar>
+        <pre slot="code">{{ codeColors }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -215,10 +193,17 @@ const BASE_COLOR = [
   'link'
 ]
 
+import code from '../../code/components/navbar.js'
+
 export default {
-  name: 'Navbar',
+  name: 'NavbarExamples',
   data() {
     return {
+      basic: code.basic,
+      transparentNavbar: code.TransparentNavbar,
+      fixedNavbar: code.fixedNavbar,
+      rightDropdown: code.rightDropdown,
+      codeColors: code.colors,
       name: 'none',
       colors: BASE_COLOR,
       position: null,

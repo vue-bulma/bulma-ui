@@ -7,23 +7,27 @@
             <vb-input prefix="fa fa-search" placeholder="Search"/>
           </vb-panel-block>
           <vb-panel-tab :tabs="tabs" @click="handleClick"></vb-panel-tab>
-          <vb-panel-block :list="tabs[index].list" @click="itemClick" ref="panel-block"></vb-panel-block>
+          <vb-panel-block :list="tabs[tabIndex].list" @click="itemClick" ref="panel-block"></vb-panel-block>
           <vb-panel-block :hover-item="false">
             <vb-button fullwidth>test</vb-button>
           </vb-panel-block>
         </vb-panel>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/components/panel.js'
+
 export default {
   name: 'PanelExamples',
   data() {
     return {
-      index: 0,
-      currentIndex: 0,
+      basic: code.basic,
+      tabIndex: 0,
+      panelBlockIndex: 0,
       tabs: [
         {
           name: 'all',
@@ -45,11 +49,11 @@ export default {
   },
   methods: {
     handleClick(index) {
-      this.index = index
+      this.tabIndex = index
       this.$refs['panel-block'].reset()
     },
     itemClick(index) {
-      this.currentIndex = index
+      this.panelBlockIndex = index
     }
   }
 }

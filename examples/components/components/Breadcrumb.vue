@@ -7,6 +7,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -17,6 +18,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ alignment.centered }}</pre>
       </demo>
 
       <demo>
@@ -25,6 +27,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ alignment.right }}</pre>
       </demo>
     </example-section-item>
 
@@ -42,6 +45,7 @@
             <vb-icon name="fa fa-thumbs-up" size="small"></vb-icon>Breadcrumb
           </vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ icons }}</pre>
       </demo>
     </example-section-item>
 
@@ -52,6 +56,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ separators.arrow }}</pre>
       </demo>
       <demo>
         <vb-breadcrumb separator="bullet">
@@ -59,6 +64,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ separators.bullet }}</pre>
       </demo>
       <demo>
         <vb-breadcrumb separator="dot">
@@ -66,6 +72,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ separators.dot }}</pre>
       </demo>
       <demo>
         <vb-breadcrumb separator="succeeds">
@@ -73,6 +80,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ separators.succeeds }}</pre>
       </demo>
     </example-section-item>
 
@@ -83,6 +91,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ sizes.small }}</pre>
       </demo>
       <demo>
         <vb-breadcrumb size="medium">
@@ -90,6 +99,7 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ sizes.medium }}</pre>
       </demo>
       <demo>
         <vb-breadcrumb size="large">
@@ -97,13 +107,25 @@
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
+        <pre slot="code">{{ sizes.large }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/components/breadcrumb.js'
+
 export default {
-  name: 'BreadcrumbExamples'
+  name: 'BreadcrumbExamples',
+  data() {
+    return {
+      basic: code.basic,
+      alignment: code.alignment,
+      icons: code.icons,
+      separators: code.separators,
+      sizes: code.siezs
+    }
+  }
 }
 </script>

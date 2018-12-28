@@ -3,8 +3,12 @@
     <example-section-item title="Basic">
       <demo>
         <vb-message title="Hello World" showClose>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+          <a>felis venenatis</a> efficitur. Aenean ac
+          <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
         </vb-message>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -31,6 +35,7 @@
         <vb-message title="Danger" color="danger" showClose>
           <p>This is the content</p>
         </vb-message>
+        <pre slot="code">{{ colors }}</pre>
       </demo>
     </example-section-item>
 
@@ -60,6 +65,7 @@
         <vb-message color="danger">
           <p>Danger</p>
         </vb-message>
+        <pre slot="code">{{ bodyOnly }}</pre>
       </demo>
     </example-section-item>
 
@@ -77,13 +83,24 @@
         <vb-message title="Large message" size="large" showClose>
           <p>This is the content</p>
         </vb-message>
+        <pre slot="code">{{ sizes }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/components/message.js'
+
 export default {
-  name: 'MessageExamples'
+  name: 'MessageExamples',
+  data() {
+    return {
+      basic: code.basic,
+      colors: code.colors,
+      bodyOnly: code.bodyOnly,
+      sizes: code.sizes
+    }
+  }
 }
 </script>

@@ -15,12 +15,13 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Hoverable or Toggable">
       <demo>
-        <vb-buttons-List>
+        <vb-buttons-list>
           <vb-dropdown trigger="click">
             <vb-button>
               <span>Click me</span>
@@ -48,13 +49,14 @@
               <vb-dropdown-item>With a divider</vb-dropdown-item>
             </vb-dropdown-menu>
           </vb-dropdown>
-        </vb-buttons-List>
+        </vb-buttons-list>
+        <pre slot="code">{{ toggable }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Right aligned">
       <demo>
-        <vb-buttons-List>
+        <vb-buttons-list>
           <vb-dropdown right-aligned>
             <vb-button>
               <span>Right aligned</span>
@@ -82,7 +84,8 @@
               <vb-dropdown-item>With a divider</vb-dropdown-item>
             </vb-dropdown-menu>
           </vb-dropdown>
-        </vb-buttons-List>
+        </vb-buttons-list>
+        <pre slot="code">{{ aligned }}</pre>
       </demo>
     </example-section-item>
 
@@ -101,13 +104,24 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
+        <pre slot="code">{{ dropup }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/components/dropdown.js'
+
 export default {
-  name: 'DropdownExamples'
+  name: 'DropdownExamples',
+  data() {
+    return {
+      basic: code.basic,
+      toggable: code.toggable,
+      aligned: code.aligned,
+      dropup: code.dropup
+    }
+  }
 }
 </script>
