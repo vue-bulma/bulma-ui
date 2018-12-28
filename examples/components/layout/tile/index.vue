@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo title="Size in 1 ... 12">
+      <demo>
         <example-basic></example-basic>
       </demo>
     </example-section-item>

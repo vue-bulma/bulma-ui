@@ -20,47 +20,41 @@ export default Vue.component('VbTile', {
       return !parent
     }
   },
-  mounted() {
-    if (this.$slots.default) {
-      this.$slots.default.forEach(vnode => {
-        const { elm } = vnode
-        if (this.isContent(vnode) && elm && elm.classList) {
-          elm.classList.add('tile')
-          elm.classList.add('is-child')
-        }
-      })
-    }
-  },
   render(createElement) {
     const { vertical, isAncestor, size } = this
-    const { default: nodes } = this.$slots
-    const allContent = nodes && nodes.every(vnode => this.isContent(vnode))
-    const isParent = !isAncestor && vertical && allContent
+    const { default: nodes = [] } = this.$slots
+    const children = nodes.map(vnode => {
+      if (!this.isChild(vnode)) return vnode
+
+      this.addClass(vnode, 'tile is-child')
+      return createElement('div', { class: 'tile is-parent' }, [vnode])
+    })
 
     const classes = {
       class: {
         tile: true,
         'is-ancestor': isAncestor,
-        'is-parent': isParent,
         'is-vertical': vertical,
         [`is-${size}`]: !!size
       }
     }
 
-    const children =
-      isParent || !nodes
-        ? nodes
-        : nodes.map(vnode => {
-            if (!this.isContent(vnode)) return vnode
-            return createElement('div', { class: 'tile is-parent' }, [vnode])
-          })
-
     return createElement('div', classes, children)
   },
   methods: {
-    isContent({ componentOptions = {} }) {
-      const { tag } = componentOptions
+    isChild(vnode) {
+      if (!vnode || !vnode.componentOptions) return
+
+      const { tag } = vnode.componentOptions
       return !tag || tag !== 'vb-tile'
+    },
+    addClass(vnode, classes) {
+      if (!vnode.data) {
+        vnode.data = { staticClass: classes }
+      } else {
+        let { staticClass = '' } = vnode.data
+        vnode.data.staticClass = [classes, staticClass].join(' ')
+      }
     }
   }
 })
