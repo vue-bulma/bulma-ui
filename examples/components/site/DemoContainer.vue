@@ -4,16 +4,19 @@
       <slot name="control"></slot>
       <hr>
     </div>
-    <slot></slot>
-    <hr v-show="isOpen">
-    <div v-show="isOpen">
-      <slot name="code"></slot>
-    </div>
 
-    <vb-button v-if="!!$slots.code" slot="footer" fullwidth color="white" @click="toggle">
-      <vb-icon name="fa fa-angle-down" :class="{ 'icon-rotate': isOpen }"></vb-icon>
-      <vb-title type="subtitle" size="6">{{ buttonText }}</vb-title>
-    </vb-button>
+    <slot></slot>
+
+    <div slot="footer" class="demo-code-container">
+      <div v-show="showCode" class="demo-code">
+        <slot name="code"></slot>
+      </div>
+
+      <vb-button v-if="!!$slots.code" slot="footer" fullwidth color="white" @click="toggle">
+        <vb-icon name="fa fa-angle-down" :class="{ 'icon-rotate': showCode }"></vb-icon>
+        <vb-title type="subtitle" size="6">{{ buttonText }}</vb-title>
+      </vb-button>
+    </div>
   </vb-card>
 </template>
 
@@ -25,34 +28,40 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      showCode: false
     }
   },
   methods: {
     toggle() {
-      this.isOpen = !this.isOpen
+      this.showCode = !this.showCode
     }
   },
   computed: {
     buttonText() {
-      if (this.isOpen) {
-        return '隐藏代码'
-      } else {
-        return '显示代码'
-      }
+      return this.showCode ? '隐藏代码' : '显示代码'
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$duration: 0.2s;
+
 .demo:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-button span {
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+.demo-code-container {
+  width: 100%;
+  flex-direction: column;
+}
+.demo-code {
+  border-bottom: 1px solid #dbdbdb;
 }
 .icon-rotate {
   transform: rotate(180deg);
+}
+button span {
+  transition: transform $duration ease-in-out,
+    -webkit-transform $duration ease-in-out;
 }
 </style>
