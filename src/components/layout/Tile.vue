@@ -1,6 +1,8 @@
 <script>
 import Vue from 'vue'
 
+import { addClass } from '@/utils'
+
 export default Vue.component('VbTile', {
   props: {
     vertical: Boolean,
@@ -26,7 +28,7 @@ export default Vue.component('VbTile', {
     const children = nodes.map(vnode => {
       if (!this.isChild(vnode)) return vnode
 
-      this.addClass(vnode, 'tile is-child')
+      addClass(vnode, 'tile is-child')
       return createElement('div', { class: 'tile is-parent' }, [vnode])
     })
 
@@ -47,14 +49,6 @@ export default Vue.component('VbTile', {
 
       const { tag } = vnode.componentOptions
       return !tag || tag !== 'vb-tile'
-    },
-    addClass(vnode, classes) {
-      if (!vnode.data) {
-        vnode.data = { staticClass: classes }
-      } else {
-        let { staticClass = '' } = vnode.data
-        vnode.data.staticClass = [classes, staticClass].join(' ')
-      }
     }
   }
 })
