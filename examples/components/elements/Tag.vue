@@ -1,13 +1,14 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <vb-box>
+      <demo>
         <vb-tag>Tag label</vb-tag>
-      </vb-box>
+        <pre slot="code">{{code.basic}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <vb-box>
+      <demo>
         <vb-tags>
           <vb-tag color="black">black</vb-tag>
           <vb-tag color="dark">dark</vb-tag>
@@ -20,49 +21,50 @@
           <vb-tag color="warning">warning</vb-tag>
           <vb-tag color="danger">danger</vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.colors}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <vb-box>
+      <demo>
         <vb-tags>
           <vb-tag>Normal</vb-tag>
           <vb-tag size="medium">Medium</vb-tag>
-          <vb-tag size='large'>Large</vb-tag>
+          <vb-tag size="large">Large</vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.size}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Modifiers">
-      <vb-box class="box-display">
+      <demo>
         <vb-tags>
           <vb-tag rounded>Rounded</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.modifiers}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Combinations">
-      <vb-box>
+      <demo>
         <vb-tags>
-          <vb-tag color="success">
-            Bar
+          <vb-tag color="success">Bar
             <vb-delete size="small"></vb-delete>
           </vb-tag>
-          <vb-tag color="warning" size='medium'>
-            Bar
+          <vb-tag color="warning" size="medium">Bar
             <vb-delete size="small"></vb-delete>
           </vb-tag>
-          <vb-tag color="danger" size='large'>
-            Bar
+          <vb-tag color="danger" size="large">Bar
             <vb-delete></vb-delete>
           </vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.combinations}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Tags">
-      <vb-box>
+      <demo>
         <vb-tags>
           <vb-tag color="primary">Vue</vb-tag>
           <vb-tag color="dark">Bulma</vb-tag>
@@ -71,11 +73,12 @@
           <vb-tag color="danger">Vue</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.tags}}</pre>
+      </demo>
     </example-section-item>
 
     <example-section-item title="Tags Addons">
-      <vb-box>
+      <demo>
         <vb-tags addons>
           <vb-tag color="primary">Vue</vb-tag>
           <vb-tag color="dark">Bulma</vb-tag>
@@ -84,19 +87,20 @@
           <vb-tag color="danger">Vue</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-      </vb-box>
+        <pre slot="code">{{code.tagsAddons}}</pre>
+      </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/elements/tag.js'
 export default {
-  name: 'TagExamples'
+  name: 'TagExamples',
+  data() {
+    return {
+      code: code
+    }
+  }
 }
 </script>
-
-<style scoped>
-.box-display {
-  display: flex !important;
-}
-</style>

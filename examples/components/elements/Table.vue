@@ -21,6 +21,7 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
@@ -45,6 +46,7 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.bordered}}</pre>
       </demo>
     </example-section-item>
 
@@ -79,6 +81,7 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.striped}}</pre>
       </demo>
     </example-section-item>
 
@@ -103,6 +106,7 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.narrow}}</pre>
       </demo>
     </example-section-item>
 
@@ -137,6 +141,8 @@
             <td>two</td>
           </tr>
         </vb-table>
+                <pre slot="code">{{code.hoverable}}</pre>
+
       </demo>
     </example-section-item>
 
@@ -171,6 +177,7 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.fullwidth}}</pre>
       </demo>
     </example-section-item>
 
@@ -205,13 +212,21 @@
             <td>two</td>
           </tr>
         </vb-table>
+        <pre slot="code">{{code.combine}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/elements/table.js'
+
 export default {
-  name: 'TableExamples'
+  name: 'TableExamples',
+  data() {
+    return {
+      code: code
+    }
+  }
 }
 </script>

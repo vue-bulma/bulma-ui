@@ -3,6 +3,7 @@
     <example-section-item title="Basic">
       <demo>
         <vb-progress></vb-progress>
+        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
@@ -18,6 +19,7 @@
         <vb-progress color="dark" value="80" max="100"></vb-progress>
         <vb-progress color="black" value="90" max="100"></vb-progress>
         <vb-progress color="link" value="100" max="100"></vb-progress>
+        <pre slot="code">{{code.colors}}</pre>
       </demo>
     </example-section-item>
 
@@ -27,13 +29,21 @@
         <vb-progress color="primary" value="20" max="100"></vb-progress>
         <vb-progress color="primary" value="40" max="100" size="medium"></vb-progress>
         <vb-progress color="primary" value="80" max="100" size="large"></vb-progress>
+        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/elements/progress.js'
+
 export default {
-  name: 'ProgressExamples'
+  name: 'ProgressExamples',
+  data() {
+    return {
+      code: code
+    }
+  }
 }
 </script>
