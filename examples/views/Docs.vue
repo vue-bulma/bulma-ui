@@ -31,7 +31,7 @@ $sidebar-width: 220px;
   overflow: hidden scroll;
   background-color: #fff;
   box-shadow: 1px 1px 5px #888888;
-  z-index: 50;
+  z-index: 31;
   transition: left 0.5s;
 }
 .doc-content {
