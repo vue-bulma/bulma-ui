@@ -3,14 +3,14 @@
     <example-section-item title="Basic">
       <demo>
         <vb-image :src="imageUrl(7)" size="128x128"></vb-image>
-        <pre slot="code">{{image.basic}}</pre>
+        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Rounded">
       <demo>
         <vb-image :src="imageUrl(7)" size="128x128" rounded></vb-image>
-        <pre slot="code">{{image.rounded}}</pre>
+        <pre slot="code">{{code.rounded}}</pre>
       </demo>
     </example-section-item>
 
@@ -23,7 +23,7 @@
         <vb-image :src="imageUrl(5)" size="64x64"></vb-image>
         <vb-image :src="imageUrl(6)" size="96x96"></vb-image>
         <vb-image :src="imageUrl(7)" size="128x128"></vb-image>
-        <pre slot="code">{{image.size}}</pre>
+        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
@@ -49,7 +49,7 @@
             <vb-image :src="imageUrl(22)" size="1by3"></vb-image>
           </vb-col>
         </vb-cols>
-        <pre slot="code">{{image.responsive}}</pre>
+        <pre slot="code">{{code.responsive}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -85,7 +85,7 @@ export default {
   name: 'ImageExamples',
   data() {
     return {
-      image: code
+      code: code
     }
   },
   methods: {

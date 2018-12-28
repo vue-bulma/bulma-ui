@@ -38,7 +38,7 @@
             </vb-level>
           </vb-media-object>
         </vb-box>
-        <pre slot="code">{{box.basic}}</pre>
+        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -50,7 +50,7 @@ export default {
   name: 'BoxExamples',
   data() {
     return {
-      box: code
+      code: code
     }
   },
   methods: {

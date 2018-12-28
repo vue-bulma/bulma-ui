@@ -3,6 +3,7 @@
     <example-section-item title="Basic">
       <demo>
         <vb-delete></vb-delete>
+        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
@@ -12,37 +13,46 @@
         <vb-delete></vb-delete>
         <vb-delete size="medium"></vb-delete>
         <vb-delete size="large"></vb-delete>
+        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Combinations">
       <demo>
         <div class="block">
-          <vb-tag color="success">
-            Hello World
+          <vb-tag color="success">Hello World
             <vb-delete size="small"></vb-delete>
           </vb-tag>
         </div>
 
         <vb-notification color="danger">
-          <vb-delete></vb-delete>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
         </vb-notification>
 
         <vb-message title="info" color="info" showClose>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque risus mi, tempus quis placerat ut,
+            porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur.
+            Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna,
+            vehicula et sem eget, facilisis sodales sem.
+          </p>
         </vb-message>
+        <pre slot="code">{{code.combinations}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/elements/delete.js'
+
 export default {
   name: 'DeleteExamples',
   data() {
     return {
-      visible: true
+      visible: true,
+      code: code
     }
   },
   methods: {
