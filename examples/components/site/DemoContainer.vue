@@ -2,11 +2,10 @@
   <vb-card class="demo" :title="title">
     <div v-if="$slots.control">
       <slot name="control"></slot>
-      <hr v-show="isOpen">
+      <hr>
     </div>
-
     <slot></slot>
-
+    <hr v-show="isOpen">
     <div v-show="isOpen">
       <slot name="code"></slot>
     </div>
