@@ -31,13 +31,7 @@ code.alignment = `
   export default {
     data() {
       return {
-        index: 0,
         tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -45,24 +39,18 @@ code.alignment = `
 `
 code.icons = `
 <template>
-  <vb-tabs :tabs="tabs2"></vb-tabs>
+  <vb-tabs :tabs="tabs"></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -80,13 +68,7 @@ code.sizes = `
   export default {
     data() {
       return {
-        index: 0,
         tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -94,27 +76,21 @@ code.sizes = `
 `
 code.styles = `
 <template>
-  <vb-tabs :tabs="tabs2" type="boxed"></vb-tabs>
-  <vb-tabs :tabs="tabs2" type="toggle"></vb-tabs>
-  <vb-tabs :tabs="tabs2" type="toggle" rounded></vb-tabs>
-  <vb-tabs :tabs="tabs2" fullwidth></vb-tabs>
+  <vb-tabs :tabs="tabs" type="boxed"></vb-tabs>
+  <vb-tabs :tabs="tabs" type="toggle"></vb-tabs>
+  <vb-tabs :tabs="tabs" type="toggle" rounded></vb-tabs>
+  <vb-tabs :tabs="tabs" fullwidth></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -123,24 +99,18 @@ code.styles = `
 code.combining = {}
 code.combining.boxed = `
 <template>
-  <vb-tabs :tabs="tabs2" align="centered" type="boxed"></vb-tabs>
+  <vb-tabs :tabs="tabs" align="centered" type="boxed"></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -148,24 +118,18 @@ code.combining.boxed = `
 `
 code.combining.toggle = `
 <template>
-  <vb-tabs :tabs="tabs2" type="toggle" fullwidth></vb-tabs>
+  <vb-tabs :tabs="tabs" type="toggle" fullwidth></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -173,24 +137,18 @@ code.combining.toggle = `
 `
 code.combining.boxedMedium = `
 <template>
-  <vb-tabs :tabs="tabs2" align="centered" type="boxed" size="medium"></vb-tabs>
+  <vb-tabs :tabs="tabs" align="centered" type="boxed" size="medium"></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }
@@ -198,24 +156,18 @@ code.combining.boxedMedium = `
 `
 code.combining.toggleLarge = `
 <template>
-  <vb-tabs :tabs="tabs2" type="toggle" size="large" fullwidth></vb-tabs>
+  <vb-tabs :tabs="tabs" type="toggle" size="large" fullwidth></vb-tabs>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        index: 0,
-        tabs2: [
+        tabs: [
           { name: 'Pictures', icon: 'fa-image' },
           { name: 'Music', icon: 'fa-music' },
           { name: 'Videos', icon: 'fa-film' }
         ]
-      }
-    },
-    methods: {
-      handleClick(index) {
-        this.index = index
       }
     }
   }

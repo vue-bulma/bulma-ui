@@ -64,14 +64,19 @@
         <vb-button color="primary">Send message</vb-button>
       </vb-form-item>
     </vb-form>
+    <pre slot="code">{{ horizontal ? basic : vertical }}</pre>
   </demo>
 </template>
 
 <script>
+import code from '../../../code/form/form/horizontal.js'
+
 export default {
   name: 'FormHorizontal',
   data() {
     return {
+      basic: code.basic,
+      vertical: code.vertical,
       horizontal: true,
       shared: [],
       already: 1

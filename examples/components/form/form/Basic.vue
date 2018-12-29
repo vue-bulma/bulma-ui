@@ -47,14 +47,18 @@
         <vb-button color="light" @click="reset">Reset</vb-button>
       </vb-form-item>
     </vb-form>
+    <pre slot="code">{{ basic }}</pre>
   </demo>
 </template>
 
 <script>
+import code from '../../../code/form/form/basic.js'
+
 export default {
   name: 'FormBasic',
   data() {
     return {
+      basic: code.basic,
       msg: {
         username: {
           text: 'This username is available',

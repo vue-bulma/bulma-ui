@@ -15,6 +15,7 @@
         <vb-input placeholder="Your email"></vb-input>
         <vb-button color="info" state="static">@gmail.com</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ basic }}</pre>
     </demo>
 
     <demo title="Expanded">
@@ -57,6 +58,7 @@
         </vb-select>
         <vb-button>Choose</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ expanded }}</pre>
     </demo>
 
     <demo title="Alignment">
@@ -79,12 +81,22 @@
         <vb-input placeholder="Amount of money"></vb-input>
         <vb-button color="primary">Transfer</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ alignment }}</pre>
     </demo>
   </div>
 </template>
 
 <script>
+import code from '../../../code/form/form/addons.js'
+
 export default {
-  name: 'FormAddons'
+  name: 'FormAddons',
+  data() {
+    return {
+      basic: code.basic,
+      expanded: code.expanded,
+      alignment: code.alignment
+    }
+  }
 }
 </script>

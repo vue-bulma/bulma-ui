@@ -15,6 +15,7 @@
         <vb-button color="info">Submit</vb-button>
         <vb-button color="light">Cancel</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ alignment }}</pre>
     </demo>
 
     <demo title="Expanded">
@@ -22,6 +23,7 @@
         <vb-input placeholder="Find a repository" expanded></vb-input>
         <vb-button color="info">Search</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ expanded }}</pre>
     </demo>
 
     <demo title="Multiline">
@@ -37,12 +39,22 @@
         <vb-button>Nine</vb-button>
         <vb-button>Ten</vb-button>
       </vb-form-item>
+      <pre slot="code">{{ multiline }}</pre>
     </demo>
   </div>
 </template>
 
 <script>
+import code from '../../../code/form/form/group.js'
+
 export default {
-  name: 'FormGroup'
+  name: 'FormGroup',
+  data() {
+    return {
+      alignment: code.alignment,
+      expanded: code.expanded,
+      multiline: code.multiline
+    }
+  }
 }
 </script>

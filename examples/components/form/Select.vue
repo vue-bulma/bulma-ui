@@ -6,6 +6,7 @@
           <option>Select dropdown</option>
           <option>With options</option>
         </vb-select>
+        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -25,6 +26,7 @@
           <option value="Uruguay">Uruguay</option>
           <option value="Venezuela">Venezuela</option>
         </vb-select>
+        <pre slot="code">{{ multiples }}</pre>
       </demo>
     </example-section-item>
 
@@ -90,6 +92,7 @@
             <option>With options</option>
           </vb-select>
         </div>
+        <pre slot="code">{{ colors }}</pre>
       </demo>
     </example-section-item>
 
@@ -99,6 +102,7 @@
           <option>Rounded</option>
           <option>With options</option>
         </vb-select>
+        <pre slot="code">{{ styles }}</pre>
       </demo>
     </example-section-item>
 
@@ -128,6 +132,7 @@
             <option>With options</option>
           </vb-select>
         </div>
+        <pre slot="code">{{ sizes }}</pre>
       </demo>
     </example-section-item>
 
@@ -157,6 +162,7 @@
             <option>With options</option>
           </vb-select>
         </div>
+        <pre slot="code">{{ states }}</pre>
       </demo>
     </example-section-item>
 
@@ -186,45 +192,55 @@
             <option>With options</option>
           </vb-select>
         </div>
+        <pre slot="code">{{ icons }}</pre>
       </demo>
     </example-section-item>
-
 
     <example-section-item title="Events">
       <demo>
         <div class="block" slot="control">
-          Value: <strong>{{value}}</strong>
-          <br>
-          This Select on: <strong>{{placeholder}}</strong>!
+          Value:
+          <strong>{{value}}</strong>
+          <br>This Select on:
+          <strong>{{placeholder}}</strong>!
         </div>
 
         <vb-select v-model="value" @focus="handleFocus" @blur="handleBlur">
-          <option v-for="item in options" :key="item.value" :value="item.value">
-            {{item.label}}
-          </option>
+          <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
+        <pre slot="code">{{ events.normal }}</pre>
       </demo>
 
       <demo>
         <div class="block" slot="control">
-          Value: <strong>{{multiple}}</strong>
+          Value:
+          <strong>{{multiple}}</strong>
         </div>
 
         <vb-select multiple v-model="multiple">
-          <option v-for="item in options" :key="item.value" :value="item.value">
-            {{item.label}}
-          </option>
+          <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
+        <pre slot="code">{{ events.multiple }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/form/select.js'
+
 export default {
   name: 'Select',
   data() {
     return {
+      basic: code.basic,
+      multiples: code.multiple,
+      colors: code.colors,
+      styles: code.style,
+      sizes: code.sizes,
+      states: code.states,
+      icons: code.icons,
+      events: code.events,
       model: 'Select dropdown',
       placeholder: 'Blurred',
       value: 1,

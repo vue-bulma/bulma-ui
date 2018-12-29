@@ -68,14 +68,21 @@
         <vb-button color="primary">Send message</vb-button>
       </vb-form-item>
     </vb-form>
+    <pre slot="code">{{ sizeCode }}</pre>
   </demo>
 </template>
 
 <script>
+import code from '../../../code/form/form/sizes.js'
+
 export default {
   name: 'FormSize',
   data() {
     return {
+      small: code.small,
+      normal: code.normal,
+      medium: code.medium,
+      large: code.large,
       size: 'small',
       shared: [],
       already: 0
@@ -84,6 +91,25 @@ export default {
   methods: {
     changeSize(value) {
       this.size = value
+    }
+  },
+  computed: {
+    sizeCode() {
+      let size = ''
+      switch (this.size) {
+        case 'small':
+          size = this.small
+          break
+        case 'medium':
+          size = this.medium
+          break
+        case 'large':
+          size = this.large
+          break
+        default:
+          size = this.normal
+      }
+      return size
     }
   }
 }
