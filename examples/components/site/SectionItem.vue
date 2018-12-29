@@ -1,10 +1,10 @@
 <template>
-  <vb-content class="">
-    <vb-title :id="id" type="title" size="4" class="anchor-title">
+  <vb-content class>
+    <vb-title :id="id" type="title" size="3" class="anchor-title" spaced>
       {{title}}:
       <a :href="`#${id}`" class="anchor-link">#</a>
     </vb-title>
-
+    <vb-title v-html="subtitle" v-if="subtitle" type="subtitle" size="6">{{subtitle}}</vb-title>
     <slot></slot>
   </vb-content>
 </template>
@@ -16,6 +16,9 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    subtitle: {
+      type: String
     }
   },
   computed: {
