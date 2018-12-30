@@ -90,6 +90,11 @@ code.states = `\
 code.disabled = `\
 <template>
   <vb-button disabled>Disable</vb-button>
+  <vb-button color="primary" disabled>Disable</vb-button>
+  <vb-button color="link" disabled>Disable</vb-button>
+  <vb-button color="info" disabled>Disable</vb-button>
+  <vb-button color="success" disabled>Disable</vb-button>
+  <vb-button color="danger" disabled>Disable</vb-button>
 </template>
 `
 

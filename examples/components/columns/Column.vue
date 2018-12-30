@@ -840,7 +840,4 @@ export default {
   cursor: pointer;
   color: #fff;
 }
-.color-red {
-  color: red;
-}
 </style>

@@ -64,4 +64,7 @@ body,
   height: 100%;
   overflow: hidden scroll;
 }
+.color-red {
+  color: red;
+}
 </style>

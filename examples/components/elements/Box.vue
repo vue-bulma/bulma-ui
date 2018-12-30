@@ -1,6 +1,9 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
+      <vb-title type="subtitle" size="6">The
+        <span class="color-red">vb-box</span> element is simply a container with a shadow, a border, a radius, and some padding
+      </vb-title>
       <demo>
         <vb-box>
           <vb-media-object>
