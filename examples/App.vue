@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" :class="classes">
     <navbar @toggleSidebar="toggleSidebar"></navbar>
 
-    <div :class="classes">
+    <sidebar></sidebar>
+
+    <div class="main">
       <router-view></router-view>
     </div>
   </div>
@@ -10,10 +12,14 @@
 
 <script>
 import Navbar from './layouts/Navbar'
+import Sidebar from './layouts/Sidebar'
 
 export default {
   name: 'app',
-  components: { Navbar },
+  components: {
+    Navbar,
+    Sidebar
+  },
   data() {
     return {
       visible: true,
@@ -23,14 +29,10 @@ export default {
   computed: {
     classes() {
       return {
-        main: true,
         'has-sidebar': this.visible,
         'has-fullwidth-content': this.fullwidth
       }
     }
-  },
-  mounted() {
-    this.setVisible(this.$route)
   },
   methods: {
     setVisible(route) {
@@ -54,15 +56,48 @@ export default {
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/navbar';
-html,
+
+$sidebar-width: 220px;
+
+#app,
 body,
-#app {
+html {
   height: 100%;
   overflow: hidden !important;
 }
+.sidebar {
+  height: calc(100% - 3.25rem);
+  position: fixed;
+  width: $sidebar-width;
+  left: -$sidebar-width - 5px;
+  padding: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #888888;
+  transition: left 0.5s;
+  z-index: 31;
+}
+.site.navbar {
+  z-index: 32 !important;
+}
+.has-sidebar {
+  .sidebar {
+    left: 0;
+  }
+  .docs {
+    padding-left: $sidebar-width + 15px;
+  }
+}
+.has-sidebar.has-fullwidth-content {
+  .docs {
+    padding-left: 1rem;
+  }
+}
 .main {
   height: 100%;
-  overflow: hidden scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .color-red {
   color: red;

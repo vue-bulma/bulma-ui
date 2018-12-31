@@ -1,5 +1,5 @@
 <template>
-  <vb-content class>
+  <vb-content>
     <vb-title :id="id" type="title" size="3" class="anchor-title">
       {{title}}:
       <a :href="`#${id}`" class="anchor-link">#</a>

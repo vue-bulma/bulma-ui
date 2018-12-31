@@ -1,7 +1,7 @@
 <template>
-  <vb-navbar @select="handleSelect" position="top" shadow>
+  <vb-navbar @select="handleSelect" position="top" shadow class="site">
     <vb-navbar-item slot="brand">
-      <a  @click="toggleSidebar">
+      <a @click="toggleSidebar">
         <vb-icon name="fa fa-bars" size="medium" iconSize="lg"></vb-icon>
       </a>
     </vb-navbar-item>

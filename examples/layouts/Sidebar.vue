@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sidebar">
     <vb-menu v-for="(item, index) in menus" :key="index" :label="item.name">
       <vb-menu-item v-for="child in item.children" :key="child.name" :to="{ name: child.component || child.name }">
         <span>{{child.name}}</span>
