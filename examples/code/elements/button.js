@@ -101,11 +101,72 @@ code.disabled = `\
 code.icons = `\
 <template>
   <vb-button>
-    <vb-icon name="fa fa-home"></vb-icon>
+    <vb-icon name="fa fa-bold"></vb-icon>
   </vb-button>
   <vb-button>
-    <vb-icon name="fa fa-home"></vb-icon>
-    <vb-title size="6">home</vb-title>
+    <vb-icon name="fa fa-italic"></vb-icon>
+  </vb-button>
+  <vb-button>
+    <vb-icon name="fa fa-underline"></vb-icon>
+  </vb-button>
+  <vb-button color="primary">
+    <vb-icon name="fa fa-twitter"></vb-icon>
+    <span>Twitter</span>
+  </vb-button>
+  <vb-button color="success">
+    <vb-icon name="fa fa-check"></vb-icon>
+    <span>Save</span>
+  </vb-button>
+  <vb-button color="danger" outlined>
+    <span>Delete</span>
+    <vb-icon name="fa fa-times"></vb-icon>
+  </vb-button>
+  <vb-button size="small">
+    <vb-icon name="fa fa-github"></vb-icon>
+    <span>Github</span>
+  </vb-button>
+  <vb-button>
+    <vb-icon name="fa fa-github"></vb-icon>
+    <span>Github</span>
+  </vb-button>
+  <vb-button size="medium">
+    <vb-icon name="fa fa-github"></vb-icon>
+    <span>Github</span>
+  </vb-button>
+  <vb-button size="large">
+    <vb-icon name="fa fa-github"></vb-icon>
+    <span>Github</span>
+  </vb-button>
+
+  <vb-button size="small">
+    <vb-icon name="fa fa-header"></vb-icon>
+  </vb-button>
+
+  <vb-button>
+    <vb-icon name="fa fa-header" size="small"></vb-icon>
+  </vb-button>
+  <vb-button>
+    <vb-icon name="fa fa-header fa-lg"></vb-icon>
+  </vb-button>
+
+  <vb-button size="medium">
+    <vb-icon name="fa fa-header" size="small"></vb-icon>
+  </vb-button>
+  <vb-button size="medium">
+    <vb-icon name="fa fa-header fa-lg"></vb-icon>
+  </vb-button>
+  <vb-button size="medium">
+    <vb-icon name="fa fa-header fa-2x"></vb-icon>
+  </vb-button>
+
+  <vb-button size="large">
+    <vb-icon name="fa fa-header" size="small"></vb-icon>
+  </vb-button>
+  <vb-button size="large">
+    <vb-icon name="fa fa-header fa-lg"></vb-icon>
+  </vb-button>
+  <vb-button size="large">
+    <vb-icon name="fa fa-header fa-2x" size="medium"></vb-icon>
   </vb-button>
 </template>
 `
@@ -125,15 +186,15 @@ code.addons = `\
   <vb-button-addons>
     <vb-button>
       <vb-icon name="fa fa-align-left"></vb-icon>
-      <vb-title size="6">left</vb-title>
+      <span>left</span>
     </vb-button>
     <vb-button>
       <vb-icon name="fa fa-align-center"></vb-icon>
-      <vb-title size="6">center</vb-title>
+      <span>center</span>
     </vb-button>
     <vb-button>
       <vb-icon name="fa fa-align-right"></vb-icon>
-      <vb-title size="6">right</vb-title>
+      <span>right</span>
     </vb-button>
   </vb-button-addons>
 </template>
@@ -151,7 +212,7 @@ code.list = `\
 
 code.listAddonsLeft = `\
 <template>
-  <vb-buttons-List type="addons">
+  <vb-buttons-List addons>
     <vb-button color="success">Save changes</vb-button>
     <vb-button>Save and continue</vb-button>
     <vb-button>Cancel</vb-button>
@@ -161,7 +222,7 @@ code.listAddonsLeft = `\
 
 code.listAddonsCentered = `\
 <template>
-  <vb-buttons-List type="addons" align="centered">
+  <vb-buttons-List addons align="centered">
     <vb-button>Save changes</vb-button>
     <vb-button color="info">Save and continue</vb-button>
     <vb-button>Cancel</vb-button>
@@ -171,7 +232,7 @@ code.listAddonsCentered = `\
 
 code.listAddonsRight = `\
 <template>
-  <vb-buttons-List type="addons" align="right">
+  <vb-buttons-List addons align="right">
     <vb-button>Save changes</vb-button>
     <vb-button>Save and continue</vb-button>
     <vb-button color="danger">Cancel</vb-button>

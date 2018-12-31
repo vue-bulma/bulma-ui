@@ -1,28 +1,16 @@
 <script>
 import Vue from 'vue'
-import Control from './Control.vue'
-const VbButtonAddons = Vue.component('VbButtonAddons', {
-  components: {
-    Control
-  },
+
+export default Vue.component('VbButtonAddons', {
   render(h) {
+    const { default: nodes = [] } = this.$slots
     return h(
-      'control',
-      { class: 'has-addons' },
-      this.list.map(item => {
-        return item.componentOptions.tag === 'VbButtonAddons'
-          ? item
-          : h('p', { class: 'control' }, [item])
-      })
+      'div',
+      { class: 'field has-addons' },
+      nodes.map(item => h('p', { class: 'control' }, [item]))
     )
-  },
-  computed: {
-    list() {
-      return this.$slots.default || []
-    }
   }
 })
-export default VbButtonAddons
 </script>
 
 <style lang="scss">

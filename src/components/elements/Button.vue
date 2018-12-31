@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="handleClick">
+  <button :class="classes" @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -23,7 +23,6 @@ export default {
     outlined: Boolean,
     inverted: Boolean,
     rounded: Boolean,
-    disabled: Boolean,
     state: {
       type: String,
       validator(value) {

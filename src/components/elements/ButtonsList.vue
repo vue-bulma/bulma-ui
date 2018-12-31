@@ -11,22 +11,16 @@ export default {
   name: 'VbButtonsList',
   mixins: [alignProps],
   props: {
-    type: {
-      type: String,
-      validator(value) {
-        return ['addons'].includes(value)
-      }
-    }
+    addons: Boolean
   },
   computed: {
     classes() {
-      const { align, type } = this
-      const obj = {
+      const { align, addons } = this
+      return {
         buttons: true,
         [`is-${align}`]: !!align,
-        [`has-${type}`]: !!type
+        'has-addons': addons
       }
-      return obj
     }
   }
 }

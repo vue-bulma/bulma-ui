@@ -130,13 +130,83 @@
       <demo class="button-icon">
         <vb-buttons-list>
           <vb-button>
-            <vb-icon name="fa fa-home"></vb-icon>
+            <vb-icon name="fa fa-bold"></vb-icon>
           </vb-button>
           <vb-button>
-            <vb-icon name="fa fa-home"></vb-icon>
-            <vb-title size="6">home</vb-title>
+            <vb-icon name="fa fa-italic"></vb-icon>
+          </vb-button>
+          <vb-button>
+            <vb-icon name="fa fa-underline"></vb-icon>
+          </vb-button>
+          <vb-button color="primary">
+            <vb-icon name="fa fa-twitter"></vb-icon>
+            <span>Twitter</span>
+          </vb-button>
+          <vb-button color="success">
+            <vb-icon name="fa fa-check"></vb-icon>
+            <span>Save</span>
+          </vb-button>
+          <vb-button color="danger" outlined>
+            <span>Delete</span>
+            <vb-icon name="fa fa-times"></vb-icon>
+          </vb-button>
+          <vb-button size="small">
+            <vb-icon name="fa fa-github"></vb-icon>
+            <span>Github</span>
+          </vb-button>
+          <vb-button>
+            <vb-icon name="fa fa-github"></vb-icon>
+            <span>Github</span>
+          </vb-button>
+          <vb-button size="medium">
+            <vb-icon name="fa fa-github"></vb-icon>
+            <span>Github</span>
+          </vb-button>
+          <vb-button size="large">
+            <vb-icon name="fa fa-github"></vb-icon>
+            <span>Github</span>
           </vb-button>
         </vb-buttons-list>
+
+        <vb-buttons-list>
+          <vb-button size="small">
+            <vb-icon name="fa fa-header"></vb-icon>
+          </vb-button>
+        </vb-buttons-list>
+
+        <vb-buttons-list>
+          <vb-button>
+            <vb-icon name="fa fa-header" size="small"></vb-icon>
+          </vb-button>
+          <vb-button>
+            <vb-icon name="fa fa-header fa-lg"></vb-icon>
+          </vb-button>
+        </vb-buttons-list>
+
+        <vb-buttons-list>
+          <vb-button size="medium">
+            <vb-icon name="fa fa-header" size="small"></vb-icon>
+          </vb-button>
+          <vb-button size="medium">
+            <vb-icon name="fa fa-header fa-lg"></vb-icon>
+          </vb-button>
+          <vb-button size="medium">
+            <vb-icon name="fa fa-header fa-2x"></vb-icon>
+          </vb-button>
+        </vb-buttons-list>
+
+        <vb-buttons-list>
+          <vb-button size="large">
+            <vb-icon name="fa fa-header" size="small"></vb-icon>
+          </vb-button>
+          <vb-button size="large">
+            <vb-icon name="fa fa-header fa-lg"></vb-icon>
+          </vb-button>
+          <vb-button size="large">
+            <vb-icon name="fa fa-header fa-2x" size="medium"></vb-icon>
+          </vb-button>
+        </vb-buttons-list>
+
         <pre slot="code">{{code.icons}}</pre>
       </demo>
     </example-section-item>
@@ -160,15 +230,15 @@
         <vb-button-addons>
           <vb-button>
             <vb-icon name="fa fa-align-left"></vb-icon>
-            <vb-title size="6">left</vb-title>
+            <span>left</span>
           </vb-button>
           <vb-button>
             <vb-icon name="fa fa-align-center"></vb-icon>
-            <vb-title size="6">center</vb-title>
+            <span>center</span>
           </vb-button>
           <vb-button>
             <vb-icon name="fa fa-align-right"></vb-icon>
-            <vb-title size="6">right</vb-title>
+            <span>right</span>
           </vb-button>
         </vb-button-addons>
         <pre slot="code">{{code.addons}}</pre>
@@ -198,7 +268,7 @@
         <span class="color-red">align="right"</span> modifiers to alter the alignment.
       </vb-title>
       <demo>
-        <vb-buttons-list type="addons">
+        <vb-buttons-list addons>
           <vb-button color="success">Save changes</vb-button>
           <vb-button>Save and continue</vb-button>
           <vb-button>Cancel</vb-button>
@@ -207,7 +277,7 @@
         <pre slot="code">{{code.listAddonsLeft}}</pre>
       </demo>
       <demo>
-        <vb-buttons-list type="addons" align="centered">
+        <vb-buttons-list addons align="centered">
           <vb-button>Save changes</vb-button>
           <vb-button color="info">Save and continue</vb-button>
           <vb-button>Cancel</vb-button>
@@ -215,7 +285,7 @@
         <pre slot="code">{{code.listAddonsCentered}}</pre>
       </demo>
       <demo>
-        <vb-buttons-list color="addons" align="right">
+        <vb-buttons-list addons align="right">
           <vb-button>Save changes</vb-button>
           <vb-button>Save and continue</vb-button>
           <vb-button color="danger">Cancel</vb-button>

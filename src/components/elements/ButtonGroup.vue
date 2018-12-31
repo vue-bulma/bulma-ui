@@ -1,28 +1,16 @@
 <script>
 import Vue from 'vue'
-import Control from './Control.vue'
-const VbButtonGroup = Vue.component('VbButtonGroup', {
-  components: {
-    Control
-  },
+
+export default Vue.component('VbButtonGroup', {
   render(h) {
+    const { default: nodes = [] } = this.$slots
     return h(
-      'control',
-      { class: 'is-grouped' },
-      this.list.map(item => {
-        return item.componentOptions.tag === 'VbButtonGroup'
-          ? item
-          : h('p', { class: 'control' }, [item])
-      })
+      'div',
+      { class: 'field is-grouped' },
+      nodes.map(item => h('p', { class: 'control' }, [item]))
     )
-  },
-  computed: {
-    list() {
-      return this.$slots.default || []
-    }
   }
 })
-export default VbButtonGroup
 </script>
 
 <style lang="scss">
