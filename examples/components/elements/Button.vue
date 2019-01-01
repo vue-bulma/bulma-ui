@@ -262,7 +262,7 @@
     <example-section-item title="Button List addons">
       <vb-title type="subtitle" size="6">You can attach
         <span class="color-red">vb-buttons-list</span> together with the
-        <span class="color-red">type="addons"</span> modifier
+        <span class="color-red">addons</span> modifier
         <br>Use the
         <span class="color-red">align="centered"</span> or the
         <span class="color-red">align="right"</span> modifiers to alter the alignment.
