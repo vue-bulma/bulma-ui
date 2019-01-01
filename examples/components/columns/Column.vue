@@ -11,16 +11,16 @@
       <demo>
         <vb-columns>
           <vb-column>
-            <p class="bg bg-primary">First col</p>
+            <p class="bg bg-primary">First column</p>
           </vb-column>
           <vb-column>
-            <p class="bg bg-primary">Second col</p>
+            <p class="bg bg-primary">Second column</p>
           </vb-column>
           <vb-column>
-            <p class="bg bg-primary">Third col</p>
+            <p class="bg bg-primary">Third column</p>
           </vb-column>
           <vb-column>
-            <p class="bg bg-primary">Fourth col</p>
+            <p class="bg bg-primary">Fourth column</p>
           </vb-column>
         </vb-columns>
 
@@ -577,13 +577,13 @@
       <demo>
         <vb-columns>
           <vb-column>
-            <p class="bg bg-primary">First col</p>
+            <p class="bg bg-primary">First column</p>
             <vb-columns>
               <vb-column>
-                <p class="bg bg-primary">First nested col</p>
+                <p class="bg bg-primary">First nested column</p>
               </vb-column>
               <vb-column>
-                <p class="bg bg-primary">Second nested col</p>
+                <p class="bg bg-primary">Second nested column</p>
               </vb-column>
             </vb-columns>
           </vb-column>
@@ -603,10 +603,10 @@
       <demo>
         <vb-columns gapType="gapless">
           <vb-column>
-            <p class="bg bg-primary">First col</p>
+            <p class="bg bg-primary">First column</p>
           </vb-column>
           <vb-column>
-            <p class="bg bg-info">Second col</p>
+            <p class="bg bg-info">Second column</p>
           </vb-column>
         </vb-columns>
         <pre slot="code">{{code.gapless}}</pre>
@@ -688,12 +688,12 @@
       <demo>
         <vb-columns align="vcentered">
           <vb-column size="8">
-            <p class="bg bg-primary">First col</p>
+            <p class="bg bg-primary">First column</p>
           </vb-column>
           <vb-column>
             <p
               class="bg bg-primary"
-            >Second col with more content. This is so you can see the vertical alignment.</p>
+            >Second column with more content. This is so you can see the vertical alignment.</p>
           </vb-column>
         </vb-columns>
         <pre slot="code">{{code.vertical}}</pre>
@@ -773,19 +773,19 @@
       <demo>
         <vb-columns view="mobile" align="centered" multiline>
           <vb-column narrow>
-            <p class="bg bg-primary">First col</p>
+            <p class="bg bg-primary">First column</p>
           </vb-column>
           <vb-column narrow>
-            <p class="bg bg-primary">Our Second col</p>
+            <p class="bg bg-primary">Our Second column</p>
           </vb-column>
           <vb-column narrow>
-            <p class="bg bg-primary">Third col</p>
+            <p class="bg bg-primary">Third column</p>
           </vb-column>
           <vb-column narrow>
-            <p class="bg bg-primary">The Fourth col</p>
+            <p class="bg bg-primary">The Fourth column</p>
           </vb-column>
           <vb-column narrow>
-            <p class="bg bg-primary">Fifth col</p>
+            <p class="bg bg-primary">Fifth column</p>
           </vb-column>
         </vb-columns>
         <pre slot="code">{{code.multilineCentering}}</pre>
