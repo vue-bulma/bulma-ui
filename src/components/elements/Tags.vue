@@ -13,11 +13,10 @@ export default {
   computed: {
     classes() {
       const { addons } = this
-      const obj = {
+      return {
         tags: true,
         'has-addons': addons
       }
-      return obj
     }
   }
 }

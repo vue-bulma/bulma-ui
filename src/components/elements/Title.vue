@@ -1,10 +1,15 @@
+<template>
+  <p :class="classes">
+    <slot></slot>
+  </p>
+</template>
+
 <script>
-import Vue from 'vue'
-
 const TYPES = ['title', 'subtitle']
-const NUMERICAL = [1, 2, 3, 4, 5, 6]
+const SIZES = [1, 2, 3, 4, 5, 6]
 
-const VbTitle = Vue.component('VbTitle', {
+export default {
+  name: 'VbTitle',
   props: {
     type: {
       type: String,
@@ -19,27 +24,22 @@ const VbTitle = Vue.component('VbTitle', {
         return this.type === 'title' ? 3 : 5
       },
       validator(value) {
-        return NUMERICAL.includes(+value)
+        return SIZES.includes(+value)
       }
     },
     spaced: Boolean
   },
-  render(h) {
-    const { type, size, spaced } = this
-    return h(
-      'p',
-      {
-        class: {
-          [`${type}`]: !!type,
-          [`is-${size}`]: !!size,
-          'is-spaced': spaced
-        }
-      },
-      this.$slots.default
-    )
+  computed: {
+    classes() {
+      const { type, size, spaced } = this
+      return {
+        [`${type}`]: !!type,
+        [`is-${size}`]: !!size,
+        'is-spaced': spaced
+      }
+    }
   }
-})
-export default VbTitle
+}
 </script>
 
 <style lang="scss">

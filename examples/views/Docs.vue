@@ -13,9 +13,6 @@ export default {
 
     const [main] = document.getElementsByClassName('main')
     main.scrollTop = elm.offsetTop - 52
-  },
-  methods: {
-    scrollToAnchor(anchor) {}
   }
 }
 </script>

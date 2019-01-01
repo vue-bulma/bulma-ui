@@ -54,6 +54,24 @@
         <pre slot="code">{{code.animated}}</pre>
       </demo>
     </example-section-item>
+
+    <example-section-item title="Stacked">
+      <demo>
+        <vb-icon class="icon-background" size="medium">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+          </span>
+        </vb-icon>
+        <vb-icon class="icon-background" size="large">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-camera fa-stack-1x"></i>
+            <i class="fa fa-ban fa-stack-2x has-text-danger"></i>
+          </span>
+        </vb-icon>
+        <pre slot="code">{{code.stacked}}</pre>
+      </demo>
+    </example-section-item>
   </vb-section>
 </template>
 
@@ -64,7 +82,7 @@ export default {
   name: 'IconExamples',
   data() {
     return {
-      code: code
+      code
     }
   }
 }

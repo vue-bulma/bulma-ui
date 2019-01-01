@@ -1,5 +1,7 @@
 <template>
-  <progress :class="classes"></progress>
+  <progress :class="classes" :max="max">
+    <slot></slot>
+  </progress>
 </template>
 
 <script>
@@ -9,15 +11,23 @@ import sizeProps from '@/mixins/size'
 export default {
   name: 'VbProgress',
   mixins: [sizeProps, colorProps],
+  props: {
+    max: {
+      type: [Number, String],
+      default: 100,
+      validator(value) {
+        return +value
+      }
+    }
+  },
   computed: {
     classes() {
       const { color, size } = this
-      const obj = {
+      return {
         progress: true,
         [`is-${color}`]: !!color,
         [`is-${size}`]: !!size
       }
-      return obj
     }
   }
 }

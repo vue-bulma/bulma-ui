@@ -1,9 +1,11 @@
 let code = {}
+
 code.basic = `\
 <template>
-  <vb-icon name="fa fa-home"></vb-icon>      
+  <vb-icon name="fa fa-home"></vb-icon>
 </template>
 `
+
 code.colors = `\
 <template>
   <vb-icon name="fa fa-home" color="primary"></vb-icon>
@@ -18,12 +20,13 @@ code.colors = `\
   <vb-icon name="fa fa-user-circle" color="link"></vb-icon>
 </template>
 `
+
 code.containerSize = `\
 <template>
   <vb-icon name="fa fa-home" size="small"></vb-icon>
   <vb-icon name="fa fa-home"></vb-icon>
   <vb-icon name="fa fa-home" size="medium"></vb-icon>
-  <vb-icon name="fa fa-home" size="large"></vb-icon>      
+  <vb-icon name="fa fa-home" size="large"></vb-icon>
 </template>
 `
 
@@ -32,15 +35,33 @@ code.iconSize = `\
   <vb-icon name="fa fa-home" size="large"></vb-icon>
   <vb-icon name="fa fa-home" size="large" iconSize="lg"></vb-icon>
   <vb-icon name="fa fa-home" size="large" iconSize="2x"></vb-icon>
-  <vb-icon name="fa fa-home" size="large" iconSize="3x"></vb-icon>      
+  <vb-icon name="fa fa-home" size="large" iconSize="3x"></vb-icon>
 </template>
 `
+
 code.animated = `\
 <template>
   <vb-icon name="fa fa-spinner" size="large" animated></vb-icon>
   <vb-icon name="fa fa-refresh" size="large" animated></vb-icon>
   <vb-icon name="fa fa-circle-o-notch" size="large" animated></vb-icon>
-  <vb-icon name="fa fa-repeat" size="large" animated></vb-icon>    
+  <vb-icon name="fa fa-repeat" size="large" animated></vb-icon>
+</template>
+`
+
+code.stacked = `\
+<template>
+  <vb-icon class="icon-background" size="medium">
+    <span class="fa-stack">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+    </span>
+  </vb-icon>
+  <vb-icon class="icon-background" size="large">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-camera fa-stack-1x"></i>
+      <i class="fa fa-ban fa-stack-2x has-text-danger"></i>
+    </span>
+  </vb-icon>
 </template>
 `
 export default code

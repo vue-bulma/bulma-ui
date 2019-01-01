@@ -298,11 +298,12 @@
 
 <script>
 import code from '../../code/elements/button.js'
+
 export default {
   name: 'ButtonExamples',
   data() {
     return {
-      code: code
+      code
     }
   }
 }

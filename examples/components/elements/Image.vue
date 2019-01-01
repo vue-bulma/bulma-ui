@@ -85,7 +85,7 @@ export default {
   name: 'ImageExamples',
   data() {
     return {
-      code: code
+      code
     }
   },
   methods: {

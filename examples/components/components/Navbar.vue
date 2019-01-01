@@ -76,13 +76,11 @@
 
     <example-section-item title="Fixed Navbar">
       <demo>
-        <div slot="control">
-          <vb-button-addons>
-            <vb-button @click="togglePosition('top')">Show Fixed Top</vb-button>
-            <vb-button @click="togglePosition('bottom')">Show Fixed Bottom</vb-button>
-            <vb-button @click="togglePosition()">Hide</vb-button>
-          </vb-button-addons>
-        </div>
+        <vb-buttons-list slot="control">
+          <vb-button @click="togglePosition('top')">Show Fixed Top</vb-button>
+          <vb-button @click="togglePosition('bottom')">Show Fixed Bottom</vb-button>
+          <vb-button @click="togglePosition()">Hide</vb-button>
+        </vb-buttons-list>
 
         <vb-navbar v-if="position" @select="handleSelect" :position="position">
           <vb-navbar-item slot="brand" name="brand">
@@ -150,14 +148,9 @@
 
     <example-section-item title="Colors">
       <demo>
-        <vb-button-addons slot="control">
-          <vb-button
-            v-for="color in colors"
-            :key="color"
-            :color="color"
-            @click="handleCheckColor(color)"
-          >{{color}}</vb-button>
-        </vb-button-addons>
+        <vb-buttons-list slot="control">
+          <vb-button v-for="color in colors" :key="color" :color="color" @click="handleCheckColor(color)">{{color}}</vb-button>
+        </vb-buttons-list>
 
         <vb-navbar :color="color">
           <vb-navbar-item slot="brand" name="brand">

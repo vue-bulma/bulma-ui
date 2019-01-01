@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       visible: true,
-      code: code
+      code
     }
   },
   methods: {

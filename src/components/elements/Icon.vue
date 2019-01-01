@@ -10,6 +10,8 @@
 import colorProps from '@/mixins/color'
 import sizeProps from '@/mixins/size'
 
+const ICON_SIZES = ['lg', '2x', '3x']
+
 export default {
   name: 'VbIcon',
   mixins: [sizeProps, colorProps],
@@ -18,7 +20,7 @@ export default {
     iconSize: {
       type: String,
       validator(value) {
-        return ['lg', '2x', '3x'].includes(value)
+        return ICON_SIZES.includes(value)
       }
     },
     animated: Boolean
@@ -26,21 +28,19 @@ export default {
   computed: {
     classes() {
       const { size, color } = this
-      const obj = {
+      return {
         icon: true,
         [`is-${size}`]: !!size,
         [`has-text-${color}`]: !!color
       }
-      return obj
     },
     IconClasses() {
       const { iconSize, name, animated } = this
-      const obj = {
+      return {
         [`${name}`]: !!name,
         [`fa-${iconSize}`]: !!iconSize,
         'fa-pulse': animated
       }
-      return obj
     }
   }
 }

@@ -18,11 +18,10 @@ export default {
   computed: {
     classes() {
       const { color } = this
-      const obj = {
+      return {
         notification: true,
         [`is-${color}`]: !!color
       }
-      return obj
     }
   },
   methods: {

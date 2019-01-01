@@ -190,7 +190,7 @@ export default {
   name: 'ContentExamples',
   data() {
     return {
-      code: code
+      code
     }
   }
 }

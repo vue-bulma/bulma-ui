@@ -2,8 +2,14 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo>
-        <vb-tag>Tag label</vb-tag>
+        <vb-tag @click="handleCLick">Tag label</vb-tag>
         <pre slot="code">{{code.basic}}</pre>
+      </demo>
+
+      <vb-title type="subtitle" size="6">Static</vb-title>
+      <demo>
+        <vb-tag static>Static tag</vb-tag>
+        <pre slot="code">{{code.static}}</pre>
       </demo>
     </example-section-item>
 
@@ -29,6 +35,7 @@
       <demo>
         <vb-tags>
           <vb-tag>Normal</vb-tag>
+          <vb-tag size="normal">Normal</vb-tag>
           <vb-tag size="medium">Medium</vb-tag>
           <vb-tag size="large">Large</vb-tag>
         </vb-tags>
@@ -52,10 +59,10 @@
           <vb-tag color="success">Bar
             <vb-delete size="small"></vb-delete>
           </vb-tag>
-          <vb-tag color="warning" size="medium">Bar
+          <vb-tag color="warning" size="medium">Hello
             <vb-delete size="small"></vb-delete>
           </vb-tag>
-          <vb-tag color="danger" size="large">Bar
+          <vb-tag color="danger" size="large">World
             <vb-delete></vb-delete>
           </vb-tag>
         </vb-tags>
@@ -95,12 +102,16 @@
 
 <script>
 import code from '../../code/elements/tag.js'
+
 export default {
   name: 'TagExamples',
   data() {
     return {
-      code: code
+      code
     }
+  },
+  methods: {
+    handleCLick() {}
   }
 }
 </script>

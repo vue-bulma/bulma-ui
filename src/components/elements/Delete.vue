@@ -13,11 +13,10 @@ export default {
   computed: {
     classes() {
       const { size } = this
-      const obj = {
+      return {
         delete: true,
         [`is-${size}`]: !!size
       }
-      return obj
     }
   },
   methods: {

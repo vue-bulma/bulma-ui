@@ -1,7 +1,21 @@
 let code = {}
 code.basic = `\
 <template>
-  <vb-tag>Tag label</vb-tag>
+  <vb-tag @click="handleClick">Tag label</vb-tag>
+</template>
+
+<script>
+export default {
+  methods: {
+    handleClick(evt) {}
+  }
+}
+</script>
+`
+
+code.static = `\
+<template>
+  <vb-tag static>Static tag</vb-tag>
 </template>
 `
 
@@ -23,6 +37,7 @@ code.colors = `\
 code.size = `\
 <template>
   <vb-tag>Normal</vb-tag>
+  <vb-tag size="normal">Normal</vb-tag>
   <vb-tag size="medium">Medium</vb-tag>
   <vb-tag size="large">Large</vb-tag>
 </template>
@@ -46,12 +61,12 @@ code.combinations = `\
     </vb-tag>
 
     <vb-tag color="warning" size="medium">
-      Bar
+      Hello
       <vb-delete size="small"></vb-delete>
     </vb-tag>
 
     <vb-tag color="danger" size="large">
-      Bar
+      World
       <vb-delete></vb-delete>
     </vb-tag>
   </vb-tags>
@@ -78,7 +93,7 @@ code.tagsAddons = `\
     <vb-tag color="primary">Vue</vb-tag>
     <vb-tag color="dark">Bulma</vb-tag>
   </vb-tags>
-  
+
   <vb-tags addons>
     <vb-tag color="danger">Vue</vb-tag>
     <vb-tag del></vb-tag>
