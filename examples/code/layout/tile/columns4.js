@@ -1,5 +1,7 @@
+let code = {}
+code.columnsFour = `
 <template>
-  <demo>
+  <div>
     <vb-tile>
       <vb-tile>
         <vb-box>
@@ -35,7 +37,9 @@
               <vb-title>Five</vb-title>
               <vb-title type="subtitle">Subtitle</vb-title>
               <vb-content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                  pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
+                  maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
               </vb-content>
             </vb-box>
           </vb-tile>
@@ -72,7 +76,9 @@
               <vb-title>Nine</vb-title>
               <vb-title type="subtitle">Subtitle</vb-title>
               <vb-content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                  pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
+                  maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
               </vb-content>
             </vb-box>
           </vb-tile>
@@ -82,7 +88,9 @@
               <vb-title>Ten</vb-title>
               <vb-title type="subtitle">Subtitle</vb-title>
               <vb-content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
+                  pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
+                  maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
               </vb-content>
             </vb-box>
           </vb-tile>
@@ -94,8 +102,12 @@
           <vb-title>Eleven</vb-title>
           <vb-title type="subtitle">Subtitle</vb-title>
           <vb-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-            <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+              felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
+              sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+            <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor
+              consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc
+              ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
           </vb-content>
         </vb-box>
       </vb-tile>
@@ -107,7 +119,9 @@
           <vb-title>Twelve</vb-title>
           <vb-title type="subtitle">Subtitle</vb-title>
           <vb-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+              felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
+              sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
           </vb-content>
         </vb-box>
       </vb-tile>
@@ -117,7 +131,9 @@
           <vb-title>Thirteen</vb-title>
           <vb-title type="subtitle">Subtitle</vb-title>
           <vb-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+              felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
+              sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
           </vb-content>
         </vb-box>
       </vb-tile>
@@ -127,24 +143,14 @@
           <vb-title>Fourteen</vb-title>
           <vb-title type="subtitle">Subtitle</vb-title>
           <vb-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
+              felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
+              sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
           </vb-content>
         </vb-box>
       </vb-tile>
     </vb-tile>
-    <pre slot="code">{{ columnsFour }}</pre>
-  </demo>
+  </div>
 </template>
-
-<script>
-import code from '../../../code/layout/tile/columns4.js'
-
-export default {
-  name: 'TileColumn4',
-  data() {
-    return {
-      columnsFour: code.columnsFour
-    }
-  }
-}
-</script>
+`
+export default code

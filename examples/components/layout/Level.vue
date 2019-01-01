@@ -16,6 +16,7 @@
             </vb-form-item>
           </vb-level-item>
         </vb-level>
+        <pre slot="code">{{ basic.normal }}</pre>
       </demo>
 
       <demo>
@@ -53,6 +54,7 @@
             </vb-level-item>
           </template>
         </vb-level>
+        <pre slot="code">{{ basic.basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -147,6 +149,7 @@
             </div>
           </vb-level-item>
         </vb-level>
+        <pre slot="code">{{ alignment }}</pre>
       </demo>
     </example-section-item>
 
@@ -181,13 +184,23 @@
             </div>
           </vb-level-item>
         </vb-level>
+        <pre slot="code">{{ mobile }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/layout/level.js'
+
 export default {
-  name: 'Level'
+  name: 'Level',
+  data() {
+    return {
+      basic: code.basic,
+      alignment: code.alignment,
+      mobile: code.mobile
+    }
+  }
 }
 </script>

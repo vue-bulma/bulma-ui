@@ -69,8 +69,7 @@ export default {
             { name: 'Navbar' },
             { name: 'Pagination' },
             { name: 'Panel' },
-            { name: 'Tabs' },
-            { name: 'Title' }
+            { name: 'Tabs' }
           ]
         }
       ]

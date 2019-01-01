@@ -1,27 +1,19 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
-        <example-basic></example-basic>
-      </demo>
+      <example-basic></example-basic>
     </example-section-item>
 
     <example-section-item title="Nesting requirements">
-      <demo>
-        <example-nest></example-nest>
-      </demo>
+      <example-nest></example-nest>
     </example-section-item>
 
     <example-section-item title="3 columns">
-      <demo>
-        <example-columns3></example-columns3>
-      </demo>
+      <example-columns3></example-columns3>
     </example-section-item>
 
     <example-section-item title="4 columns">
-      <demo>
-        <example-columns4></example-columns4>
-      </demo>
+      <example-columns4></example-columns4>
     </example-section-item>
   </vb-section>
 </template>

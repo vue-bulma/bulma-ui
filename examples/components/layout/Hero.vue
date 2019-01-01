@@ -6,88 +6,45 @@
           Hero title
           <span slot="subtitle">Hero subtitle</span>
         </vb-hero>
+        <pre slot="code">{{ basic.firstUsage }}</pre>
       </demo>
 
       <demo>
         <vb-hero title="Hero title" subtitle="Hero subtitle"></vb-hero>
+        <pre slot="code">{{ basic.secondUsage }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
       <demo>
-        <vb-hero color="primary" title="Primary title" subtitle="Primary subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="info" title="Info title" subtitle="Info subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="success" title="Success title" subtitle="Success subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="warning" title="Warning title" subtitle="Warning subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="danger" title="Danger title" subtitle="Danger subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="light" title="Light title" subtitle="Light subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="dark" title="Dark title" subtitle="Dark subtitle"></vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="link" title="Link title" subtitle="Link subtitle"></vb-hero>
+        <vb-buttons-list slot="control">
+          <vb-button
+            v-for="color in colors"
+            :key="color"
+            :color="color"
+            @click="handleCheckColor(color)"
+          >{{color}}</vb-button>
+        </vb-buttons-list>
+        <vb-hero :color="color" title="Colors title" subtitle="Colors subtitle"></vb-hero>
+        <pre slot="code">{{ colorsCode }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Gradients">
       <demo>
-        <vb-hero color="primary" bold>
-          Primary bold title
-          <span slot="subtitle">Primary bold subtitle</span>
+        <vb-buttons-list slot="control">
+          <vb-button
+            v-for="color in colors"
+            :key="color"
+            :color="color"
+            @click="handleCheckColor(color, 1)"
+          >{{color}}</vb-button>
+        </vb-buttons-list>
+        <vb-hero :color="colorBold" bold>
+          Colors bold title
+          <span slot="subtitle">Colors bold subtitle</span>
         </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="info" bold>
-          Info bold title
-          <span slot="subtitle">Info bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="success" bold>
-          Success bold title
-          <span slot="subtitle">Success bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="warning" bold>
-          Warning bold title
-          <span slot="subtitle">Warning bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="danger" bold>
-          Danger bold title
-          <span slot="subtitle">Danger bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="light" bold>
-          Light bold title
-          <span slot="subtitle">Light bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="dark" bold>
-          Dark bold title
-          <span slot="subtitle">Dark bold subtitle</span>
-        </vb-hero>
-      </demo>
-      <demo>
-        <vb-hero color="link" bold>
-          Link bold title
-          <span slot="subtitle">Link bold subtitle</span>
-        </vb-hero>
+        <pre slot="code">{{ gradients }}</pre>
       </demo>
     </example-section-item>
 
@@ -97,6 +54,7 @@
           Medium bold title
           <span slot="subtitle">Medium bold subtitle</span>
         </vb-hero>
+        <pre slot="code">{{ sizes.medium }}</pre>
       </demo>
 
       <demo>
@@ -104,6 +62,7 @@
           Large bold title
           <span slot="subtitle">Large bold subtitle</span>
         </vb-hero>
+        <pre slot="code">{{ sizes.large }}</pre>
       </demo>
 
       <demo>
@@ -111,6 +70,7 @@
           Fullheight bold title
           <span slot="subtitle">Fullheight bold subtitle</span>
         </vb-hero>
+        <pre slot="code">{{ sizes.fullheight }}</pre>
       </demo>
     </example-section-item>
 
@@ -120,6 +80,7 @@
           Fullheight hero with navbar
           <span slot="subtitle">Fullheight hero with navbar</span>
         </vb-hero>
+        <pre slot="code">{{ fullheightNavbar }}</pre>
       </demo>
     </example-section-item>
 
@@ -140,7 +101,9 @@
               <vb-navbar-item name="Documentation">Documentation</vb-navbar-item>
               <vb-navbar-item>
                 <vb-button color="primary" inverted>
-                  <span class="icon"><i class="fa fa-github"></i></span>
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
                   <span>Download</span>
                 </vb-button>
               </vb-navbar-item>
@@ -149,6 +112,7 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
+        <pre slot="code">{{ fullheightHero.medium }}</pre>
       </demo>
     </example-section-item>
 
@@ -178,6 +142,7 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
+        <pre slot="code">{{ fullheightHero.large }}</pre>
       </demo>
 
       <demo>
@@ -196,7 +161,9 @@
               <vb-navbar-item name="Documentation">Documentation</vb-navbar-item>
               <vb-navbar-item>
                 <vb-button color="success" inverted>
-                  <span class="icon"><i class="fa fa-github"></i></span>
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
                   <span>Download</span>
                 </vb-button>
               </vb-navbar-item>
@@ -205,16 +172,40 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
+        <pre slot="code">{{ fullheightHero.fullheight }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
+import code from '../../code/layout/hero.js'
+
+const BASE_COLOR = [
+  'primary',
+  'info',
+  'success',
+  'warning',
+  'danger',
+  'light',
+  'dark',
+  'black',
+  'link'
+]
+
 export default {
   name: 'HeroExamples',
   data() {
     return {
+      basic: code.basic,
+      colorsCode: code.colors,
+      gradients: code.gradients,
+      sizes: code.sizes,
+      fullheightNavbar: code.fullheightNavbar,
+      fullheightHero: code.fullheightHero,
+      colors: BASE_COLOR,
+      color: 'primary',
+      colorBold: 'primary',
       tabs: [
         { name: 'Overview' },
         { name: 'Modifiers' },
@@ -223,6 +214,15 @@ export default {
         { name: 'Components' },
         { name: 'Layout' }
       ]
+    }
+  },
+  methods: {
+    handleCheckColor(color, key) {
+      if (key) {
+        this.colorBold = color
+      } else {
+        this.color = color
+      }
     }
   }
 }

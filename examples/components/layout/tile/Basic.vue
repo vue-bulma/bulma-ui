@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <demo>
     <vb-tile>
       <vb-tile size="8" vertical>
         <vb-tile>
           <vb-tile vertical>
             <vb-tile>
-              <vb-notification color="primary" class="test" primary :class="test">
+              <vb-notification color="primary" primary>
                 <vb-content>
                   <vb-title>Vertical...</vb-title>
                   <vb-title type="subtitle">Top tile</vb-title>
@@ -88,15 +88,18 @@
         </vb-box>
       </vb-tile>
     </vb-tile>
-  </div>
+    <pre slot="code">{{ basic }}</pre>
+  </demo>
 </template>
 
 <script>
+import code from '../../../code/layout/tile/basic.js'
+
 export default {
   name: 'TileBasic',
   data() {
     return {
-      test: { is1: true }
+      basic: code.basic
     }
   }
 }
