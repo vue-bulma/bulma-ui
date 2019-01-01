@@ -29,8 +29,8 @@
 
     <example-section-item title="Responsive images with ratios">
       <demo class="paddingRight">
-        <vb-cols view="mobile">
-          <vb-col size="4">
+        <vb-columns view="mobile">
+          <vb-column size="4">
             <vb-image :src="imageUrl(8)" size="square"></vb-image>
             <vb-image :src="imageUrl(8)" size="1by1"></vb-image>
             <vb-image :src="imageUrl(9)" size="5by4"></vb-image>
@@ -47,8 +47,8 @@
             <vb-image :src="imageUrl(20)" size="9by16"></vb-image>
             <vb-image :src="imageUrl(21)" size="1by2"></vb-image>
             <vb-image :src="imageUrl(22)" size="1by3"></vb-image>
-          </vb-col>
-        </vb-cols>
+          </vb-column>
+        </vb-columns>
         <pre slot="code">{{code.responsive}}</pre>
       </demo>
     </example-section-item>

@@ -30,7 +30,7 @@ const NUMERICAL = [
   'one-fifth'
 ]
 export default {
-  name: 'VbCol',
+  name: 'VbColumn',
   props: {
     size: {
       type: String,

@@ -1,264 +1,264 @@
 let code = {}
 code.basic = `\
 <template>
-  <vb-cols>
-    <vb-col> <p>First column</p> </vb-col>
-    <vb-col> <p>Second column</p> </vb-col>
-    <vb-col> <p>Third column</p> </vb-col>
-    <vb-col> <p>Fourth column</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column> <p>First column</p> </vb-column>
+    <vb-column> <p>Second column</p> </vb-column>
+    <vb-column> <p>Third column</p> </vb-column>
+    <vb-column> <p>Fourth column</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.size = `\
 <template>
-  <vb-cols>
-    <vb-col size="1"> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="1"> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="2"> <p>2</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="2"> <p>2</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="3"> <p>3</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="3"> <p>3</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="4"> <p>4</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="4"> <p>4</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="5"> <p>5</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="5"> <p>5</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="6"> <p>6</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="6"> <p>6</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="7"> <p>7</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="7"> <p>7</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="8"> <p>8</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="8"> <p>8</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="9"> <p>9</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="9"> <p>9</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="10"> <p>10</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="10"> <p>10</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="11"> <p>11</p> </vb-col>
-    <vb-col> <p>1</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="11"> <p>11</p> </vb-column>
+    <vb-column> <p>1</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="12"> <p>12</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="12"> <p>12</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="full"> <p>full</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="full"> <p>full</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="four-fifths">
+  <vb-columns>
+    <vb-column size="four-fifths">
       <p>four-fifths</p>
-    </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+    </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="three-quarters">
+  <vb-columns>
+    <vb-column size="three-quarters">
       <p>three-quarters</p>
-    </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+    </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="two-thirds"> <p>two-thirds</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="two-thirds"> <p>two-thirds</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="three-fifths">
+  <vb-columns>
+    <vb-column size="three-fifths">
       <p>three-fifths</p>
-    </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+    </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="half"> <p>half</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="half"> <p>half</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="two-fifths"> <p>two-fifths</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="two-fifths"> <p>two-fifths</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="one-third"> <p>one-third</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="one-third"> <p>one-third</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="one-quarter">
+  <vb-columns>
+    <vb-column size="one-quarter">
       <p>one-quarter</p>
-    </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+    </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="one-fifth"> <p>one-fifth</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-    <vb-col> <p>Auto</p> </vb-col>
-  </vb-cols>
+  <vb-columns>
+    <vb-column size="one-fifth"> <p>one-fifth</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+    <vb-column> <p>Auto</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.Offset = `\
 <template>
-  <vb-cols>
-    <vb-col size="half" offset="one-quarter">
+  <vb-columns>
+    <vb-column size="half" offset="one-quarter">
       <p>size:half<br />offset:one-quarter</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="three-fifths" offset="one-fifth">
+  <vb-columns>
+    <vb-column size="three-fifths" offset="one-fifth">
       <p>size:three-fifths<br />offset:one-fifth</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="4" offset="8">
+  <vb-columns>
+    <vb-column size="4" offset="8">
       <p>size:4<br />offset:8</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 
-  <vb-cols>
-    <vb-col size="11" offset="1">
+  <vb-columns>
+    <vb-column size="11" offset="1">
       <p>size:11<br />offset:1</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.narrow = `\
 <template>
-  <vb-cols>
-    <vb-col narrow>
+  <vb-columns>
+    <vb-column narrow>
       <div style="width: 200px;">
         <p>This column is only 200px wide</p>
       </div>
-    </vb-col>
-    <vb-col>
+    </vb-column>
+    <vb-column>
       <p>
         This column will take up the remaining space available
       </p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.mobile = `\
 <template>
-  <vb-cols view="mobile">
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>2</p> </vb-col>
-    <vb-col> <p>3</p> </vb-col>
-    <vb-col> <p>4</p> </vb-col>
-  </vb-cols>
+  <vb-columns view="mobile">
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>2</p> </vb-column>
+    <vb-column> <p>3</p> </vb-column>
+    <vb-column> <p>4</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.desktop = `\
 <template>
-  <vb-cols view="desktop">
-    <vb-col> <p>1</p> </vb-col>
-    <vb-col> <p>2</p> </vb-col>
-    <vb-col> <p>3</p> </vb-col>
-    <vb-col> <p>4</p> </vb-col>
-  </vb-cols>
+  <vb-columns view="desktop">
+    <vb-column> <p>1</p> </vb-column>
+    <vb-column> <p>2</p> </vb-column>
+    <vb-column> <p>3</p> </vb-column>
+    <vb-column> <p>4</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.breakpoint = `\
 <template>
-  <vb-cols view="mobile">
-    <vb-col
+  <vb-columns view="mobile">
+    <vb-column
       mobile="three-quarters"
       tablet="two-thirds"
       desktop="half"
@@ -272,151 +272,151 @@ code.breakpoint = `\
         widescreen:one-third<br />
         fullhd:one-quarter
       </p>
-    </vb-col>
-    <vb-col> <p>2</p> </vb-col>
-    <vb-col> <p>3</p> </vb-col>
-    <vb-col> <p>4</p> </vb-col>
-  </vb-cols>
+    </vb-column>
+    <vb-column> <p>2</p> </vb-column>
+    <vb-column> <p>3</p> </vb-column>
+    <vb-column> <p>4</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.nesting = `\
 <template>
-  <vb-cols>
-    <vb-col>
+  <vb-columns>
+    <vb-column>
       <p>First column</p>
-      <vb-cols>
-        <vb-col> <p>First nested column</p> </vb-col>
-        <vb-col> <p>Second nested column</p> </vb-col>
-      </vb-cols>
-    </vb-col>
-  </vb-cols>
+      <vb-columns>
+        <vb-column> <p>First nested column</p> </vb-column>
+        <vb-column> <p>Second nested column</p> </vb-column>
+      </vb-columns>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.gapless = `\
 <template>
-  <vb-cols gapType="gapless">
-    <vb-col> <p>First column</p> </vb-col>
-    <vb-col> <p>Second column</p> </vb-col>
-  </vb-cols>
+  <vb-columns gapType="gapless">
+    <vb-column> <p>First column</p> </vb-column>
+    <vb-column> <p>Second column</p> </vb-column>
+  </vb-columns>
 </template>
 `
 code.gap = `\
 <template>
-  <vb-cols gapType="variable" gap="0">
+  <vb-columns gapType="variable" gap="0">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="1">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="1">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="2">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="2">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="3">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="3">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="4">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="4">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="5">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="5">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="6">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="6">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="7">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="7">
     ...
-  </vb-cols>
-  <vb-cols gapType="variable" gap="8">
+  </vb-columns>
+  <vb-columns gapType="variable" gap="8">
     ...
-  </vb-cols>
+  </vb-columns>
 </template>
 `
 code.breakpointGap = `\
 <template>
-  <vb-cols gapType="variable" mobileGap="8" tabletGap="0" desktopGap="3" widescreenGap="8" fullhdGap="2">
+  <vb-columns gapType="variable" mobileGap="8" tabletGap="0" desktopGap="3" widescreenGap="8" fullhdGap="2">
     ...
-  </vb-cols>
+  </vb-columns>
 </template>
 `
 code.vertical = `\
 <template>
-  <vb-cols align="vcentered">
-    <vb-col size="8">
+  <vb-columns align="vcentered">
+    <vb-column size="8">
       <p>First column</p>
-    </vb-col>
-    <vb-col>
+    </vb-column>
+    <vb-column>
       <p>Second column with more content. This is so you can see the vertical alignment.</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.centered = `\
 <template>
-  <vb-cols align="centered">
-    <vb-col size="8">
+  <vb-columns align="centered">
+    <vb-column size="8">
       <p>8</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 
-  <vb-cols align="centered">
-    <vb-col size="2">
+  <vb-columns align="centered">
+    <vb-column size="2">
       <p>2</p>
-    </vb-col>
-    <vb-col size="2">
+    </vb-column>
+    <vb-column size="2">
       <p>2</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.multiline = `\
 <template>
-  <vb-cols multiline>
-    <vb-col size="3">
+  <vb-columns multiline>
+    <vb-column size="3">
       <p>3</p>
-    </vb-col>
-    <vb-col size="3">
+    </vb-column>
+    <vb-column size="3">
       <p>3</p>
-    </vb-col>
-    <vb-col size="3">
+    </vb-column>
+    <vb-column size="3">
       <p>3</p>
-    </vb-col>
-    <vb-col size="3">
+    </vb-column>
+    <vb-column size="3">
       <p>3</p>
-    </vb-col>
-    <vb-col size="8">
+    </vb-column>
+    <vb-column size="8">
       <p>8</p>
-    </vb-col>
-    <vb-col size="4">
+    </vb-column>
+    <vb-column size="4">
       <p>4</p>
-    </vb-col>
-    <vb-col size="6">
+    </vb-column>
+    <vb-column size="6">
       <p>6</p>
-    </vb-col>
-    <vb-col size="6">
+    </vb-column>
+    <vb-column size="6">
       <p>6</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 code.multilineCentering = `\
 <template>
-  <vb-cols view="mobile" align="centered" multiline>
-    <vb-col narrow>
+  <vb-columns view="mobile" align="centered" multiline>
+    <vb-column narrow>
       <p>First Column</p>
-    </vb-col>
-    <vb-col narrow>
+    </vb-column>
+    <vb-column narrow>
       <p>Our Second Column</p>
-    </vb-col>
-    <vb-col narrow>
+    </vb-column>
+    <vb-column narrow>
       <p>Third Column</p>
-    </vb-col>
-    <vb-col narrow>
+    </vb-column>
+    <vb-column narrow>
       <p>The Fourth Column</p>
-    </vb-col>
-    <vb-col narrow>
+    </vb-column>
+    <vb-column narrow>
       <p>Fifth Column</p>
-    </vb-col>
-  </vb-cols>
+    </vb-column>
+  </vb-columns>
 </template>
 `
 export default code
