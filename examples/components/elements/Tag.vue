@@ -2,14 +2,13 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo>
-        <vb-tag @click="handleCLick">Tag label</vb-tag>
+        <vb-tag>Tag label</vb-tag>
         <pre slot="code">{{code.basic}}</pre>
       </demo>
 
-      <vb-title type="subtitle" size="6">Static</vb-title>
       <demo>
-        <vb-tag static>Static tag</vb-tag>
-        <pre slot="code">{{code.static}}</pre>
+        <vb-tag :static="false" @click="handleCLick">Clickable tag</vb-tag>
+        <pre slot="code">{{code.clickable}}</pre>
       </demo>
     </example-section-item>
 

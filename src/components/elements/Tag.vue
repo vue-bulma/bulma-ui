@@ -9,7 +9,10 @@ export default Vue.component('VbTag', {
   props: {
     rounded: Boolean,
     del: Boolean,
-    static: Boolean
+    static: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     classes() {
@@ -32,9 +35,9 @@ export default Vue.component('VbTag', {
     }
   },
   render(h) {
-    const { classes, handleMouseenter, handleClick } = this
+    const { classes, handleMouseenter, handleClick, del } = this
     return h(
-      this.static ? 'span' : 'a',
+      this.static && !del ? 'span' : 'a',
       {
         class: classes,
         on: { mouseenter: handleMouseenter, click: handleClick }

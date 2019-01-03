@@ -1,7 +1,13 @@
 let code = {}
 code.basic = `\
 <template>
-  <vb-tag @click="handleClick">Tag label</vb-tag>
+  <vb-tag>Tag label</vb-tag>
+</template>
+`
+
+code.clickable = `\
+<template>
+  <vb-tag :static="false" @click="handleCLick">Clickable tag</vb-tag>
 </template>
 
 <script>
@@ -11,12 +17,6 @@ export default {
   }
 }
 </script>
-`
-
-code.static = `\
-<template>
-  <vb-tag static>Static tag</vb-tag>
-</template>
 `
 
 code.colors = `\
