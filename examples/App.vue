@@ -86,7 +86,7 @@ html {
     left: 0;
   }
   .docs {
-    padding-left: $sidebar-width + 15px;
+    padding-left: $sidebar-width;
   }
 }
 .has-sidebar.has-fullwidth-content {

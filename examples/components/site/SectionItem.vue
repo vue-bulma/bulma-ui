@@ -1,8 +1,8 @@
 <template>
   <vb-content>
     <vb-title :id="id" type="title" size="3" class="anchor-title">
-      {{title}}:
       <a :href="`#${id}`" class="anchor-link">#</a>
+      {{title}}:
     </vb-title>
     <slot></slot>
   </vb-content>
@@ -27,13 +27,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.anchor-title {
-  position: relative;
-}
-.anchor-link {
-  position: absolute;
-  right: calc(100% + 0.5rem);
-}
-</style>
