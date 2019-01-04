@@ -22,7 +22,8 @@ export default {
 </style>
 
 <style scoped>
-.menu-label:not(:first-child) {
-  margin-bottom: 1em;
+.menu-label:first-child {
+  margin-bottom: 0em;
+  margin-top: 1em;
 }
 </style>
