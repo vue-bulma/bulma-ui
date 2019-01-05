@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <form>
     <slot></slot>
-  </div>
+  </form>
 </template>
 
 <script>
@@ -20,3 +20,8 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '~bulma/sass/utilities/_all';
+@import '~bulma/sass/elements/form';
+</style>

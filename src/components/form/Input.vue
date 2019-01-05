@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import VbIcon from '../elements/Icon'
+import VbIcon from '@/components/elements/Icon'
 import baseInput from '@/mixins/baseInput'
 import colorProps from '@/mixins/color'
 import sizeProps from '@/mixins/size'

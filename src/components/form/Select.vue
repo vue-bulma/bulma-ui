@@ -14,13 +14,15 @@
         <slot></slot>
       </select>
 
-      <vb-icon v-if="!!prefix" class="is-left" :name="prefix" :size="size"></vb-icon>
+      <vb-icon v-if="hasIcon" class="is-left" :name="icon" :size="size" :color="color">
+        <slot name="icon"></slot>
+      </vb-icon>
     </div>
   </div>
 </template>
 
 <script>
-import VbIcon from '../elements/Icon'
+import VbIcon from '@/components/elements/Icon'
 import colorProps from '@/mixins/color'
 import sizeProps from '@/mixins/size'
 import { equal } from '@/utils'
@@ -45,7 +47,7 @@ export default {
     rounded: Boolean,
     loading: Boolean,
     fullWidth: Boolean,
-    prefix: String,
+    icon: String,
     placeholder: String,
     value: {
       required: true
@@ -63,9 +65,17 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      currentValue: this.value
+    }
+  },
   computed: {
     formSize() {
       return this.size || this.vbFormItem._formSize
+    },
+    hasIcon() {
+      return !!this.icon || !!this.$slots.icon
     },
     classes() {
       const { color, rounded, multiple, loading, fullWidth, formSize } = this
@@ -80,10 +90,10 @@ export default {
       }
     },
     ctrlClass() {
-      const { prefix, fullWidth } = this
+      const { hasIcon, fullWidth } = this
       return {
         control: true,
-        'has-icons-left': !!prefix,
+        'has-icons-left': hasIcon,
         'is-expanded': fullWidth
       }
     },
@@ -92,11 +102,6 @@ export default {
       return {
         [`is-${state}`]: !!state
       }
-    }
-  },
-  data() {
-    return {
-      currentValue: this.value
     }
   },
   watch: {

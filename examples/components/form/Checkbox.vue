@@ -16,7 +16,7 @@
         <div>
           <vb-checkbox disabled>Save my preferences</vb-checkbox>
         </div>
-        <pre slot="code">{{ basic }}</pre>
+        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -27,13 +27,13 @@
           <strong>{{animals.join(', ')}}</strong>.
         </div>
 
-        <vb-checkbox-group v-model="animals">
+        <vb-checkbox-group v-model="animals" @change="handleGroupChange">
           <vb-checkbox label="dog">Dog</vb-checkbox>
           <vb-checkbox label="cat">Cat</vb-checkbox>
           <vb-checkbox label="mouse">Mouse</vb-checkbox>
           <vb-checkbox label="panda">Panda</vb-checkbox>
         </vb-checkbox-group>
-        <pre slot="code">{{ group }}</pre>
+        <pre slot="code">{{ code.group }}</pre>
       </demo>
     </example-section-item>
 
@@ -47,22 +47,20 @@
         </div>
 
         <vb-checkbox v-model="checked" @focus="handleFocus" @blur="handleBlur">Are You OK</vb-checkbox>
-        <pre slot="code">{{ events }}</pre>
+        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
-import code from '../../code/form/checkbox.js'
+import code from '@examples/code/form/checkbox.js'
 
 export default {
   name: 'Checkbox',
   data() {
     return {
-      basic: code.basic,
-      group: code.group,
-      events: code.events,
+      code,
       checked: true,
       focused: false,
       rember: false,
@@ -76,7 +74,8 @@ export default {
     },
     handleBlur() {
       this.focused = false
-    }
+    },
+    handleGroupChange() {}
   }
 }
 </script>

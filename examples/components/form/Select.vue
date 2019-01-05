@@ -6,13 +6,13 @@
           <option>Select dropdown</option>
           <option>With options</option>
         </vb-select>
-        <pre slot="code">{{ basic }}</pre>
+        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Multiple">
       <demo>
-        <vb-select multiple lines="8" :value="[model]">
+        <vb-select multiple lines="8" :value="['Bolivia', 'Chile']">
           <option value="Argentina">Argentina</option>
           <option value="Bolivia">Bolivia</option>
           <option value="Brazil">Brazil</option>
@@ -26,7 +26,7 @@
           <option value="Uruguay">Uruguay</option>
           <option value="Venezuela">Venezuela</option>
         </vb-select>
-        <pre slot="code">{{ multiples }}</pre>
+        <pre slot="code">{{ code.multiples }}</pre>
       </demo>
     </example-section-item>
 
@@ -92,7 +92,7 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ colors }}</pre>
+        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
@@ -102,7 +102,7 @@
           <option>Rounded</option>
           <option>With options</option>
         </vb-select>
-        <pre slot="code">{{ styles }}</pre>
+        <pre slot="code">{{ code.styles }}</pre>
       </demo>
     </example-section-item>
 
@@ -132,7 +132,7 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ sizes }}</pre>
+        <pre slot="code">{{ code.sizes }}</pre>
       </demo>
     </example-section-item>
 
@@ -162,85 +162,103 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ states }}</pre>
+        <pre slot="code">{{ code.states }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="With icons">
+      <vb-title type="subtitle" size="6">The size of the select will define the size of the icon container.</vb-title>
       <demo>
         <div class="block">
-          <vb-select size="small" prefix="fa fa-home" value="Small dropdown with Small icon">
+          <vb-select size="small" icon="fa fa-home" value="Small dropdown with Small icon">
             <option>Small dropdown with Small icon</option>
             <option>With options</option>
           </vb-select>
         </div>
         <div class="block">
-          <vb-select prefix="fa fa-home" value="Default dropdown with Default icon">
+          <vb-select icon="fa fa-home" value="Default dropdown with Default icon">
             <option>Default dropdown with Default icon</option>
             <option>With options</option>
           </vb-select>
         </div>
         <div class="block">
-          <vb-select size="medium" prefix="fa fa-home" value="Medium dropdown with Medium icon">
+          <vb-select size="medium" icon="fa fa-home" value="Medium dropdown with Medium icon">
             <option>Medium dropdown with Medium icon</option>
             <option>With options</option>
           </vb-select>
         </div>
         <div class="block">
-          <vb-select size="large" prefix="fa fa-home" value="Large dropdown with Large icon">
+          <vb-select size="large" icon="fa fa-home" value="Large dropdown with Large icon">
             <option>Large dropdown with Large icon</option>
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ icons }}</pre>
+        <pre slot="code">{{ code.icons.basic }}</pre>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Style icon">
+      <vb-title type="subtitle" size="6">The color of the select will define the color of the icon.</vb-title>
+      <demo>
+        <div class="block">
+          <vb-select color="primary" icon="fa fa-home" value="Primary color icon">
+            <option>Primary color icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="info" icon="fa fa-home" value="Info color icon">
+            <option>Info color icon</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <div class="block">
+          <vb-select color="success" value="Custom icon style">
+            <vb-icon slot="icon" name="fa fa-home" color="warning"></vb-icon>
+            <option>Custom icon style</option>
+            <option>With options</option>
+          </vb-select>
+        </div>
+        <pre slot="code">{{ code.icons.style }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
       <demo>
         <div class="block" slot="control">
-          Value:
-          <strong>{{value}}</strong>
-          <br>This Select on:
-          <strong>{{placeholder}}</strong>!
+          Selection: <strong>{{value}}</strong>
+          <br>
+          This Select on: <strong>{{placeholder}}</strong>!
         </div>
 
         <vb-select v-model="value" @focus="handleFocus" @blur="handleBlur">
           <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
-        <pre slot="code">{{ events.normal }}</pre>
+        <pre slot="code">{{ code.events.normal }}</pre>
       </demo>
 
       <demo>
         <div class="block" slot="control">
-          Value:
-          <strong>{{multiple}}</strong>
+          Selection: <strong>{{multiple}}</strong>
         </div>
 
         <vb-select multiple v-model="multiple">
           <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
-        <pre slot="code">{{ events.multiple }}</pre>
+        <pre slot="code">{{ code.events.multiples }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
-import code from '../../code/form/select.js'
+import code from '@examples/code/form/select.js'
 
 export default {
   name: 'Select',
   data() {
     return {
-      basic: code.basic,
-      multiples: code.multiple,
-      colors: code.colors,
-      styles: code.style,
-      sizes: code.sizes,
-      states: code.states,
-      icons: code.icons,
-      events: code.events,
+      code,
       model: 'Select dropdown',
       placeholder: 'Blurred',
       value: 1,

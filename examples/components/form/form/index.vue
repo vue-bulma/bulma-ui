@@ -1,24 +1,14 @@
 <template>
   <vb-section>
-    <example-section-item title="Basic">
-      <example-basic></example-basic>
-    </example-section-item>
+    <example-basic></example-basic>
 
-    <example-section-item title="Horizontal">
-      <example-horizontal></example-horizontal>
-    </example-section-item>
+    <example-horizontal></example-horizontal>
 
-    <example-section-item title="Sizes">
-      <example-size></example-size>
-    </example-section-item>
+    <example-size></example-size>
 
-    <example-section-item title="Addons">
-      <example-addons></example-addons>
-    </example-section-item>
+    <example-addons></example-addons>
 
-    <example-section-item title="Group">
-      <example-group></example-group>
-    </example-section-item>
+    <example-group></example-group>
   </vb-section>
 </template>
 

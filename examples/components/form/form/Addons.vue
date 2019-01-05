@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <demo title="Basic">
+  <example-section-item title="Addons">
+    <vb-title type="subtitle" size="6">Basic</vb-title>
+    <demo>
       <vb-form-item addons>
         <vb-button color="info">Confirm</vb-button>
         <vb-button color="warning">Reset</vb-button>
@@ -18,7 +19,8 @@
       <pre slot="code">{{ basic }}</pre>
     </demo>
 
-    <demo title="Expanded">
+    <vb-title type="subtitle" size="6">Expanded</vb-title>
+    <demo>
       <vb-form-item addons>
         <vb-select value="€">
           <option>$</option>
@@ -61,7 +63,18 @@
       <pre slot="code">{{ expanded }}</pre>
     </demo>
 
-    <demo title="Alignment">
+    <vb-title type="subtitle" size="6">Alignment</vb-title>
+    <demo>
+      <vb-form-item addons>
+        <vb-select value="€">
+          <option>$</option>
+          <option>£</option>
+          <option>€</option>
+        </vb-select>
+        <vb-input placeholder="Amount of money"></vb-input>
+        <vb-button color="primary">Transfer</vb-button>
+      </vb-form-item>
+
       <vb-form-item addons align="centered">
         <vb-select value="€">
           <option>$</option>
@@ -83,11 +96,11 @@
       </vb-form-item>
       <pre slot="code">{{ alignment }}</pre>
     </demo>
-  </div>
+  </example-section-item>
 </template>
 
 <script>
-import code from '../../../code/form/form/addons.js'
+import code from '@examples/code/form/form/addons.js'
 
 export default {
   name: 'FormAddons',

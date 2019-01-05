@@ -3,150 +3,147 @@
     <example-section-item title="Basic">
       <demo>
         <div class="block">
-          <vb-textarea placeholder="Basic"/>
+          <vb-textarea placeholder="Basic"></vb-textarea>
         </div>
 
         <div class="block">
-          <vb-textarea :rows="2" placeholder="2 lines of textarea"/>
+          <vb-textarea rows="2" placeholder="2 lines of textarea"></vb-textarea>
         </div>
-        <pre slot="code">{{ basic }}</pre>
+        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
       <demo>
         <div class="block">
-          <vb-textarea color="primary" :rows="2" placeholder="Primary textarea"/>
+          <vb-textarea color="primary" rows="2" placeholder="Primary textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="info" :rows="2" placeholder="Info textarea"/>
+          <vb-textarea color="info" rows="2" placeholder="Info textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="success" :rows="2" placeholder="Success textarea"/>
+          <vb-textarea color="success" rows="2" placeholder="Success textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="warning" :rows="2" placeholder="Warning textarea"/>
+          <vb-textarea color="warning" rows="2" placeholder="Warning textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="danger" :rows="2" placeholder="Danger textarea"/>
+          <vb-textarea color="danger" rows="2" placeholder="Danger textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="white" :rows="2" placeholder="White textarea"/>
+          <vb-textarea color="white" rows="2" placeholder="White textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="light" :rows="2" placeholder="Light textarea"/>
+          <vb-textarea color="light" rows="2" placeholder="Light textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="dark" :rows="2" placeholder="Dark textarea"/>
+          <vb-textarea color="dark" rows="2" placeholder="Dark textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="black" :rows="2" placeholder="Black textarea"/>
+          <vb-textarea color="black" rows="2" placeholder="Black textarea"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea color="link" :rows="2" placeholder="Link textarea"/>
+          <vb-textarea color="link" rows="2" placeholder="Link textarea"></vb-textarea>
         </div>
-        <pre slot="code">{{ colors }}</pre>
+        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
       <demo>
         <div class="block">
-          <vb-textarea size="small" :rows="2" placeholder="Small"/>
+          <vb-textarea size="small" rows="2" placeholder="Small"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea :rows="2" placeholder="Normal"/>
+          <vb-textarea rows="2" placeholder="Normal"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea size="medium" :rows="2" placeholder="Medium"/>
+          <vb-textarea size="medium" rows="2" placeholder="Medium"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea size="large" :rows="2" placeholder="Large"/>
+          <vb-textarea size="large" rows="2" placeholder="Large"></vb-textarea>
         </div>
-        <pre slot="code">{{ sizes }}</pre>
+        <pre slot="code">{{ code.sizes }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="States">
       <demo>
         <div class="block">
-          <vb-textarea placeholder="Normal" :rows="2"/>
+          <vb-textarea placeholder="Normal" rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea placeholder="Hover" state="hovered" :rows="2"/>
+          <vb-textarea placeholder="Hover" state="hovered" rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea placeholder="Focus" state="focused" :rows="2"/>
+          <vb-textarea placeholder="Focus" state="focused" rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea placeholder="Loading" loading :rows="2"/>
+          <vb-textarea placeholder="Loading" loading rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea placeholder="Disabled" disabled :rows="2"/>
+          <vb-textarea placeholder="Disabled" disabled rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea value="Read only" readonly :rows="2"/>
+          <vb-textarea value="Read only" readonly rows="2"></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea placeholder="Fixed Size" :resize="false" :rows="2"/>
+          <vb-textarea placeholder="Fixed Size" :resize="false" rows="2"></vb-textarea>
         </div>
-        <pre slot="code">{{ states }}</pre>
+        <pre slot="code">{{ code.states }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Resize loading Textarea">
+      <vb-title type="subtitle" size="6">The size of the Textarea will define the size of the loading icon.</vb-title>
       <demo>
         <div class="block">
-          <vb-textarea size="small" :rows="2" placeholder="Small loading textarea" loading/>
+          <vb-textarea size="small" rows="2" placeholder="Small loading textarea" loading></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea :rows="2" placeholder="Normal loading textarea" loading/>
+          <vb-textarea rows="2" placeholder="Normal loading textarea" loading></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea size="medium" :rows="2" placeholder="Medium loading textarea" loading/>
+          <vb-textarea size="medium" rows="2" placeholder="Medium loading textarea" loading></vb-textarea>
         </div>
         <div class="block">
-          <vb-textarea size="large" :rows="2" placeholder="Large loading textarea" loading/>
+          <vb-textarea size="large" rows="2" placeholder="Large loading textarea" loading></vb-textarea>
         </div>
-        <pre slot="code">{{ loading }}</pre>
+        <pre slot="code">{{ code.loading }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
       <demo>
-        <div class="block" slot="control">Value:
-          <strong>{{value}}</strong>
-          <br>State:
-          <strong>{{placeholder}}</strong>
+        <div slot="control">
+          Value: <strong>{{value}}</strong>
+          <br>
+          State: <strong>{{placeholder}}</strong>
         </div>
 
         <vb-textarea
-          v-model="value"
+          autofocus
           placeholder="Max 5 Character"
+          v-model="value"
           :maxlength="5"
           @focus="handleFocus"
           @blur="handleBlur"
-          autofocus
-        />
-        <pre slot="code">{{ events }}</pre>
+        >
+        </vb-textarea>
+        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
-import code from '../../code/form/textarea.js'
+import code from '@examples/code/form/textarea.js'
 
 export default {
   name: 'Textarea',
   data() {
     return {
-      basic: code.basic,
-      colors: code.colors,
-      sizes: code.sizes,
-      states: code.states,
-      loading: code.loading,
-      events: code.events,
+      code,
       value: '',
       placeholder: 'Textarea blurred!'
     }

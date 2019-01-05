@@ -7,6 +7,10 @@
 <script>
 export default {
   name: 'VbRadioGroup',
+  model: {
+    prop: 'value',
+    event: 'change'
+  },
   props: {
     value: {}
   }

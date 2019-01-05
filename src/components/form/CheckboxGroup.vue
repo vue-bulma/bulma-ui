@@ -7,6 +7,10 @@
 <script>
 export default {
   name: 'VbCheckboxGroup',
+  model: {
+    prop: 'value',
+    event: 'change'
+  },
   props: {
     value: {
       type: Array,

@@ -44,7 +44,7 @@ export default {
         return this.group.value
       },
       set(value) {
-        this.group.$emit.apply(this.group, ['input', value])
+        this.group.$emit.apply(this.group, ['change', value])
       }
     },
     group() {

@@ -30,7 +30,7 @@ export default {
       },
       set(value) {
         if (this.group) {
-          this.group.$emit.apply(this.group, ['input', value])
+          this.group.$emit.apply(this.group, ['change', value])
         } else {
           this.$emit('input', value)
         }

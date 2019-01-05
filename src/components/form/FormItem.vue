@@ -1,11 +1,11 @@
 <script>
-import colorProps from '@/mixins/color'
+import Vue from 'vue'
 import sizeProps from '@/mixins/size'
 import alignProps from '@/mixins/align'
-import Vue from 'vue'
+import colorProps from '@/mixins/color'
 
 export default Vue.component('VbFormItem', {
-  mixins: [colorProps, alignProps, sizeProps],
+  mixins: [sizeProps, alignProps, colorProps],
   inject: {
     vbForm: {
       default() {
@@ -22,13 +22,12 @@ export default Vue.component('VbFormItem', {
     label: String,
     message: String,
     grouped: Boolean,
+    addons: Boolean,
+    multiline: Boolean,
     horizontal: {
       type: Boolean,
       default: undefined
-    },
-    addons: Boolean,
-    multiline: Boolean
-    // expanded: Boolean
+    }
   },
   computed: {
     _formSize() {
@@ -37,92 +36,90 @@ export default Vue.component('VbFormItem', {
     helpMessage() {
       return this.$slots.message || this.message
     },
+    isParentForm() {
+      return this.$parent.$options.name === 'VbForm'
+    },
     isHorizontal() {
       if (this.horizontal === undefined) {
         return this.vbForm.horizontal
       }
       return this.horizontal
-    },
-    classes() {
-      const { grouped, align, isHorizontal, addons, multiline } = this
-
-      return {
-        field: true,
-        'is-grouped': grouped,
-        [`is-grouped-${align}`]: !!align && grouped,
-        [`has-addons-${align}`]: !!align && addons,
-        'has-addons': addons && !this.helpMessage,
-        'is-horizontal': isHorizontal,
-        'is-grouped-multiline': multiline
-      }
     }
   },
   render(h) {
-    const { isHorizontal, _formSize = 'normal' } = this
-    let label = this.renderLabel(h)
-    let content = this.renderContent(h)
+    const { isParentForm, isHorizontal, helpMessage, color } = this
+    const label = this.renderLabel(h)
+    const help = this.renderHelp(h, helpMessage, color)
+    const content = this.renderContent(h, help)
 
-    if (isHorizontal) {
-      label = h('div', { class: `field-label is-${_formSize}` }, [label])
-      content = h('div', { class: 'field-body' }, [content])
-    }
-
-    return h('div', { class: this.classes }, [label, content])
+    return h(
+      'div',
+      { class: { field: true, 'is-horizontal': isParentForm && isHorizontal } },
+      [label, content]
+    )
   },
   methods: {
     renderLabel(h) {
-      const labelTmpl = this.$slots.label || this.label
-      return labelTmpl && h('label', { class: 'label' }, labelTmpl)
+      const { isParentForm, isHorizontal, label, _formSize = 'normal' } = this
+
+      if (!isParentForm) return
+
+      const tmpl = h('label', { class: 'label' }, label)
+      return isHorizontal
+        ? h('div', { class: `field-label is-${_formSize}` }, [tmpl])
+        : tmpl
     },
-    renderContent(h) {
-      const { isHorizontal, addons } = this
-      const help = this.renderHelp(h)
+    renderContent(h, help) {
+      const { isParentForm, grouped, addons, align, multiline } = this
+      const { default: vNodes = [] } = this.$slots
 
-      let content = this.$slots.default.map(o => {
-        const { componentOptions: options, data } = o
-        const isControl = options
-          ? options.tag !== 'vb-button' // VbButton is <a>
-          : data && data.staticClass.includes('control') // custom elm.class has control
+      let content = vNodes.map(vNode => this.convertToControl(h, vNode))
 
-        return isControl ? o : h('div', { class: 'control' }, [o])
-      })
+      if (addons || grouped) {
+        const classes = {
+          field: true,
+          'is-grouped': grouped,
+          [`is-grouped-${align}`]: grouped && !!align,
+          'is-grouped-multiline': grouped && multiline,
+          'has-addons': addons,
+          [`has-addons-${align}`]: addons && !!align
+        }
 
-      if (addons && help) {
-        content = h('div', { class: 'field' }, [
-          h('div', { class: 'field has-addons' }, [content]),
-          help
-        ])
-      } else if (!addons && isHorizontal) {
-        content = content.map((o, index) => {
-          const item = index === 0 ? [o, help] : [o]
-          return h('div', { class: 'field' }, item)
-        })
+        content = h('div', { class: classes }, [content])
+        if (help) {
+          content = h('div', { class: 'field' }, [content, help])
+        }
       } else {
-        content = [content, help]
+        content = isParentForm
+          ? this.convertToField(h, content, help)
+          : [content, help]
       }
 
-      return content
+      return isParentForm
+        ? h('div', { class: 'field-body' }, [content])
+        : content
     },
-    renderHelp(h) {
-      const { helpMessage, color } = this
+    renderHelp(h, helpMessage, color) {
       if (!helpMessage) return
+      const classes = { help: true, [`is-${color}`]: helpMessage && color }
+      return h('p', { class: classes }, helpMessage)
+    },
+    convertToControl(h, vNode) {
+      const { componentOptions: options, data } = vNode
+      const isControl = options
+        ? options.tag !== 'vb-button' // VbButton is <a>
+        : data && data.staticClass.includes('control') // custom elm.class has control
 
-      return h(
-        'p',
-        {
-          class: {
-            help: true,
-            [`is-${color}`]: helpMessage && color
-          }
-        },
-        this.helpMessage
-      )
+      return isControl ? vNode : h('div', { class: 'control' }, [vNode])
+    },
+    convertToField(h, vNodes, help) {
+      return vNodes.map((vNode, index) => {
+        const { componentOptions: options } = vNode
+        const content = index === 0 ? [vNode, help] : [vNode]
+        const isFormItem = options && options.tag === 'vb-form-item'
+        return isFormItem ? content : h('div', { class: 'field' }, content)
+      })
     }
   }
 })
 </script>
-
-<style lang="scss">
-@import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/elements/form';
-</style>

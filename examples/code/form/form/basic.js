@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-form>
     <vb-form-item label="Name">
@@ -7,7 +7,13 @@ code.basic = `
     </vb-form-item>
 
     <vb-form-item label="Username" :color="msg.username.color" :message="msg.username.text">
-      <vb-input placeholder="Text Input" prefix="fa fa-user" suffix="fa fa-check" color="success" v-model="username">
+      <vb-input
+        placeholder="Text Input"
+        prefix="fa fa-user"
+        suffix="fa fa-check"
+        color="success"
+        v-model="username"
+      >
       </vb-input>
     </vb-form-item>
 
@@ -17,7 +23,7 @@ code.basic = `
         <i slot="suffix" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
       </vb-input>
 
-      <p slot="message" :class="help is-danger">{{msg.email.text}}</p>
+      <p slot="message" :class="\`help is-\${msg.email.color}\`">{{msg.email.text}}</p>
     </vb-form-item>
 
     <vb-form-item label="City">
