@@ -6,12 +6,12 @@
           Hero title
           <span slot="subtitle">Hero subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ basic.firstUsage }}</pre>
+        <pre slot="code">{{ code.basic.firstUsage }}</pre>
       </demo>
 
       <demo>
         <vb-hero title="Hero title" subtitle="Hero subtitle"></vb-hero>
-        <pre slot="code">{{ basic.secondUsage }}</pre>
+        <pre slot="code">{{ code.basic.secondUsage }}</pre>
       </demo>
     </example-section-item>
 
@@ -22,11 +22,13 @@
             v-for="color in colors"
             :key="color"
             :color="color"
-            @click="handleCheckColor(color)"
-          >{{color}}</vb-button>
+            @click="toggleColors(color)"
+          >
+            {{color}}
+          </vb-button>
         </vb-buttons-list>
         <vb-hero :color="color" title="Colors title" subtitle="Colors subtitle"></vb-hero>
-        <pre slot="code">{{ colorsCode }}</pre>
+        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
@@ -37,14 +39,16 @@
             v-for="color in colors"
             :key="color"
             :color="color"
-            @click="handleCheckColor(color, 1)"
-          >{{color}}</vb-button>
+            @click="toggleGradient(color)"
+          >
+            {{color}}
+          </vb-button>
         </vb-buttons-list>
         <vb-hero :color="colorBold" bold>
           Colors bold title
           <span slot="subtitle">Colors bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ gradients }}</pre>
+        <pre slot="code">{{ code.gradients }}</pre>
       </demo>
     </example-section-item>
 
@@ -54,7 +58,7 @@
           Medium bold title
           <span slot="subtitle">Medium bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ sizes.medium }}</pre>
+        <pre slot="code">{{ code.sizes.medium }}</pre>
       </demo>
 
       <demo>
@@ -62,7 +66,7 @@
           Large bold title
           <span slot="subtitle">Large bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ sizes.large }}</pre>
+        <pre slot="code">{{ code.sizes.large }}</pre>
       </demo>
 
       <demo>
@@ -70,7 +74,7 @@
           Fullheight bold title
           <span slot="subtitle">Fullheight bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ sizes.fullheight }}</pre>
+        <pre slot="code">{{ code.sizes.fullheight }}</pre>
       </demo>
     </example-section-item>
 
@@ -80,7 +84,7 @@
           Fullheight hero with navbar
           <span slot="subtitle">Fullheight hero with navbar</span>
         </vb-hero>
-        <pre slot="code">{{ fullheightNavbar }}</pre>
+        <pre slot="code">{{ code.fullheightNavbar }}</pre>
       </demo>
     </example-section-item>
 
@@ -112,7 +116,7 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ fullheightHero.medium }}</pre>
+        <pre slot="code">{{ code.fullheightHero.medium }}</pre>
       </demo>
     </example-section-item>
 
@@ -142,7 +146,7 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ fullheightHero.large }}</pre>
+        <pre slot="code">{{ code.fullheightHero.large }}</pre>
       </demo>
 
       <demo>
@@ -172,16 +176,16 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ fullheightHero.fullheight }}</pre>
+        <pre slot="code">{{ code.fullheightHero.fullheight }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
-import code from '../../code/layout/hero.js'
+import code from '@examples/code/layout/hero.js'
 
-const BASE_COLOR = [
+const HERO_COLORS = [
   'primary',
   'info',
   'success',
@@ -197,13 +201,8 @@ export default {
   name: 'HeroExamples',
   data() {
     return {
-      basic: code.basic,
-      colorsCode: code.colors,
-      gradients: code.gradients,
-      sizes: code.sizes,
-      fullheightNavbar: code.fullheightNavbar,
-      fullheightHero: code.fullheightHero,
-      colors: BASE_COLOR,
+      code,
+      colors: HERO_COLORS,
       color: 'primary',
       colorBold: 'primary',
       tabs: [
@@ -217,12 +216,11 @@ export default {
     }
   },
   methods: {
-    handleCheckColor(color, key) {
-      if (key) {
-        this.colorBold = color
-      } else {
-        this.color = color
-      }
+    toggleColors(color) {
+      this.color = color
+    },
+    toggleGradient(color) {
+      this.colorBold = color
     }
   }
 }

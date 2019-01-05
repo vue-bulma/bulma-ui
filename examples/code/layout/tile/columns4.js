@@ -1,5 +1,5 @@
 let code = {}
-code.columnsFour = `
+code.columnsFour = `\
 <template>
   <div>
     <vb-tile>

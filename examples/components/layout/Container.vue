@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import code from '../../code/layout/container.js'
+import code from '@examples/code/layout/container.js'
 
 export default {
   name: 'Container',

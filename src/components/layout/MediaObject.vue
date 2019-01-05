@@ -1,6 +1,6 @@
 <template>
   <article class="media">
-    <div class="media-left">
+    <div v-if="$slots.left" class="media-left">
       <slot name="left"></slot>
     </div>
 
@@ -8,7 +8,7 @@
       <slot></slot>
     </div>
 
-    <div class="media-right">
+    <div v-if="$slots.right" class="media-right">
       <slot name="right"></slot>
     </div>
   </article>

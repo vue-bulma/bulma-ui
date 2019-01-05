@@ -137,7 +137,7 @@
 </template>
 
 <script>
-import code from '../../../code/layout/tile/columns4.js'
+import code from '@examples/code/layout/tile/columns4.js'
 
 export default {
   name: 'TileColumn4',

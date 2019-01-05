@@ -1,8 +1,22 @@
+<template>
+  <div :class="classes">
+    <div v-if="$slots.left" class="level-left">
+      <slot name="left"></slot>
+    </div>
+
+    <slot></slot>
+
+    <div v-if="$slots.right" class="level-right">
+      <slot name="right"></slot>
+    </div>
+  </div>
+</template>
+
 <script>
-import Vue from 'vue'
 import alignProps from '@/mixins/align'
 
-const Level = Vue.component('VbLevel', {
+export default {
+  name: 'VbLevel',
   mixins: [alignProps],
   provide() {
     return {
@@ -12,19 +26,15 @@ const Level = Vue.component('VbLevel', {
   props: {
     mobile: Boolean
   },
-  render(h) {
-    const { left, right, default: content } = this.$slots
-    const items = [content]
-    if (left) {
-      items.unshift(h('div', { class: 'level-left' }, left))
+  computed: {
+    classes() {
+      return {
+        level: true,
+        'is-mobile': this.mobile
+      }
     }
-    if (right) {
-      items.push(h('div', { class: 'level-right' }, right))
-    }
-    return h('div', { class: { level: true, 'is-mobile': this.mobile } }, items)
   }
-})
-export default Level
+}
 </script>
 
 <style lang="scss">

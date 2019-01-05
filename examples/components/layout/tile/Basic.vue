@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import code from '../../../code/layout/tile/basic.js'
+import code from '@examples/code/layout/tile/basic.js'
 
 export default {
   name: 'TileBasic',

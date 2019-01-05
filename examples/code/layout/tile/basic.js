@@ -1,5 +1,6 @@
 let code = {}
-code.basic = `
+
+code.basic = `\
 <template>
   <div>
     <vb-tile>
@@ -93,4 +94,5 @@ code.basic = `
   </div>
 </template>
 `
+
 export default code

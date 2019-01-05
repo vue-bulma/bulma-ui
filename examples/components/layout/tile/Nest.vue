@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import code from '../../../code/layout/tile/nest.js'
+import code from '@examples/code/layout/tile/nest.js'
 
 export default {
   name: 'TileNest',

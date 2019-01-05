@@ -1,5 +1,5 @@
 let code = {}
-code.nest = `
+code.nest = `\
 <template>
   <vb-tile>
     <vb-tile vertical size="8">

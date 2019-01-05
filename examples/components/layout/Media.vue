@@ -54,7 +54,7 @@
             </vb-level-item>
           </vb-level>
         </vb-media-object>
-        <pre slot="code">{{ basic }}</pre>
+        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
@@ -116,21 +116,20 @@
             <vb-button>Post comment</vb-button>
           </vb-form-item>
         </vb-media-object>
-        <pre slot="code">{{ nesting }}</pre>
+        <pre slot="code">{{ code.nesting }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
 </template>
 
 <script>
-import code from '../../code/layout/media.js'
+import code from '@examples/code/layout/media.js'
 
 export default {
   name: 'MediaExamples',
   data() {
     return {
-      basic: code.basic,
-      nesting: code.nesting
+      code
     }
   }
 }

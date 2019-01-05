@@ -1,8 +1,15 @@
+<template>
+  <div :class="classes">
+    <slot></slot>
+  </div>
+</template>
+
+
 <script>
-import Vue from 'vue'
 import alignProps from '@/mixins/align'
 
-const LevelItem = Vue.component('VbLevelItem', {
+export default {
+  name: 'VbLevelItem',
   inject: {
     vbLevel: {
       default() {
@@ -11,21 +18,16 @@ const LevelItem = Vue.component('VbLevelItem', {
     }
   },
   mixins: [alignProps],
-  render(h) {
-    const align = this.align || this.vbLevel.align
-    return h(
-      'div',
-      {
-        class: {
-          'level-item': true,
-          [`has-text-${align}`]: !!align
-        }
-      },
-      this.$slots.default
-    )
+  computed: {
+    classes() {
+      const align = this.align || this.vbLevel.align
+      return {
+        'level-item': true,
+        [`has-text-${align}`]: !!align
+      }
+    }
   }
-})
-export default LevelItem
+}
 </script>
 
 <style lang="scss">

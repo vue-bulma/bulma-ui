@@ -1,5 +1,6 @@
 let code = {}
-code.basic = `
+
+code.basic = `\
 <template>
   <vb-container>
     <vb-notification>
@@ -8,7 +9,8 @@ code.basic = `
   </vb-container>
 </template>
 `
-code.fluid = `
+
+code.fluid = `\
 <template>
   <vb-container view="fluid">
     <vb-notification>
@@ -17,8 +19,10 @@ code.fluid = `
   </vb-container>
 </template>
 `
+
 code.breakpoint = {}
-code.breakpoint.desktop = `
+
+code.breakpoint.desktop = `\
 <template>
   <vb-container view="desktop">
     <vb-notification>
@@ -27,7 +31,8 @@ code.breakpoint.desktop = `
   </vb-container>
 </template>
 `
-code.breakpoint.widescreen = `
+
+code.breakpoint.widescreen = `\
 <template>
   <vb-container view="widescreen">
     <vb-notification>
@@ -36,7 +41,8 @@ code.breakpoint.widescreen = `
   </vb-container>
 </template>
 `
-code.breakpoint.fullhd = `
+
+code.breakpoint.fullhd = `\
 <template>
   <vb-container view="fullhd">
     <vb-notification>

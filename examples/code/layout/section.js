@@ -1,5 +1,4 @@
-let code = {}
-code.basic = `
+let code = `\
 <template>
   <vb-section>
     <vb-hero title="Section1" color="primary"></vb-hero>
@@ -10,4 +9,5 @@ code.basic = `
   </vb-section>
 </template>
 `
+
 export default code

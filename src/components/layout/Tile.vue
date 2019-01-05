@@ -1,6 +1,5 @@
 <script>
 import Vue from 'vue'
-
 import { addClass } from '@/utils'
 
 export default Vue.component('VbTile', {
