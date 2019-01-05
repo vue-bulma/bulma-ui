@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" @click="handleClick">
+  <button :type="type" :class="classes" @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -19,6 +19,10 @@ export default {
   },
   mixins: [sizeProps, colorProps],
   props: {
+    type: {
+      type: String,
+      default: 'button'
+    },
     fullwidth: Boolean,
     outlined: Boolean,
     inverted: Boolean,
