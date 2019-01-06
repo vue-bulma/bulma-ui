@@ -80,7 +80,7 @@ const IMAGES = [
   '320x640',
   '240x720'
 ]
-import code from '../../code/elements/image.js'
+import code from '@examples/code/elements/image.js'
 export default {
   name: 'ImageExamples',
   data() {

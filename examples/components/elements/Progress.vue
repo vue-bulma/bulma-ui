@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/progress.js'
+import code from '@examples/code/elements/progress.js'
 
 export default {
   name: 'ProgressExamples',

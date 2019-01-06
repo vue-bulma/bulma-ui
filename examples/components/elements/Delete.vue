@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/delete.js'
+import code from '@examples/code/elements/delete.js'
 
 export default {
   name: 'DeleteExamples',

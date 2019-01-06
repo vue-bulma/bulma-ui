@@ -795,7 +795,7 @@
 </template>
 
 <script>
-import code from '../../code/columns/column.js'
+import code from '@examples/code/columns/column.js'
 export default {
   name: 'columnsExamples',
   data() {

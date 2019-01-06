@@ -297,7 +297,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/button.js'
+import code from '@examples/code/elements/button.js'
 
 export default {
   name: 'ButtonExamples',

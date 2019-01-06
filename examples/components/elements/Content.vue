@@ -184,7 +184,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/content.js'
+import code from '@examples/code/elements/content.js'
 
 export default {
   name: 'ContentExamples',

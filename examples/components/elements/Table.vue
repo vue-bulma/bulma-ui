@@ -219,7 +219,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/table.js'
+import code from '@examples/code/elements/table.js'
 
 export default {
   name: 'TableExamples',

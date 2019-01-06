@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/icon.js'
+import code from '@examples/code/elements/icon.js'
 
 export default {
   name: 'IconExamples',

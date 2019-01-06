@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/tag.js'
+import code from '@examples/code/elements/tag.js'
 
 export default {
   name: 'TagExamples',

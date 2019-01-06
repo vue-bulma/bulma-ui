@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/title.js'
+import code from '@examples/code/elements/title.js'
 
 export default {
   name: 'TitleExamples',

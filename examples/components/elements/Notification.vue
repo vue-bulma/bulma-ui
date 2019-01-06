@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/notification.js'
+import code from '@examples/code/elements/notification.js'
 
 export default {
   name: 'NotificationExamples',

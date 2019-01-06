@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import code from '../../code/elements/box.js'
+import code from '@examples/code/elements/box.js'
 
 export default {
   name: 'BoxExamples',
