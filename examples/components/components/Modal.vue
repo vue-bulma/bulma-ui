@@ -91,7 +91,7 @@
 </template>
 
 <script>
-import code from '../../code/components/modal.js'
+import code from '@examples/code/components/modal.js'
 
 export default {
   name: 'ModalExamples',

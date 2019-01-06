@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-section>
     <example-section-item title="Basic">
@@ -27,37 +27,22 @@ code.basic = `
       return {
         tabIndex: 0,
         panelBlockIndex: 0,
-        tabs: [{
+        tabs: [
+          {
             name: 'all',
-            list: [{
-                name: 'GibHub',
-                icon: 'fa fa-github'
-              },
-              {
-                name: 'marksheet',
-                icon: 'fa fa-book'
-              },
-              {
-                name: 'minireset.css'
-              }
+            list: [
+              { name: 'GibHub', icon: 'fa fa-github' },
+              { name: 'marksheet', icon: 'fa fa-book' },
+              { name: 'minireset.css' }
             ]
           },
           {
             name: 'public',
             list: ['jgthms.github.io', 'daniellowtw/infboard', 'mojs']
           },
-          {
-            name: 'private',
-            list: ['github.io', 'infboard', 'reat']
-          },
-          {
-            name: 'sources',
-            list: ['Vue', 'iview', 'element']
-          },
-          {
-            name: 'forks',
-            list: ['iview', 'element']
-          }
+          { name: 'private', list: ['github.io', 'infboard', 'reat'] },
+          { name: 'sources', list: ['Vue', 'iview', 'element'] },
+          { name: 'forks', list: ['iview', 'element'] }
         ]
       }
     },

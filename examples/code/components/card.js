@@ -1,5 +1,5 @@
 let code = {}
-code.imageCard = `
+code.imageCard = `\
 <template>
   <vb-card>
     <vb-image slot="image" src="https://bulma.io/images/placeholders/1280x960.png" size="4by3"></vb-image>
@@ -25,7 +25,7 @@ code.imageCard = `
 </template>
 `
 code.card = {}
-code.card.oneKind= `
+code.card.oneKind = `\
 <template>
   <vb-card>
     <span slot="title">Component</span>
@@ -47,7 +47,7 @@ code.card.oneKind= `
   </vb-card>
 </template>
 `
-code.card.anotherKind= `
+code.card.anotherKind = `\
 <template>
   <vb-card title="Component" icon="fa fa-angle-down" title-centered>
     <vb-content>
@@ -66,7 +66,7 @@ code.card.anotherKind= `
   </vb-card>
 </template>
 `
-code.card.hideHeader= `
+code.card.hideHeader = `\
 <template>
   <vb-card>
     <vb-content>

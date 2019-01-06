@@ -108,7 +108,7 @@
 </template>
 
 <script>
-import code from '../../code/components/dropdown.js'
+import code from '@examples/code/components/dropdown.js'
 
 export default {
   name: 'DropdownExamples',

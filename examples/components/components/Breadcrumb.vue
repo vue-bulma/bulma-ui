@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import code from '../../code/components/breadcrumb.js'
+import code from '@examples/code/components/breadcrumb.js'
 
 export default {
   name: 'BreadcrumbExamples',

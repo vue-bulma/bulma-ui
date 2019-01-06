@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import code from '../../code/components/pagination.js'
+import code from '@examples/code/components/pagination.js'
 
 export default {
   name: 'PaginationExamples',

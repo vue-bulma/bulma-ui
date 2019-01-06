@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-navbar>
     <vb-navbar-item slot="brand">
@@ -33,7 +33,7 @@ code.basic = `
   </vb-navbar>
 </template>
 `
-code.TransparentNavbar = `
+code.TransparentNavbar = `\
 <template>
   <vb-navbar transparent>
     <vb-navbar-item slot="brand">
@@ -67,7 +67,7 @@ code.TransparentNavbar = `
   </vb-navbar>
 </template>
 `
-code.fixedNavbar = `
+code.fixedNavbar = `\
 <template>
   <div slot="control">
     <vb-button-addons>
@@ -121,7 +121,7 @@ code.fixedNavbar = `
   }
 </script>
 `
-code.rightDropdown = `
+code.rightDropdown = `\
 <template>
   <vb-navbar>
     <vb-navbar-dropdown>
@@ -152,7 +152,7 @@ code.rightDropdown = `
   </vb-navbar>
 </template>
 `
-code.colors = `
+code.colors = `\
 <template>
   <vb-navbar color="primary">
     <vb-navbar-item slot="brand">

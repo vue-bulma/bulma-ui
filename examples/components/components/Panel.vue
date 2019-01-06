@@ -9,7 +9,7 @@
           <vb-panel-tab :tabs="tabs" @click="handleClick"></vb-panel-tab>
           <vb-panel-block :list="tabs[tabIndex].list" @click="itemClick" ref="panel-block"></vb-panel-block>
           <vb-panel-block :hover-item="false">
-            <vb-button fullwidth>test</vb-button>
+            <vb-button fullwidth>Button</vb-button>
           </vb-panel-block>
         </vb-panel>
         <pre slot="code">{{ basic }}</pre>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import code from '../../code/components/panel.js'
+import code from '@examples/code/components/panel.js'
 
 export default {
   name: 'PanelExamples',

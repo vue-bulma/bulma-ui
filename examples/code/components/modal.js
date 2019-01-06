@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-modal :is-show.sync="modal1">
     <p>This is the content</p>
@@ -17,7 +17,7 @@ code.basic = `
   }
 </script>
 `
-code.imageModal = `
+code.imageModal = `\
 <template>
   <vb-button @click="modal7 = true">Image modal</vb-button>
   <vb-modal :is-show.sync="modal7" close-button-size="large">
@@ -35,7 +35,7 @@ code.imageModal = `
   }
 </script>
 `
-code.modalCard = `
+code.modalCard = `\
 <template>
   <vb-button @click="modal8 = true">Modal card</vb-button>
   <vb-modal-card title="modalCard" :is-show.sync="modal8">
@@ -57,7 +57,7 @@ code.modalCard = `
   }
 </script>
 `
-code.disable = `
+code.disable = `\
 <template>
   <vb-buttons-list>
     <vb-button @click="modal9 = true">Disable mask layer closure</vb-button>
@@ -91,7 +91,7 @@ code.disable = `
   }
 </script>
 `
-code.closeButtonSize = `
+code.closeButtonSize = `\
 <template>
   <vb-modal :is-show.sync="modal2">
     <p>This is the content</p>

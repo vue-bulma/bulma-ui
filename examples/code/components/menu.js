@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-menu label="General">
     <vb-menu-item>

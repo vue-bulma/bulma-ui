@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-dropdown>
     <vb-button>
@@ -16,7 +16,7 @@ code.basic = `
   </vb-dropdown>
 </template>
 `
-code.toggable = `
+code.toggable = `\
 <template>
   <vb-dropdown trigger="click">
     <vb-button>
@@ -33,7 +33,7 @@ code.toggable = `
   </vb-dropdown>
 </template>
 `
-code.aligned = `
+code.aligned = `\
 <template>
   <vb-dropdown right-aligned>
     <vb-button>
@@ -49,7 +49,7 @@ code.aligned = `
     </vb-dropdown-menu>
 </template>
 `
-code.dropup = `
+code.dropup = `\
 <template>
   <vb-dropdown dropup>
     <vb-button>

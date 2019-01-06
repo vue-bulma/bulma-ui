@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-breadcrumb>
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -9,7 +9,7 @@ code.basic = `
 </template>
 `
 code.alignment = {}
-code.alignment.centered = `
+code.alignment.centered = `\
 <template>
   <vb-breadcrumb align="centered">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -18,7 +18,7 @@ code.alignment.centered = `
   </vb-breadcrumb>
 </template>
 `
-code.alignment.right = `
+code.alignment.right = `\
 <template>
   <vb-breadcrumb align="right">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -27,7 +27,7 @@ code.alignment.right = `
   </vb-breadcrumb>
 </template>
 `
-code.icons = `
+code.icons = `\
 <template>
   <vb-breadcrumb>
     <vb-breadcrumb-item to="/docs">
@@ -44,7 +44,7 @@ code.icons = `
 </template>
 `
 code.separators = {}
-code.separators.arrow = `
+code.separators.arrow = `\
 <template>
   <vb-breadcrumb separator="arrow">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -53,7 +53,7 @@ code.separators.arrow = `
   </vb-breadcrumb>
 </template>
 `
-code.separators.bullet = `
+code.separators.bullet = `\
 <template>
   <vb-breadcrumb separator="bullet">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -62,7 +62,7 @@ code.separators.bullet = `
   </vb-breadcrumb>
 </template>
 `
-code.separators.dot = `
+code.separators.dot = `\
 <template>
   <vb-breadcrumb separator="dot">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -71,7 +71,7 @@ code.separators.dot = `
   </vb-breadcrumb>
 </template>
 `
-code.separators.succeeds = `
+code.separators.succeeds = `\
 <template>
   <vb-breadcrumb separator="succeeds">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -81,7 +81,7 @@ code.separators.succeeds = `
 </template>
 `
 code.siezs = {}
-code.siezs.small = `
+code.siezs.small = `\
 <template>
   <vb-breadcrumb size="small">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -90,7 +90,7 @@ code.siezs.small = `
   </vb-breadcrumb>
 </template>
 `
-code.siezs.medium = `
+code.siezs.medium = `\
 <template>
   <vb-breadcrumb size="medium">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
@@ -99,7 +99,7 @@ code.siezs.medium = `
   </vb-breadcrumb>
 </template>
 `
-code.siezs.large = `
+code.siezs.large = `\
 <template>
   <vb-breadcrumb size="large">
     <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>

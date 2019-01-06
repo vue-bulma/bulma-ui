@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import code from '../../code/components/menu.js'
+import code from '@examples/code/components/menu.js'
 
 export default {
   name: 'MenuExamples',

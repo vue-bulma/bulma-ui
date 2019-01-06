@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <demo>
     <vb-message title="Hello World" showClose>
@@ -12,7 +12,7 @@ code.basic = `
   </demo>
 </template>
 `
-code.colors = `
+code.colors = `\
 <template>
   <vb-message title="Dark" color="dark" showClose>
     <p>This is the content</p>
@@ -37,7 +37,7 @@ code.colors = `
   </vb-message>
 </template>
 `
-code.bodyOnly = `
+code.bodyOnly = `\
 <template>
   <vb-message>
     <p>Default</p>
@@ -65,7 +65,7 @@ code.bodyOnly = `
   </vb-message>
 </template>
 `
-code.sizes = `
+code.sizes = `\
 <template>
   <vb-message title="Small message" size="small" showClose>
     <p>This is the content</p>

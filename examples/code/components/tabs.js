@@ -1,5 +1,5 @@
 let code = {}
-code.basic = `
+code.basic = `\
 <template>
   <vb-tabs :tabs="tabs" @click="handleClick"></vb-tabs>
 </template>
@@ -20,7 +20,7 @@ code.basic = `
   }
 </script>
 `
-code.alignment = `
+code.alignment = `\
 <template>
   <vb-tabs :tabs="tabs"></vb-tabs>
   <vb-tabs :tabs="tabs" align="centered"></vb-tabs>
@@ -37,7 +37,7 @@ code.alignment = `
   }
 </script>
 `
-code.icons = `
+code.icons = `\
 <template>
   <vb-tabs :tabs="tabs"></vb-tabs>
 </template>
@@ -56,7 +56,7 @@ code.icons = `
   }
 </script>
 `
-code.sizes = `
+code.sizes = `\
 <template>
   <vb-tabs :tabs="tabs" size="small"></vb-tabs>
   <vb-tabs :tabs="tabs"></vb-tabs>
@@ -74,7 +74,7 @@ code.sizes = `
   }
 </script>
 `
-code.styles = `
+code.styles = `\
 <template>
   <vb-tabs :tabs="tabs" type="boxed"></vb-tabs>
   <vb-tabs :tabs="tabs" type="toggle"></vb-tabs>
@@ -97,7 +97,7 @@ code.styles = `
 </script>
 `
 code.combining = {}
-code.combining.boxed = `
+code.combining.boxed = `\
 <template>
   <vb-tabs :tabs="tabs" align="centered" type="boxed"></vb-tabs>
 </template>
@@ -116,7 +116,7 @@ code.combining.boxed = `
   }
 </script>
 `
-code.combining.toggle = `
+code.combining.toggle = `\
 <template>
   <vb-tabs :tabs="tabs" type="toggle" fullwidth></vb-tabs>
 </template>
@@ -135,7 +135,7 @@ code.combining.toggle = `
   }
 </script>
 `
-code.combining.boxedMedium = `
+code.combining.boxedMedium = `\
 <template>
   <vb-tabs :tabs="tabs" align="centered" type="boxed" size="medium"></vb-tabs>
 </template>
@@ -154,7 +154,7 @@ code.combining.boxedMedium = `
   }
 </script>
 `
-code.combining.toggleLarge = `
+code.combining.toggleLarge = `\
 <template>
   <vb-tabs :tabs="tabs" type="toggle" size="large" fullwidth></vb-tabs>
 </template>

@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import code from '../../code/components/message.js'
+import code from '@examples/code/components/message.js'
 
 export default {
   name: 'MessageExamples',

@@ -186,7 +186,7 @@ const BASE_COLOR = [
   'link'
 ]
 
-import code from '../../code/components/navbar.js'
+import code from '@examples/code/components/navbar.js'
 
 export default {
   name: 'NavbarExamples',

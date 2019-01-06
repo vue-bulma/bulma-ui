@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import code from '../../code/components/tabs.js'
+import code from '@examples/code/components/tabs.js'
 
 export default {
   name: 'TabsExamples',

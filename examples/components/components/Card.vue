@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import code from '../../code/components/card.js'
+import code from '@examples/code/components/card.js'
 
 export default {
   name: 'Card',
