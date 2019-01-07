@@ -7,12 +7,33 @@
 <script>
 export default {
   name: 'Docs',
+  data() {
+    return {
+      main: null
+    }
+  },
   mounted() {
-    const elm = document.getElementById(this.$route.hash.slice(1))
-    if (!elm) return
-
     const [main] = document.getElementsByClassName('main')
-    main.scrollTop = elm.offsetTop - 52
+    this.main = main
+
+    this.scrollTop(this.$route)
+  },
+  methods: {
+    scrollTop({ hash }) {
+      let offset = 0
+
+      if (hash) {
+        const elm = document.getElementById(hash.slice(1))
+        offset = elm && elm.offsetTop - 52
+      }
+
+      this.main.scrollTop = offset
+    }
+  },
+  watch: {
+    $route(data) {
+      this.scrollTop(data)
+    }
   }
 }
 </script>
