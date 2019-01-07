@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown-menu">
-    <ul class="dropdown-content dropdown-menu">
+    <div class="dropdown-content dropdown-menu">
       <slot></slot>
-    </ul>
+    </div>
   </div>
 </template>
 

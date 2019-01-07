@@ -1,7 +1,6 @@
 let code = {}
 code.basic = `\
 <template>
-  <demo>
     <vb-message title="Hello World" showClose>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
       placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
@@ -9,7 +8,6 @@ code.basic = `\
       sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem
       eget, facilisis sodales sem.
     </vb-message>
-  </demo>
 </template>
 `
 code.colors = `\

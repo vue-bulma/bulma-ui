@@ -1,24 +1,16 @@
-<template>
-  <li class="dropdown-item">
-    <slot></slot>
-  </li>
-</template>
-
 <script>
-export default {
-  name: 'VbDropdownItem',
-  props: {
-    divided: {
-      tyep: Boolean,
-      default: false
-    }
-  }
-}
-</script>
+import Vue from 'vue'
 
-<style scoped>
-li:hover {
-  background-color: whitesmoke;
-  color: #0a0a0a;
-}
-</style>
+export default Vue.component('VbDropdownItem', {
+  props: {
+    content: Boolean
+  },
+  render(h) {
+    return h(
+      this.content ? 'div' : 'a',
+      { class: 'dropdown-item' },
+      this.$slots.default
+    )
+  }
+})
+</script>
