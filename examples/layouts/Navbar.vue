@@ -6,7 +6,14 @@
       </a>
     </vb-navbar-item>
 
-    <vb-navbar-item name="Docs">Docs</vb-navbar-item>
+    <template slot="right">
+      <vb-navbar-item name="Docs">Docs</vb-navbar-item>
+      <vb-navbar-dropdown title="Bulma">
+        <vb-navbar-item name="Bulma">Documentation</vb-navbar-item>
+        <hr class="navbar-divider">
+        <vb-navbar-item>Version 0.7.2</vb-navbar-item>
+      </vb-navbar-dropdown>
+    </template>
   </vb-navbar>
 </template>
 
@@ -14,7 +21,11 @@
 export default {
   methods: {
     handleSelect(name) {
-      this.$router.push({ name })
+      if (name === 'Bulma') {
+        window.open('https://bulma.io/')
+      } else {
+        this.$router.push({ name })
+      }
     },
     toggleSidebar() {
       this.$emit('toggleSidebar')
