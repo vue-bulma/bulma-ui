@@ -58,7 +58,7 @@ export default new Router({
         {
           path: 'elements/table',
           name: 'Table',
-          component: () => import('./components/elements/Table')
+          component: () => import('./components/elements/table/index')
         },
         {
           path: 'elements/tag',

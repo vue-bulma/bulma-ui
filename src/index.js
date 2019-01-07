@@ -10,7 +10,7 @@ import Image from './components/elements/Image'
 import Note from './components/elements/Notification'
 import Progress from './components/elements/ProgressBar'
 import Table from './components/elements/Table'
-import TableHeader from './components/elements/TableHeader'
+import TableColumn from './components/elements/TableColumn'
 import Tag from './components/elements/Tag'
 import Tags from './components/elements/Tags'
 import Title from './components/elements/Title'
@@ -67,7 +67,7 @@ const components = [
   Note,
   Progress,
   Table,
-  TableHeader,
+  TableColumn,
   Tag,
   Tags,
   Title,

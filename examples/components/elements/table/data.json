@@ -1,0 +1,50 @@
+[
+  {
+    "position": 1,
+    "team": "Leicester City",
+    "played": 38,
+    "won": 23,
+    "drawn": 12,
+    "lost": 3,
+    "goalsFor": 68,
+    "goalsAgainst": 36,
+    "goalDifference": 32,
+    "points": 81
+  },
+  {
+    "position": 2,
+    "team": "Arsenal",
+    "played": 38,
+    "won": 20,
+    "drawn": 11,
+    "lost": 7,
+    "goalsFor": 65,
+    "goalsAgainst": 36,
+    "goalDifference": 29,
+    "points": 71
+  },
+  {
+    "position": 3,
+    "team": "Tottenham Hotspur",
+    "played": 38,
+    "won": 19,
+    "drawn": 13,
+    "lost": 6,
+    "goalsFor": 69,
+    "goalsAgainst": 35,
+    "goalDifference": 34,
+    "points": 70
+  },
+  {
+    "position": 4,
+    "team": "Manchester City",
+    "played": 38,
+    "won": 19,
+    "drawn": 9,
+    "lost": 10,
+    "goalsFor": 71,
+    "goalsAgainst": 41,
+    "goalDifference": 30,
+    "points": 66
+  }
+]

@@ -20,7 +20,7 @@
       @blur="handleBlur"
     >
 
-    <span class="checkbox-label">
+    <span v-if="$slots.default" class="checkbox-label">
       <slot></slot>
     </span>
   </label>

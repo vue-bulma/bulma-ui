@@ -1,5 +1,5 @@
 <template>
-  <span :class="classes">
+  <span :class="classes" @click="handleClick">
     <slot>
       <i :class="IconClasses"></i>
     </slot>
@@ -41,6 +41,11 @@ export default {
         [`fa-${iconSize}`]: !!iconSize,
         'fa-pulse': animated
       }
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     }
   }
 }
