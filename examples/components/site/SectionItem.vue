@@ -5,6 +5,8 @@
       {{title}}:
     </vb-title>
     <slot></slot>
+
+    <hr>
   </vb-content>
 </template>
 
