@@ -46,7 +46,7 @@
             </vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ basic }}</pre>
+        <pre slot="code">{{ content }}</pre>
       </demo>
     </example-section-item>
 
@@ -148,7 +148,8 @@ export default {
       basic: code.basic,
       toggable: code.toggable,
       aligned: code.aligned,
-      dropup: code.dropup
+      dropup: code.dropup,
+      content: code.content
     }
   }
 }

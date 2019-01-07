@@ -16,6 +16,35 @@ code.basic = `\
   </vb-dropdown>
 </template>
 `
+code.content = `\
+<template>
+  <vb-dropdown>
+    <vb-button>
+      <span>Dropdown button</span>
+      <vb-icon name="fa fa-angle-down"></vb-icon>
+    </vb-button>
+    <vb-dropdown-menu>
+      <vb-dropdown-item content>
+        <p>
+          You can insert
+          <strong>any type of content</strong> within the dropdown menu.
+        </p>
+      </vb-dropdown-item>
+      <hr class="dropdown-divider">
+      <vb-dropdown-item content>
+        <p>
+          You simply need to use a
+          <code>&lt;div&gt;</code> instead.
+        </p>
+      </vb-dropdown-item>
+      <hr class="dropdown-divider">
+      <vb-dropdown-item>
+        <a href="#" class="dropdown-item">This is a link</a>
+      </vb-dropdown-item>
+    </vb-dropdown-menu>
+  </vb-dropdown>
+</template>
+`
 code.toggable = `\
 <template>
   <vb-dropdown trigger="click">
