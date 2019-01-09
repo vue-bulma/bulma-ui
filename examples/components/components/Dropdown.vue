@@ -59,7 +59,7 @@
           </vb-button>
 
           <vb-dropdown-menu>
-            <vb-dropdown-item><a href="">Dropdown item</a> </vb-dropdown-item>
+            <vb-dropdown-item>Dropdown item</vb-dropdown-item>
             <vb-dropdown-item>Other dropdown item</vb-dropdown-item>
             <vb-dropdown-item>Other dropdown item</vb-dropdown-item>
             <hr class="dropdown-divider">

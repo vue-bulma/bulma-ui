@@ -6,11 +6,17 @@ export default Vue.component('VbDropdownItem', {
     content: Boolean
   },
   render(h) {
+    const { content, handleClick: click } = this
     return h(
-      this.content ? 'div' : 'a',
-      { class: 'dropdown-item' },
+      content ? 'div' : 'a',
+      { class: 'dropdown-item', on: { click } },
       this.$slots.default
     )
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
+    }
   }
 })
 </script>
