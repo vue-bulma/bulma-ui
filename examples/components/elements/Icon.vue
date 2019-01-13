@@ -1,14 +1,13 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-icon class="icon-background" name="fa fa-home"></vb-icon>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <vb-icon name="fa fa-home" color="primary"></vb-icon>
         <vb-icon name="fa fa-info-circle" color="info"></vb-icon>
         <vb-icon name="fa fa-check-square" color="success"></vb-icon>
@@ -19,44 +18,40 @@
         <vb-icon name="fa fa-shield" color="dark"></vb-icon>
         <vb-icon name="fa fa-camera" color="black"></vb-icon>
         <vb-icon name="fa fa-user-circle" color="link"></vb-icon>
-        <pre slot="code">{{code.colors}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Container Sizes">
-      <demo>
+      <demo :code="code.containerSize">
         <vb-icon class="icon-background" name="fa fa-home" size="small"></vb-icon>
         <vb-icon class="icon-background" name="fa fa-home"></vb-icon>
         <vb-icon class="icon-background" name="fa fa-home" size="medium"></vb-icon>
         <vb-icon class="icon-background" name="fa fa-home" size="large"></vb-icon>
-        <pre slot="code">{{code.containerSize}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Icon Sizes">
-      <demo>
+      <demo :code="code.iconSize">
         <div class="flex-container">
           <vb-icon class="icon-background" name="fa fa-home" size="large"></vb-icon>
           <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="lg"></vb-icon>
           <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="2x"></vb-icon>
           <vb-icon class="icon-background" name="fa fa-home" size="large" iconSize="3x"></vb-icon>
         </div>
-        <pre slot="code">{{code.iconSize}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Animated">
-      <demo>
+      <demo :code="code.animated">
         <vb-icon class="icon-background" name="fa fa-spinner" size="large" animated></vb-icon>
         <vb-icon class="icon-background" name="fa fa-refresh" size="large" animated></vb-icon>
         <vb-icon class="icon-background" name="fa fa-circle-o-notch" size="large" animated></vb-icon>
         <vb-icon class="icon-background" name="fa fa-repeat" size="large" animated></vb-icon>
-        <pre slot="code">{{code.animated}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Stacked">
-      <demo>
+      <demo :code="code.stacked">
         <vb-icon class="icon-background" size="medium">
           <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
@@ -69,7 +64,6 @@
             <i class="fa fa-ban fa-stack-2x has-text-danger"></i>
           </span>
         </vb-icon>
-        <pre slot="code">{{code.stacked}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

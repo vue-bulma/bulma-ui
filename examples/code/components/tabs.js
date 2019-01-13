@@ -1,7 +1,12 @@
 let code = {}
+
 code.basic = `\
 <template>
-  <vb-tabs :tabs="tabs" @click="handleClick"></vb-tabs>
+  <div>
+    <p>Current Tab: {{ tabs[index].name }}</p>
+
+    <vb-tabs :tabs="tabs" @click="handleClick"></vb-tabs>
+  </div>
 </template>
 
 <script>
@@ -20,23 +25,15 @@ code.basic = `\
   }
 </script>
 `
-code.alignment = `\
-<template>
-  <vb-tabs :tabs="tabs"></vb-tabs>
-  <vb-tabs :tabs="tabs" align="centered"></vb-tabs>
-  <vb-tabs :tabs="tabs" align="right"></vb-tabs>
-</template>
 
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }]
-      }
-    }
-  }
-</script>
+code.alignment = `\
+<vb-tabs :tabs="tabs"></vb-tabs>
+
+<vb-tabs :tabs="tabs" align="centered"></vb-tabs>
+
+<vb-tabs :tabs="tabs" align="right"></vb-tabs>
 `
+
 code.icons = `\
 <template>
   <vb-tabs :tabs="tabs"></vb-tabs>
@@ -56,30 +53,28 @@ code.icons = `\
   }
 </script>
 `
-code.sizes = `\
-<template>
-  <vb-tabs :tabs="tabs" size="small"></vb-tabs>
-  <vb-tabs :tabs="tabs"></vb-tabs>
-  <vb-tabs :tabs="tabs" size="medium"></vb-tabs>
-  <vb-tabs :tabs="tabs" size="large"></vb-tabs>
-</template>
 
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }]
-      }
-    }
-  }
-</script>
+code.sizes = `\
+<vb-tabs :tabs="tabs" size="small"></vb-tabs>
+
+<vb-tabs :tabs="tabs"></vb-tabs>
+
+<vb-tabs :tabs="tabs" size="medium"></vb-tabs>
+
+<vb-tabs :tabs="tabs" size="large"></vb-tabs>
 `
+
 code.styles = `\
 <template>
-  <vb-tabs :tabs="tabs" type="boxed"></vb-tabs>
-  <vb-tabs :tabs="tabs" type="toggle"></vb-tabs>
-  <vb-tabs :tabs="tabs" type="toggle" rounded></vb-tabs>
-  <vb-tabs :tabs="tabs" fullwidth></vb-tabs>
+  <div>
+    <vb-tabs :tabs="tabs" type="boxed"></vb-tabs>
+
+    <vb-tabs :tabs="tabs" type="toggle"></vb-tabs>
+
+    <vb-tabs :tabs="tabs" type="toggle" rounded></vb-tabs>
+
+    <vb-tabs :tabs="tabs" fullwidth></vb-tabs>
+  </div>
 </template>
 
 <script>
@@ -96,81 +91,23 @@ code.styles = `\
   }
 </script>
 `
+
 code.combining = {}
+
 code.combining.boxed = `\
-<template>
-  <vb-tabs :tabs="tabs" align="centered" type="boxed"></vb-tabs>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [
-          { name: 'Pictures', icon: 'fa-image' },
-          { name: 'Music', icon: 'fa-music' },
-          { name: 'Videos', icon: 'fa-film' }
-        ]
-      }
-    }
-  }
-</script>
+<vb-tabs :tabs="tabs" align="centered" type="boxed"></vb-tabs>
 `
+
 code.combining.toggle = `\
-<template>
-  <vb-tabs :tabs="tabs" type="toggle" fullwidth></vb-tabs>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [
-          { name: 'Pictures', icon: 'fa-image' },
-          { name: 'Music', icon: 'fa-music' },
-          { name: 'Videos', icon: 'fa-film' }
-        ]
-      }
-    }
-  }
-</script>
+<vb-tabs :tabs="tabs" type="toggle" fullwidth></vb-tabs>
 `
+
 code.combining.boxedMedium = `\
-<template>
-  <vb-tabs :tabs="tabs" align="centered" type="boxed" size="medium"></vb-tabs>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [
-          { name: 'Pictures', icon: 'fa-image' },
-          { name: 'Music', icon: 'fa-music' },
-          { name: 'Videos', icon: 'fa-film' }
-        ]
-      }
-    }
-  }
-</script>
+<vb-tabs :tabs="tabs" align="centered" type="boxed" size="medium"></vb-tabs>
 `
-code.combining.toggleLarge = `\
-<template>
-  <vb-tabs :tabs="tabs" type="toggle" size="large" fullwidth></vb-tabs>
-</template>
 
-<script>
-  export default {
-    data() {
-      return {
-        tabs: [
-          { name: 'Pictures', icon: 'fa-image' },
-          { name: 'Music', icon: 'fa-music' },
-          { name: 'Videos', icon: 'fa-film' }
-        ]
-      }
-    }
-  }
-</script>
+code.combining.boxedLarge = `\
+<vb-tabs :tabs="tabs" type="toggle" size="large" fullwidth></vb-tabs>
 `
+
 export default code

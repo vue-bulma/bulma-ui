@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Custom Header and Cell template">
-    <demo>
+    <demo :code="code">
       <vb-button slot="control" outlined @click="HandleReset">
         Reset
       </vb-button>
@@ -56,8 +56,6 @@
           </template>
         </vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.custom}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -69,7 +67,7 @@ import code from '@examples/code/elements/table.js'
 export default {
   data() {
     return {
-      code,
+      code: code.custom,
       data: tableData.slice(),
       sort: null,
       filter: [],

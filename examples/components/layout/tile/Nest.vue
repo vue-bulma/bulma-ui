@@ -1,5 +1,5 @@
 <template>
-  <demo>
+  <demo :code="nest">
     <vb-tile>
       <vb-tile vertical size="8">
         <vb-tile>
@@ -63,7 +63,6 @@
         </vb-box>
       </vb-tile>
     </vb-tile>
-    <pre slot="code">{{ nest }}</pre>
   </demo>
 </template>
 

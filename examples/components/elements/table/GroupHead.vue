@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Group">
-    <demo>
+    <demo :code="code">
       <vb-table border :data="tableData">
         <vb-table-column prop="position" label="Position"></vb-table-column>
 
@@ -21,8 +21,6 @@
 
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.group}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -35,7 +33,7 @@ export default {
   data() {
     return {
       tableData,
-      code
+      code: code.group
     }
   }
 }

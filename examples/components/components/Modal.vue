@@ -1,27 +1,25 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-modal :is-show.sync="modal1">
           <p>This is the content</p>
         </vb-modal>
         <vb-button @click="modal1 = true">Basic</vb-button>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Image modal">
-      <demo>
+      <demo :code="code.imageModal">
         <vb-button @click="modal7 = true">Image modal</vb-button>
         <vb-modal :is-show.sync="modal7" close-button-size="large">
           <vb-image src="https://bulma.io/images/placeholders/1280x960.png" size="4by3"></vb-image>
         </vb-modal>
-        <pre slot="code">{{ imageModal }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Modal card">
-      <demo>
+      <demo :code="code.modalCard">
         <vb-button @click="modal8 = true">Modal card</vb-button>
         <vb-modal-card title="modalCard" :is-show.sync="modal8">
           <p>This is content</p>
@@ -30,12 +28,11 @@
             <vb-button>Cancel</vb-button>
           </div>
         </vb-modal-card>
-        <pre slot="code">{{ modalCard }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Disable">
-      <demo>
+      <demo :code="code.disable">
         <vb-buttons-list>
           <vb-button @click="modal9 = true">Disable mask layer closure</vb-button>
           <vb-button @click="modal10 = true">Disable Mask</vb-button>
@@ -55,12 +52,11 @@
             <vb-button>Cancel</vb-button>
           </div>
         </vb-modal-card>
-        <pre slot="code">{{ disable }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Closable">
-      <demo>
+      <demo :code="code.closeButtonSize">
         <vb-buttons-list>
           <vb-button @click="modal2 = true">Close button normal</vb-button>
           <vb-button @click="modal3 = true">Close button small</vb-button>
@@ -84,7 +80,6 @@
         <vb-modal :is-show.sync="modal6" :closable="false">
           <p>Disable closeButton</p>
         </vb-modal>
-        <pre slot="code">{{ closeButtonSize }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -97,11 +92,7 @@ export default {
   name: 'ModalExamples',
   data() {
     return {
-      basic: code.basic,
-      imageModal: code.imageModal,
-      modalCard: code.modalCard,
-      disable: code.disable,
-      closeButtonSize: code.closeButtonSize,
+      code,
       modal1: false,
       modal2: false,
       modal3: false,

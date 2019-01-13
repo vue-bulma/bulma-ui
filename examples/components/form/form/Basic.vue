@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Basic">
-    <demo>
+    <demo :code="code.basic">
       <vb-form>
         <vb-form-item label="Name">
           <vb-input placeholder="Text Input"></vb-input>
@@ -48,7 +48,6 @@
           <vb-button color="light" @click="reset">Reset</vb-button>
         </vb-form-item>
       </vb-form>
-      <pre slot="code">{{ code.basic }}</pre>
     </demo>
   </example-section-item>
 </template>

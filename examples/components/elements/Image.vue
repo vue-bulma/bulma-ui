@@ -1,21 +1,19 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-image :src="imageUrl(7)" size="128x128"></vb-image>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Rounded">
-      <demo>
+      <demo :code="code.rounded">
         <vb-image :src="imageUrl(7)" size="128x128" rounded></vb-image>
-        <pre slot="code">{{code.rounded}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Size">
-      <demo>
+      <demo :code="code.size">
         <vb-image :src="imageUrl(1)" size="16x16"></vb-image>
         <vb-image :src="imageUrl(2)" size="24x24"></vb-image>
         <vb-image :src="imageUrl(3)" size="32x32"></vb-image>
@@ -23,12 +21,11 @@
         <vb-image :src="imageUrl(5)" size="64x64"></vb-image>
         <vb-image :src="imageUrl(6)" size="96x96"></vb-image>
         <vb-image :src="imageUrl(7)" size="128x128"></vb-image>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Responsive images with ratios">
-      <demo class="paddingRight">
+      <demo class="paddingRight" :code="code.responsive">
         <vb-columns view="mobile">
           <vb-column size="4">
             <vb-image :src="imageUrl(8)" size="square"></vb-image>
@@ -49,7 +46,6 @@
             <vb-image :src="imageUrl(22)" size="1by3"></vb-image>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.responsive}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -81,6 +77,7 @@ const IMAGES = [
   '240x720'
 ]
 import code from '@examples/code/elements/image.js'
+
 export default {
   name: 'ImageExamples',
   data() {
@@ -101,7 +98,6 @@ export default {
   margin-bottom: 20px;
 }
 .paddingRight img {
-  /* padding-right: 40% !important; */
   width: 400px;
 }
 </style>

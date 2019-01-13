@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Border">
-    <demo>
+    <demo :code="code">
       <vb-table border :data="tableData">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       tableData,
-      code
+      code: code.border
     }
   }
 }

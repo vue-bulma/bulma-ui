@@ -1,14 +1,13 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-button>Button</vb-button>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <vb-buttons-list>
           <vb-button color="primary">Primary</vb-button>
           <vb-button color="link">Link</vb-button>
@@ -22,33 +21,30 @@
           <vb-button color="black">Black</vb-button>
           <vb-button color="text">Text</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.colors}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
       <vb-title type="subtitle" size="6">The button comes in 4 different sizes:</vb-title>
-      <demo>
+      <demo :code="code.size">
         <vb-buttons-list>
           <vb-button size="small">Small</vb-button>
           <vb-button>Default</vb-button>
           <vb-button size="medium">Medium</vb-button>
           <vb-button size="large">Large</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Displays">
-      <demo>
+      <demo :code="code.displays">
         <vb-button fullwidth>Fullwidth</vb-button>
-        <pre slot="code">{{code.displays}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Styles">
       <vb-title type="subtitle" size="6">Outlined</vb-title>
-      <demo>
+      <demo :code="code.outlined">
         <vb-buttons-list>
           <vb-button outlined>Outlined</vb-button>
           <vb-button color="primary" outlined>Outlined</vb-button>
@@ -58,10 +54,9 @@
           <vb-button color="success" outlined>Outlined</vb-button>
           <vb-button color="danger" outlined>Outlined</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.outlined}}</pre>
       </demo>
       <vb-title type="subtitle" size="6">Inverted</vb-title>
-      <demo class="button-invert">
+      <demo class="button-invert" :code="code.invert">
         <vb-buttons-list>
           <vb-button color="primary" inverted>Invert</vb-button>
           <vb-button color="link" inverted>Invert</vb-button>
@@ -69,10 +64,9 @@
           <vb-button color="success" inverted>Invert</vb-button>
           <vb-button color="danger" inverted>Invert</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.invert}}</pre>
       </demo>
       <vb-title type="subtitle" size="6">Outlined and Inverted</vb-title>
-      <demo class="button-invert">
+      <demo class="button-invert" :code="code.invertedOutlined">
         <vb-buttons-list>
           <vb-button color="primary" inverted outlined>Invert Outlined</vb-button>
           <vb-button color="link" inverted outlined>Invert Outlined</vb-button>
@@ -80,12 +74,11 @@
           <vb-button color="success" inverted outlined>Invert Outlined</vb-button>
           <vb-button color="danger" inverted outlined>Invert Outlined</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.invertedOutlined}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Rounded">
-      <demo>
+      <demo :code="code.rounded">
         <vb-buttons-list>
           <vb-button rounded>Outlined</vb-button>
           <vb-button color="primary" rounded>Rounded</vb-button>
@@ -94,12 +87,11 @@
           <vb-button color="success" rounded>Rounded</vb-button>
           <vb-button color="danger" rounded>Rounded</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.rounded}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="States">
-      <demo>
+      <demo :code="code.states">
         <vb-buttons-list>
           <vb-button state="hovered">Hover</vb-button>
           <vb-button state="focused">Focus</vb-button>
@@ -107,12 +99,11 @@
           <vb-button state="loading">Loading</vb-button>
           <vb-button state="static">Static</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.states}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Disabled">
-      <demo>
+      <demo :code="code.disabled">
         <vb-buttons-list>
           <vb-button disabled>Disable</vb-button>
           <vb-button color="primary" disabled>Disable</vb-button>
@@ -121,13 +112,12 @@
           <vb-button color="success" disabled>Disable</vb-button>
           <vb-button color="danger" disabled>Disable</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.disabled}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Icons">
       <vb-title type="subtitle" size="6">With Font Awesome icons</vb-title>
-      <demo class="button-icon">
+      <demo :code="code.icons">
         <vb-buttons-list>
           <vb-button>
             <vb-icon name="fa fa-bold"></vb-icon>
@@ -206,27 +196,24 @@
             <vb-icon name="fa fa-header fa-2x" size="medium"></vb-icon>
           </vb-button>
         </vb-buttons-list>
-
-        <pre slot="code">{{code.icons}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Button Group">
       <vb-title type="subtitle" size="6">If you want to group buttons together on a single line</vb-title>
 
-      <demo>
+      <demo :code="code.group">
         <vb-button-group>
           <vb-button color="primary">Save</vb-button>
           <vb-button>Cancel</vb-button>
           <vb-button color="danger">Delete</vb-button>
         </vb-button-group>
-        <pre slot="code">{{code.group}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Button Addons">
       <vb-title type="subtitle" size="6">If you want to use buttons as addons</vb-title>
-      <demo class="button-icon">
+      <demo :code="code.addons">
         <vb-button-addons>
           <vb-button>
             <vb-icon name="fa fa-align-left"></vb-icon>
@@ -241,7 +228,6 @@
             <span>right</span>
           </vb-button>
         </vb-button-addons>
-        <pre slot="code">{{code.addons}}</pre>
       </demo>
     </example-section-item>
 
@@ -249,13 +235,12 @@
       <vb-title type="subtitle" size="6">You can now create a list of buttons with the
         <span class="color-red">vb-buttons-list</span> container
       </vb-title>
-      <demo>
+      <demo :code="code.list">
         <vb-buttons-list>
           <vb-button>Save changes</vb-button>
           <vb-button>Save and continue</vb-button>
           <vb-button>Cancel</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.list}}</pre>
       </demo>
     </example-section-item>
 
@@ -267,30 +252,26 @@
         <span class="color-red">align="centered"</span> or the
         <span class="color-red">align="right"</span> modifiers to alter the alignment.
       </vb-title>
-      <demo>
+      <demo :code="code.listAddonsLeft">
         <vb-buttons-list addons>
           <vb-button color="success">Save changes</vb-button>
           <vb-button>Save and continue</vb-button>
           <vb-button>Cancel</vb-button>
         </vb-buttons-list>
-
-        <pre slot="code">{{code.listAddonsLeft}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.listAddonsCentered">
         <vb-buttons-list addons align="centered">
           <vb-button>Save changes</vb-button>
           <vb-button color="info">Save and continue</vb-button>
           <vb-button>Cancel</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.listAddonsCentered}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.listAddonsRight">
         <vb-buttons-list addons align="right">
           <vb-button>Save changes</vb-button>
           <vb-button>Save and continue</vb-button>
           <vb-button color="danger">Cancel</vb-button>
         </vb-buttons-list>
-        <pre slot="code">{{code.listAddonsRight}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Basic">
-    <demo>
+    <demo :code="code">
       <vb-table :data="tableData">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -13,8 +13,6 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.basic}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -27,7 +25,7 @@ export default {
   data() {
     return {
       tableData,
-      code
+      code: code.basic
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code">
         <div class="block" slot="control">
           <vb-radio-group v-model="align">
             <vb-radio :label="null">Left</vb-radio>
@@ -17,7 +17,6 @@
             The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
           </p>
         </vb-footer>
-        <pre slot="code">{{ code }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

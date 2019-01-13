@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Attribute value type">
-      <demo>
+      <demo :code="code.type">
         <vb-content>
           <ol type="1">
             <li>Coffee</li>
@@ -29,12 +29,11 @@
             <li>Milk</li>
           </ol>
         </vb-content>
-        <pre slot="code">{{code.type}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="CSS modifier classes">
-      <demo>
+      <demo :code="code.modifier">
         <vb-content>
           <ol class="is-lower-alpha">
             <li>Coffee</li>
@@ -57,12 +56,11 @@
             <li>Milk</li>
           </ol>
         </vb-content>
-        <pre slot="code">{{code.modifier}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-content>
           <h1>Hello World</h1>
           <p>
@@ -82,12 +80,11 @@
             <li>Ut non enim metus.</li>
           </ul>
         </vb-content>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Size">
-      <demo>
+      <demo :code="code.sizeSmall">
         <vb-content size="small">
           <h1>Small</h1>
           <h1>Hello World</h1>
@@ -108,9 +105,8 @@
             <li>Ut non enim metus.</li>
           </ul>
         </vb-content>
-        <pre slot="code">{{code.sizeSmall}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.sizeNormal">
         <vb-content>
           <h1>Normal</h1>
           <h1>Hello World</h1>
@@ -131,9 +127,8 @@
             <li>Ut non enim metus.</li>
           </ul>
         </vb-content>
-        <pre slot="code">{{code.sizeNormal}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.sizeMedium">
         <vb-content size="medium">
           <h1>Medium</h1>
           <h1>Hello World</h1>
@@ -154,9 +149,8 @@
             <li>Ut non enim metus.</li>
           </ul>
         </vb-content>
-        <pre slot="code">{{code.sizeMedium}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.sizeLarge">
         <vb-content size="large">
           <h1>Large</h1>
           <h1>Hello World</h1>
@@ -177,7 +171,6 @@
             <li>Ut non enim metus.</li>
           </ul>
         </vb-content>
-        <pre slot="code">{{code.sizeLarge}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

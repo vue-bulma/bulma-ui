@@ -1,32 +1,32 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-delete></vb-delete>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Size">
-      <demo>
+      <demo :code="code.size">
         <vb-delete size="small"></vb-delete>
         <vb-delete></vb-delete>
         <vb-delete size="medium"></vb-delete>
         <vb-delete size="large"></vb-delete>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Combinations">
-      <demo>
+      <demo :code="code.combinations">
         <div class="block">
-          <vb-tag color="success">Hello World
+          <vb-tag color="success">
+            Hello World
             <vb-delete size="small"></vb-delete>
           </vb-tag>
         </div>
 
         <vb-notification color="danger">
-          <vb-delete></vb-delete>Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <vb-delete></vb-delete>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
         </vb-notification>
 
         <vb-message title="info" color="info" showClose>
@@ -38,7 +38,6 @@
             vehicula et sem eget, facilisis sodales sem.
           </p>
         </vb-message>
-        <pre slot="code">{{code.combinations}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

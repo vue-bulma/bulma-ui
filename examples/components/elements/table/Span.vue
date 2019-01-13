@@ -1,27 +1,23 @@
 <template>
   <example-section-item title="Rowspan and colspan">
     <vb-title type="subtitle" size="6">Rowspan</vb-title>
-    <demo>
+    <demo :code="code.rowspan">
       <vb-table border :data="tableData" :span-method="rowspanMethod" width="600">
         <vb-table-column label="ID" prop="id"></vb-table-column>
         <vb-table-column label="Name" prop="name"></vb-table-column>
         <vb-table-column label="Subject" prop="subject"></vb-table-column>
         <vb-table-column label="Score" prop="score"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.rowspan}}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Colspan</vb-title>
-    <demo>
+    <demo :code="code.colspan">
       <vb-table border :data="tableData" :span-method="colspanMethod" width="600">
         <vb-table-column label="ID" prop="id"></vb-table-column>
         <vb-table-column label="Name" prop="name"></vb-table-column>
         <vb-table-column label="Subject" prop="subject"></vb-table-column>
         <vb-table-column label="Score" prop="score"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.colspan}}</pre>
     </demo>
   </example-section-item>
 </template>

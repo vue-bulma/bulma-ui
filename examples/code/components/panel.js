@@ -1,4 +1,5 @@
 let code = {}
+
 code.basic = `\
 <template>
   <vb-section>
@@ -10,7 +11,7 @@ code.basic = `\
           </vb-panel-block>
 
           <vb-panel-tab :tabs="tabs" @click="handleClick"></vb-panel-tab>
-          
+
           <vb-panel-block :list="tabs[index].list" @click="itemClick" ref="panel-block"></vb-panel-block>
           <vb-panel-block :hover-item="false">
             <vb-button fullwidth>test</vb-button>
@@ -58,4 +59,5 @@ code.basic = `\
   }
 </script>
 `
+
 export default code

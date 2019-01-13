@@ -1,7 +1,7 @@
 <template>
   <example-section-item title="Group">
     <vb-title type="subtitle" size="6">Alignment</vb-title>
-    <demo>
+    <demo :code="code.alignment">
       <vb-form-item grouped>
         <vb-button color="info">Submit</vb-button>
         <vb-button color="light">Cancel</vb-button>
@@ -16,20 +16,18 @@
         <vb-button color="info">Submit</vb-button>
         <vb-button color="light">Cancel</vb-button>
       </vb-form-item>
-      <pre slot="code">{{ code.alignment }}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Expanded</vb-title>
-    <demo>
+    <demo :code="code.expanded">
       <vb-form-item grouped>
         <vb-input placeholder="Find a repository" expanded></vb-input>
         <vb-button color="info">Search</vb-button>
       </vb-form-item>
-      <pre slot="code">{{ code.expanded }}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Multiline</vb-title>
-    <demo>
+    <demo :code="code.multiline">
       <vb-columns>
         <vb-column size="6">
           <vb-form-item grouped multiline>
@@ -46,7 +44,6 @@
           </vb-form-item>
         </vb-column>
       </vb-columns>
-      <pre slot="code">{{ code.multiline }}</pre>
     </demo>
   </example-section-item>
 </template>

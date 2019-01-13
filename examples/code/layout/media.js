@@ -22,11 +22,13 @@ code.basic = `\
           <vb-icon size="small" name="fa fa-reply"></vb-icon>
         </a>
       </vb-level-item>
+
       <vb-level-item>
         <a href="#">
           <vb-icon size="small" name="fa fa-retweet"></vb-icon>
         </a>
       </vb-level-item>
+
       <vb-level-item>
         <a href="#">
           <vb-icon size="small" name="fa fa-heart"></vb-icon>

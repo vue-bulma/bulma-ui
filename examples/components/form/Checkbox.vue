@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <div>
           <vb-checkbox v-model="rember">Remember me</vb-checkbox>
           // {{rember}}
@@ -16,12 +16,11 @@
         <div>
           <vb-checkbox disabled>Save my preferences</vb-checkbox>
         </div>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Group">
-      <demo>
+      <demo :code="code.group">
         <div class="block" slot="control">
           The animals you like:
           <strong>{{animals.join(', ')}}</strong>.
@@ -33,12 +32,11 @@
           <vb-checkbox label="mouse">Mouse</vb-checkbox>
           <vb-checkbox label="panda">Panda</vb-checkbox>
         </vb-checkbox-group>
-        <pre slot="code">{{ code.group }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
-      <demo>
+      <demo :code="code.events">
         <div class="block" slot="control">
           I'm
           <strong>{{checked ? 'ok' : 'not ok'}}</strong>.
@@ -47,7 +45,6 @@
         </div>
 
         <vb-checkbox v-model="checked" @focus="handleFocus" @blur="handleBlur">Are You OK</vb-checkbox>
-        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

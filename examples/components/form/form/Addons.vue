@@ -1,7 +1,7 @@
 <template>
   <example-section-item title="Addons">
     <vb-title type="subtitle" size="6">Basic</vb-title>
-    <demo>
+    <demo :code="code.basic">
       <vb-form-item addons>
         <vb-button color="info">Confirm</vb-button>
         <vb-button color="warning">Reset</vb-button>
@@ -16,11 +16,10 @@
         <vb-input placeholder="Your email"></vb-input>
         <vb-button color="info" state="static">@gmail.com</vb-button>
       </vb-form-item>
-      <pre slot="code">{{ basic }}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Expanded</vb-title>
-    <demo>
+    <demo :code="code.expanded">
       <vb-form-item addons>
         <vb-select value="€">
           <option>$</option>
@@ -60,11 +59,10 @@
         </vb-select>
         <vb-button>Choose</vb-button>
       </vb-form-item>
-      <pre slot="code">{{ expanded }}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Alignment</vb-title>
-    <demo>
+    <demo :code="code.alignment">
       <vb-form-item addons>
         <vb-select value="€">
           <option>$</option>
@@ -94,7 +92,6 @@
         <vb-input placeholder="Amount of money"></vb-input>
         <vb-button color="primary">Transfer</vb-button>
       </vb-form-item>
-      <pre slot="code">{{ alignment }}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -106,9 +103,7 @@ export default {
   name: 'FormAddons',
   data() {
     return {
-      basic: code.basic,
-      expanded: code.expanded,
-      alignment: code.alignment
+      code
     }
   }
 }

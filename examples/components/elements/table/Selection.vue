@@ -1,7 +1,7 @@
 <template>
   <example-section-item title="Selection">
     <vb-title type="subtitle">Single</vb-title>
-    <demo>
+    <demo :code="code.single">
       <vb-buttons-list slot="control">
         <vb-button color="primary" outlined @click="toggleSingleSelection(2)">
           Select third row
@@ -24,12 +24,10 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.selection.single}}</pre>
     </demo>
 
     <vb-title type="subtitle">Multiple</vb-title>
-    <demo>
+    <demo :code="code.multiple">
       <vb-buttons-list slot="control">
         <vb-button color="primary" outlined @click="toggleSelection([1, 2])">
           Toggle selection status of second and third rows
@@ -53,8 +51,6 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.selection.multiple}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -67,7 +63,7 @@ export default {
   data() {
     return {
       tableData,
-      code,
+      code: code.selection,
       selection: []
     }
   },

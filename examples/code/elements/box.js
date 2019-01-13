@@ -7,10 +7,10 @@ code.basic = `\
 
       <vb-content>
         <p>
-          <strong>John Smith</strong> 
-          <small>@johnsmith</small> 
+          <strong>John Smith</strong>
+          <small>@johnsmith</small>
           <small>31m</small>
-          <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, 
+          <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros,
           eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
         </p>
       </vb-content>
@@ -42,6 +42,9 @@ export default {
     return {
       image: require('../../assets/images/64x64.png')
     }
+  },
+  methods: {
+    handleClick(evt) {}
   }
 }
 </script>

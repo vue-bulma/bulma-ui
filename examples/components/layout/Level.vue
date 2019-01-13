@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic.normal">
         <vb-level>
           <vb-level-item>
             <vb-title type="subtitle" size="5">
@@ -16,10 +16,9 @@
             </vb-form-item>
           </vb-level-item>
         </vb-level>
-        <pre slot="code">{{ code.basic.normal }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.basic.basic">
         <vb-level>
           <template slot="left">
             <vb-level-item>
@@ -54,12 +53,11 @@
             </vb-level-item>
           </template>
         </vb-level>
-        <pre slot="code">{{ code.basic.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Alignment">
-      <demo>
+      <demo :code="code.alignment">
         <vb-level>
           <vb-level-item>
             <div>
@@ -149,12 +147,11 @@
             </div>
           </vb-level-item>
         </vb-level>
-        <pre slot="code">{{ code.alignment }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Mobile">
-      <demo>
+      <demo :code="code.mobile">
         <vb-level mobile align="centered">
           <vb-level-item>
             <div>
@@ -184,7 +181,6 @@
             </div>
           </vb-level-item>
         </vb-level>
-        <pre slot="code">{{ code.mobile }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

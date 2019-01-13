@@ -1,14 +1,13 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-input></vb-input>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <div class="block">
           <vb-input color="primary" placeholder="Primary"></vb-input>
         </div>
@@ -39,12 +38,11 @@
         <div class="block">
           <vb-input color="link" placeholder="Link"></vb-input>
         </div>
-        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes">
         <div class="block">
           <vb-input size="small" placeholder="Small"></vb-input>
         </div>
@@ -57,19 +55,17 @@
         <div class="block">
           <vb-input size="large" placeholder="Large"></vb-input>
         </div>
-        <pre slot="code">{{ code.sizes }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Rounded">
-      <demo>
+      <demo :code="code.rounded">
         <vb-input rounded placeholder="Rounded"></vb-input>
-        <pre slot="code">{{ code.rounded }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="States">
-      <demo>
+      <demo :code="code.states">
         <div class="block">
           <vb-input placeholder="Normal"></vb-input>
         </div>
@@ -91,13 +87,12 @@
         <div class="block">
           <vb-input value="Static: me@example.com" static readonly></vb-input>
         </div>
-        <pre slot="code">{{ code.states }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="With Font Awesome icons">
       <vb-content>The size of the input will define the size of the icon container.</vb-content>
-      <demo>
+      <demo :code="code.icon ">
         <div class="block">
           <vb-input prefix="fa fa-envelope" suffix="fa fa-check" placeholder="Small" size="small"></vb-input>
         </div>
@@ -117,13 +112,11 @@
             <vb-icon size="large"  color="success" slot="suffix" name="fa fa-check"></vb-icon>
           </vb-input>
         </div>
-
-        <pre slot="code">{{ code.icon }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Event">
-      <demo>
+      <demo :code="code.events">
         <div class="block" slot="control">
           Value:
           <strong>{{value}}</strong>
@@ -132,7 +125,6 @@
         </div>
 
         <vb-input v-model="value" @focus="handleFocus" @blur="handleBlur"></vb-input>
-        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

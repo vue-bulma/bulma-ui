@@ -1,17 +1,16 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-notification>
           <vb-delete></vb-delete>
           <span v-html="tmpl"></span>
         </vb-notification>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo class="box-background">
+      <demo class="box-background" :code="code.colors">
         <vb-notification color="primary">
           <vb-delete></vb-delete>
           Primar <span v-html="tmpl"></span>
@@ -52,12 +51,11 @@
           <vb-delete></vb-delete>
           Primar <span v-html="tmpl"></span>
         </vb-notification>
-        <pre slot="code">{{code.colors}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Event">
-      <demo>
+      <demo :code="code.event">
         <div class="block" slot="control">
           <vb-button @click="show">show Notification</vb-button>
         </div>
@@ -74,7 +72,6 @@
             Primar <span v-html="tmpl"></span>
           </vb-notification>
         </transition>
-        <pre slot="code">{{code.event}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-panel title="repositories">
           <vb-panel-block :hover-item="false">
             <vb-input prefix="fa fa-search" placeholder="Search"/>
@@ -12,7 +12,6 @@
             <vb-button fullwidth>Button</vb-button>
           </vb-panel-block>
         </vb-panel>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -25,7 +24,7 @@ export default {
   name: 'PanelExamples',
   data() {
     return {
-      basic: code.basic,
+      code,
       tabIndex: 0,
       panelBlockIndex: 0,
       tabs: [

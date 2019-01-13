@@ -8,11 +8,9 @@
     <slot></slot>
 
     <div slot="footer" class="demo-code-container">
-      <div v-show="showCode" class="demo-code">
-        <slot name="code"></slot>
-      </div>
+      <pre v-show="showCode" class="demo-code"><code class="html" ref="code">{{code}}</code></pre>
 
-      <vb-button v-if="!!$slots.code" slot="footer" fullwidth color="white" @click="toggle">
+      <vb-button v-if="!!code" slot="footer" fullwidth color="white" @click="toggle">
         <vb-icon name="fa fa-angle-down" :class="{ 'icon-rotate': showCode }"></vb-icon>
         <vb-title type="subtitle" size="6">{{ buttonText }}</vb-title>
       </vb-button>
@@ -21,15 +19,28 @@
 </template>
 
 <script>
+import hljs from 'highlight.js'
+
 export default {
   name: 'DemoContainer',
   props: {
-    title: String
+    title: String,
+    code: {
+      type: String,
+      default: ''
+    },
+    codeLang: {
+      type: String,
+      default: 'html'
+    }
   },
   data() {
     return {
       showCode: false
     }
+  },
+  mounted() {
+    hljs.highlightBlock(this.$refs.code)
   },
   methods: {
     toggle() {
@@ -45,6 +56,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~highlight.js/styles/atom-one-light.css';
+
 $duration: 0.2s;
 
 .demo:not(:last-child) {
@@ -52,16 +65,19 @@ $duration: 0.2s;
 }
 .demo-code-container {
   width: 100%;
-  flex-direction: column;
-}
-.demo-code {
-  border-bottom: 1px solid #dbdbdb;
-}
-.icon-rotate {
-  transform: rotate(180deg);
-}
-button span {
-  transition: transform $duration ease-in-out,
-    -webkit-transform $duration ease-in-out;
+  .demo-code {
+    border-bottom: 1px solid #dbdbdb;
+    .hljs {
+      background-color: whitesmoke;
+      padding-left: 0;
+    }
+  }
+  .icon-rotate {
+    transform: rotate(180deg);
+  }
+  button span {
+    transition: transform $duration ease-in-out,
+      -webkit-transform $duration ease-in-out;
+  }
 }
 </style>

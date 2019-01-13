@@ -1,17 +1,16 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-select :value="model">
           <option>Select dropdown</option>
           <option>With options</option>
         </vb-select>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Multiple">
-      <demo>
+      <demo :code="code.multiple">
         <vb-select multiple lines="8" :value="['Bolivia', 'Chile']">
           <option value="Argentina">Argentina</option>
           <option value="Bolivia">Bolivia</option>
@@ -26,12 +25,11 @@
           <option value="Uruguay">Uruguay</option>
           <option value="Venezuela">Venezuela</option>
         </vb-select>
-        <pre slot="code">{{ code.multiples }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <div class="block">
           <vb-select color="primary" value="Primary">
             <option>Primary</option>
@@ -92,22 +90,20 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Styles">
-      <demo>
+      <demo :code="code.styles">
         <vb-select rounded value="Rounded">
           <option>Rounded</option>
           <option>With options</option>
         </vb-select>
-        <pre slot="code">{{ code.styles }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes">
         <div class="block">
           <vb-select size="small" value="Small dropdown">
             <option>Small dropdown</option>
@@ -132,12 +128,11 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ code.sizes }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="States">
-      <demo>
+      <demo :code="code.states">
         <div class="block">
           <vb-select value="Normal dropdown">
             <option>Normal dropdown</option>
@@ -162,13 +157,12 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ code.states }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="With icons">
       <vb-title type="subtitle" size="6">The size of the select will define the size of the icon container.</vb-title>
-      <demo>
+      <demo :code="code.icons.basic">
         <div class="block">
           <vb-select size="small" icon="fa fa-home" value="Small dropdown with Small icon">
             <option>Small dropdown with Small icon</option>
@@ -193,13 +187,12 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ code.icons.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Style icon">
       <vb-title type="subtitle" size="6">The color of the select will define the color of the icon.</vb-title>
-      <demo>
+      <demo :code="code.icons.style">
         <div class="block">
           <vb-select color="primary" icon="fa fa-home" value="Primary color icon">
             <option>Primary color icon</option>
@@ -219,12 +212,11 @@
             <option>With options</option>
           </vb-select>
         </div>
-        <pre slot="code">{{ code.icons.style }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
-      <demo>
+      <demo :code="code.events.normal">
         <div class="block" slot="control">
           Selection: <strong>{{value}}</strong>
           <br>
@@ -234,10 +226,9 @@
         <vb-select v-model="value" @focus="handleFocus" @blur="handleBlur">
           <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
-        <pre slot="code">{{ code.events.normal }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.events.multiples">
         <div class="block" slot="control">
           Selection: <strong>{{multiple}}</strong>
         </div>
@@ -245,7 +236,6 @@
         <vb-select multiple v-model="multiple">
           <option v-for="item in options" :key="item.value" :value="item.value">{{item.label}}</option>
         </vb-select>
-        <pre slot="code">{{ code.events.multiples }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

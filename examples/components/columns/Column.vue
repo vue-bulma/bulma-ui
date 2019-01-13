@@ -8,7 +8,7 @@
         <span class="color-red">vb-column</span> will have an equal width, no matter the number of
         <span class="color-red">vb-column</span>
       </vb-title>
-      <demo>
+      <demo :code="code.basic">
         <vb-columns>
           <vb-column>
             <p class="bg bg-primary">First column</p>
@@ -23,8 +23,6 @@
             <p class="bg bg-primary">Fourth column</p>
           </vb-column>
         </vb-columns>
-
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
@@ -33,7 +31,7 @@
         change the size of a single
         <span class="color-red">vb-column</span>
       </vb-title>
-      <demo>
+      <demo :code="code.size">
         <vb-columns>
           <vb-column size="1">
             <p class="bg bg-primary">1</p>
@@ -397,7 +395,6 @@
             <p class="bg bg-light">Auto</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
@@ -408,7 +405,7 @@
           class="color-red"
         >offset="x"</span>
       </vb-title>
-      <demo>
+      <demo :code="code.Offset">
         <vb-columns>
           <vb-column size="half" offset="one-quarter">
             <p class="bg bg-primary">size:half
@@ -437,7 +434,6 @@
             </p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.Offset}}</pre>
       </demo>
     </example-section-item>
 
@@ -449,7 +445,7 @@
         <span class="color-red">narrow</span>
         modifier. The other col(s) will fill up the remaining space.',
       </vb-title>
-      <demo>
+      <demo :code="code.narrow">
         <vb-columns>
           <vb-column narrow>
             <div style="width: 200px;">
@@ -460,7 +456,6 @@
             <p class="bg bg-primary">This col will take up the remaining space available</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.narrow}}</pre>
       </demo>
     </example-section-item>
 
@@ -473,7 +468,7 @@
         <span class="color-red">vb-columns</span> to work on mobile too, just add the
         <span class="color-red">view="mobile"</span> modifier on the vb-columns container
       </vb-title>
-      <demo>
+      <demo :code="code.mobile">
         <vb-columns view="mobile">
           <vb-column>
             <p class="bg bg-primary">1</p>
@@ -488,7 +483,6 @@
             <p class="bg bg-primary">4</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.mobile}}</pre>
       </demo>
     </example-section-item>
 
@@ -498,7 +492,7 @@
         <span class="color-red">vb-columns</span> on desktop upwards, just use the
         <span class="color-red">view="desktop"</span> modifier on the vb-columns container
       </vb-title>
-      <demo>
+      <demo :code="code.desktop">
         <vb-columns view="desktop">
           <vb-column>
             <p class="bg bg-primary">1</p>
@@ -513,7 +507,6 @@
             <p class="bg bg-primary">4</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.desktop}}</pre>
       </demo>
     </example-section-item>
 
@@ -524,7 +517,7 @@
         <strong>mobile, tablet,</strong> and
         <strong>desktop</strong>
       </vb-title>
-      <demo>
+      <demo :code="code.breakpoint">
         <vb-columns view="mobile">
           <vb-column
             mobile="three-quarters"
@@ -550,7 +543,6 @@
             <p class="bg bg-primary">4</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.breakpoint}}</pre>
       </demo>
     </example-section-item>
 
@@ -574,7 +566,7 @@
           </ul>
         </li>
       </ul>
-      <demo>
+      <demo :code="code.nesting">
         <vb-columns>
           <vb-column>
             <p class="bg bg-primary">First column</p>
@@ -588,7 +580,6 @@
             </vb-columns>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.nesting}}</pre>
       </demo>
     </example-section-item>
 
@@ -600,7 +591,7 @@
         <span class="color-red">vb-columns</span>
         container
       </vb-title>
-      <demo>
+      <demo :code="code.gapless">
         <vb-columns gapType="gapless">
           <vb-column>
             <p class="bg bg-primary">First column</p>
@@ -609,31 +600,22 @@
             <p class="bg bg-info">Second column</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.gapless}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Variable gap">
       <vb-title type="subtitle" size="6">
-        ou can specify a custom col gap by appending one of 9 modifiers on the
-        <span
-          class="color-red"
-        >vb-columns</span> container
+        ou can specify a custom col gap by appending one of 9 modifiers on the <span class="color-red">vb-columns</span> container
         <br>
-        <span class="color-red">gap="0"</span> will remove any gap (similar to
-        <span class="color-red">gapType="gapless"</span>)
+        <span class="color-red">gap="0"</span> will remove any gap (similar to <span class="color-red">gapType="gapless"</span>)
         <br>
-        <span class="color-red">gap="3"</span> is the default value, equivalent to the
-        <span class="color-red">0.75rem</span> value
+        <span class="color-red">gap="3"</span> is the default value, equivalent to the <span class="color-red">0.75rem</span> value
         <br>
-        <span class="color-red">gap="8"</span> is the maximum gap of
-        <span class="color-red">2rem</span>
-        <br>Additionally,
-        <span class="color-red">gapType="variable"</span> should be added on the
-        <span class="color-red">vb-columns</span>
-        container
+        <span class="color-red">gap="8"</span> is the maximum gap of <span class="color-red">2rem</span>
+        <br>
+        Additionally, <span class="color-red">gapType="variable"</span> should be added on the <span class="color-red">vb-columns</span> container
       </vb-title>
-      <demo>
+      <demo :code="code.gap">
         <vb-tags slot="control">
           <vb-tag
             class="cursor"
@@ -648,20 +630,16 @@
             <p class="bg bg-primary">{{count}}</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.gap}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Breakpoint based column gaps">
       <vb-title type="subtitle" size="6">
-        You can define a
-        <span class="color-red">vb-column</span> gap for each viewport size
-        <br>For example, here is how it looks with the following modifiers:
-        <span
-          class="color-red"
-        >gapType="variable" mobileGap="8" tabletGap="0" desktopGap="3" widescreenGap="8" fullhdGap="2"</span>
+        You can define a <span class="color-red">vb-column</span> gap for each viewport size
+        <br>
+        For example, here is how it looks with the following modifiers: <span class="color-red">gapType="variable" mobileGap="8" tabletGap="0" desktopGap="3" widescreenGap="8" fullhdGap="2"</span>
       </vb-title>
-      <demo>
+      <demo :code="code.breakpointGap">
         <vb-columns
           gapType="variable"
           mobileGap="8"
@@ -674,18 +652,14 @@
             <p class="bg bg-primary">{{count}}</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.breakpointGap}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Vertical alignment">
       <vb-title type="subtitle" size="6">
-        To align your
-        <span class="color-red">vb-columns</span> vertically, add the
-        <span class="color-red">align="vcentered"</span> modifier to the
-        <span class="color-red">vb-columns</span> container.',
+        To align your <span class="color-red">vb-columns</span> vertically, add the <span class="color-red">align="vcentered"</span> modifier to the <span class="color-red">vb-columns</span> container.',
       </vb-title>
-      <demo>
+      <demo :code="code.vertical">
         <vb-columns align="vcentered">
           <vb-column size="8">
             <p class="bg bg-primary">First column</p>
@@ -696,20 +670,14 @@
             >Second column with more content. This is so you can see the vertical alignment.</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.vertical}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Centering columns">
       <vb-title type="subtitle" size="6">
-        While you can use empty
-        <span class="color-red">vb-columns</span> (like &lt;vb-column&gt;&lt;/vb-column&gt;) to create horizontal space around col elements, you can also use
-        <span
-          class="color-red"
-        >align="centered"</span> on the parent
-        <span class="color-red">vb-columns</span> element:
+        While you can use empty <span class="color-red">vb-columns</span> (like &lt;vb-column&gt;&lt;/vb-column&gt;) to create horizontal space around col elements, you can also use <span class="color-red">align="centered"</span> on the parent <span class="color-red">vb-columns</span> element:
       </vb-title>
-      <demo>
+      <demo :code="code.centered">
         <vb-columns align="centered">
           <vb-column size="8">
             <p class="bg bg-primary">8</p>
@@ -723,7 +691,6 @@
             <p class="bg bg-primary">2</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.centered}}</pre>
       </demo>
     </example-section-item>
 
@@ -734,7 +701,7 @@
         <span class="color-red">multiline</span> modifier and add more
         <span class="color-red">vb-column</span> elements than would fit in a single row
       </vb-title>
-      <demo>
+      <demo :code="code.multiline">
         <vb-columns multiline>
           <vb-column size="3">
             <p class="bg bg-primary">3</p>
@@ -761,7 +728,6 @@
             <p class="bg bg-primary">6</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.multiline}}</pre>
       </demo>
     </example-section-item>
 
@@ -770,7 +736,7 @@
         <span class="color-red">align="centered"</span> use with
         <span class="color-red">multiline</span> to create a flexible, centered list (try resizing to see centering in different viewport sizes)
       </vb-title>
-      <demo>
+      <demo :code="code.multilineCentering">
         <vb-columns view="mobile" align="centered" multiline>
           <vb-column narrow>
             <p class="bg bg-primary">First column</p>
@@ -788,7 +754,6 @@
             <p class="bg bg-primary">Fifth column</p>
           </vb-column>
         </vb-columns>
-        <pre slot="code">{{code.multilineCentering}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

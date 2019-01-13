@@ -1,43 +1,39 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-uploader label="Choose a file." icon="fa fa-upload"></vb-uploader>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Modifiers">
       <vb-title type="subtitle" size="6">Selected file name</vb-title>
-      <demo>
+      <demo :code="code.modifiers.filtName">
         <vb-uploader label="Choose a file">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
 
           <span slot="file-name">{{demoFilename}}</span>
         </vb-uploader>
-        <pre slot="code">{{ code.modifiers.filtName }}</pre>
       </demo>
 
       <vb-title type="subtitle" size="6">Expand file name</vb-title>
-      <demo>
+      <demo :code="code.modifiers.expand">
         <vb-uploader fullwidth label="Choose a file">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
 
           <span slot="file-name">{{demoFilename}}</span>
         </vb-uploader>
-        <pre slot="code">{{ code.modifiers.expand }}</pre>
       </demo>
 
       <vb-title type="subtitle" size="6">Boxed</vb-title>
-      <demo>
+      <demo :code="code.modifiers.boxed">
         <vb-uploader boxed label="Choose a file.">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
-        <pre slot="code">{{ code.modifiers.boxed }}</pre>
       </demo>
 
       <vb-title type="subtitle" size="6">Combine filename and boxed</vb-title>
-      <demo>
+      <demo :code="code.modifiers.combine">
         <vb-uploader boxed>
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
 
@@ -45,12 +41,11 @@
 
           <span slot="file-name">{{demoFilename}}</span>
         </vb-uploader>
-        <pre slot="code">{{ code.modifiers.combine }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <div class="block">
           <vb-uploader color="primary" label="Primary">
             <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
@@ -111,12 +106,11 @@
             <vb-icon slot="icon" name="fa fa-cloud-upload"></vb-icon>
           </vb-uploader>
         </div>
-        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes.basic">
         <div class="block">
           <vb-uploader size="small" label="Small file" icon="fa fa-upload"></vb-uploader>
         </div>
@@ -129,10 +123,9 @@
         <div class="block">
           <vb-uploader size="large" label="Large file" icon="fa fa-upload"></vb-uploader>
         </div>
-        <pre slot="code">{{ code.sizes.basic }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.sizes.filename">
         <div class="block">
           <vb-uploader size="small" label="Small file" icon="fa fa-upload" :name="demoFilename"></vb-uploader>
         </div>
@@ -145,10 +138,9 @@
         <div class="block">
           <vb-uploader size="large" label="Large file" icon="fa fa-upload" :name="demoFilename"></vb-uploader>
         </div>
-        <pre slot="code">{{ code.sizes.filename }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.sizes.boxed">
         <div class="block">
           <vb-uploader boxed size="small" label="Small file" icon="fa fa-upload"></vb-uploader>
         </div>
@@ -161,10 +153,9 @@
         <div class="block">
           <vb-uploader boxed size="large" label="Large file" icon="fa fa-upload"></vb-uploader>
         </div>
-        <pre slot="code">{{ code.sizes.boxed }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.sizes.combined">
         <div class="block">
           <vb-uploader boxed size="small" label="Small file" icon="fa fa-upload" :name="demoFilename"></vb-uploader>
         </div>
@@ -177,12 +168,11 @@
         <div class="block">
           <vb-uploader boxed size="large" label="Large file" icon="fa fa-upload" :name="demoFilename"></vb-uploader>
         </div>
-        <pre slot="code">{{ code.sizes.combined }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Alignment">
-      <demo>
+      <demo :code="code.alignment.center">
         <vb-uploader
           boxed
           color="success"
@@ -192,9 +182,8 @@
         >
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
-        <pre slot="code">{{ code.alignment.center}}</pre>
       </demo>
-      <demo>
+      <demo :code="code.alignment.right">
         <vb-uploader
           color="info"
           align="right"
@@ -203,14 +192,12 @@
         >
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
-        <pre slot="code">{{ code.alignment.right}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
-      <demo>
+      <demo :code="code.events">
         <vb-uploader label="Uploader" icon="fa fa-upload" :name="name" @change="handleChange"></vb-uploader>
-        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

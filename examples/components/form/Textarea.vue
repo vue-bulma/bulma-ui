@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <div class="block">
           <vb-textarea placeholder="Basic"></vb-textarea>
         </div>
@@ -9,12 +9,11 @@
         <div class="block">
           <vb-textarea rows="2" placeholder="2 lines of textarea"></vb-textarea>
         </div>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <div class="block">
           <vb-textarea color="primary" rows="2" placeholder="Primary textarea"></vb-textarea>
         </div>
@@ -45,12 +44,11 @@
         <div class="block">
           <vb-textarea color="link" rows="2" placeholder="Link textarea"></vb-textarea>
         </div>
-        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes">
         <div class="block">
           <vb-textarea size="small" rows="2" placeholder="Small"></vb-textarea>
         </div>
@@ -63,12 +61,11 @@
         <div class="block">
           <vb-textarea size="large" rows="2" placeholder="Large"></vb-textarea>
         </div>
-        <pre slot="code">{{ code.sizes }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="States">
-      <demo>
+      <demo :code="code.states">
         <div class="block">
           <vb-textarea placeholder="Normal" rows="2"></vb-textarea>
         </div>
@@ -90,13 +87,12 @@
         <div class="block">
           <vb-textarea placeholder="Fixed Size" :resize="false" rows="2"></vb-textarea>
         </div>
-        <pre slot="code">{{ code.states }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Resize loading Textarea">
       <vb-title type="subtitle" size="6">The size of the Textarea will define the size of the loading icon.</vb-title>
-      <demo>
+      <demo :code="code.loading">
         <div class="block">
           <vb-textarea size="small" rows="2" placeholder="Small loading textarea" loading></vb-textarea>
         </div>
@@ -109,12 +105,11 @@
         <div class="block">
           <vb-textarea size="large" rows="2" placeholder="Large loading textarea" loading></vb-textarea>
         </div>
-        <pre slot="code">{{ code.loading }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Events">
-      <demo>
+      <demo :code="code.events">
         <div slot="control">
           Value: <strong>{{value}}</strong>
           <br>
@@ -130,7 +125,6 @@
           @blur="handleBlur"
         >
         </vb-textarea>
-        <pre slot="code">{{ code.events }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

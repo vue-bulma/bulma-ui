@@ -1,15 +1,14 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-title type="title">Title (default type)</vb-title>
         <vb-title type="subtitle">Subtitle</vb-title>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.size">
         <vb-title size="1">Title 1</vb-title>
         <vb-title size="2">Title 2</vb-title>
         <vb-title size="3">Title 3 (default size)</vb-title>
@@ -23,7 +22,6 @@
         <vb-title type="subtitle" size="4">Subtitle 4</vb-title>
         <vb-title type="subtitle" size="5">Subtitle 5 (default size)</vb-title>
         <vb-title type="subtitle" size="6">Subtitle 6</vb-title>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
@@ -34,20 +32,18 @@
           combine it with a <span class="color-red">subtitle size: 3</span>.
         </p>
       </vb-content>
-      <demo>
+      <demo :code="code.combinations">
         <vb-title>Title</vb-title>
         <vb-title type="subtitle">Subtitle</vb-title>
 
         <vb-title size="1">Title 1</vb-title>
         <vb-title type="subtitle" size="3">Subtitle 3</vb-title>
-        <pre slot="code">{{code.combinations}}</pre>
       </demo>
 
       <vb-content>Spaced</vb-content>
-      <demo>
+      <demo :code="code.spaced">
         <vb-title spaced>Title</vb-title>
         <vb-title type="subtitle">Subtitle</vb-title>
-        <pre slot="code">{{code.spaced}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

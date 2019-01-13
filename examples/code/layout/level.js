@@ -38,15 +38,19 @@ code.basic.basic = `\
     <vb-level-item>
       <strong>All</strong>
     </vb-level-item>
+
     <vb-level-item>
       <a>Published</a>
     </vb-level-item>
+
     <vb-level-item>
       <a>Drafts</a>
     </vb-level-item>
+
     <vb-level-item>
       <a>Deleted</a>
     </vb-level-item>
+
     <vb-level-item>
       <vb-button color="success">New</vb-button>
     </vb-level-item>

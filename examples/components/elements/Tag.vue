@@ -1,19 +1,17 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-tag>Tag label</vb-tag>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.clickable">
         <vb-tag :static="false" @click="handleCLick">Clickable tag</vb-tag>
-        <pre slot="code">{{code.clickable}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <vb-tags>
           <vb-tag color="black">black</vb-tag>
           <vb-tag color="dark">dark</vb-tag>
@@ -26,34 +24,31 @@
           <vb-tag color="warning">warning</vb-tag>
           <vb-tag color="danger">danger</vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.colors}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.size">
         <vb-tags>
           <vb-tag>Normal</vb-tag>
           <vb-tag size="normal">Normal</vb-tag>
           <vb-tag size="medium">Medium</vb-tag>
           <vb-tag size="large">Large</vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.size}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Modifiers">
-      <demo>
+      <demo :code="code.modifiers">
         <vb-tags>
           <vb-tag rounded>Rounded</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.modifiers}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Combinations">
-      <demo>
+      <demo :code="code.combinations">
         <vb-tags>
           <vb-tag color="success">Bar
             <vb-delete size="small"></vb-delete>
@@ -65,12 +60,11 @@
             <vb-delete></vb-delete>
           </vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.combinations}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Tags">
-      <demo>
+      <demo :code="code.tags">
         <vb-tags>
           <vb-tag color="primary">Vue</vb-tag>
           <vb-tag color="dark">Bulma</vb-tag>
@@ -79,12 +73,11 @@
           <vb-tag color="danger">Vue</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.tags}}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Tags Addons">
-      <demo>
+      <demo :code="code.tagsAddons">
         <vb-tags addons>
           <vb-tag color="primary">Vue</vb-tag>
           <vb-tag color="dark">Bulma</vb-tag>
@@ -93,7 +86,6 @@
           <vb-tag color="danger">Vue</vb-tag>
           <vb-tag del></vb-tag>
         </vb-tags>
-        <pre slot="code">{{code.tagsAddons}}</pre>
       </demo>
     </example-section-item>
   </vb-section>

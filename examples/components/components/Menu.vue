@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code">
         <vb-menu label="General">
           <vb-menu-item index="1">
             <span>Dashboard</span>
@@ -52,7 +52,6 @@
             <span>Balance</span>
           </vb-menu-item>
         </vb-menu>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -65,7 +64,7 @@ export default {
   name: 'MenuExamples',
   data() {
     return {
-      basic: code.basic
+      code: code.basic
     }
   }
 }

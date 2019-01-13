@@ -4,7 +4,7 @@
       <vb-title type="subtitle" size="6">
         The <span class="color-red">vb-box</span> element is simply a container with a shadow, a border, a radius, and some padding
       </vb-title>
-      <demo>
+      <demo :code="code.basic">
         <vb-box>
           <vb-media-object>
             <vb-image slot="left" :src="image" size="64x64"></vb-image>
@@ -37,7 +37,6 @@
             </vb-level>
           </vb-media-object>
         </vb-box>
-        <pre slot="code">{{code.basic}}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -51,7 +50,7 @@ export default {
   data() {
     return {
       code,
-      image: require('../../assets/images/64x64.png')
+      image: require('@examples/assets/images/64x64.png')
     }
   },
   methods: {

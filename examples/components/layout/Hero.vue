@@ -1,22 +1,20 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic.firstUsage">
         <vb-hero>
           Hero title
           <span slot="subtitle">Hero subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ code.basic.firstUsage }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.basic.secondUsage">
         <vb-hero title="Hero title" subtitle="Hero subtitle"></vb-hero>
-        <pre slot="code">{{ code.basic.secondUsage }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <vb-buttons-list slot="control">
           <vb-button
             v-for="color in colors"
@@ -28,12 +26,11 @@
           </vb-button>
         </vb-buttons-list>
         <vb-hero :color="color" title="Colors title" subtitle="Colors subtitle"></vb-hero>
-        <pre slot="code">{{ code.colors }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Gradients">
-      <demo>
+      <demo :code="code.gradients">
         <vb-buttons-list slot="control">
           <vb-button
             v-for="color in colors"
@@ -48,48 +45,43 @@
           Colors bold title
           <span slot="subtitle">Colors bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ code.gradients }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes.medium">
         <vb-hero color="primary" size="medium">
           Medium bold title
           <span slot="subtitle">Medium bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ code.sizes.medium }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.sizes.large">
         <vb-hero color="info" size="large">
           Large bold title
           <span slot="subtitle">Large bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ code.sizes.large }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.sizes.fullheight">
         <vb-hero color="success" size="fullheight">
           Fullheight bold title
           <span slot="subtitle">Fullheight bold subtitle</span>
         </vb-hero>
-        <pre slot="code">{{ code.sizes.fullheight }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Fullheight with navbar">
-      <demo>
+      <demo :code="code.fullheightNavbar">
         <vb-hero color="info" size="fullheight-with-navbar">
           Fullheight hero with navbar
           <span slot="subtitle">Fullheight hero with navbar</span>
         </vb-hero>
-        <pre slot="code">{{ code.fullheightNavbar }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Fullheight hero in 3 parts">
-      <demo>
+      <demo :code="code.fullheightHero.medium">
         <vb-hero color="primary" size="medium" align="centered">
           Title
           <span slot="subtitle">Subtitle</span>
@@ -116,12 +108,11 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ code.fullheightHero.medium }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Fullheight with navbar">
-      <demo>
+      <demo :code="code.fullheightHero.large">
         <vb-hero color="info" size="large" align="centered">
           Title
           <span slot="subtitle">Subtitle</span>
@@ -146,10 +137,9 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ code.fullheightHero.large }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.fullheightHero.fullheight">
         <vb-hero color="success" size="fullheight" align="centered">
           Title
           <span slot="subtitle">Subtitle</span>
@@ -176,7 +166,6 @@
 
           <vb-tabs slot="foot" type="boxed" fullwidth :tabs="tabs"></vb-tabs>
         </vb-hero>
-        <pre slot="code">{{ code.fullheightHero.fullheight }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

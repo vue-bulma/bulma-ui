@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-media-object>
           <vb-image slot="left" src="https://bulma.io/images/placeholders/128x128.png" size="64x64"></vb-image>
 
@@ -54,12 +54,11 @@
             </vb-level-item>
           </vb-level>
         </vb-media-object>
-        <pre slot="code">{{ code.basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Nesting">
-      <demo>
+      <demo :code="code.nesting">
         <vb-media-object>
           <vb-image slot="left" src="https://bulma.io/images/placeholders/128x128.png" size="64x64"></vb-image>
           <vb-content>
@@ -116,7 +115,6 @@
             <vb-button>Post comment</vb-button>
           </vb-form-item>
         </vb-media-object>
-        <pre slot="code">{{ code.nesting }}</pre>
       </demo>
     </example-section-item>
   </vb-section>

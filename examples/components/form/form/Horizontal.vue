@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Horizontal">
-    <demo>
+    <demo :code="code">
       <div class="block" slot="control">
         <vb-radio-group v-model="horizontal">
           <vb-radio :label="true">Horizontal</vb-radio>
@@ -71,7 +71,6 @@
           <vb-button color="light">Reset</vb-button>
         </vb-form-item>
       </vb-form>
-      <pre slot="code">{{ code }}</pre>
     </demo>
   </example-section-item>
 </template>

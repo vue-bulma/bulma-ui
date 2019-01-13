@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-dropdown>
           <vb-button>
             <span>Dropdown button</span>
@@ -15,12 +15,11 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Dropdown content">
-      <demo>
+      <demo :code="code.content">
         <vb-dropdown>
           <vb-button>
             <span>Dropdown button</span>
@@ -46,12 +45,11 @@
             </vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ content }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Hoverable or Toggable">
-      <demo>
+      <demo :code="code.toggable">
         <vb-dropdown trigger="click">
           <vb-button>
             <span>Click me</span>
@@ -80,12 +78,11 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ toggable }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Right aligned">
-      <demo>
+      <demo :code="code.aligned">
         <vb-dropdown right-aligned>
           <vb-button>
             <span>Right aligned</span>
@@ -113,12 +110,11 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ aligned }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Dropup">
-      <demo>
+      <demo :code="code.dropup">
         <vb-dropdown dropup>
           <vb-button>
             <span>Dropup</span>
@@ -132,7 +128,6 @@
             <vb-dropdown-item>With a divider</vb-dropdown-item>
           </vb-dropdown-menu>
         </vb-dropdown>
-        <pre slot="code">{{ dropup }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -145,11 +140,7 @@ export default {
   name: 'DropdownExamples',
   data() {
     return {
-      basic: code.basic,
-      toggable: code.toggable,
-      aligned: code.aligned,
-      dropup: code.dropup,
-      content: code.content
+      code
     }
   }
 }

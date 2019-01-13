@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Expandable">
-    <demo>
+    <demo :code="code">
       <vb-table fullwidth :data="tableData">
         <vb-table-column type="expand" class="demo-table-expand">
           <template slot-scope="props">
@@ -20,8 +20,6 @@
         <vb-table-column label="Palyed" prop="played"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.expand}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -34,7 +32,7 @@ export default {
   data() {
     return {
       tableData,
-      code
+      code: code.expand
     }
   }
 }

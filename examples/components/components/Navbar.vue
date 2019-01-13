@@ -1,7 +1,7 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <div slot="control">
           <p>Last Click: {{name}}</p>
           <p>Dropdown Status: {{status}}</p>
@@ -37,12 +37,11 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Transparent navbar">
-      <demo>
+      <demo :code="code.transparentNavbar">
         <vb-navbar @select="handleSelect" transparent>
           <vb-navbar-item slot="brand" name="brand">
             <a @click="handleCustomEvent('Brand')">
@@ -70,12 +69,11 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
-        <pre slot="code">{{ transparentNavbar }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Fixed Navbar">
-      <demo>
+      <demo :code="code.fixedNavbar">
         <vb-buttons-list slot="control">
           <vb-button @click="togglePosition('top')">Show Fixed Top</vb-button>
           <vb-button @click="togglePosition('bottom')">Show Fixed Bottom</vb-button>
@@ -109,12 +107,11 @@
             </vb-navbar-item>
           </template>
         </vb-navbar>
-        <pre slot="code">{{ fixedNavbar }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Right Dropdown">
-      <demo>
+      <demo :code="code.rightDropdown">
         <vb-navbar @select="handleSelect">
           <vb-navbar-dropdown>
             <template slot="title">Left</template>
@@ -142,12 +139,11 @@
             </vb-navbar-dropdown>
           </template>
         </vb-navbar>
-        <pre slot="code">{{ rightDropdown }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Colors">
-      <demo>
+      <demo :code="code.colors">
         <vb-buttons-list slot="control">
           <vb-button v-for="color in colors" :key="color" :color="color" @click="handleCheckColor(color)">{{color}}</vb-button>
         </vb-buttons-list>
@@ -166,7 +162,6 @@
             <vb-button color="primary" @click="name = 'Sign up'">Sign up</vb-button>
           </vb-navbar-item>
         </vb-navbar>
-        <pre slot="code">{{ codeColors }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -192,11 +187,7 @@ export default {
   name: 'NavbarExamples',
   data() {
     return {
-      basic: code.basic,
-      transparentNavbar: code.TransparentNavbar,
-      fixedNavbar: code.fixedNavbar,
-      rightDropdown: code.rightDropdown,
-      codeColors: code.colors,
+      code,
       name: 'none',
       colors: BASE_COLOR,
       position: null,

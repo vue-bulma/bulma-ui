@@ -1,5 +1,5 @@
 <template>
-  <demo>
+  <demo :code="columnsThree">
     <vb-tile>
       <vb-tile>
         <vb-box>
@@ -102,7 +102,6 @@
         </vb-box>
       </vb-tile>
     </vb-tile>
-    <pre slot="code">{{ columnsThree }}</pre>
   </demo>
 </template>
 

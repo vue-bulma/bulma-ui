@@ -1,38 +1,35 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <demo>
+      <demo :code="code.basic">
         <vb-breadcrumb>
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ basic }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Alignment">
-      <demo>
+      <demo :code="code.alignment.centered">
         <vb-breadcrumb align="centered">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ alignment.centered }}</pre>
       </demo>
 
-      <demo>
+      <demo :code="code.alignment.right">
         <vb-breadcrumb align="right">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ alignment.right }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Icons">
-      <demo>
+      <demo :code="code.icons">
         <vb-breadcrumb>
           <vb-breadcrumb-item to="/docs">
             <vb-icon name="fa fa-home" size="small"></vb-icon>
@@ -45,69 +42,61 @@
             <vb-icon name="fa fa-thumbs-up" size="small"></vb-icon>Breadcrumb
           </vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ icons }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Alternative separators">
-      <demo>
+      <demo :code="code.separators.arrow ">
         <vb-breadcrumb separator="arrow">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ separators.arrow }}</pre>
       </demo>
-      <demo>
+      <demo :code="code.separators.bullet">
         <vb-breadcrumb separator="bullet">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ separators.bullet }}</pre>
       </demo>
-      <demo>
+      <demo :code="code.separators.dot">
         <vb-breadcrumb separator="dot">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ separators.dot }}</pre>
       </demo>
-      <demo>
+      <demo :code="code.separators.succeeds">
         <vb-breadcrumb separator="succeeds">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ separators.succeeds }}</pre>
       </demo>
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <demo>
+      <demo :code="code.sizes.small">
         <vb-breadcrumb size="small">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ sizes.small }}</pre>
       </demo>
-      <demo>
+      <demo :code="code.sizes.medium">
         <vb-breadcrumb size="medium">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ sizes.medium }}</pre>
       </demo>
-      <demo>
+      <demo :code="code.sizes.large">
         <vb-breadcrumb size="large">
           <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
           <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
         </vb-breadcrumb>
-        <pre slot="code">{{ sizes.large }}</pre>
       </demo>
     </example-section-item>
   </vb-section>
@@ -120,11 +109,7 @@ export default {
   name: 'BreadcrumbExamples',
   data() {
     return {
-      basic: code.basic,
-      alignment: code.alignment,
-      icons: code.icons,
-      separators: code.separators,
-      sizes: code.siezs
+      code
     }
   }
 }

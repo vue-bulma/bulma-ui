@@ -2,7 +2,7 @@
   <example-section-item title="Style">
     <vb-title type="subtitle" size="6">Table width</vb-title>
 
-    <demo>
+    <demo :code="code.tableWidth">
       <vb-table width="500" :data="tableData">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -15,13 +15,11 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.style.tableWidth}}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Header style</vb-title>
 
-    <demo>
+    <demo :code="code.headerStyle">
       <vb-table :data="tableData" :header-class-name="headerClassName" :header-cell-class-name="headerCellClassName">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -34,13 +32,11 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.style.headerStyle}}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Row style</vb-title>
 
-    <demo>
+    <demo :code="code.rowStyle">
       <vb-table :data="tableData" :row-class-name="rowClassName">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -53,14 +49,12 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.style.rowStyle}}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Column Style</vb-title>
     <!-- https://www.w3.org/TR/CSS22/tables.html#columns -->
 
-    <demo>
+    <demo :code="code.columnStyle">
       <vb-table :data="tableData">
         <vb-table-column
           label="Position"
@@ -79,13 +73,11 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.style.columnStyle}}</pre>
     </demo>
 
     <vb-title type="subtitle" size="6">Cell style</vb-title>
 
-    <demo>
+    <demo :code="code.cellStyle">
       <vb-table :data="tableData" :cell-class-name="cellClassName">
         <vb-table-column label="Position" prop="position"></vb-table-column>
         <vb-table-column label="Team" prop="team"></vb-table-column>
@@ -98,8 +90,6 @@
         <vb-table-column label="Goal Difference" prop="goalDifference"></vb-table-column>
         <vb-table-column label="Points" prop="points"></vb-table-column>
       </vb-table>
-
-      <pre slot="code">{{code.style.cellStyle}}</pre>
     </demo>
   </example-section-item>
 </template>
@@ -112,7 +102,7 @@ export default {
   data() {
     return {
       tableData,
-      code
+      code: code.style
     }
   },
   methods: {
