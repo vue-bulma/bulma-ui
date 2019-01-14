@@ -2,20 +2,36 @@
 import Vue from 'vue'
 
 export default Vue.component('VbDropdownItem', {
+  inject: {
+    vbDropdown: {
+      default() {
+        return {}
+      }
+    }
+  },
   props: {
-    content: Boolean
+    name: String,
+    static: Boolean,
+    disabled: Boolean,
+    divided: Boolean
   },
   render(h) {
-    const { content, handleClick: click } = this
+    const { static: isStatic, handleClick: click } = this
     return h(
-      content ? 'div' : 'a',
+      isStatic ? 'div' : 'a',
       { class: 'dropdown-item', on: { click } },
       this.$slots.default
     )
   },
   methods: {
     handleClick(event) {
+      event.stopPropagation()
       this.$emit('click', event)
+
+      const { vbDropdown: parent, name, static: isStatic } = this
+      if (parent && !isStatic) {
+        parent.handleItemClick(name)
+      }
     }
   }
 })
