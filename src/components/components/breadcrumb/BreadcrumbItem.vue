@@ -21,6 +21,8 @@ export default {
   },
   methods: {
     handleClick() {
+      if (!this.to || !this.$router) return
+
       if (this.replace) {
         this.$router.replace(this.to)
       } else {
