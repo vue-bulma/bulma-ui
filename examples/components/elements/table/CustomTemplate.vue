@@ -9,7 +9,7 @@
         <vb-table-column label="Position" prop="position">
           <template slot="header" slot-scope="slotProp">
             {{slotProp.column.label}}
-            <vb-icon :name="sortIcon" @click="handleSort"></vb-icon>
+            <vb-icon class="is-clickable" :name="sortIcon" @click="handleSort"></vb-icon>
           </template>
         </vb-table-column>
 
@@ -18,7 +18,7 @@
             {{slotProp.column.label}}
 
             <vb-dropdown trigger="click">
-              <vb-icon name="fa fa-filter"></vb-icon>
+              <vb-icon class="is-clickable" name="fa fa-filter"></vb-icon>
 
               <vb-checkbox-group v-model="filter">
                 <vb-dropdown-menu>
@@ -127,3 +127,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.is-clickable {
+  cursor: pointer;
+}
+</style>
