@@ -29,6 +29,7 @@ import Uploader from './components/form/Uploader'
 import Breadcrumb from './components/components/breadcrumb/Breadcrumb'
 import BreadcrumbItem from './components/components/breadcrumb/BreadcrumbItem'
 import Card from './components/components/Card'
+import CardFooterItem from './components/components/CardFooterItem'
 import Container from './components/layout/Container'
 import Level from './components/layout/Level'
 import LevelItem from './components/layout/LevelItem'
@@ -87,6 +88,7 @@ const components = [
   Level,
   LevelItem,
   Card,
+  CardFooterItem,
   FormItem,
   Form,
   MediaObject,

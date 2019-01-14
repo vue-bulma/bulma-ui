@@ -26,7 +26,7 @@ code.imageCard = `\
 
 code.card = {}
 
-code.card.oneKind = `\
+code.card.headAndFooter = `\
 <vb-card>
   <span slot="title">Component</span>
   <vb-icon slot="icon" name="fa fa-angle-down"></vb-icon>
@@ -42,14 +42,19 @@ code.card.oneKind = `\
   </vb-content>
 
   <template slot="footer">
-    <a class="card-footer-item">Save</a>
-    <a class="card-footer-item">Edit</a>
-    <a class="card-footer-item">Delete</a>
+    <vb-card-footer-item @click="handleSave">Save</vb-card-footer-item>
+    <vb-card-footer-item @click="handleEdit">Edit</vb-card-footer-item>
+    <vb-card-footer-item @click="handleDelete">Delete</vb-card-footer-item>
   </template>
+</vb-card>
+
+// Or
+<vb-card title="Component" icon="fa fa-angle-down">
+  ...
 </vb-card>
 `
 
-code.card.anotherKind = `\
+code.card.titleCentered = `\
 <vb-card title="Component" icon="fa fa-angle-down" title-centered>
   <vb-content>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -62,9 +67,9 @@ code.card.anotherKind = `\
   </vb-content>
 
   <template slot="footer">
-    <a class="card-footer-item">Save</a>
-    <a class="card-footer-item">Edit</a>
-    <a class="card-footer-item">Delete</a>
+    <vb-card-footer-item @click="handleSave">Save</vb-card-footer-item>
+    <vb-card-footer-item @click="handleEdit">Edit</vb-card-footer-item>
+    <vb-card-footer-item @click="handleDelete">Delete</vb-card-footer-item>
   </template>
 </vb-card>
 `
@@ -72,18 +77,60 @@ code.card.anotherKind = `\
 code.card.hideHeader = `\
 <vb-card>
   <vb-content>
-    <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one
-      errors.”</vb-title>
+    <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
     <vb-title type="subtitle">Jeff Atwood</vb-title>
   </vb-content>
 
-  <p slot="footer" class="card-footer-item">View on
-    <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-  </p>
-  <p slot="footer" class="card-footer-item">Share on
-    <a href="#">Facebook</a>
-  </p>
+  <template slot="footer">
+    <vb-card-footer-item static>
+      <span>View on <a>Twitter</a></span>
+    </vb-card-footer-item>
+
+    <vb-card-footer-item static>
+      <span>Share on <a>Facebook</a></span>
+    </vb-card-footer-item>
+  </template>
 </vb-card>
+`
+
+code.card.custom = `\
+<template>
+  <vb-card>
+    <div class="demo-card-header" slot="header">
+      <vb-input placeholder="Searching" loading></vb-input>
+    </div>
+
+    <vb-content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris.
+      <a>@bulmaio</a>.
+      <a href="#">#css</a>
+      <a href="#">#responsive</a>
+      <br>
+    </vb-content>
+
+    <div class="demo-card-footer" slot="footer">
+      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      <vb-buttons-list class="demo-card-buttons">
+        <vb-button color="primary" outlined>Save</vb-button>
+        <vb-button>Edit</vb-button>
+      </vb-buttons-list>
+    </div>
+  </vb-card>
+</template>
+
+<style>
+.demo-card-header {
+  padding: 1rem 1.5rem;
+}
+.demo-card-footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+.demo-card-buttons {
+  float: right;
+}
+</style>
 `
 
 export default code

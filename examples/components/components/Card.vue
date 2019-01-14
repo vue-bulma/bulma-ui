@@ -25,7 +25,8 @@
         </vb-card>
       </demo>
 
-      <demo :code="code.card.oneKind">
+      <vb-title type="subtitle">Card header and footer</vb-title>
+      <demo :code="code.card.headAndFooter">
         <vb-card>
           <span slot="title">Component</span>
           <vb-icon slot="icon" name="fa fa-angle-down"></vb-icon>
@@ -41,14 +42,15 @@
           </vb-content>
 
           <template slot="footer">
-            <a class="card-footer-item">Save</a>
-            <a class="card-footer-item">Edit</a>
-            <a class="card-footer-item">Delete</a>
+            <vb-card-footer-item @click="handleSave">Save</vb-card-footer-item>
+            <vb-card-footer-item @click="handleEdit">Edit</vb-card-footer-item>
+            <vb-card-footer-item @click="handleDelete">Delete</vb-card-footer-item>
           </template>
         </vb-card>
       </demo>
 
-      <demo :code="code.card.anotherKind">
+      <vb-title type="subtitle">Card title centered</vb-title>
+      <demo :code="code.card.titleCentered">
         <vb-card title="Component" icon="fa fa-angle-down" title-centered>
           <vb-content>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -61,28 +63,57 @@
           </vb-content>
 
           <template slot="footer">
-            <a class="card-footer-item">Save</a>
-            <a class="card-footer-item">Edit</a>
-            <a class="card-footer-item">Delete</a>
+            <vb-card-footer-item @click="handleSave">Save</vb-card-footer-item>
+            <vb-card-footer-item @click="handleEdit">Edit</vb-card-footer-item>
+            <vb-card-footer-item @click="handleDelete">Delete</vb-card-footer-item>
           </template>
         </vb-card>
       </demo>
 
+      <vb-title type="subtitle">Hide header</vb-title>
       <demo :code="code.card.hideHeader">
         <vb-card>
           <vb-content>
             <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
+
             <vb-title type="subtitle">Jeff Atwood</vb-title>
           </vb-content>
 
           <template slot="footer">
-            <p class="card-footer-item">
+            <vb-card-footer-item static>
               <span>View on <a>Twitter</a></span>
-            </p>
-            <p class="card-footer-item">
+            </vb-card-footer-item>
+
+            <vb-card-footer-item static>
               <span>Share on <a>Facebook</a></span>
-            </p>
+            </vb-card-footer-item>
           </template>
+        </vb-card>
+      </demo>
+
+      <vb-title type="subtitle">Custom header and footer</vb-title>
+      <demo :code="code.card.custom">
+        <vb-card>
+          <div class="demo-card-header" slot="header">
+            <vb-input placeholder="Searching" loading></vb-input>
+          </div>
+
+          <vb-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
+            <a>@bulmaio</a>.
+            <a href="#">#css</a>
+            <a href="#">#responsive</a>
+            <br>
+          </vb-content>
+
+          <div class="demo-card-footer" slot="footer">
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            <vb-buttons-list class="demo-card-buttons">
+              <vb-button color="primary" outlined>Save</vb-button>
+              <vb-button>Edit</vb-button>
+            </vb-buttons-list>
+          </div>
         </vb-card>
       </demo>
     </example-section-item>
@@ -98,12 +129,27 @@ export default {
     return {
       code
     }
+  },
+  methods: {
+    handleSave() {},
+    handleEdit() {},
+    handleDelete() {}
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .demo-card-1 {
   width: 400px;
+}
+.demo-card-header {
+  padding: 1rem 1.5rem;
+}
+.demo-card-footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  .demo-card-buttons {
+    float: right;
+  }
 }
 </style>
