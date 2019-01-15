@@ -8,15 +8,16 @@
 
     <template slot="right">
       <vb-navbar-item name="Docs">Docs</vb-navbar-item>
+
+      <vb-navbar-item name="github">
+        <vb-icon name="fa fa-github" iconSize="lg"></vb-icon>
+      </vb-navbar-item>
+
       <vb-navbar-dropdown title="Bulma">
         <vb-navbar-item name="Bulma">Documentation</vb-navbar-item>
         <hr class="navbar-divider">
         <vb-navbar-item>Version 0.7.2</vb-navbar-item>
       </vb-navbar-dropdown>
-
-      <vb-navbar-item name="github">
-        <vb-icon name="fa fa-github" size="large"></vb-icon>
-      </vb-navbar-item>
     </template>
   </vb-navbar>
 </template>
