@@ -1,8 +1,8 @@
 let code = {}
 code.basic = `\
-<vb-title>Title (default type)</vb-title>
+<vb-title>Title</vb-title>
 
-<vb-title type="subtitle">Subtitle</vb-title>
+<vb-subtitle>Subtitle</vb-subtitle>
 `
 
 code.size = {}
@@ -17,25 +17,25 @@ code.size.title = `\
 `
 
 code.size.subtitle = `\
-<vb-title type="subtitle" size="1">Subtitle 1</vb-title>
-<vb-title type="subtitle" size="2">Subtitle 2</vb-title>
-<vb-title type="subtitle" size="3">Subtitle 3</vb-title>
-<vb-title type="subtitle" size="4">Subtitle 4</vb-title>
-<vb-title type="subtitle" size="5">Subtitle 5 (default size)</vb-title>
-<vb-title type="subtitle" size="6">Subtitle 6</vb-title>
+<vb-subtitle size="1">Subtitle 1</vb-subtitle>
+<vb-subtitle size="2">Subtitle 2</vb-subtitle>
+<vb-subtitle size="3">Subtitle 3</vb-subtitle>
+<vb-subtitle size="4">Subtitle 4</vb-subtitle>
+<vb-subtitle size="5">Subtitle 5 (default size)</vb-subtitle>
+<vb-subtitle size="6">Subtitle 6</vb-subtitle>
 `
 
 code.combinations = `\
 <vb-title>Title</vb-title>
-<vb-title type="subtitle">Subtitle</vb-title>
+<vb-subtitle>Subtitle</vb-subtitle>
 
 <vb-title size="1">Title 1</vb-title>
-<vb-title type="subtitle" size="3">Subtitle 3</vb-title>
+<vb-subtitle size="3">Subtitle 3</vb-subtitle>
 `
 
 code.spaced = `\
 <vb-title spaced>Title</vb-title>
 
-<vb-title type="subtitle">Subtitle</vb-title>
+<vb-subtitle>Subtitle</vb-subtitle>
 `
 export default code
