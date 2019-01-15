@@ -8,7 +8,7 @@ code.imageCard = `\
     <vb-image slot="left" src="https://bulma.io/images/placeholders/96x96.png" size="48x48"></vb-image>
     <vb-content>
       <vb-title size="4">John Smith</vb-title>
-      <vb-title type="subtitle" size="6">@johnsmith</vb-title>
+      <vb-subtitle size="6">@johnsmith</vb-subtitle>
     </vb-content>
   </vb-media-object>
 
@@ -78,7 +78,7 @@ code.card.hideHeader = `\
 <vb-card>
   <vb-content>
     <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
-    <vb-title type="subtitle">Jeff Atwood</vb-title>
+    <vb-subtitle>Jeff Atwood</vb-subtitle>
   </vb-content>
 
   <template slot="footer">

@@ -9,7 +9,7 @@
             <vb-image slot="left" src="https://bulma.io/images/placeholders/96x96.png" size="48x48"></vb-image>
             <vb-content>
               <vb-title size="4">John Smith</vb-title>
-              <vb-title type="subtitle" size="6">@johnsmith</vb-title>
+              <vb-subtitle size="6">@johnsmith</vb-subtitle>
             </vb-content>
           </vb-media-object>
 
@@ -25,7 +25,7 @@
         </vb-card>
       </demo>
 
-      <vb-title type="subtitle">Card header and footer</vb-title>
+      <vb-subtitle>Card header and footer</vb-subtitle>
       <demo :code="code.card.headAndFooter">
         <vb-card>
           <span slot="title">Component</span>
@@ -49,7 +49,7 @@
         </vb-card>
       </demo>
 
-      <vb-title type="subtitle">Card title centered</vb-title>
+      <vb-subtitle>Card title centered</vb-subtitle>
       <demo :code="code.card.titleCentered">
         <vb-card title="Component" icon="fa fa-angle-down" title-centered>
           <vb-content>
@@ -70,13 +70,13 @@
         </vb-card>
       </demo>
 
-      <vb-title type="subtitle">Hide header</vb-title>
+      <vb-subtitle>Hide header</vb-subtitle>
       <demo :code="code.card.hideHeader">
         <vb-card>
           <vb-content>
             <vb-title>“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”</vb-title>
 
-            <vb-title type="subtitle">Jeff Atwood</vb-title>
+            <vb-subtitle>Jeff Atwood</vb-subtitle>
           </vb-content>
 
           <template slot="footer">
@@ -91,7 +91,7 @@
         </vb-card>
       </demo>
 
-      <vb-title type="subtitle">Custom header and footer</vb-title>
+      <vb-subtitle>Custom header and footer</vb-subtitle>
       <demo :code="code.card.custom">
         <vb-card>
           <div class="demo-card-header" slot="header">

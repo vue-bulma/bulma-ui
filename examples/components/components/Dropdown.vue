@@ -50,7 +50,7 @@
     </example-section-item>
 
     <example-section-item title="Hoverable or Toggable">
-      <vb-title type="subtitle">Default hover</vb-title>
+      <vb-subtitle>Default hover</vb-subtitle>
       <demo :code="code.toggable">
         <vb-dropdown trigger="click">
           <vb-button>

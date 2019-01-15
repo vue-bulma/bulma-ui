@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Selection">
-    <vb-title type="subtitle">Single</vb-title>
+    <vb-subtitle>Single</vb-subtitle>
     <demo :code="code.single">
       <vb-buttons-list slot="control">
         <vb-button color="primary" outlined @click="toggleSingleSelection(2)">
@@ -26,7 +26,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle">Multiple</vb-title>
+    <vb-subtitle>Multiple</vb-subtitle>
     <demo :code="code.multiple">
       <vb-buttons-list slot="control">
         <vb-button color="primary" outlined @click="toggleSelection([1, 2])">

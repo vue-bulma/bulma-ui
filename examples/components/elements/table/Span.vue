@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Rowspan and colspan">
-    <vb-title type="subtitle" size="6">Rowspan</vb-title>
+    <vb-subtitle size="6">Rowspan</vb-subtitle>
     <demo :code="code.rowspan">
       <vb-table border :data="tableData" :span-method="rowspanMethod" width="600">
         <vb-table-column label="ID" prop="id"></vb-table-column>
@@ -10,7 +10,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle" size="6">Colspan</vb-title>
+    <vb-subtitle size="6">Colspan</vb-subtitle>
     <demo :code="code.colspan">
       <vb-table border :data="tableData" :span-method="colspanMethod" width="600">
         <vb-table-column label="ID" prop="id"></vb-table-column>

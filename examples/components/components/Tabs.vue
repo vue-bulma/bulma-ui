@@ -40,22 +40,22 @@
     </example-section-item>
 
     <example-section-item title="Combining">
-      <vb-title type="subtitle" size="6">Box</vb-title>
+      <vb-subtitle size="6">Box</vb-subtitle>
       <demo :code="code.combining.boxed">
         <vb-tabs :tabs="tabs2" align="centered" type="boxed"></vb-tabs>
       </demo>
 
-      <vb-title type="subtitle" size="6">Box Medium</vb-title>
+      <vb-subtitle size="6">Box Medium</vb-subtitle>
       <demo :code="code.combining.boxedMedium">
         <vb-tabs :tabs="tabs2" align="centered" type="boxed" size="medium"></vb-tabs>
       </demo>
 
-      <vb-title type="subtitle" size="6">Toggle Fullwidth</vb-title>
+      <vb-subtitle size="6">Toggle Fullwidth</vb-subtitle>
       <demo :code="code.combining.toggle">
         <vb-tabs :tabs="tabs2" type="toggle" fullwidth></vb-tabs>
       </demo>
 
-      <vb-title type="subtitle" size="6">Toggle Large</vb-title>
+      <vb-subtitle size="6">Toggle Large</vb-subtitle>
       <demo :code="code.combining.boxedLarge">
         <vb-tabs :tabs="tabs2" type="toggle" size="large" fullwidth></vb-tabs>
       </demo>

@@ -1,13 +1,13 @@
 <template>
   <vb-section>
     <example-section-item title="Basic">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         Add a
         <span class="color-red">vb-columns</span> container,Add as many
         <span class="color-red">vb-column</span> elements as you want,Each
         <span class="color-red">vb-column</span> will have an equal width, no matter the number of
         <span class="color-red">vb-column</span>
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.basic">
         <vb-columns>
           <vb-column>
@@ -27,10 +27,10 @@
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         change the size of a single
         <span class="color-red">vb-column</span>
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.size">
         <vb-columns>
           <vb-column size="1">
@@ -460,14 +460,14 @@
     </example-section-item>
 
     <example-section-item title="Mobile columns">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         By default,
         <span class="color-red">vb-columns</span> are only activated from tablet onwards. This means
         <span class="color-red">vb-columns</span> are stacked on top of each other on mobile.
         <br>If you want
         <span class="color-red">vb-columns</span> to work on mobile too, just add the
         <span class="color-red">view="mobile"</span> modifier on the vb-columns container
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.mobile">
         <vb-columns view="mobile">
           <vb-column>
@@ -487,11 +487,11 @@
     </example-section-item>
 
     <example-section-item title="Desktop columns">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         If you only want
         <span class="color-red">vb-columns</span> on desktop upwards, just use the
         <span class="color-red">view="desktop"</span> modifier on the vb-columns container
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.desktop">
         <vb-columns view="desktop">
           <vb-column>
@@ -511,12 +511,12 @@
     </example-section-item>
 
     <example-section-item title="Different column sizes per breakpoint">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         You can define a
         <span class="color-red">vb-column</span> size for each viewport size:
         <strong>mobile, tablet,</strong> and
         <strong>desktop</strong>
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.breakpoint">
         <vb-columns view="mobile">
           <vb-column
@@ -547,10 +547,10 @@
     </example-section-item>
 
     <example-section-item title="Nesting">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         You can nest
         <span class="color-red">vb-columns</span> to have more flexibility in your design. You only need to follow this structure:
-      </vb-title>
+      </vb-subtitle>
       <ul>
         <li>&lt;vb-columns&gt;
           <ul>
@@ -584,13 +584,13 @@
     </example-section-item>
 
     <example-section-item title="Gapless">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         If you want to remove the space between the
         <span class="color-red">vb-columns</span>, add the
         <span class="color-red">gapType="gapless"</span> modifier on the
         <span class="color-red">vb-columns</span>
         container
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.gapless">
         <vb-columns gapType="gapless">
           <vb-column>
@@ -604,7 +604,7 @@
     </example-section-item>
 
     <example-section-item title="Variable gap">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         ou can specify a custom col gap by appending one of 9 modifiers on the <span class="color-red">vb-columns</span> container
         <br>
         <span class="color-red">gap="0"</span> will remove any gap (similar to <span class="color-red">gapType="gapless"</span>)
@@ -614,7 +614,7 @@
         <span class="color-red">gap="8"</span> is the maximum gap of <span class="color-red">2rem</span>
         <br>
         Additionally, <span class="color-red">gapType="variable"</span> should be added on the <span class="color-red">vb-columns</span> container
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.gap">
         <vb-tags slot="control">
           <vb-tag
@@ -634,11 +634,11 @@
     </example-section-item>
 
     <example-section-item title="Breakpoint based column gaps">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         You can define a <span class="color-red">vb-column</span> gap for each viewport size
         <br>
         For example, here is how it looks with the following modifiers: <span class="color-red">gapType="variable" mobileGap="8" tabletGap="0" desktopGap="3" widescreenGap="8" fullhdGap="2"</span>
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.breakpointGap">
         <vb-columns
           gapType="variable"
@@ -656,9 +656,9 @@
     </example-section-item>
 
     <example-section-item title="Vertical alignment">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         To align your <span class="color-red">vb-columns</span> vertically, add the <span class="color-red">align="vcentered"</span> modifier to the <span class="color-red">vb-columns</span> container.',
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.vertical">
         <vb-columns align="vcentered">
           <vb-column size="8">
@@ -674,9 +674,9 @@
     </example-section-item>
 
     <example-section-item title="Centering columns">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         While you can use empty <span class="color-red">vb-columns</span> (like &lt;vb-column&gt;&lt;/vb-column&gt;) to create horizontal space around col elements, you can also use <span class="color-red">align="centered"</span> on the parent <span class="color-red">vb-columns</span> element:
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.centered">
         <vb-columns align="centered">
           <vb-column size="8">
@@ -695,12 +695,12 @@
     </example-section-item>
 
     <example-section-item title="Multiline">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         Whenever you want to start a new line, you can close a
         <span class="color-red">vb-columns</span> container and start a new one. But you can also add the
         <span class="color-red">multiline</span> modifier and add more
         <span class="color-red">vb-column</span> elements than would fit in a single row
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.multiline">
         <vb-columns multiline>
           <vb-column size="3">
@@ -732,10 +732,10 @@
     </example-section-item>
 
     <example-section-item title="Multiline and Centering">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         <span class="color-red">align="centered"</span> use with
         <span class="color-red">multiline</span> to create a flexible, centered list (try resizing to see centering in different viewport sizes)
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.multilineCentering">
         <vb-columns view="mobile" align="centered" multiline>
           <vb-column narrow>

@@ -8,12 +8,12 @@
     </example-section-item>
 
     <example-section-item title="Pager Count">
-      <vb-title type="subtitle" size="6">Page count by 3</vb-title>
+      <vb-subtitle size="6">Page count by 3</vb-subtitle>
       <demo :code="code.pagerCount.three">
         <vb-pagination :current="5" :pageCount="10" :pagerCount="3"></vb-pagination>
       </demo>
 
-      <vb-title type="subtitle" size="6">Page count by 5</vb-title>
+      <vb-subtitle size="6">Page count by 5</vb-subtitle>
       <demo :code="code.pagerCount.five">
         <vb-pagination :current="5" :pageCount="10" :pagerCount="5"></vb-pagination>
       </demo>

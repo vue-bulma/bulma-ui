@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Style">
-    <vb-title type="subtitle" size="6">Table width</vb-title>
+    <vb-subtitle size="6">Table width</vb-subtitle>
 
     <demo :code="code.tableWidth">
       <vb-table width="500" :data="tableData">
@@ -17,7 +17,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle" size="6">Header style</vb-title>
+    <vb-subtitle size="6">Header style</vb-subtitle>
 
     <demo :code="code.headerStyle">
       <vb-table :data="tableData" :header-class-name="headerClassName" :header-cell-class-name="headerCellClassName">
@@ -34,7 +34,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle" size="6">Row style</vb-title>
+    <vb-subtitle size="6">Row style</vb-subtitle>
 
     <demo :code="code.rowStyle">
       <vb-table :data="tableData" :row-class-name="rowClassName">
@@ -51,7 +51,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle" size="6">Column Style</vb-title>
+    <vb-subtitle size="6">Column Style</vb-subtitle>
     <!-- https://www.w3.org/TR/CSS22/tables.html#columns -->
 
     <demo :code="code.columnStyle">
@@ -75,7 +75,7 @@
       </vb-table>
     </demo>
 
-    <vb-title type="subtitle" size="6">Cell style</vb-title>
+    <vb-subtitle size="6">Cell style</vb-subtitle>
 
     <demo :code="code.cellStyle">
       <vb-table :data="tableData" :cell-class-name="cellClassName">

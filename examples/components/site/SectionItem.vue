@@ -1,13 +1,13 @@
 <template>
-  <vb-content>
-    <vb-title :id="id" type="title" size="3" class="anchor-title">
+  <div>
+    <vb-title :id="id" class="anchor-title" spaced>
       <a :href="`#${id}`" class="anchor-link">#</a>
       {{title}}:
     </vb-title>
     <slot></slot>
 
     <hr>
-  </vb-content>
+  </div>
 </template>
 
 <script>
