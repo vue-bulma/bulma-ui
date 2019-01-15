@@ -131,7 +131,8 @@ export default {
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/pagination.sass';
-.pagination-previous,.pagination-next{
+.pagination-previous,
+.pagination-next {
   cursor: pointer;
 }
 </style>
