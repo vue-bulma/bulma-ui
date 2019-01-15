@@ -14,7 +14,7 @@
         <vb-navbar-item>Version 0.7.2</vb-navbar-item>
       </vb-navbar-dropdown>
 
-      <vb-navbar-item name="github" @click="goGithub">
+      <vb-navbar-item name="github">
         <vb-icon name="fa fa-github" size="large"></vb-icon>
       </vb-navbar-item>
     </template>
