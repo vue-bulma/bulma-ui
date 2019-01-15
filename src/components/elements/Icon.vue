@@ -1,7 +1,7 @@
 <template>
   <span :class="classes" @click="handleClick">
     <slot>
-      <i :class="IconClasses"></i>
+      <i :class="iconClasses"></i>
     </slot>
   </span>
 </template>
@@ -34,7 +34,7 @@ export default {
         [`has-text-${color}`]: !!color
       }
     },
-    IconClasses() {
+    iconClasses() {
       const { iconSize, name, animated } = this
       return {
         [`${name}`]: !!name,
