@@ -1,4 +1,4 @@
-const BASE_COLOR = [
+const BASE_COLORS = [
   'primary',
   'info',
   'success',
@@ -11,7 +11,7 @@ const BASE_COLOR = [
   'link'
 ]
 
-const HERO_COLOR = [
+const HERO_COLORS = [
   'primary',
   'info',
   'success',
@@ -28,7 +28,7 @@ export const button = {
     color: {
       type: String,
       validator(value) {
-        return [...BASE_COLOR, 'text'].includes(value)
+        return [...BASE_COLORS, 'text'].includes(value)
       }
     }
   }
@@ -39,7 +39,7 @@ export const hero = {
     color: {
       type: String,
       validator(value) {
-        return HERO_COLOR.includes(value)
+        return HERO_COLORS.includes(value)
       }
     }
   }
@@ -50,7 +50,7 @@ export default {
     color: {
       type: String,
       validator(value) {
-        return BASE_COLOR.includes(value)
+        return BASE_COLORS.includes(value)
       }
     }
   }

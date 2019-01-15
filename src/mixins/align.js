@@ -1,8 +1,12 @@
+const ALIGNS = ['centered', 'right']
+
 export default {
   props: {
     align: {
       type: String,
-      validator: value => ['centered', 'right'].includes(value)
+      validator(value) {
+        return ALIGNS.includes(value)
+      }
     }
   }
 }
