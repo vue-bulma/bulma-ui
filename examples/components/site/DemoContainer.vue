@@ -12,7 +12,7 @@
 
       <vb-button v-if="!!code" slot="footer" fullwidth color="white" @click="toggle">
         <vb-icon name="fa fa-angle-down" :class="{ 'icon-rotate': showCode }"></vb-icon>
-        <vb-title type="subtitle" size="6">{{ buttonText }}</vb-title>
+        <vb-subtitle size="6">{{ buttonText }}</vb-subtitle>
       </vb-button>
     </div>
   </vb-card>
