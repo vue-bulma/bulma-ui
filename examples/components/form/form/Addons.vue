@@ -1,6 +1,6 @@
 <template>
   <example-section-item title="Addons">
-    <vb-title type="subtitle" size="6">Basic</vb-title>
+    <vb-subtitle size="6">Basic</vb-subtitle>
     <demo :code="code.basic">
       <vb-form-item addons>
         <vb-button color="info">Confirm</vb-button>
@@ -18,7 +18,7 @@
       </vb-form-item>
     </demo>
 
-    <vb-title type="subtitle" size="6">Expanded</vb-title>
+    <vb-subtitle size="6">Expanded</vb-subtitle>
     <demo :code="code.expanded">
       <vb-form-item addons>
         <vb-select value="€">
@@ -61,7 +61,7 @@
       </vb-form-item>
     </demo>
 
-    <vb-title type="subtitle" size="6">Alignment</vb-title>
+    <vb-subtitle size="6">Alignment</vb-subtitle>
     <demo :code="code.alignment">
       <vb-form-item addons>
         <vb-select value="€">

@@ -161,7 +161,7 @@
     </example-section-item>
 
     <example-section-item title="With icons">
-      <vb-title type="subtitle" size="6">The size of the select will define the size of the icon container.</vb-title>
+      <vb-subtitle size="6">The size of the select will define the size of the icon container.</vb-subtitle>
       <demo :code="code.icons.basic">
         <div class="block">
           <vb-select size="small" icon="fa fa-home" value="Small dropdown with Small icon">
@@ -191,7 +191,7 @@
     </example-section-item>
 
     <example-section-item title="Style icon">
-      <vb-title type="subtitle" size="6">The color of the select will define the color of the icon.</vb-title>
+      <vb-subtitle size="6">The color of the select will define the color of the icon.</vb-subtitle>
       <demo :code="code.icons.style">
         <div class="block">
           <vb-select color="primary" icon="fa fa-home" value="Primary color icon">

@@ -4,28 +4,28 @@ code.columnsFour = `\
   <vb-tile>
     <vb-box>
       <vb-title>One</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
     </vb-box>
   </vb-tile>
 
   <vb-tile>
     <vb-box>
       <vb-title>Two</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
     </vb-box>
   </vb-tile>
 
   <vb-tile>
     <vb-box>
       <vb-title>Three</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
     </vb-box>
   </vb-tile>
 
   <vb-tile>
     <vb-box>
       <vb-title>Four</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
     </vb-box>
   </vb-tile>
 </vb-tile>
@@ -36,7 +36,7 @@ code.columnsFour = `\
       <vb-tile>
         <vb-box>
           <vb-title>Five</vb-title>
-          <vb-title type="subtitle">Subtitle</vb-title>
+          <vb-subtitle>Subtitle</vb-subtitle>
           <vb-content>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
               pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
@@ -50,14 +50,14 @@ code.columnsFour = `\
           <vb-tile>
             <vb-box>
               <vb-title>Six</vb-title>
-              <vb-title type="subtitle">Subtitle</vb-title>
+              <vb-subtitle>Subtitle</vb-subtitle>
             </vb-box>
           </vb-tile>
 
           <vb-tile>
             <vb-box>
               <vb-title>Seven</vb-title>
-              <vb-title type="subtitle">Subtitle</vb-title>
+              <vb-subtitle>Subtitle</vb-subtitle>
             </vb-box>
           </vb-tile>
         </vb-tile>
@@ -65,7 +65,7 @@ code.columnsFour = `\
         <vb-tile>
           <vb-box>
             <vb-title>Eight</vb-title>
-            <vb-title type="subtitle">Subtitle</vb-title>
+            <vb-subtitle>Subtitle</vb-subtitle>
           </vb-box>
         </vb-tile>
       </vb-tile>
@@ -75,7 +75,7 @@ code.columnsFour = `\
       <vb-tile size="8">
         <vb-box>
           <vb-title>Nine</vb-title>
-          <vb-title type="subtitle">Subtitle</vb-title>
+          <vb-subtitle>Subtitle</vb-subtitle>
           <vb-content>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
               pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
@@ -87,7 +87,7 @@ code.columnsFour = `\
       <vb-tile>
         <vb-box>
           <vb-title>Ten</vb-title>
-          <vb-title type="subtitle">Subtitle</vb-title>
+          <vb-subtitle>Subtitle</vb-subtitle>
           <vb-content>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at
               pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi
@@ -101,7 +101,7 @@ code.columnsFour = `\
   <vb-tile>
     <vb-box>
       <vb-title>Eleven</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
       <vb-content>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
           felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
@@ -118,7 +118,7 @@ code.columnsFour = `\
   <vb-tile>
     <vb-box>
       <vb-title>Twelve</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
       <vb-content>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
           felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
@@ -130,7 +130,7 @@ code.columnsFour = `\
   <vb-tile>
     <vb-box>
       <vb-title>Thirteen</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
       <vb-content>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
           felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
@@ -142,7 +142,7 @@ code.columnsFour = `\
   <vb-tile>
     <vb-box>
       <vb-title>Fourteen</vb-title>
-      <vb-title type="subtitle">Subtitle</vb-title>
+      <vb-subtitle>Subtitle</vb-subtitle>
       <vb-content>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar
           felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo

@@ -399,12 +399,12 @@
     </example-section-item>
 
     <example-section-item title="Offset">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         While you can use empty vb-columns (like &lt;vb-column&gt;&lt;/vb-column&gt;) to create horizontal space around col elements, you can also use offset modifiers like
         <span
           class="color-red"
         >offset="x"</span>
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.Offset">
         <vb-columns>
           <vb-column size="half" offset="one-quarter">
@@ -438,13 +438,13 @@
     </example-section-item>
 
     <example-section-item title="Narrow">
-      <vb-title type="subtitle" size="6">
+      <vb-subtitle size="6">
         If you want a
         <span class="color-red">vb-column</span>
         to only take the space it needs, use the
         <span class="color-red">narrow</span>
         modifier. The other col(s) will fill up the remaining space.',
-      </vb-title>
+      </vb-subtitle>
       <demo :code="code.narrow">
         <vb-columns>
           <vb-column narrow>

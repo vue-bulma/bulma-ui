@@ -3,9 +3,9 @@ let code = { basic: {} }
 code.basic.normal = `\
 <vb-level>
   <vb-level-item>
-    <vb-title type="subtitle" size="5">
+    <vb-subtitle size="5">
       <strong>123</strong> posts
-    </vb-title>
+    </vb-subtitle>
   </vb-level-item>
 
   <vb-level-item>
@@ -21,9 +21,9 @@ code.basic.basic = `\
 <vb-level>
   <template slot="left">
     <vb-level-item>
-      <vb-title type="subtitle" size="5">
+      <vb-subtitle size="5">
         <strong>123</strong> posts
-      </vb-title>
+      </vb-subtitle>
     </vb-level-item>
 
     <vb-level-item>

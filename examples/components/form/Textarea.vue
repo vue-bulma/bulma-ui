@@ -91,7 +91,7 @@
     </example-section-item>
 
     <example-section-item title="Resize loading Textarea">
-      <vb-title type="subtitle" size="6">The size of the Textarea will define the size of the loading icon.</vb-title>
+      <vb-subtitle size="6">The size of the Textarea will define the size of the loading icon.</vb-subtitle>
       <demo :code="code.loading">
         <div class="block">
           <vb-textarea size="small" rows="2" placeholder="Small loading textarea" loading></vb-textarea>

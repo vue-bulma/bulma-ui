@@ -19,7 +19,7 @@
         </div>
       </demo>
 
-      <vb-title type="subtitle" size="6">Radio Group</vb-title>
+      <vb-subtitle size="6">Radio Group</vb-subtitle>
       <demo :code="code.events.group">
         <div class="block" slot="control">
           Gender: <strong>{{gender2}}</strong>

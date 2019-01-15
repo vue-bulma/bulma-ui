@@ -4,7 +4,7 @@
       <demo :code="code.basic.normal">
         <vb-level>
           <vb-level-item>
-            <vb-title type="subtitle" size="5">
+            <vb-subtitle size="5">
               <strong>123</strong> posts
             </vb-title>
           </vb-level-item>
@@ -22,7 +22,7 @@
         <vb-level>
           <template slot="left">
             <vb-level-item>
-              <vb-title type="subtitle" size="5">
+              <vb-subtitle size="5">
                 <strong>123</strong> posts
               </vb-title>
             </vb-level-item>

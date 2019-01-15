@@ -7,7 +7,7 @@
     </example-section-item>
 
     <example-section-item title="Modifiers">
-      <vb-title type="subtitle" size="6">Selected file name</vb-title>
+      <vb-subtitle size="6">Selected file name</vb-subtitle>
       <demo :code="code.modifiers.filtName">
         <vb-uploader label="Choose a file">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
@@ -16,7 +16,7 @@
         </vb-uploader>
       </demo>
 
-      <vb-title type="subtitle" size="6">Expand file name</vb-title>
+      <vb-subtitle size="6">Expand file name</vb-subtitle>
       <demo :code="code.modifiers.expand">
         <vb-uploader fullwidth label="Choose a file">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
@@ -25,14 +25,14 @@
         </vb-uploader>
       </demo>
 
-      <vb-title type="subtitle" size="6">Boxed</vb-title>
+      <vb-subtitle size="6">Boxed</vb-subtitle>
       <demo :code="code.modifiers.boxed">
         <vb-uploader boxed label="Choose a file.">
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
         </vb-uploader>
       </demo>
 
-      <vb-title type="subtitle" size="6">Combine filename and boxed</vb-title>
+      <vb-subtitle size="6">Combine filename and boxed</vb-subtitle>
       <demo :code="code.modifiers.combine">
         <vb-uploader boxed>
           <vb-icon slot="icon" name="fa fa-upload"></vb-icon>
