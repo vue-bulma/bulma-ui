@@ -68,7 +68,7 @@
             @mouseenter="handleMouseenter"
             @mouseleave="handleMouseleave"
           >
-            <vb-delete></vb-delete>
+            <vb-delete @click.stop="close"></vb-delete>
             Primar <span v-html="tmpl"></span>
           </vb-notification>
         </transition>
