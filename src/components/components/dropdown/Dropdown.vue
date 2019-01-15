@@ -30,7 +30,7 @@ export default {
       validdator(value) {
         if (Array.isArray(value)) {
           return value.every(v => PLACEMENTS.includes(v))
-        } else if (typeof value) {
+        } else if (typeof value === 'string') {
           return PLACEMENTS.includes(value)
         }
       }
@@ -48,7 +48,7 @@ export default {
       return Array.isArray(placement) ? placement : [placement]
     },
     classes() {
-      const { placementArr, localActived, dropup, trigger, visible } = this
+      const { placementArr, localActived, trigger, visible } = this
       const isHover = trigger === 'hover'
       const actived = trigger === 'click' ? localActived : visible
 

@@ -13,6 +13,10 @@
         <hr class="navbar-divider">
         <vb-navbar-item>Version 0.7.2</vb-navbar-item>
       </vb-navbar-dropdown>
+
+      <vb-navbar-item name="github">
+        <vb-icon name="fa fa-github" size="large"></vb-icon>
+      </vb-navbar-item>
     </template>
   </vb-navbar>
 </template>
@@ -21,7 +25,9 @@
 export default {
   methods: {
     handleSelect(name) {
-      if (name === 'Bulma') {
+      if (name === 'github') {
+        window.open('https://github.com/vue-bulma/bulma-ui')
+      } else if (name === 'Bulma') {
         window.open('https://bulma.io/')
       } else {
         this.$router.push({ name })
