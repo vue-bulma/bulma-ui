@@ -6,7 +6,7 @@
           <vb-level-item>
             <vb-subtitle size="5">
               <strong>123</strong> posts
-            </vb-title>
+            </vb-subtitle>
           </vb-level-item>
 
           <vb-level-item>
@@ -24,7 +24,7 @@
             <vb-level-item>
               <vb-subtitle size="5">
                 <strong>123</strong> posts
-              </vb-title>
+              </vb-subtitle>
             </vb-level-item>
 
             <vb-level-item>
