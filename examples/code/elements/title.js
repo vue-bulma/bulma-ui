@@ -25,7 +25,6 @@ code.size.subtitle = `\
 <vb-title type="subtitle" size="6">Subtitle 6</vb-title>
 `
 
-
 code.combinations = `\
 <vb-title>Title</vb-title>
 <vb-title type="subtitle">Subtitle</vb-title>
