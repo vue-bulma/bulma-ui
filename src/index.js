@@ -14,6 +14,7 @@ import TableColumn from './components/elements/TableColumn'
 import Tag from './components/elements/Tag'
 import Tags from './components/elements/Tags'
 import Title from './components/elements/Title'
+import Subtitle from './components/elements/Subtitle'
 import Column from './components/columns/Column'
 import Columns from './components/columns/Columns'
 import FormItem from './components/form/FormItem'
@@ -72,6 +73,7 @@ const components = [
   Tag,
   Tags,
   Title,
+  Subtitle,
   Column,
   Columns,
   Input,

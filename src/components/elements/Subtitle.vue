@@ -1,26 +1,24 @@
 <script>
 import Vue from 'vue'
 const SIZES = [1, 2, 3, 4, 5, 6]
-const VbTitle = Vue.component('VbTitle', {
+const VbSubtitle = Vue.component('VbSubtitle', {
   props: {
     size: {
       type: String,
-      default: '3',
+      default: '5',
       validator(value) {
         return SIZES.includes(+value)
       }
-    },
-    spaced: Boolean
+    }
   },
   render(h) {
-    const { size, spaced } = this
+    const { size } = this
     return h(
       `h${size}`,
       {
         class: {
-          title: true,
-          [`is-${size}`]: !!size,
-          'is-spaced': spaced
+          subtitle: true,
+          [`is-${size}`]: !!size
         }
       },
       this.$slots.default
@@ -28,7 +26,7 @@ const VbTitle = Vue.component('VbTitle', {
   }
 })
 
-export default VbTitle
+export default VbSubtitle
 </script>
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';

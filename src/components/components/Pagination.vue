@@ -1,34 +1,64 @@
 <template>
-<nav :class="classes" role="navigation" aria-label="pagination">
-  <button class="pagination-previous" @click="prePage" :disabled="!hasPrevPage">上一页</button>
-  <button class="pagination-next" @click="nextPage" :disabled="!hasNextPage">下一页</button>
+  <nav
+    :class="classes"
+    role="navigation"
+    aria-label="pagination"
+  >
+    <button
+      class="pagination-previous"
+      @click="prePage"
+      :disabled="!hasPrevPage"
+    >上一页</button>
+    <button
+      class="pagination-next"
+      @click="nextPage"
+      :disabled="!hasNextPage"
+    >下一页</button>
 
-  <ul class="pagination-list">
-    <li>
-      <a class="pagination-link" aria-label="Goto page 1" :class="{ 'is-current': currentPage === 1 }" @click="goPage(1)">1</a>
-    </li>
+    <ul class="pagination-list">
+      <li>
+        <a
+          class="pagination-link"
+          aria-label="Goto page 1"
+          :class="{ 'is-current': currentPage === 1 }"
+          @click="goPage(1)"
+        >1</a>
+      </li>
 
-    <li v-if="pages.showPrevMore">
-      <span class="pagination-ellipsis">&hellip;</span>
-    </li>
+      <li v-if="pages.showPrevMore">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
 
-    <li v-for="page in pages.ret" :key="page">
-      <a class="pagination-link" :class="{ 'is-current': currentPage === page }" :aria-label="`Goto page ${page}`" @click="goPage(page)">
-        {{page}}
-      </a>
-    </li>
+      <li
+        v-for="page in pages.ret"
+        :key="page"
+      >
+        <a
+          class="pagination-link"
+          :class="{ 'is-current': currentPage === page }"
+          :aria-label="`Goto page ${page}`"
+          @click="goPage(page)"
+        >
+          {{page}}
+        </a>
+      </li>
 
-    <li v-if="pages.showNextMore">
-      <span class="pagination-ellipsis">&hellip;</span>
-    </li>
+      <li v-if="pages.showNextMore">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
 
-    <li v-if="pageCount > 1">
-      <a class="pagination-link" :class="{ 'is-current': currentPage === pageCount }" :aria-label="`Goto page ${pageCount}`" @click="goPage(pageCount)">
-        {{pageCount}}
-      </a>
-    </li>
-  </ul>
-</nav>
+      <li v-if="pageCount > 1">
+        <a
+          class="pagination-link"
+          :class="{ 'is-current': currentPage === pageCount }"
+          :aria-label="`Goto page ${pageCount}`"
+          @click="goPage(pageCount)"
+        >
+          {{pageCount}}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
