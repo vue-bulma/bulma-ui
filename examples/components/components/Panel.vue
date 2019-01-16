@@ -48,6 +48,7 @@ export default {
   },
   methods: {
     handleClick(index) {
+      console.log('test signature verification ')
       this.tabIndex = index
       this.$refs['panel-block'].reset()
     },
