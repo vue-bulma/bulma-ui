@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~highlight.js/styles/atom-one-light.css';
+@import '~@examples/assets/css/bulma.css';
 
 $duration: 0.2s;
 
@@ -67,10 +67,6 @@ $duration: 0.2s;
   width: 100%;
   .demo-code {
     border-bottom: 1px solid #dbdbdb;
-    .hljs {
-      background-color: whitesmoke;
-      padding-left: 0;
-    }
   }
   .icon-rotate {
     transform: rotate(180deg);
