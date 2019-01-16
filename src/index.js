@@ -40,6 +40,7 @@ import Section from './components/layout/Section'
 import Footer from './components/layout/Footer'
 import Tile from './components/layout/Tile'
 import Menu from './components/components/menu/Menu'
+import MenuList from './components/components/menu/MenuList'
 import MenuItem from './components/components/menu/MenuItem'
 import Message from './components/components/Message'
 import Pagination from './components/components/Pagination'
@@ -99,6 +100,7 @@ const components = [
   Footer,
   Tile,
   Menu,
+  MenuList,
   MenuItem,
   Message,
   Pagination,

@@ -1,112 +1,103 @@
 <template>
-  <li @click.stop="active">
-    <span @click="toggle">
-      <router-link :class="classes" :to="to">
-        <vb-icon v-if="hasIcon" class="icon-margin" :name="icon"></vb-icon>
-        <slot></slot>
-        <vb-icon
-          v-if="!!$slots.subMenu"
-          class="icon-right"
-          :class="{'icon-rotate': isOpen}"
-          name="fa fa-angle-down"
-        ></vb-icon>
-      </router-link>
-    </span>
-    <div v-show="isOpen">
-      <slot name="subMenu"></slot>
-    </div>
+  <li>
+    <a :class="classes" @click="handleClick">
+      <vb-icon v-if="icon" :name="icon" class="vb-menu-item__icon"></vb-icon>
+
+      <slot></slot>
+
+      <vb-icon v-if="$slots.submenu" name="fa fa-angle-down" :class="submenuIconClass" ></vb-icon>
+    </a>
+
+    <slot v-if="showSubmenu" name="submenu"></slot>
   </li>
 </template>
 
 <script>
+import VbIcon from '@/components/elements/Icon'
+
 export default {
   name: 'VbMenuItem',
-
+  coponents: { VbIcon },
+  inject: {
+    rootMenu: {
+      default: ''
+    }
+  },
   props: {
-    to: {
+    route: {
       type: [Object, String],
       default: ''
     },
-    icon: String,
     index: {
       type: [String, Number],
       required: true
-    }
+    },
+    icon: String
   },
   data() {
     return {
-      isOpen: false,
-      actived: false,
-      data: []
+      showSubmenu: false
     }
   },
   computed: {
     classes() {
-      return { 'is-active': this.actived }
+      return { 'is-active': this.rootMenu.actived === this.index }
     },
-    hasIcon() {
-      return this.icon
+    submenuIconClass() {
+      return {
+        'submenu-icon': true,
+        'is-opened': this.showSubmenu
+      }
+    },
+    defaultOpen() {
+      const { defaultOpen = [] } = this.rootMenu
+      return defaultOpen
     }
+  },
+  created() {
+    const { defaultOpen = [] } = this.rootMenu
+    this.showSubmenu = defaultOpen.includes(this.index)
   },
   methods: {
-    toggle() {
-      this.isOpen = !this.isOpen
-    },
-    findComponentUpward(context, componentName) {
-      let parent = context.$parent
-      let name = parent.$options.name
-      if (name === componentName) {
-        parent = parent.$parent
+    handleClick() {
+      if (this.$slots.submenu) {
+        this.toggleSubmenu()
+      } else {
+        if (this.$router && this.route) {
+          this.$router.push(this.route)
+        }
+
+        this.rootMenu.handleItemClick(this.index)
       }
-      return parent
     },
-    menuList(menus) {
-      let menuList = menus.filter(item => {
-        return item.$options.name === 'VbMenu'
-      })
-      return menuList
-    },
-    filterData(array) {
-      array.forEach(item => {
-        item.$children.forEach(o => {
-          if (o.$options.name === 'VbMenuItem') {
-            this.data.push(o)
-            if (o.$children.length) {
-              this.filterData(o.$children)
-            }
-          }
-        })
-      })
-    },
-    active() {
-      this.data.forEach(item => {
-        item.actived =
-          this.index === item.index
-            ? item.$slots.subMenu
-              ? false
-              : true
-            : false
-      })
+    toggleSubmenu(defaultOpen) {
+      this.showSubmenu =
+        defaultOpen === undefined
+          ? !this.showSubmenu
+          : defaultOpen.includes(this.index)
+      const action = this.showSubmenu ? 'open' : 'close'
+      this.rootMenu.handleToggerSubmenu(action, this.index)
     }
   },
-  mounted() {
-    let parent = this.findComponentUpward(this, 'VbMenu')
-    let menuData = this.menuList(parent.$children)
-    this.filterData(menuData)
+  watch: {
+    defaultOpen(data) {
+      this.toggleSubmenu(data)
+    }
   }
 }
 </script>
 
 <style scoped>
-.icon-right {
+.vb-menu-item__icon {
+  margin-right: 5px;
+}
+.submenu-icon {
   position: relative;
   float: right;
+  color: #b5b5b5;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-.icon-rotate {
+.is-opened {
   transform: rotate(180deg);
-}
-.icon-margin {
-  margin-right: 5px;
 }
 </style>

@@ -150,7 +150,7 @@ export default new Router({
         {
           path: 'components/menu',
           name: 'Menu',
-          component: () => import('./components/components/Menu')
+          component: () => import('./components/components/menu/index')
         },
         {
           path: 'components/message',

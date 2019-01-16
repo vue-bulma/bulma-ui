@@ -1,14 +1,16 @@
 <template>
   <div class="sidebar">
-    <vb-menu v-for="(item, index) in menus" :key="index" :label="item.name">
-      <vb-menu-item
-        v-for="child in item.children"
-        :key="child.name"
-        :to="{ name: child.component || child.name }"
-        :index="child.index"
-      >
-        <span>{{child.name}}</span>
-      </vb-menu-item>
+    <vb-menu :actived="actived">
+      <vb-menu-list v-for="(item, index) in menus" :key="index" :label="item.name" :index="item.name">
+        <vb-menu-item
+          v-for="child in item.children"
+          :key="child.name"
+          :index="child.component || child.name"
+          :route="{ name: child.component || child.name }"
+        >
+          {{child.name}}
+        </vb-menu-item>
+      </vb-menu-list>
     </vb-menu>
   </div>
 </template>
@@ -20,64 +22,69 @@ export default {
       menus: [
         {
           name: 'Columns',
-          children: [{ name: 'Column', index: 1 }]
+          children: [{ name: 'Column' }]
         },
         {
           name: 'Layout',
           children: [
-            { name: 'Container', index: 2 },
-            { name: 'Level', index: 3 },
-            { name: 'Media', component: 'MediaObject', index: 4 },
-            { name: 'Hero', index: 5 },
-            { name: 'Section', index: 6 },
-            { name: 'Footer', index: 7 },
-            { name: 'Tile', index: 8 }
+            { name: 'Container' },
+            { name: 'Level' },
+            { name: 'Media', component: 'MediaObject' },
+            { name: 'Hero' },
+            { name: 'Section' },
+            { name: 'Footer' },
+            { name: 'Tile' }
           ]
         },
         {
           name: 'Form',
           children: [
-            { name: 'General', component: 'Form', index: 9 },
-            { name: 'Checkbox', index: 10 },
-            { name: 'File', index: 11 },
-            { name: 'Input', index: 12 },
-            { name: 'Radio', index: 13 },
-            { name: 'Select', index: 14 },
-            { name: 'Textarea', index: 15 }
+            { name: 'General', component: 'Form' },
+            { name: 'Checkbox' },
+            { name: 'File' },
+            { name: 'Input' },
+            { name: 'Radio' },
+            { name: 'Select' },
+            { name: 'Textarea' }
           ]
         },
         {
           name: 'Elements',
           children: [
-            { name: 'Box', index: 16 },
-            { name: 'Button', index: 17 },
-            { name: 'Content', index: 18 },
-            { name: 'Delete', index: 19 },
-            { name: 'Icon', index: 20 },
-            { name: 'Image', index: 21 },
-            { name: 'Notification', index: 22 },
-            { name: 'ProgressBars', index: 23 },
-            { name: 'Table', index: 24 },
-            { name: 'Tag', index: 25 },
-            { name: 'Title', index: 26 }
+            { name: 'Box' },
+            { name: 'Button' },
+            { name: 'Content' },
+            { name: 'Delete' },
+            { name: 'Icon' },
+            { name: 'Image' },
+            { name: 'Notification' },
+            { name: 'ProgressBars' },
+            { name: 'Table' },
+            { name: 'Tag' },
+            { name: 'Title' }
           ]
         },
         {
           name: 'Components',
           children: [
-            { name: 'Breadcrumb', index: 27 },
-            { name: 'Card', index: 28 },
-            { name: 'Dropdown', index: 29 },
-            { name: 'Menu', index: 30 },
-            { name: 'Message', index: 31 },
-            { name: 'Modal', index: 32 },
-            { name: 'Navbar', index: 33 },
-            { name: 'Pagination', index: 34 },
-            { name: 'Panel', index: 35 },
-            { name: 'Tabs', index: 36 }
+            { name: 'Breadcrumb' },
+            { name: 'Card' },
+            { name: 'Dropdown' },
+            { name: 'Menu' },
+            { name: 'Message' },
+            { name: 'Modal' },
+            { name: 'Navbar' },
+            { name: 'Pagination' },
+            { name: 'Panel' },
+            { name: 'Tabs' }
           ]
         }
       ]
+    }
+  },
+  computed: {
+    actived() {
+      return this.$route.name
     }
   }
 }
