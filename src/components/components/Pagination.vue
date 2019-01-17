@@ -1,19 +1,12 @@
 <template>
-  <nav
-    :class="classes"
-    role="navigation"
-    aria-label="pagination"
-  >
-    <button
-      class="pagination-previous"
-      @click="prePage"
-      :disabled="!hasPrevPage"
-    >上一页</button>
-    <button
-      class="pagination-next"
-      @click="nextPage"
-      :disabled="!hasNextPage"
-    >下一页</button>
+  <nav role="navigation" aria-label="pagination" :class="classes">
+    <a class="pagination-previous" :disabled="!hasPrevPage" @click="prePage">
+      上一页
+    </a>
+
+    <a class="pagination-next" :disabled="!hasNextPage" @click="nextPage">
+      下一页
+    </a>
 
     <ul class="pagination-list">
       <li>
@@ -29,10 +22,7 @@
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
 
-      <li
-        v-for="page in pages.ret"
-        :key="page"
-      >
+      <li v-for="page in pages.ret" :key="page">
         <a
           class="pagination-link"
           :class="{ 'is-current': currentPage === page }"
@@ -142,12 +132,16 @@ export default {
       }
     },
     prePage() {
-      this.currentPage--
-      this.$emit('change', this.currentPage)
+      if (this.hasPrevPage) {
+        this.currentPage--
+        this.$emit('change', this.currentPage)
+      }
     },
     nextPage() {
-      this.currentPage++
-      this.$emit('change', this.currentPage)
+      if (this.hasNextPage) {
+        this.currentPage++
+        this.$emit('change', this.currentPage)
+      }
     }
   },
   watch: {
@@ -161,8 +155,4 @@ export default {
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/pagination.sass';
-.pagination-previous,
-.pagination-next {
-  cursor: pointer;
-}
 </style>
