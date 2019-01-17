@@ -4,18 +4,19 @@
       <demo :code="code.basic">
         <div class="block" slot="control">Current Page: {{page}}</div>
         <vb-pagination :current="page" :pageCount="5" @change="handleChange"></vb-pagination>
+        <!-- <vb-pagination :current.sync="page" :pageCount="5"></vb-pagination> -->
       </demo>
     </example-section-item>
 
     <example-section-item title="Pager Count">
-      <vb-subtitle size="6">Page count by 3</vb-subtitle>
+      <vb-subtitle size="6">Pager count 5</vb-subtitle>
       <demo :code="code.pagerCount.three">
-        <vb-pagination :current="5" :pageCount="10" :pagerCount="3"></vb-pagination>
+        <vb-pagination :current="5" :pageCount="10" :pagerCount="5"></vb-pagination>
       </demo>
 
-      <vb-subtitle size="6">Page count by 5</vb-subtitle>
+      <vb-subtitle size="6">Pager count 7</vb-subtitle>
       <demo :code="code.pagerCount.five">
-        <vb-pagination :current="5" :pageCount="10" :pagerCount="5"></vb-pagination>
+        <vb-pagination :current="5" :pageCount="10" :pagerCount="7"></vb-pagination>
       </demo>
     </example-section-item>
 
@@ -52,7 +53,7 @@ export default {
   data() {
     return {
       code,
-      page: 1
+      page: 3
     }
   },
   methods: {

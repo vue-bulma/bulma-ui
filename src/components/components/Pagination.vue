@@ -15,14 +15,16 @@
           aria-label="Goto page 1"
           :class="{ 'is-current': currentPage === 1 }"
           @click="goPage(1)"
-        >1</a>
+        >
+          1
+        </a>
       </li>
 
-      <li v-if="pages.showPrevMore">
+      <li v-if="pagintaion.showPrevMore">
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
 
-      <li v-for="page in pages.ret" :key="page">
+      <li v-for="page in pagintaion.pages" :key="page">
         <a
           class="pagination-link"
           :class="{ 'is-current': currentPage === page }"
@@ -33,7 +35,7 @@
         </a>
       </li>
 
-      <li v-if="pages.showNextMore">
+      <li v-if="pagintaion.showNextMore">
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
 
@@ -70,7 +72,7 @@ export default {
     // Items count in prevMore and nextMore
     pagerCount: {
       type: Number,
-      default: 3
+      default: 5
     },
     rounded: Boolean
   },
@@ -96,13 +98,13 @@ export default {
       const { currentPage, pageCount } = this
       return currentPage < pageCount && currentPage > 0
     },
-    pages() {
+    pagintaion() {
       const { currentPage, pageCount, pagerCount } = this
       const showMore = pageCount > pagerCount
 
       const min = 2
       const max = pageCount - 1
-      const offset = (pagerCount - 1) / 2
+      const offset = (pagerCount - 3) / 2
       const start = currentPage - offset
       const end = currentPage + offset
 
@@ -118,7 +120,7 @@ export default {
       }
 
       return {
-        ret: pages,
+        pages,
         showPrevMore,
         showNextMore
       }
@@ -127,21 +129,23 @@ export default {
   methods: {
     goPage(index) {
       if (index !== this.currentPage) {
-        this.currentPage = index
-        this.$emit('change', index)
+        this.setCurrent(index)
       }
     },
     prePage() {
       if (this.hasPrevPage) {
-        this.currentPage--
-        this.$emit('change', this.currentPage)
+        this.setCurrent(this.currentPage - 1)
       }
     },
     nextPage() {
       if (this.hasNextPage) {
-        this.currentPage++
-        this.$emit('change', this.currentPage)
+        this.setCurrent(this.currentPage + 1)
       }
+    },
+    setCurrent(page) {
+      this.currentPage = page
+      this.$emit('change', page)
+      this.$emit('update:current', page)
     }
   },
   watch: {
