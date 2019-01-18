@@ -91,6 +91,33 @@ code.styles = `\
   }
 </script>
 `
+code.bottom = `\
+<template>
+  <div>
+    <vb-tabs :tabs="tabs" end></vb-tabs>
+
+    <vb-tabs :tabs="tabs2" end></vb-tabs>
+
+    <vb-tabs :tabs="tabs2" type="boxed" end></vb-tabs>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }],
+        tabs2: [
+          { name: 'Pictures', icon: 'fa-image' },
+          { name: 'Music', icon: 'fa-music' },
+          { name: 'Videos', icon: 'fa-film' }
+        ]
+      }
+    }
+  }
+</script>
+
+`
 
 code.combining = {}
 

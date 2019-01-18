@@ -3,7 +3,7 @@
     <example-section-item title="Basic">
       <demo :code="code.basic">
         <p slot="control">Current Tab: {{tabs[index].name}}</p>
-        <vb-tabs :tabs="tabs" @click="handleClick"></vb-tabs>
+        <vb-tabs :tabs="tabs" @click="handleClick" end></vb-tabs>
       </demo>
     </example-section-item>
 
@@ -36,6 +36,14 @@
         <vb-tabs :tabs="tabs2" type="toggle"></vb-tabs>
         <vb-tabs :tabs="tabs2" type="toggle" rounded></vb-tabs>
         <vb-tabs :tabs="tabs2" fullwidth></vb-tabs>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Bottom placement of tab controls">
+      <demo :code="code.bottom">
+        <vb-tabs :tabs="tabs" end></vb-tabs>
+        <vb-tabs :tabs="tabs2" end></vb-tabs>
+        <vb-tabs :tabs="tabs2" type="boxed" end></vb-tabs>
       </demo>
     </example-section-item>
 

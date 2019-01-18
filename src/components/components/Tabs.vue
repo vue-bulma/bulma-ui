@@ -1,13 +1,17 @@
 <template>
   <div :class="classes">
-    <ul>
+    <ul :style="ulClass">
       <li
         :class="{'is-active':currentTab===index}"
         v-for="(tab,index) in tabs"
         :key="index"
         @click.stop="handleClick(index)"
       >
-        <a>
+        <a
+          :style="[currentTab === index ? aActiveClass : aClass]"
+          @mouseover="addClass(index)"
+          @mouseout="removeClass(index)"
+        >
           <span class="icon is-small" v-if="tab.icon&&tab.icon!==''">
             <i class="fa" :class="tab.icon" aria-hidden="true"></i>
           </span>
@@ -47,12 +51,17 @@ export default {
       }
     },
     rounded: Boolean,
-    fullwidth: Boolean
+    fullwidth: Boolean,
+    end: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
       // 当前Tab
-      currentTab: 0
+      currentTab: 0,
+      originalBorder: ''
     }
   },
   computed: {
@@ -67,12 +76,68 @@ export default {
         'is-fullwidth': fullwidth
       }
       return obj
+    },
+    ulClass() {
+      const { end, type } = this
+      if (!type && end) {
+        return {
+          borderTop: '1px solid #dbdbdb',
+          borderBottom: '0px'
+        }
+      }
+      if (type === 'boxed' && end) {
+        return {
+          borderTop: '1px solid #dbdbdb',
+          borderBottom: '0px'
+        }
+      }
+    },
+    aClass() {
+      const { end, type } = this
+      if (!type && end) {
+        return {
+          borderTop: '1px solid transparent',
+          borderBottom: '0px'
+        }
+      }
+    },
+    aActiveClass() {
+      const { end, type } = this
+      if (!type && end) {
+        return {
+          borderTop: '1px solid #3273dc',
+          color: '#3273dc',
+          borderBottom: '0px'
+        }
+      }
+      if (type === 'boxed' && end) {
+        return {
+          backgroundColor: 'white',
+          marginBottom: '0px',
+          marginTop: '-1px',
+          border: '1px solid #dbdbdb',
+          'border-bottom': '1px solid #dbdbdb !important',
+          'border-top-color': 'transparent !important',
+          'border-radius': '0 0 4px 4px'
+        }
+      }
     }
   },
   methods: {
     handleClick(index) {
       this.currentTab = index
       this.$emit('click', index)
+    },
+    addClass(index) {
+      if (this.currentTab !== index && this.end && !this.type) {
+        this.originalBorder = event.currentTarget.style.borderTop
+        event.currentTarget.style.borderTop = '1px solid #363636'
+      }
+    },
+    removeClass(index) {
+      if (this.currentTab !== index && this.end && !this.type) {
+        event.currentTarget.style.borderTop = this.originalBorder
+      }
     }
   }
 }
