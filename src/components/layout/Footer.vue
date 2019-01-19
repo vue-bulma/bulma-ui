@@ -1,26 +1,12 @@
 <template>
   <footer class="footer">
-    <div :class="classes">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </footer>
 </template>
 
 <script>
-import alignProps from '@/mixins/align'
-
 export default {
-  name: 'VbFooter',
-  mixins: [alignProps],
-  computed: {
-    classes() {
-      const { align } = this
-      return {
-        content: true,
-        [`has-text-${align}`]: !!align
-      }
-    }
-  }
+  name: 'VbFooter'
 }
 </script>
 
