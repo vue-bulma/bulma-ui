@@ -26,6 +26,5 @@ export default {
 
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
-@import '~bulma/sass/components/navbar.sass';
-@import '~bulma/sass/layout/hero.sass';
+@import '~bulma/sass/layout/footer.sass';
 </style>
