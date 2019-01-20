@@ -1,12 +1,31 @@
 <template>
-  <section class="section">
+  <section :class="classes">
     <slot></slot>
   </section>
 </template>
 
 <script>
+const SIZES = ['medium', 'large']
+
 export default {
-  name: 'VbSection'
+  name: 'VbSection',
+  props: {
+    size: {
+      type: String,
+      validator(value) {
+        return SIZES.includes(value)
+      }
+    }
+  },
+  computed: {
+    classes() {
+      const { size } = this
+      return {
+        section: true,
+        [`is-${size}`]: !!size
+      }
+    }
+  }
 }
 </script>
 
