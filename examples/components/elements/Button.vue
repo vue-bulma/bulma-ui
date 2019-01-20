@@ -25,7 +25,7 @@
     </example-section-item>
 
     <example-section-item title="Sizes">
-      <vb-subtitle size="6">The button comes in 4 different sizes:</vb-subtitle>
+      <vb-content>The button comes in 4 different sizes:</vb-content>
       <demo :code="code.size">
         <vb-buttons-list>
           <vb-button size="small">Small</vb-button>
@@ -43,7 +43,7 @@
     </example-section-item>
 
     <example-section-item title="Styles">
-      <vb-subtitle size="6">Outlined</vb-subtitle>
+      <vb-content>Outlined</vb-content>
       <demo :code="code.outlined">
         <vb-buttons-list>
           <vb-button outlined>Outlined</vb-button>
@@ -55,7 +55,7 @@
           <vb-button color="danger" outlined>Outlined</vb-button>
         </vb-buttons-list>
       </demo>
-      <vb-subtitle size="6">Inverted</vb-subtitle>
+      <vb-content>Inverted</vb-content>
       <demo class="button-invert" :code="code.invert">
         <vb-buttons-list>
           <vb-button color="primary" inverted>Invert</vb-button>
@@ -65,7 +65,7 @@
           <vb-button color="danger" inverted>Invert</vb-button>
         </vb-buttons-list>
       </demo>
-      <vb-subtitle size="6">Outlined and Inverted</vb-subtitle>
+      <vb-content>Outlined and Inverted</vb-content>
       <demo class="button-invert" :code="code.invertedOutlined">
         <vb-buttons-list>
           <vb-button color="primary" inverted outlined>Invert Outlined</vb-button>
@@ -116,7 +116,7 @@
     </example-section-item>
 
     <example-section-item title="Icons">
-      <vb-subtitle size="6">With Font Awesome icons</vb-subtitle>
+      <vb-content>With Font Awesome icons</vb-content>
       <demo :code="code.icons">
         <vb-buttons-list>
           <vb-button>
@@ -200,7 +200,7 @@
     </example-section-item>
 
     <example-section-item title="Button Group">
-      <vb-subtitle size="6">If you want to group buttons together on a single line</vb-subtitle>
+      <vb-content>If you want to group buttons together on a single line</vb-content>
 
       <demo :code="code.group">
         <vb-button-group>
@@ -212,7 +212,7 @@
     </example-section-item>
 
     <example-section-item title="Button Addons">
-      <vb-subtitle size="6">If you want to use buttons as addons</vb-subtitle>
+      <vb-content>If you want to use buttons as addons</vb-content>
       <demo :code="code.addons">
         <vb-button-addons>
           <vb-button>
@@ -232,9 +232,10 @@
     </example-section-item>
 
     <example-section-item title="Button List">
-      <vb-subtitle size="6">You can now create a list of buttons with the
-        <span class="color-red">vb-buttons-list</span> container
-      </vb-subtitle>
+      <vb-content>
+        You can now create a list of buttons with the <code>vb-buttons-list</code> container
+      </vb-content>
+
       <demo :code="code.list">
         <vb-buttons-list>
           <vb-button>Save changes</vb-button>
@@ -245,13 +246,10 @@
     </example-section-item>
 
     <example-section-item title="Button List addons">
-      <vb-subtitle size="6">You can attach
-        <span class="color-red">vb-buttons-list</span> together with the
-        <span class="color-red">addons</span> modifier
-        <br>Use the
-        <span class="color-red">align="centered"</span> or the
-        <span class="color-red">align="right"</span> modifiers to alter the alignment.
-      </vb-subtitle>
+      <vb-content>
+        <p>You can attach <code>vb-button</code> together with the <code>addons</code> modifier.</p>
+        <p>Use the <code>align="centered"</code> or the <code>align="right"</code> modifiers to alter the alignment.</p>
+      </vb-content>
       <demo :code="code.listAddonsLeft">
         <vb-buttons-list addons>
           <vb-button color="success">Save changes</vb-button>
