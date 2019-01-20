@@ -1,26 +1,15 @@
 <template>
   <section :class="classes">
     <div v-if="$slots.head" class="hero-head">
-      <div class="container">
-        <slot name="head"></slot>
-      </div>
+      <slot name="head"></slot>
     </div>
 
     <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          <slot>{{title}}</slot>
-        </h1>
-        <h2 class="subtitle">
-          <slot name="subtitle">{{subtitle}}</slot>
-        </h2>
-      </div>
+      <slot></slot>
     </div>
 
     <div v-if="$slots.foot" class="hero-foot">
-      <div class="container">
-        <slot name="foot"></slot>
-      </div>
+      <slot name="foot"></slot>
     </div>
   </section>
 </template>
@@ -34,8 +23,6 @@ export default {
   name: 'VbHero',
   mixins: [colorProps, sizeProps, alignProps],
   props: {
-    title: String,
-    subtitle: String,
     bold: Boolean
   },
   computed: {
