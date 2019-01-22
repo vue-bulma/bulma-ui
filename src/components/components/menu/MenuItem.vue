@@ -1,11 +1,9 @@
 <template>
-  <li>
+  <li :class="{ 'submenu-opened': showSubmenu }">
     <a :class="classes" @click="handleClick">
       <vb-icon v-if="icon" :name="icon" class="vb-menu-item__icon"></vb-icon>
 
       <slot></slot>
-
-      <vb-icon v-if="$slots.submenu" name="fa fa-angle-down" :class="submenuIconClass" ></vb-icon>
     </a>
 
     <slot v-if="showSubmenu" name="submenu"></slot>
@@ -17,7 +15,7 @@ import VbIcon from '@/components/elements/Icon'
 
 export default {
   name: 'VbMenuItem',
-  coponents: { VbIcon },
+  components: { VbIcon },
   inject: {
     rootMenu: {
       default: ''
@@ -41,7 +39,12 @@ export default {
   },
   computed: {
     classes() {
-      return { 'is-active': this.rootMenu.actived === this.index }
+      const { rootMenu, index, $slots } = this
+      return {
+        'vb-menu-item__label': true,
+        'has-submenu': !!$slots.submenu,
+        'is-active': rootMenu.actived === index
+      }
     },
     submenuIconClass() {
       return {
@@ -87,17 +90,44 @@ export default {
 }
 </script>
 
-<style scoped>
-.vb-menu-item__icon {
-  margin-right: 5px;
-}
-.submenu-icon {
-  position: relative;
-  float: right;
-  color: #b5b5b5;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-.is-opened {
-  transform: rotate(180deg);
+<style lang="scss" scoped>
+@import '~bulma/sass/utilities/_all';
+
+$menu-collapse-arrow: $link !default;
+
+li {
+  .vb-menu-item__icon {
+    margin-right: 5px;
+  }
+  .vb-menu-item__label {
+    position: relative;
+    align-items: center;
+    display: flex;
+  }
+  .has-submenu:after {
+    content: ' ';
+    border: 3px solid transparent;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    display: block;
+    height: 0.625em;
+    width: 0.625em;
+    margin-top: -0.375em;
+    right: 1.125em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    border-color: $menu-collapse-arrow;
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 35% 65%;
+    transform-origin: 35% 65%;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+  &.submenu-opened {
+    .has-submenu:after {
+      transform: rotate(135deg);
+    }
+  }
 }
 </style>
