@@ -24,8 +24,7 @@
 
             <vb-navbar-item name="about">About</vb-navbar-item>
             <vb-navbar-item name="jobs">Jobs</vb-navbar-item>
-            <hr class="navbar-divider">
-            <vb-navbar-item name="contact">Contact</vb-navbar-item>
+            <vb-navbar-item name="contact" divided>Contact</vb-navbar-item>
           </vb-navbar-dropdown>
 
           <template slot="right">

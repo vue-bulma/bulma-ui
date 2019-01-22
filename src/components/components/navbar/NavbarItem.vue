@@ -3,21 +3,22 @@ import Vue from 'vue'
 
 export default Vue.component('VbNavbarItem', {
   props: {
-    name: String
+    name: String,
+    static: Boolean
   },
   computed: {
     navbar() {
       let parent = this.$parent
-      while (parent && parent.$options.name !== 'VbNavbar') {
+      while (parent && parent.$options.name !== 'vb-navbar') {
         parent = parent.$parent
       }
       return parent
     }
   },
   render(h) {
-    const { name, handleClick: click } = this
+    const { static: isStatic, handleClick: click } = this
     return h(
-      name ? 'a' : 'div',
+      isStatic ? 'div' : 'a',
       { class: 'navbar-item', on: { click } },
       this.$slots.default
     )

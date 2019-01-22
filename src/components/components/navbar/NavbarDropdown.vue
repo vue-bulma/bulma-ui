@@ -1,17 +1,7 @@
-<template>
-  <div class="navbar-item has-dropdown is-hoverable" :class="{ 'has-dropdown-up': dropup }" @mouseenter="handleTitleOver" @mouseleave="handleTitleOut">
-    <a class="navbar-link" :class="{ 'is-arrowless': arrowLess }">
-      <slot name="title">{{title}}</slot>
-    </a>
-
-    <div :class="classes">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-
 <script>
-export default {
+import Vue from 'vue'
+
+export default Vue.component('VbNavbarDropdown', {
   name: 'VbNavbarDropdown',
   props: {
     title: String,
@@ -22,6 +12,44 @@ export default {
     return {
       alignRight: false
     }
+  },
+  render() {
+    const {
+      dropup,
+      handleTitleOver,
+      handleTitleOut,
+      arrowLess,
+      title,
+      classes,
+      $slots
+    } = this
+
+    const { default: nodes = [] } = $slots
+    const content = nodes.map(node => {
+      const { attrs = {} } = node.data || {}
+      return attrs.divided || attrs.divided === ''
+        ? [<hr class="navbar-divider" />, node]
+        : node
+    })
+
+    return (
+      <div
+        class={{
+          'navbar-item': true,
+          'has-dropdown': true,
+          'is-hoverable': true,
+          'has-dropdown-up': dropup
+        }}
+        on-mouseenter={handleTitleOver}
+        on-mouseleave={handleTitleOut}
+      >
+        <a class={{ 'navbar-link': true, 'is-arrowless': arrowLess }}>
+          {$slots.title || title}
+        </a>
+
+        <div class={classes}>{content}</div>
+      </div>
+    )
   },
   computed: {
     classes() {
@@ -44,8 +72,10 @@ export default {
     }
   },
   mounted() {
-    const { className = '' } = this.$el.parentNode
-    this.alignRight = className.includes('navbar-end')
+    if (this.$el && this.$el.parentNode) {
+      const { className = '' } = this.$el.parentNode || {}
+      this.alignRight = className.includes('navbar-end')
+    }
   },
   methods: {
     handleTitleOver(event) {
@@ -55,5 +85,5 @@ export default {
       this.$emit('close', event)
     }
   }
-}
+})
 </script>
