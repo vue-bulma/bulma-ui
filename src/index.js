@@ -44,7 +44,8 @@ import MenuList from './components/components/menu/MenuList'
 import MenuItem from './components/components/menu/MenuItem'
 import Message from './components/components/Message'
 import Pagination from './components/components/Pagination'
-import Tabs from './components/components/Tabs'
+import Tabs from './components/components/Tabs/Tabs'
+import TabItem from './components/components/Tabs/TabItem'
 import Modal from './components/components/modal/Modal'
 import ModalCard from './components/components/modal/ModalCard'
 import Navbar from './components/components/navbar/Navbar'
@@ -105,6 +106,7 @@ const components = [
   Message,
   Pagination,
   Tabs,
+  TabItem,
   Modal,
   ModalCard,
   Navbar,

@@ -2,70 +2,146 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo :code="code.basic">
-        <p slot="control">Current Tab: {{tabs[index].name}}</p>
-        <vb-tabs :tabs="tabs" @click="handleClick" end></vb-tabs>
+        <vb-tabs>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
-
     <example-section-item title="Alignment">
       <demo :code="code.alignment">
-        <vb-tabs :tabs="tabs"></vb-tabs>
-        <vb-tabs :tabs="tabs" align="centered"></vb-tabs>
-        <vb-tabs :tabs="tabs" align="right"></vb-tabs>
+        <vb-tabs>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs align="centered">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs align="right">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
-
     <example-section-item title="Icons">
       <demo :code="code.icons">
-        <vb-tabs :tabs="tabs2"></vb-tabs>
+        <vb-tabs>
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
 
     <example-section-item title="Size">
       <demo :code="code.sizes">
-        <vb-tabs :tabs="tabs" size="small"></vb-tabs>
-        <vb-tabs :tabs="tabs"></vb-tabs>
-        <vb-tabs :tabs="tabs" size="medium"></vb-tabs>
-        <vb-tabs :tabs="tabs" size="large"></vb-tabs>
+        <vb-tabs size="small">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs size="medium">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs size="large">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
 
     <example-section-item title="Styles">
       <demo :code="code.styles">
-        <vb-tabs :tabs="tabs2" type="boxed"></vb-tabs>
-        <vb-tabs :tabs="tabs2" type="toggle"></vb-tabs>
-        <vb-tabs :tabs="tabs2" type="toggle" rounded></vb-tabs>
-        <vb-tabs :tabs="tabs2" fullwidth></vb-tabs>
+        <vb-tabs type="boxed">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs type="toggle">
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs type="toggle" rounded>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs fullwidth>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
 
     <example-section-item title="Bottom placement of tab controls">
       <demo :code="code.bottom">
-        <vb-tabs :tabs="tabs" end></vb-tabs>
-        <vb-tabs :tabs="tabs2" end></vb-tabs>
-        <vb-tabs :tabs="tabs2" type="boxed" end></vb-tabs>
+        <vb-tabs end>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs end>
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
+        <vb-tabs type="boxed" end>
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
 
     <example-section-item title="Combining">
       <vb-subtitle size="6">Box</vb-subtitle>
       <demo :code="code.combining.boxed">
-        <vb-tabs :tabs="tabs2" align="centered" type="boxed"></vb-tabs>
+        <vb-tabs align="centered" type="boxed">
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
 
       <vb-subtitle size="6">Box Medium</vb-subtitle>
       <demo :code="code.combining.boxedMedium">
-        <vb-tabs :tabs="tabs2" align="centered" type="boxed" size="medium"></vb-tabs>
+        <vb-tabs align="centered" type="boxed" size="medium">
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
 
       <vb-subtitle size="6">Toggle Fullwidth</vb-subtitle>
       <demo :code="code.combining.toggle">
-        <vb-tabs :tabs="tabs2" type="toggle" fullwidth></vb-tabs>
+        <vb-tabs type="toggle" fullwidth>
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
-
       <vb-subtitle size="6">Toggle Large</vb-subtitle>
       <demo :code="code.combining.boxedLarge">
-        <vb-tabs :tabs="tabs2" type="toggle" size="large" fullwidth></vb-tabs>
+        <vb-tabs type="toggle" size="large" fullwidth>
+          <vb-tab-item label="Pictures " icon="fa fa-image">Pictures</vb-tab-item>
+          <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+          <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
       </demo>
     </example-section-item>
   </vb-section>
@@ -78,19 +154,7 @@ export default {
   name: 'TabsExamples',
   data() {
     return {
-      code,
-      index: 0,
-      tabs: [{ name: 'Pictures' }, { name: 'Music' }, { name: 'Videos' }],
-      tabs2: [
-        { name: 'Pictures', icon: 'fa-image' },
-        { name: 'Music', icon: 'fa-music' },
-        { name: 'Videos', icon: 'fa-film' }
-      ]
-    }
-  },
-  methods: {
-    handleClick(index) {
-      this.index = index
+      code
     }
   }
 }

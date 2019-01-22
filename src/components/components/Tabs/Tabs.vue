@@ -1,48 +1,52 @@
 <template>
   <div :class="classes">
+    <div v-if="end">
+      <slot></slot>
+    </div>
+
     <ul :style="ulClass">
       <li
-        :class="{'is-active':currentTab===index}"
-        v-for="(tab,index) in tabs"
+        v-for="(tab, index) in tabList"
         :key="index"
-        @click.stop="handleClick(index)"
+        :class="{'is-active' : currentTab === index}"
+        @click.stop="handleClick(index, tab.label)"
       >
         <a
-          :style="[currentTab === index ? aActiveClass : aClass]"
+          :style="[currentTab === index ? aActiveClass : aNomalClass]"
           @mouseover="addClass(index)"
           @mouseout="removeClass(index)"
         >
-          <span class="icon is-small" v-if="tab.icon&&tab.icon!==''">
-            <i class="fa" :class="tab.icon" aria-hidden="true"></i>
+          <span v-if="tab.icon && tab.icon !== ''" class="icon is-small">
+            <i :class="tab.icon" aria-hidden="true"></i>
           </span>
-          <span>{{tab.name}}</span>
+          <span>{{tab.label}}</span>
         </a>
       </li>
     </ul>
+
+    <div v-if="!end">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <script>
-const ALIGNS = ['centered', 'right']
-const SIZE = ['small', 'medium', 'large']
+import alignProps from '@/mixins/align'
+import sizeProps from '@/mixins/size'
+
 const STYLES = ['boxed', 'toggle', 'fullwidth']
+
 export default {
   name: 'VbTabs',
+  mixins: [alignProps, sizeProps],
+  provide() {
+    return {
+      rootTabs: this
+    }
+  },
   props: {
     tabs: {
       type: Array
-    },
-    align: {
-      type: String,
-      validator(value) {
-        return ALIGNS.includes(value)
-      }
-    },
-    size: {
-      type: String,
-      validator(value) {
-        return SIZE.includes(value)
-      }
     },
     type: {
       type: String,
@@ -61,13 +65,15 @@ export default {
     return {
       // 当前Tab
       currentTab: 0,
-      originalBorder: ''
+      originalBorder: '',
+      tabList: [],
+      label: ''
     }
   },
   computed: {
     classes() {
       const { align, size, type, rounded, fullwidth } = this
-      const obj = {
+      return {
         tabs: true,
         [`is-${align}`]: !!align,
         [`is-${size}`]: !!size,
@@ -75,7 +81,6 @@ export default {
         'is-toggle-rounded': rounded,
         'is-fullwidth': fullwidth
       }
-      return obj
     },
     ulClass() {
       const { end, type } = this
@@ -92,7 +97,7 @@ export default {
         }
       }
     },
-    aClass() {
+    aNomalClass() {
       const { end, type } = this
       if (!type && end) {
         return {
@@ -124,8 +129,9 @@ export default {
     }
   },
   methods: {
-    handleClick(index) {
+    handleClick(index, label) {
       this.currentTab = index
+      this.label = label
       this.$emit('click', index)
     },
     addClass(index) {
@@ -139,6 +145,12 @@ export default {
         event.currentTarget.style.borderTop = this.originalBorder
       }
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.tabList = this.$children.filter(child => child.isTabItem)
+      this.label = this.tabList[0].label
+    })
   }
 }
 </script>
@@ -146,4 +158,13 @@ export default {
 <style lang="scss">
 @import '~bulma/sass/utilities/_all';
 @import '~bulma/sass/components/tabs.sass';
+</style>
+
+<style scoped>
+.tabs {
+  display: block;
+}
+.tabs ul {
+  margin-bottom: 15px;
+}
 </style>
