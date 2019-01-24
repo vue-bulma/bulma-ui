@@ -7,8 +7,10 @@
 <script>
 export default {
   name: 'VbTabItem',
-  beforeCreate() {
-    this.isTabItem = true
+  data() {
+    return {
+      isTabItem: true
+    }
   },
   inject: {
     rootTabs: {

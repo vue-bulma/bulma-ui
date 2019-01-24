@@ -122,6 +122,93 @@ code.bottom = `\
   </div>
 </template>
 `
+code.position = {}
+code.position.nomal = `\
+<template>
+  <div>
+    <vb-tabs position="left">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+
+    <vb-tabs position="right">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+  </div>
+</template>
+
+`
+code.position.icon = `\
+<template>
+  <div>
+    <vb-tabs :position="left">
+      <vb-tab-item label="Pictures" icon="fa fa-image">Pictures</vb-tab-item>
+      <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+      <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+    </vb-tabs>
+
+    <vb-tabs :position="right">
+      <vb-tab-item label="Pictures" icon="fa fa-image">Pictures</vb-tab-item>
+      <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
+      <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+    </vb-tabs>
+  </div>
+</template>
+`
+code.position.boxed = `\
+<template>
+  <div>
+    <vb-tabs type="boxed" position="left">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+
+    <vb-tabs type="boxed" position="right">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+  </div>
+</template>
+`
+code.position.toggle = `\
+<template>
+  <div>
+    <vb-tabs type="toggle" position="left">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+
+    <vb-tabs type="toggle" position="right">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+  </div>
+</template>
+`
+code.position.rounded = `\
+<template>
+  <div>
+    <vb-tabs type="toggle" rounded position="left">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+
+    <vb-tabs type="toggle" rounded position="right">
+      <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+      <vb-tab-item label="Music">Music</vb-tab-item>
+      <vb-tab-item label="Videos">Videos</vb-tab-item>
+    </vb-tabs>
+  </div>
+</template>
+`
 
 code.combining = {}
 

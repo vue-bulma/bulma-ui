@@ -35,6 +35,7 @@ import alignProps from '@/mixins/align'
 import sizeProps from '@/mixins/size'
 
 const STYLES = ['boxed', 'toggle', 'fullwidth']
+const POSITION = ['left', 'right']
 
 export default {
   name: 'VbTabs',
@@ -59,6 +60,12 @@ export default {
     end: {
       type: Boolean,
       default: false
+    },
+    position: {
+      type: String,
+      validator(value) {
+        return POSITION.includes(value)
+      }
     }
   },
   data() {
@@ -83,7 +90,7 @@ export default {
       }
     },
     ulClass() {
-      const { end, type } = this
+      const { end, type, position } = this
       if (!type && end) {
         return {
           borderTop: '1px solid #dbdbdb',
@@ -96,18 +103,40 @@ export default {
           borderBottom: '0px'
         }
       }
+      if (position) {
+        let contrary
+        if (position === 'left') {
+          contrary = 'right'
+        } else {
+          contrary = 'left'
+        }
+        return {
+          display: 'block',
+          [`border-${contrary}`]: '1px solid #dbdbdb',
+          borderBottom: '0px',
+          float: `${position}`,
+          marginBottom: '0px',
+          [`margin-${contrary}`]: '15px'
+        }
+      }
     },
     aNomalClass() {
-      const { end, type } = this
+      const { end, type, position } = this
       if (!type && end) {
         return {
           borderTop: '1px solid transparent',
           borderBottom: '0px'
         }
       }
+      if (position) {
+        return {
+          border: '0px',
+          justifyContent: 'normal'
+        }
+      }
     },
     aActiveClass() {
-      const { end, type } = this
+      const { end, type, position } = this
       if (!type && end) {
         return {
           borderTop: '1px solid #3273dc',
@@ -124,6 +153,12 @@ export default {
           'border-bottom': '1px solid #dbdbdb !important',
           'border-top-color': 'transparent !important',
           'border-radius': '0 0 4px 4px'
+        }
+      }
+      if (position) {
+        return {
+          border: '0px',
+          justifyContent: 'normal'
         }
       }
     }
