@@ -4,18 +4,14 @@
       <slot></slot>
     </div>
 
-    <ul :style="ulClass">
+    <ul :class="ulClass">
       <li
         v-for="(tab, index) in tabList"
         :key="index"
         :class="{'is-active' : currentTab === index}"
         @click.stop="handleClick(index, tab.label)"
       >
-        <a
-          :style="[currentTab === index ? aActiveClass : aNomalClass]"
-          @mouseover="addClass(index)"
-          @mouseout="removeClass(index)"
-        >
+        <a :class="[currentTab === index ? aActiveClass : aNomalClass]">
           <span v-if="tab.icon && tab.icon !== ''" class="icon is-small">
             <i :class="tab.icon" aria-hidden="true"></i>
           </span>
@@ -91,75 +87,26 @@ export default {
     },
     ulClass() {
       const { end, type, position } = this
-      if (!type && end) {
-        return {
-          borderTop: '1px solid #dbdbdb',
-          borderBottom: '0px'
-        }
-      }
-      if (type === 'boxed' && end) {
-        return {
-          borderTop: '1px solid #dbdbdb',
-          borderBottom: '0px'
-        }
-      }
-      if (position) {
-        let contrary
-        if (position === 'left') {
-          contrary = 'right'
-        } else {
-          contrary = 'left'
-        }
-        return {
-          display: 'block',
-          [`border-${contrary}`]: '1px solid #dbdbdb',
-          borderBottom: '0px',
-          float: `${position}`,
-          marginBottom: '0px',
-          [`margin-${contrary}`]: '15px'
-        }
+      return {
+        'is-end': (!type && end) || (type === 'boxed' && end),
+        [`${position}`]: !!position
       }
     },
     aNomalClass() {
       const { end, type, position } = this
-      if (!type && end) {
-        return {
-          borderTop: '1px solid transparent',
-          borderBottom: '0px'
-        }
-      }
-      if (position) {
-        return {
-          border: '0px',
-          justifyContent: 'normal'
-        }
+
+      return {
+        end: !type && end,
+        position: !!position
       }
     },
     aActiveClass() {
       const { end, type, position } = this
-      if (!type && end) {
-        return {
-          borderTop: '1px solid #3273dc',
-          color: '#3273dc',
-          borderBottom: '0px'
-        }
-      }
-      if (type === 'boxed' && end) {
-        return {
-          backgroundColor: 'white',
-          marginBottom: '0px',
-          marginTop: '-1px',
-          border: '1px solid #dbdbdb',
-          'border-bottom': '1px solid #dbdbdb !important',
-          'border-top-color': 'transparent !important',
-          'border-radius': '0 0 4px 4px'
-        }
-      }
-      if (position) {
-        return {
-          border: '0px',
-          justifyContent: 'normal'
-        }
+
+      return {
+        active: !type && end,
+        'boxed-active': type === 'boxed' && end,
+        position: !!position
       }
     }
   },
@@ -168,17 +115,6 @@ export default {
       this.currentTab = index
       this.label = label
       this.$emit('click', index)
-    },
-    addClass(index) {
-      if (this.currentTab !== index && this.end && !this.type) {
-        this.originalBorder = event.currentTarget.style.borderTop
-        event.currentTarget.style.borderTop = '1px solid #363636'
-      }
-    },
-    removeClass(index) {
-      if (this.currentTab !== index && this.end && !this.type) {
-        event.currentTarget.style.borderTop = this.originalBorder
-      }
     }
   },
   mounted() {
@@ -201,5 +137,66 @@ export default {
 }
 .tabs ul {
   margin-bottom: 15px;
+}
+/* end is truly */
+
+/* ul end is truly */
+.is-end {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 0px;
+}
+
+/* ul position is truly */
+.left {
+  display: block;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 0px;
+  float: left;
+  margin-bottom: 0px;
+  margin-right: 15px;
+}
+.right {
+  display: block;
+  float: right;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  border-left: 1px solid #dbdbdb;
+  border-bottom: 0px;
+}
+
+/* a */
+.end {
+  border-top: 1px solid transparent;
+  border-bottom: 0px;
+}
+/* <a> position is truly */
+.tabs ul li a.position {
+  border: 0px;
+  justify-content: normal;
+}
+/* <a> end is truly a:hover */
+.tabs ul.is-end li a:hover {
+  border-top: 1px solid #363636;
+}
+/* <a> type is false, end is truly */
+.active {
+  color: #3273dc;
+  border-top: 1px solid #3273dc;
+  border-bottom: 0px;
+}
+
+/* <a> Both type and end are truly */
+.tabs.is-boxed li a.boxed-active {
+  background-color: white;
+  margin-bottom: 0px !important;
+  margin-top: -1px;
+  border: 1px solid #dbdbdb;
+  border-bottom-color: #dbdbdb !important;
+  border-top-color: transparent !important;
+  border-radius: 0 0 4px 4px !important;
+}
+.tabs.is-boxed ul.is-end a:hover {
+  border-bottom-color: transparent;
+  border-top-color: transparent;
 }
 </style>
