@@ -2,7 +2,7 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo :code="code.basic">
-        <vb-tabs card>
+        <vb-tabs>
           <vb-tab-item label="Pictures">Pictures</vb-tab-item>
           <vb-tab-item label="Music">Music</vb-tab-item>
           <vb-tab-item label="Videos">Videos</vb-tab-item>
