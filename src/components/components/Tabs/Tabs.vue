@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <div v-if="end">
+    <div v-if="end" class="content">
       <slot></slot>
     </div>
 
@@ -20,7 +20,7 @@
       </li>
     </ul>
 
-    <div v-if="!end">
+    <div v-if="!end" class="content">
       <slot></slot>
     </div>
   </div>
@@ -62,6 +62,10 @@ export default {
       validator(value) {
         return POSITION.includes(value)
       }
+    },
+    card: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -75,21 +79,23 @@ export default {
   },
   computed: {
     classes() {
-      const { align, size, type, rounded, fullwidth } = this
+      const { align, size, type, rounded, fullwidth, card } = this
       return {
         tabs: true,
         [`is-${align}`]: !!align,
         [`is-${size}`]: !!size,
         [`is-${type}`]: !!type,
         'is-toggle-rounded': rounded,
-        'is-fullwidth': fullwidth
+        'is-fullwidth': fullwidth,
+        'is-card': !!card
       }
     },
     ulClass() {
-      const { end, type, position } = this
+      const { end, type, position, card } = this
       return {
         'is-end': (!type && end) || (type === 'boxed' && end),
-        [`${position}`]: !!position
+        [`${position}`]: !!position,
+        margin: !card
       }
     },
     aNomalClass() {
@@ -135,8 +141,15 @@ export default {
 .tabs {
   display: block;
 }
-.tabs ul {
+.margin {
   margin-bottom: 15px;
+}
+.content {
+  white-space: initial;
+}
+.is-card {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
 }
 /* end is truly */
 

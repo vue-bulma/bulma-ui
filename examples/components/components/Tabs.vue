@@ -2,13 +2,14 @@
   <vb-section>
     <example-section-item title="Basic">
       <demo :code="code.basic">
-        <vb-tabs>
+        <vb-tabs card>
           <vb-tab-item label="Pictures">Pictures</vb-tab-item>
           <vb-tab-item label="Music">Music</vb-tab-item>
           <vb-tab-item label="Videos">Videos</vb-tab-item>
         </vb-tabs>
       </demo>
     </example-section-item>
+
     <example-section-item title="Alignment">
       <demo :code="code.alignment">
         <vb-tabs>
@@ -28,6 +29,7 @@
         </vb-tabs>
       </demo>
     </example-section-item>
+
     <example-section-item title="Icons">
       <demo :code="code.icons">
         <vb-tabs>
@@ -223,6 +225,36 @@
           <vb-tab-item label="Pictures" icon="fa fa-image">Pictures</vb-tab-item>
           <vb-tab-item label="Music" icon="fa fa-music">Music</vb-tab-item>
           <vb-tab-item label="Videos" icon="fa fa-film">Videos</vb-tab-item>
+        </vb-tabs>
+      </demo>
+    </example-section-item>
+
+    <example-section-item title="Card">
+      <demo :code="code.card.nomal">
+        <vb-tabs card>
+          <vb-tab-item label="Pictures">Pictures</vb-tab-item>
+          <vb-tab-item label="Music">Music</vb-tab-item>
+          <vb-tab-item label="Videos">Videos</vb-tab-item>
+        </vb-tabs>
+      </demo>
+
+      <demo :code="code.card.image">
+        <vb-tabs card>
+          <vb-tab-item label="Picture1">
+            <vb-image size="3by1" src="https://bulma.io/images/placeholders/256x256.png"></vb-image>
+            <div slot="footer">Picture1</div>
+          </vb-tab-item>
+          <vb-tab-item label="Picture2">
+            <vb-image size="3by1" src="https://bulma.io/images/placeholders/128x128.png"></vb-image>
+            <div slot="footer">Picture2</div>
+          </vb-tab-item>
+          <vb-tab-item label="Text">
+            <vb-title>Title</vb-title>
+            <vb-subtitle>With some content</vb-subtitle>
+            <vb-content>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </vb-content>
+          </vb-tab-item>
         </vb-tabs>
       </demo>
     </example-section-item>
