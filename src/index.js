@@ -47,7 +47,6 @@ import Pagination from './components/components/Pagination'
 import Tabs from './components/components/Tabs/Tabs'
 import TabItem from './components/components/Tabs/TabItem'
 import Modal from './components/components/modal/Modal'
-import ModalCard from './components/components/modal/ModalCard'
 import Navbar from './components/components/navbar/Navbar'
 import NavbarDropdown from './components/components/navbar/NavbarDropdown'
 import NavbarItem from './components/components/navbar/NavbarItem'
@@ -108,7 +107,6 @@ const components = [
   Tabs,
   TabItem,
   Modal,
-  ModalCard,
   Navbar,
   NavbarDropdown,
   NavbarItem,

@@ -1,41 +1,81 @@
 <template>
-  <div v-if="isActive" :class="classes" >
-    <div v-if="showMask" class="modal-background" @click="handleMask"></div>
-    <div class="modal-content">
+  <div :class="classes" >
+    <div v-if="mask" class="modal-background" @click="handleClickMask"></div>
+
+    <div v-if="type === 'content'" class="modal-content">
       <slot></slot>
     </div>
-    <button v-show="closable" :class="modalClose" @click="deactive"></button>
+
+    <div v-else class="modal-card">
+      <header v-if="$slots.title || title || closable" class="modal-card-head">
+        <slot name="title">
+          <p class="modal-card-title">{{ title }}</p>
+        </slot>
+        <button v-if="closable" class="delete" @click="close"></button>
+      </header>
+
+      <section v-if="$slots.default" class="modal-card-body">
+        <slot></slot>
+      </section>
+
+      <footer v-if="$slots.footer" class="modal-card-foot">
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+
+    <button v-show="type === 'content' && closable" class="modal-close" @click="close"></button>
   </div>
 </template>
 
 <script>
-import ModalMixin from '@/mixins/modal'
-
-const SIZE = ['small', 'medium', 'large']
+const TYPES = ['content', 'card']
 
 export default {
   name: 'VbModal',
-  mixins: [ModalMixin],
   props: {
+    visible: {
+      type: Boolean,
+      default: false
+    },
+    type: {
+      type: String,
+      default: 'content',
+      validator(value) {
+        return TYPES.includes(value)
+      }
+    },
+    title: {
+      type: String
+    },
+    mask: {
+      tyep: Boolean,
+      default: true
+    },
+    maskClosable: {
+      tyep: Boolean,
+      default: true
+    },
     closable: {
       type: Boolean,
       default: true
-    },
-    closeButtonSize: {
-      type: String,
-      validator(value) {
-        return SIZE.includes(value)
-      }
     }
   },
   computed: {
-    modalClose() {
-      const { closeButtonSize } = this
-      const obj = {
-        'modal-close': true,
-        [`is-${closeButtonSize}`]: !!closeButtonSize
+    classes() {
+      return {
+        modal: true,
+        'is-active': this.visible
       }
-      return obj
+    }
+  },
+  methods: {
+    handleClickMask() {
+      if (this.maskClosable) {
+        this.close()
+      }
+    },
+    close() {
+      this.$emit('update:visible', false)
     }
   }
 }
