@@ -1,11 +1,15 @@
 <template>
   <nav role="navigation" aria-label="pagination" :class="classes">
     <a class="pagination-previous" :disabled="!hasPrevPage" @click="prePage">
-      上一页
+      <slot name="prev">
+        {{ prevText || 'Previous' }}
+      </slot>
     </a>
 
     <a class="pagination-next" :disabled="!hasNextPage" @click="nextPage">
-      下一页
+      <slot name="next">
+        {{ nextText || 'Next page' }}
+      </slot>
     </a>
 
     <ul class="pagination-list">
@@ -74,7 +78,9 @@ export default {
       type: Number,
       default: 5
     },
-    rounded: Boolean
+    rounded: Boolean,
+    prevText: String,
+    nextText: String
   },
   data() {
     return {

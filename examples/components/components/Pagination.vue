@@ -42,6 +42,17 @@
         <vb-pagination :pageCount="5" size="large"></vb-pagination>
       </demo>
     </example-section-item>
+
+    <example-section-item title="Custom text">
+      <demo :code="code.customText">
+        <vb-pagination :pageCount="5" prev-text="上一页" next-text="下一页"></vb-pagination>
+
+        <vb-pagination :pageCount="5">
+          <vb-icon slot="prev" name="fa fa-chevron-left"></vb-icon>
+          <vb-icon slot="next" name="fa fa-chevron-right"></vb-icon>
+        </vb-pagination>
+      </demo>
+    </example-section-item>
   </vb-section>
 </template>
 
