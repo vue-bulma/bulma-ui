@@ -16,7 +16,7 @@
 
     <div v-if="hasImage" class="card-image">
       <slot name="image">
-        <vb-image :path="image"></vb-image>
+        <vb-image :src="image"></vb-image>
       </slot>
     </div>
 
