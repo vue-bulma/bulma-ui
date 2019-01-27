@@ -85,6 +85,14 @@ code.sizes.small = `\
 </vb-breadcrumb>
 `
 
+code.sizes.default = `\
+<vb-breadcrumb>
+  <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>
+  <vb-breadcrumb-item to="/docs/components">Components</vb-breadcrumb-item>
+  <vb-breadcrumb-item to="/docs/components/breadcrumb" actived>Breadcrumb</vb-breadcrumb-item>
+</vb-breadcrumb>
+`
+
 code.sizes.medium = `\
 <vb-breadcrumb size="medium">
   <vb-breadcrumb-item to="/">Examples</vb-breadcrumb-item>

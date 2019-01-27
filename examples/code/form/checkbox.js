@@ -25,7 +25,9 @@ code.group = `\
 <script>
   export default {
     data() {
-      animals: []
+      return {
+        animals: []
+      }
     },
     methods: {
       handleChange(val) {}

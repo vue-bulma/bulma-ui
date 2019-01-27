@@ -153,22 +153,22 @@ code.states = `\
 
 code.icons = {}
 code.icons.basic = `\
-<vb-select size="small" prefix="fa fa-home" value="Small dropdown with Small icon">
+<vb-select size="small" icon="fa fa-home" value="Small dropdown with Small icon">
   <option>Small dropdown with Small icon</option>
   <option>With options</option>
 </vb-select>
 
-<vb-select prefix="fa fa-home" value="Default dropdown with Default icon">
+<vb-select icon="fa fa-home" value="Default dropdown with Default icon">
   <option>Default dropdown with Default icon</option>
   <option>With options</option>
 </vb-select>
 
-<vb-select size="medium" prefix="fa fa-home" value="Medium dropdown with Medium icon">
+<vb-select size="medium" icon="fa fa-home" value="Medium dropdown with Medium icon">
   <option>Medium dropdown with Medium icon</option>
   <option>With options</option>
 </vb-select>
 
-<vb-select size="large" prefix="fa fa-home" value="Large dropdown with Large icon">
+<vb-select size="large" icon="fa fa-home" value="Large dropdown with Large icon">
   <option>Large dropdown with Large icon</option>
   <option>With options</option>
 </vb-select>
