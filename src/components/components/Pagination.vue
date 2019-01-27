@@ -24,11 +24,11 @@
         </a>
       </li>
 
-      <li v-if="pagintaion.showPrevMore">
+      <li v-if="pagination.showPrevMore">
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
 
-      <li v-for="page in pagintaion.pages" :key="page">
+      <li v-for="page in pagination.pages" :key="page">
         <a
           class="pagination-link"
           :class="{ 'is-current': currentPage === page }"
@@ -39,7 +39,7 @@
         </a>
       </li>
 
-      <li v-if="pagintaion.showNextMore">
+      <li v-if="pagination.showNextMore">
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
 
@@ -104,7 +104,7 @@ export default {
       const { currentPage, pageCount } = this
       return currentPage < pageCount && currentPage > 0
     },
-    pagintaion() {
+    pagination() {
       const { currentPage, pageCount, pagerCount } = this
       const showMore = pageCount > pagerCount
 
