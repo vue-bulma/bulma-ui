@@ -1,5 +1,5 @@
 <template>
-  <div v-if="hasItem" ref="sy">
+  <div v-if="!disableHover">
     <a
       class="panel-block"
       v-for="(item, index) in list"
@@ -29,10 +29,7 @@ export default {
       type: [String, Boolean]
     },
     actived: Boolean,
-    hoverItem: {
-      type: Boolean,
-      default: true
-    },
+    disableHover: Boolean,
     list: {
       type: Array
     }
@@ -40,11 +37,6 @@ export default {
   data() {
     return {
       currentItem: null
-    }
-  },
-  computed: {
-    hasItem() {
-      return this.hoverItem
     }
   },
   methods: {

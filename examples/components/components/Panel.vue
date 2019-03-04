@@ -3,13 +3,13 @@
     <example-section-item title="Basic">
       <demo :code="code.basic">
         <vb-panel title="repositories">
-          <vb-panel-block :hover-item="false">
+          <vb-panel-block disableHover>
             <vb-input prefix="fa fa-search" placeholder="Search"/>
           </vb-panel-block>
           <vb-panel-tab :tabs="tabs" @click="handleClick"></vb-panel-tab>
           <vb-panel-block :list="tabs[tabIndex].list" @click="itemClick" ref="panel-block"></vb-panel-block>
-          <vb-panel-block :hover-item="false">
-            <vb-button fullwidth>Button</vb-button>
+          <vb-panel-block disableHover>
+            <vb-button color="link" fullwidth outlined>Button</vb-button>
           </vb-panel-block>
         </vb-panel>
       </demo>
